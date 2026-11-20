@@ -1,0 +1,39 @@
+TRECHO DO HTML DA PÁGINA INICIAL — https://servicos.pbh.gov.br
+Coletado em 20/11/2026 às 18:57 por Marcos Alberto, Chrome 158.0.8127.36 (arm64).
+Trecho transcrito do HTML colado pelo coletor. NÃO é o HTML completo.
+Tokens de autorização (Bearer e SD_EMBEDDED_GUEST_TOKEN) foram REMOVIDOS: [REDIGIDO].
+Não versionar o HTML completo.
+
+--- <title> e metas ---
+<title>Página inicial | Portal de Serviços</title>
+<meta name="robots" content="noindex">   (meta da página; não é o robots.txt)
+
+--- importmap (pacotes @sydle e hashes de versão "v:") ---
+"@sydle/pbh-components":          ./ui-package/v:31309267200adce4ee6b7d4bc3b0b864/pbh-components/build/index.esm.js
+"@sydle/sydle-one-components":    ./ui-package/v:9ef695195486dfa6dd532ed5932cc119/one-components/build/index.esm.js
+"@sydle/service-desk-components": ./ui-package/v:49472ac3036e940f5b83d29a5c1feff5/service-desk-components/build/index.esm.js
+"@sydle/sign-components":         ./ui-package/v:b47773baffb88ab0d82971ef63a0ffae/sign-components/build/index.esm.js
+"@sydle/ui-design-system":        ./ui-package/v:c026dba47a9e4387d6ca4d8d172bc60c/ui-design-system/build/index.esm.js
+"@sydle/ui-api":                  ./ui-package/v:04f89da89339fb04f6ace40b93f3eb6e/ui-api/index.js
+"@sydle/ui-app-components":       ./ui-package/v:0367c7c6b53e395874055352a2da7388/ui-app-components/build/index.esm.js
+(outros: vlibras-shadow v:a33801c4365aa1fcc285eb8dd312cb61; monitoring-service v:7998551c0cf42a9f6350c9bfe86366a8)
+
+--- configuração do chat/app ---
+config = { baseURL: "https://servicos.pbh.gov.br", app: "portal", org: "bhdigital", accountId: "63db9b06eb345b6b77f981a6" }
+
+--- window.SYDLE.app ---
+"name__i18n":{"pt":"PBH"}, "identifier":"servicos", "baseHref":"https://servicos.pbh.gov.br/", "hash":"lmegnwzk"
+
+--- window.SYDLE.config (campos relevantes) ---
+"ui-api": { "BASE_API_URL":"https://servicos.pbh.gov.br/api/1/", "APPLICATION_IDENTIFIER":"portal", "ORGANIZATION_IDENTIFIER":"bhdigital",
+            "REQUEST_PARAMS":{"headers":{"Authorization":"Bearer [REDIGIDO]"}} }
+"ui-app": { "titleSufix":"Portal de Serviços", "applicationHash":"hjfrrmkx" }
+"service-desk-components": { "dialogLoginTitle":"Acesso GOV.BR", 7 catálogos listados, "SD_EMBEDDED_GUEST_TOKEN":"[REDIGIDO]" }
+Texto de login: "Você será direcionado a uma página externa à Prefeitura de Belo Horizonte para se autenticar ... via acesso único do Governo - gov.br"
+
+--- terceiros carregados ---
+Google Tag Manager (GTM-P29WDHS); jQuery 3.7.1 (ajax.googleapis.com); Bootstrap 5.3.2 (cdn.jsdelivr.net); Google Fonts;
+Line Awesome (icons8); VLibras (vlibras.gov.br) — widget de acessibilidade em Libras.
+
+--- estrutura ---
+Aplicação de página única: <sy-app-root></sy-app-root>; <noscript> exige JavaScript.

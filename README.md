@@ -62,7 +62,7 @@ Nada disso foi respondido. Todas seguem **abertas** e não devem ser tratadas co
 
 | Pendência | Decisão |
 |---|---|
-| P4 | A RQ4 terá teste inferencial ou fica só descritiva? |
+| P4 | O teste exploratório proposto para a RQ4 (Wilcoxon pareado por participante sobre a diferença na taxa de erro por passo alcançado, com permutação de sinais como sensibilidade) está adequado? |
 | P5 | Faremos a conversão do impacto em horas? |
 | P6 | Qual o n mínimo abaixo de 32? |
 | P13 | Datas reais de S02, S03 e entrega final (do cronograma da disciplina) |

@@ -155,7 +155,7 @@ O robots.txt do Portal contém `User-agent: *` e `Disallow: /`. Consequências a
 | Q2 | O dispositivo altera o tempo nas tarefas (teto 300 s)? | RQ2 | Confirmatória |
 | Q3 | O dispositivo altera a satisfação percebida? | RQ3 | Confirmatória |
 | **Q4** | Quantas e quais violações WCAG existem nas páginas dos serviços da tarefa? | **nenhuma** | **Descritiva, sem hipótese** |
-| **Q5** | As violações estão nos passos onde os participantes erram? | RQ4 | Exploratória, fora do Holm, descritiva |
+| **Q5** | As violações estão nos passos onde os participantes erram? | RQ4 | Exploratória, fora do Holm, com teste (p-valor sem ajuste) |
 
 ### 5.2 Métricas
 
@@ -176,7 +176,7 @@ O robots.txt do Portal contém `User-agent: *` e `Disallow: /`. Consequências a
 | Taxa de erro por passo (erros ÷ pessoas que chegaram), por grupo: com violação / sem violação detectada / indeterminado | Q5 | Processo (uso) | Associação | Derivada | Razão | Exploratória descritiva |
 
 **Entram em teste de hipótese apenas:** tarefas concluídas (RQ1), log-tempo médio (RQ2), SUS (RQ3).
-**Só descritivos:** nº de erros por tarefa, item SUS, SEQ, SUS contra a referência de 68, taxa de conclusão em %, todas as métricas da Q4, e a taxa de erro por passo (RQ4).
+**Só descritivos:** nº de erros por tarefa, item SUS, SEQ, SUS contra a referência de 68, taxa de conclusão em %, todas as métricas da Q4, e a distribuição das taxas por grupo de passos (RQ4; o teste da RQ4 é exploratório, ver §6.1).
 
 **Armadilhas de medição (tema da disciplina):** a nota Lighthouse é "jogável" (Goodhart); página nota 100 pode ser inutilizável com leitor de tela. Por isso não é métrica principal; o desfecho principal é a conclusão da tarefa por pessoas (contra a Falácia de McNamara).
 
@@ -184,7 +184,7 @@ O robots.txt do Portal contém `User-agent: *` e `Disallow: /`. Consequências a
 
 ## 6. Hipóteses e desenho experimental
 
-Todos os testes bicaudais, α = 0,05. **RQ1–RQ3 confirmatórias, família Holm de 3 testes. RQ4 exploratória, fora do Holm, descritiva, sem p-valor na versão atual.**
+Todos os testes bicaudais, α = 0,05. **RQ1–RQ3 confirmatórias, família Holm de 3 testes. RQ4 exploratória, fora do Holm, com teste próprio e p-valor sem ajuste (proposta de 22/11/2026, a validar no P4).**
 
 ### 6.1 Hipóteses (definições da PROPOSTA §4, sem simplificação)
 
@@ -193,7 +193,7 @@ Todos os testes bicaudais, α = 0,05. **RQ1–RQ3 confirmatórias, família Holm
 | RQ1 | Não há diferença no número de tarefas concluídas entre celular e computador | Há diferença no número de tarefas concluídas entre celular e computador | Wilcoxon pareado sobre diferença celular − computador (`scipy.stats.wilcoxon`, `zero_method="wilcox"`). **Não** McNemar (tarefas de cada dispositivo vêm de conjuntos diferentes). Efeito: r de postos |
 | RQ2 | A média, entre participantes, da diferença do log do tempo gasto (teto 300 s) (celular − computador) é zero, isto é, a razão das médias geométricas dos tempos (celular/computador) é 1 | A média da diferença do log do tempo é diferente de zero, isto é, a razão das médias geométricas é diferente de 1 | t pareado nas diferenças das médias do log. Efeito: d_z. O exponencial da diferença média estima a razão das médias geométricas **com teto**, não a razão das médias aritméticas |
 | RQ3 | A diferença média de SUS (celular − computador) é zero | A diferença média de SUS é diferente de zero | t pareado. Efeito: d_z |
-| RQ4 | A taxa de erro por passo é a mesma entre passos com violação WCAG e passos sem violação detectada por axe e pelo checklist manual (rótulos permutáveis em relação à taxa de erro) | A taxa de erro por passo é diferente entre os dois grupos | **Nenhum teste inferencial nem p-valor.** H0/H1 são hipótese de trabalho; se P4 não resolver a favor de um teste, a RQ4 vira pergunta descritiva sem H0/H1. Teste de permutação só se a validade puder ser defendida (P4) |
+| RQ4 | Na mediana entre participantes, a diferença intraparticipante entre a taxa de erro por passo alcançado em passos com violação e sem violação detectada é zero | A mediana dessa diferença é diferente de zero | **Exploratória, fora do Holm.** Wilcoxon pareado sobre d_i (participante como unidade); sensibilidade: permutação por inversão de sinais; p-valor sem ajuste; efeito: média de d_i com IC bootstrap e r. **A validar pelo professor (P4)** |
 
 Nota: o RQ2 mede "tempo gasto com teto de 300 s", que **não** é o tempo até concluir quando a tarefa falha.
 
@@ -329,14 +329,14 @@ Cada métrica recebe o teste permitido pela escala e pelo desenho pareado.
 | RQ1 conclusão | Participante | Média e distribuição por dispositivo | **Sim (Holm)** | Wilcoxon pareado | r de postos; IC 95% da diferença da taxa de conclusão por bootstrap de participantes |
 | RQ2 tempo | Participante (média do log por dispositivo) | Mediana, IQR, boxplot; quantidade e proporção de tarefas no teto por dispositivo | **Sim (Holm)** | t pareado no log | d_z; exp(diferença média) = razão das médias geométricas (com teto), com IC. **Sensibilidade:** Wilcoxon pareado; análise só das concluídas (viés de seleção) |
 | RQ3 SUS | Participante | Média e DP por dispositivo | **Sim (Holm)** | t pareado | d_z |
-| RQ4 violações × erros | **Passo (página × dispositivo)** | Tamanho de cada grupo, contagens de erros, denominadores, taxas por passo, diferença observada, nº de indeterminados; tabela 2×2 (Fisher apenas descritivo) | **Não** | Nenhum, sem p-valor | Diferença observada entre médias das taxas (descritiva) |
+| RQ4 violações × erros | **Participante** (d_i = taxa com − sem violação, por passo alcançado; indeterminados fora) | Tamanho de cada grupo, contagens de erros, passos alcançados, taxas por grupo, distribuição de d_i; tabela 2×2 (Fisher apenas descritivo) | Exploratório, fora do Holm | Wilcoxon pareado sobre d_i; sensibilidade: permutação por inversão de sinais; p-valor sem ajuste | Média de d_i com IC 95% bootstrap; r de postos |
 | SEQ, SUS vs. 68 | — | Mediana/distribuição; média/DP com referência de 68 | Não | — | — |
 | Auditoria (Q4) | Página | Totais, mediana por página, top 10 regras WCAG violadas | Não | — | — |
 
 - **Holm** sobre RQ1–RQ3 (α = 0,05 na família de 3). Teste primário de cada RQ fixado **antes** da coleta, sem escolher teste pelo resultado de normalidade.
 - **Controle de ordem:** verificar efeito de período e de conjunto (A × B) antes de interpretar o dispositivo. Com 8 por sequência o poder dessa checagem é baixo e **não calculado**; não encontrar efeito não prova que seja nulo.
 - **Erro tipo I:** sequências desbalanceadas podem elevá-lo acima de 0,05 (simulações n = 24 e 28: 0,068 e 0,073 no cenário realista; **n = 32 não foi simulado**). Por isso a meta é o mesmo n por sequência.
-- **RQ4 — por que sem p-valor:** permutabilidade dos rótulos não defensável: (i) rótulos detectados, não randomizados; (ii) complexidade, posição no fluxo e tipo de tarefa podem coincidir com violações; (iii) passos sequenciais (erro impede o seguinte); (iv) mesma página nos dois dispositivos; (v) denominadores diferentes. Os pontos (iii)–(v) não foram simulados. Um teste exploratório só entra se grupo e professor definirem critério e estratégia (P4). Um padrão observado indica associação nos passos observados, **não** causa e **não** se estende ao resto do Portal.
+- **RQ4 — teste proposto (22/11/2026), a validar no P4:** a permutação de rótulos entre passos não é defensável (rótulos detectados, não randomizados; complexidade, posição e tipo de tarefa coincidem com violações; passos sequenciais; mesma página nos dois dispositivos; denominadores diferentes). Por isso a unidade é o **participante**: taxa por passo alcançado com × sem violação (dispositivos somados, indeterminados fora), Wilcoxon pareado sobre a diferença, permutação por inversão de sinais como sensibilidade e repetição por tarefa. Resolve as dependências (iii)–(v); **não** resolve a falta de randomização dos rótulos. p-valor exploratório, sem ajuste; poder não calculado. Um resultado indica associação nos passos observados, **não** causa e **não** se estende ao resto do Portal.
 - **Ferramentas:** Python (pandas, scipy, statsmodels) em notebook versionado; gráficos/dashboard reaproveitando a base do Lab04.
 
 ---
@@ -352,7 +352,7 @@ Cada métrica recebe o teste permitido pela escala e pelo desenho pareado.
 | Interna | Aprendizado: 2ª rodada mais rápida | Confunde dispositivo e ordem | 4 sequências; teste de efeito de período (poder baixo) |
 | Interna | Portal muda durante a coleta | Condições diferentes entre sessões | Coleta em até 2 semanas; registrar data e hash dos pacotes |
 | Interna | Moderador induz o participante | Viés de desempenho | Roteiro idêntico; moderador não ajuda nem decide; pedido de ajuda = não conclusão |
-| Interna | RQ4: rótulos não randomizados, passos dependentes, mesma página em dois dispositivos, denominadores distintos, confusão por complexidade | Associação espúria ou mascarada | Rótulo no elemento; indeterminados reportados; análise descritiva sem p-valor; sem causalidade nem generalização |
+| Interna | RQ4: rótulos não randomizados, passos dependentes, mesma página em dois dispositivos, denominadores distintos, confusão por complexidade | Associação espúria ou mascarada | Rótulo no elemento; indeterminados reportados; unidade no participante, denominador de passos alcançados, sensibilidade por tarefa; p-valor exploratório sem ajuste; sem causalidade nem generalização |
 | Construto | Tarefas sem login não representam o uso completo | Construto reduzido | Declarar o construto como "encontrar e iniciar" o serviço |
 | Construto | Nota Lighthouse ≠ acessibilidade real; "sem violação" = "não detectada" | Falsa segurança | Contagem axe e erros de pessoas como principais; Lighthouse complementar |
 | Externa | Amostra de estudantes e conhecidos, mais jovem e digital que a população de BH | Generalização limitada | Registrar perfil; não generalizar para idosos ou pessoas com deficiência; recrutar fora da turma |
@@ -414,12 +414,12 @@ Legenda: **Verificado** · **Planejado** · **Em andamento** · **Pend. professo
 | Análise estatística e notebook | Planejado | — | Após coleta |
 | Estimativa de impacto relativo (S03) | Planejado | — | Após análise |
 | Conversão em horas | Pend. grupo (P5) | — | Decidir se será feita |
-| Teste inferencial na RQ4 | Pend. grupo e professor (P4) | — | Decidir |
+| Teste inferencial na RQ4 | Proposto pelo grupo em 22/11/2026; pend. validação do professor (P4) | Proposta §7 | Validar |
 | n mínimo (P6) | Pend. grupo | — | Decidir |
 | Datas S02/S03/Final e janela de coleta (P13) | Pend. documental | — | Obter do cronograma da disciplina |
 | Repositório e GitHub Projects (P14) | Pend. documental | — | Preencher |
 | Conferência visual das páginas do PDF não vistas | Pend. (relatório §6) | RELATÓRIO | Conferir |
-| Concordância do grupo com RQ4 descritiva e categoria "indeterminado" | Pend. grupo (adotadas "por instrução", sem votação registrada) | RELATÓRIO §6 | Registrar a decisão |
+| Concordância do grupo com o teste exploratório da RQ4 (proposto em 22/11/2026) e com a categoria "indeterminado" | Pend. grupo (adotadas "por instrução", sem votação registrada) | RELATÓRIO §6 | Registrar a decisão |
 
 Nenhuma atividade de coleta, auditoria ou análise está marcada como concluída porque **não há artefato** que a comprove.
 
@@ -434,7 +434,7 @@ Preservadas integralmente da PROPOSTA §10 e do RELATÓRIO §4. **Todas estão a
 | P1 | Tratamento do tempo da tarefa abandonada antes de 300 s e da encerrada por pedido de ajuda (RQ2); definir antes da coleta | Professor | Professor | **Aberta** | Resposta documentada do professor; regra registrada no protocolo e aqui |
 | P2 | Validação da regra operacional provisória de fechamento dos blocos e da análise só de blocos completos | Professor | Professor | **Aberta** (regra provisória) | Aprovação documentada, ou regra substituta |
 | P3 | Critério formal de validade/exclusão por proporção de tarefas no teto de 300 s (nenhum adotado) | Professor | Professor | **Aberta** | Decisão documentada (adotar critério ou confirmar que não haverá) |
-| P4 | Teste inferencial na RQ4: critério de adequação dos grupos e denominadores, estatística, unidade de análise, verificação de permutabilidade | Grupo e Professor | Grupo, com validação do professor | **Aberta** (RQ4 hoje descritiva) | Especificação do teste + validação do professor, ou decisão registrada de manter só descritiva |
+| P4 | Teste inferencial na RQ4: critério de adequação dos grupos e denominadores, estatística, unidade de análise, verificação de permutabilidade | Grupo e Professor | Grupo, com validação do professor | **Aberta** (teste proposto em 22/11/2026) | Validação do professor da especificação (Wilcoxon pareado por participante; sensibilidade por permutação de sinais) e do poder |
 | P5 | Conversão do impacto em horas (secundária): métrica compatível e dados externos | Grupo | Grupo | **Aberta** | Métrica definida e dados externos com fonte (ou decisão de não converter) |
 | P6 | n mínimo abaixo de 32 e como declarar o estudo nesse caso | Grupo | Grupo | **Aberta** | n mínimo e rótulo do estudo decididos e registrados |
 | P7 | Como foram obtidos a leitura do HTML da página inicial e o tempo de resposta (HTTP 200 em 0,49 s). A frase do tempo de resposta foi **retirada** do texto | Documental | Grupo | **Encerrada em 20/11/2026** (HTML de https://servicos.pbh.gov.br, 18:57, Chrome 158.0.8127.36, via view-source Cmd+Option+U; trecho sem tokens em `docs/evidencias/capturas/`). Ressalva: o tempo de 0,49 s segue fora do texto | Registro feito: ver `docs/evidencias/S01_criterios_do_software.md` §2 |
@@ -514,7 +514,7 @@ Regras adicionais derivadas deste documento:
 
 13. Citar poder estatístico sempre com suas limitações (§6.5) e nunca como resultado.
 14. Não escrever nomes de integrantes, datas de S02/S03/final, número de acessos ao Portal ou horas economizadas sem fonte.
-15. Não descrever a regra de fechamento, o teto de 300 s ou a RQ4 descritiva como aprovados pelo professor.
+15. Não descrever a regra de fechamento, o teto de 300 s ou o teste da RQ4 como aprovados pelo professor.
 16. Não modificar a PROPOSTA e o RELATÓRIO como efeito colateral de outra tarefa; correções entram com registro na §19.
 
 ---
@@ -527,7 +527,7 @@ Regras adicionais derivadas deste documento:
 | D2 | O relatório lista `LAB05_S01_Proposta_FINAL.pdf`, `..._v2_pre_FINAL.md` e `original_S01.txt` como produzidos/preservados; nenhum está no repositório | RELATÓRIO §2 vs. repositório | Localizar e versionar, ou corrigir o relatório (com registro) |
 | D3 | O enunciado limita medições de fora a **no máximo 1 requisição por segundo**. A proposta cita robots.txt e termos de uso, mas **não menciona o limite**. O Lighthouse recarrega a página em cada execução (12–20 páginas × 3 execuções × 2 modos, ou seja, até cerca de 120 carregamentos), e o enunciado exige respeito ao robots.txt (`Disallow: /`) | ENUNCIADO §2 vs. PROPOSTA §6 | Incluir o limite explícito de 1 req/s no protocolo de auditoria e levar a P12 ao professor. Não alterar a proposta sem registro |
 | D4 | O enunciado pede "coleta piloto" na S01; a proposta a prevê, mas não há evidência de execução, e o relatório de fechamento não menciona o piloto como feito | ENUNCIADO §7, PROPOSTA §9, RELATÓRIO | Tratar como **não executado** até haver artefato |
-| D5 | O relatório declara o texto "sem contradições internas relevantes" e a decisão de RQ4 descritiva/"indeterminado" foi adotada "por instrução, não por votação registrada" | RELATÓRIO §1, §6 | Registrar a concordância do grupo |
+| D5 | O relatório declara o texto "sem contradições internas relevantes" e a decisão de RQ4 descritiva/"indeterminado" foi adotada "por instrução, não por votação registrada". Em 22/11/2026 o grupo passou a propor teste exploratório na RQ4 (categoria "indeterminado" mantida) | RELATÓRIO §1, §6 | Registrar a concordância do grupo |
 | D6 | O relatório diz que a proposta foi "finalizada com pendências externas" e "metodologicamente coerente" — é uma autoavaliação; não existe revisão independente nem do professor | RELATÓRIO §1 | Não citar como validação externa |
 | D7 | A proposta (§9) lista o S01 como incluindo "aceite do professor sobre a auditoria" e "pedido LAI enviado" — nenhuma das duas é comprovada | PROPOSTA §9 | Tratar como planejadas |
 | D8 | Autoria: cabeçalho trazia "@Someone"; trocado em 22/11/2026 por primeiros nomes e papéis (da issue #15). Nomes completos a confirmar. Atenção: o README atribui o envio do LAI (papel A) a Arthur (papel C na #15) | PROPOSTA | P14 |
@@ -555,3 +555,4 @@ Não foi encontrada divergência de conteúdo entre a proposta e o relatório qu
 | 2.1 | 20/11/2026 | Fontes do software conferidas no navegador (5 páginas); D9 registrada; evidências arquivadas |
 | 2.2 | 22/11/2026 | P10: envio do LAI informado pelo grupo em 22/11/2026; protocolo e captura pendentes. Versão observada dos pacotes registrada (S01_criterios §2.1). Correção do título da D9 na proposta |
 | 2.3 | 22/11/2026 | Issue #17: RQ4 explicitada como hipótese de trabalho sem teste; gatilhos de reclassificação das 7 categorias; cabeçalho da proposta sem "@Someone" (primeiros nomes da issue #15) |
+| 2.4 | 22/11/2026 | RQ4 passa a ter teste exploratório proposto (participante como unidade, Wilcoxon pareado, permutação de sinais como sensibilidade), a validar no P4; reverte a nota de 2.3 de "sem teste" |

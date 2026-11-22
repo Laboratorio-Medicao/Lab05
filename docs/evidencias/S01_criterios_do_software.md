@@ -16,7 +16,7 @@ Legenda de status: **V-API** = verificado por consulta a API pública em 20/11/2
 | Real | HTML da página inicial carrega `@sydle/pbh-components`, `@sydle/sydle-one-components`, `@sydle/service-desk-components`, `org: "bhdigital"` | Página inicial do Portal | **Confirmado no HTML (P7 encerrada)** | §2 |
 | Real | SYDLE ONE é plataforma de BPM, CRM e Service Desk | sydle.com/br | **Verificado (§8)** | Concluído |
 | Em operação | Portal no ar desde maio/2020, com login gov.br | PBH, 12/05/2020 | **Verificado (§8)**: lançamento em 12/05/2020. Login gov.br confirmado no próprio Portal (P7), não no trecho lido da notícia | Concluído |
-| Em operação | Versão atual / último release | — | **Lacuna**: o enunciado pede "versão atual, data do último release". Plataforma comercial: registrar versão observada dos pacotes `ui-package` (P7) e a data da observação | Roteiro §2 |
+| Em operação | Versão atual / último release | HTML da página inicial (importmap), coletado em 20/11/2026 18:57, Chrome 158.0.8127.36 | **Registrado como versão observada**: o Portal não publica número de versão nem data de release (plataforma comercial SYDLE ONE); só há hashes de build por pacote `ui-package` (§2.1). **Data do último release: não disponível publicamente**; não inventar | Concluído |
 | Alto impacto | 1.492 serviços catalogados, 1.118 solicitáveis pela internet; 92% das demandas jan–set/2026 via Portal ou app | PBH, 05/10/2026 | **Verificado (§8)** | Concluído |
 | Alto impacto | 496.956 solicitações jan–out/2023 (Portal + app + 156 + BH Resolve) | PBH, 27/12/2023 | **Verificado (§8)**. Lembrar: soma de 4 canais | Concluído |
 | Alto impacto | BH eleita cidade mais digital do Brasil pelo 3º ano | PBH, 18/08/2026 | **Verificado (§8)** | Concluído |
@@ -48,6 +48,24 @@ Objetivo: documentar **como** a leitura do HTML foi obtida, de forma compatível
 | Pacotes e versões/hash observados | `pbh-components` v:31309267200adce4ee6b7d4bc3b0b864; `sydle-one-components` v:9ef695195486dfa6dd532ed5932cc119; `service-desk-components` v:49472ac3036e940f5b83d29a5c1feff5; demais hashes no arquivo do trecho. `org: "bhdigital"`; app hash `lmegnwzk` |
 
 **Resultado da leitura (20/11/2026):** o HTML confirma o que a proposta afirma: carrega `@sydle/pbh-components`, `@sydle/sydle-one-components`, `@sydle/service-desk-components` e `org: "bhdigital"`; o texto de login cita o acesso único gov.br. Achados adicionais, sem interpretação além do que o código mostra: a página é uma aplicação de página única (conteúdo montado por JavaScript); usa o widget VLibras e Google Tag Manager; o HTML contém tokens de autorização (redigidos e **não versionados**). O `<meta name="robots" content="noindex">` é da página e **não** substitui a leitura do `robots.txt`.
+
+### 2.1 Versão observada dos pacotes (critério "versão atual / último release")
+
+Fonte: `capturas/2026-11-20_portal_html_trecho.txt`, importmap da página inicial, observação única em **20/11/2026 às 18:57** (Chrome 158.0.8127.36, arm64). O Portal identifica as versões apenas por hash de build (`ui-package/v:<hash>`); não há número de versão nem data de release no HTML.
+
+| Pacote | Hash da versão observada |
+|---|---|
+| `@sydle/pbh-components` | `31309267200adce4ee6b7d4bc3b0b864` |
+| `@sydle/sydle-one-components` | `9ef695195486dfa6dd532ed5932cc119` |
+| `@sydle/service-desk-components` | `49472ac3036e940f5b83d29a5c1feff5` |
+| `@sydle/sign-components` | `b47773baffb88ab0d82971ef63a0ffae` |
+| `@sydle/ui-design-system` | `c026dba47a9e4387d6ca4d8d172bc60c` |
+| `@sydle/ui-api` | `04f89da89339fb04f6ace40b93f3eb6e` |
+| `@sydle/ui-app-components` | `0367c7c6b53e395874055352a2da7388` |
+
+Também observados: `window.SYDLE.app.hash` = `lmegnwzk`; `ui-app.applicationHash` = `hjfrrmkx`.
+
+**Uso e limite:** a mudança de qualquer hash entre duas observações indica nova publicação do Portal (alimenta a regra "Portal muda durante a coleta", Proposta §8), mas o hash **não revela a data do release**. Reobservar os hashes no início e no fim da coleta (S02). Para o enunciado: versão atual = hashes acima, observados em 20/11/2026; data do último release = não divulgada.
 
 **P7 encerrada em 20/11/2026** (método confirmado pelo coletor). Ressalvas: captura de tela não anexada (opcional); número de aberturas da página não informado; o tempo de resposta de 0,49 s continua fora da proposta.
 
@@ -127,7 +145,7 @@ Uso das evidências:
 
 ---
 
-## 5. P10 — Pedido via LAI (rascunho, **não enviado**)
+## 5. P10 — Pedido via LAI (**enviado**; protocolo a registrar)
 
 Enviar é uma ação externa e deve ser feita pelo grupo, com o integrante responsável. Rascunho:
 
@@ -147,9 +165,9 @@ Observações: (i) os serviços listados são as **candidatas** da proposta, ain
 | Campo | Valor |
 |---|---|
 | Canal | _a preencher (canal de transparência da PBH)_ |
-| Data do envio | _a preencher_ |
-| Protocolo | _a preencher_ |
-| Prazo legal de resposta | 20 dias, prorrogáveis por mais 10 (Lei 12.527/2011, art. 11) — conferir antes de citar |
+| Data do envio | **22/11/2026** (informada pelo grupo; hora e canal exato a registrar) |
+| Protocolo | _**a preencher: número + captura em `docs/evidencias/capturas/` (sem CPF/senha/token)**_ |
+| Prazo legal de resposta | 20 dias, prorrogáveis por mais 10 (Lei 12.527/2011, art. 11) — conferir antes de citar. Referência a partir de 22/11/2026: ~12/12/2026 (até ~22/12/2026 se prorrogado); confirmar a contagem e o prazo que o sistema informar |
 | Resposta (data e arquivo) | _a preencher_ |
 
 **Encerra P10 quando** o protocolo de envio estiver arquivado e a resposta (ou o vencimento do prazo) registrada.
@@ -170,8 +188,8 @@ Observações: (i) os serviços listados são as **candidatas** da proposta, ain
 | P7 | **Encerrada** (HTML coletado, trecho arquivado sem tokens, método confirmado) | Marcos |
 | P8 | **Encerrada** — Termos de Uso lidos (§4.2); sem menção a automação/ferramentas; Política de Privacidade não lida | Grupo |
 | P9 | **Encerrada** — conferido no IBGE Cidades pelo navegador | Grupo |
-| P10 | Aberta — rascunho §5 pronto, não enviado | Grupo (A) |
-| Fontes PBH e SYDLE (6 afirmações) | Não verificadas de forma independente | Grupo, no navegador |
+| P10 | **Enviado** (confirmado pelo grupo). Falta registrar data e protocolo na §5 e arquivar o comprovante; resposta/vencimento do prazo encerram a P10 depois | Grupo (A) |
+| Fontes PBH e SYDLE | **Verificadas** (5 fontes conferidas no navegador em 20/11/2026, §8); login gov.br pelo HTML (P7) | Grupo |
 
 ---
 
@@ -189,7 +207,7 @@ Observações: (i) os serviços listados são as **candidatas** da proposta, ain
 
 **Observações para a proposta (sem alterá-la aqui):**
 1. **Números de datas diferentes:** 05/10/2026 → 1.492 catalogados / 1.118 solicitáveis; 18/08/2026 → 1.489 / 903; 27/12/2023 → 1.387 / 936. Citar sempre com a data da fonte; não misturar.
-2. **Título citado de forma diferente:** a lista de fontes da proposta cita "amplia em mais de 500 serviços digitais"; o título real é "amplia em **mais de 500%** serviços digitais". Provável erro de digitação (faltou o "%"); corrigir com registro.
+2. **Título citado de forma diferente:** a lista de fontes da proposta cita "amplia em mais de 500 serviços digitais"; o título real é "amplia em **mais de 500%** serviços digitais". Erro de digitação (faltou o "%"). **Corrigido na proposta em 22/11/2026.**
 3. **Natureza das fontes:** todos os números de impacto vêm da **própria PBH** (autodeclarados), e a eleição é um ranking de uma empresa privada (Melhores.com), de metodologia não verificada. Não há fonte independente para o volume de uso.
 4. As notícias foram lidas na parte visível após rolagem curta; trechos não exibidos não foram lidos.
 5. A SYDLE foi aberta sem aceitar cookies; o banner de cookies não foi respondido.

@@ -26,7 +26,7 @@ Fontes consultadas (links relativos):
 | Software estudado | Portal de Serviços da Prefeitura de Belo Horizonte (PBH), construído sobre a plataforma SYDLE ONE | PROPOSTA §1 |
 | Estudo | Experimento intrassujeitos celular × computador (32 participantes analisáveis planejados) + auditoria WCAG complementar | PROPOSTA |
 | Integrantes | **Não confirmados.** O cabeçalho da proposta traz apenas "@Someone"; papéis A, B e C existem, mas sem nomes. Conferência da autoria é a pendência P14 | PROPOSTA, P14 |
-| Sprint atual | **S01 (Proposta) fechada com pendências externas** em 17/11/2026. Piloto, aceite do professor e pedido LAI **não têm evidência de execução** (ver §13) | RELATÓRIO |
+| Sprint atual | **S01 (Proposta) fechada com pendências externas** em 17/11/2026. Piloto e aceite do professor **não têm evidência de execução**; pedido LAI informado como enviado em 22/11/2026, sem protocolo arquivado (ver §13) | RELATÓRIO |
 | Link repositório / GitHub Projects | A preencher (P14) | PROPOSTA §9 |
 
 ---
@@ -404,7 +404,7 @@ Legenda: **Verificado** · **Planejado** · **Em andamento** · **Pend. professo
 | Validação da regra de fechamento, tempo de abandono, teto (P1, P2, P3) | Pend. professor | Nenhuma | Levar ao professor |
 | Ética / comitê (P11) | Pend. professor | Nenhuma | Consultar professor/instituição |
 | Termos de uso (P8) | Pend. documental | Nenhuma | Ler e registrar |
-| Pedido via LAI (P10) | Planejado (previsto para S01); sem evidência de envio | Nenhuma | Enviar e arquivar protocolo |
+| Pedido via LAI (P10) | Enviado em 22/11/2026 (informado pelo grupo) | Nenhuma ainda (sem protocolo/captura) | Arquivar protocolo e captura |
 | Tarefas definitivas e conjuntos A/B | Planejado (candidatas) | PROPOSTA §4 | Definir e validar no piloto |
 | Planilha de observação, roteiro final, termo de consentimento, formulários SUS/SEQ | Planejado; **inexistentes no repositório** | Nenhuma | Produzir (integrante B) |
 | Script `power_analysis.py` e `results_v3_2.json` | Citados; **ausentes do repositório** | Nenhuma (D1) | Versionar no repositório |
@@ -440,7 +440,7 @@ Preservadas integralmente da PROPOSTA §10 e do RELATÓRIO §4. **Todas estão a
 | P7 | Como foram obtidos a leitura do HTML da página inicial e o tempo de resposta (HTTP 200 em 0,49 s). A frase do tempo de resposta foi **retirada** do texto | Documental | Grupo | **Encerrada em 20/11/2026** (HTML de https://servicos.pbh.gov.br, 18:57, Chrome 158.0.8127.36, via view-source Cmd+Option+U; trecho sem tokens em `docs/evidencias/capturas/`). Ressalva: o tempo de 0,49 s segue fora do texto | Registro feito: ver `docs/evidencias/S01_criterios_do_software.md` §2 |
 | P8 | Leitura dos termos de uso do Portal e registro | Documental | Grupo | **Encerrada em 20/11/2026** (Termos de Uso em `https://servicos.pbh.gov.br/termos-de-uso+5df3bbb5ad0ab2006ceca0ad`, menu "O Portal"; sem menção a acesso automatizado, robôs ou ferramentas de auditoria; Política de Privacidade não lida; leitura feita por assistente no Chrome do coletor, com autorização, a informar ao professor na P12; reler antes da S02) | Registro em `docs/evidencias/S01_criterios_do_software.md` §4.2 |
 | P9 | Conferência no navegador do nº de habitantes de BH no IBGE Cidades | Documental | Grupo | **Encerrada em 20/11/2026** (IBGE Cidades mostra 2.315.560 pessoas, Censo 2022; estimativa 2026: 2.415.451; captura em `docs/evidencias/capturas/`; conferência feita por assistente no Chrome do coletor, com autorização) | Registro em `docs/evidencias/S01_criterios_do_software.md` §3 |
-| P10 | Envio do pedido via LAI ao canal de transparência da PBH e resposta | Documental | Grupo | **Aberta** | Protocolo do envio e resposta arquivados |
+| P10 | Envio do pedido via LAI ao canal de transparência da PBH e resposta | Documental | Grupo | **Enviada em 22/11/2026; protocolo a arquivar** | Protocolo do envio e resposta arquivados |
 | P11 | Necessidade de apreciação por comitê de ética | Professor | Professor ou instituição | **Aberta** | Decisão documentada |
 | P12 | Validação do uso de axe DevTools e Lighthouse (manuais) frente ao robots.txt e à ética do enunciado | Professor | Professor | **Aberta** | Aceite/recusa documentada; se recusa, auditoria removida |
 | P13 | Datas reais de S02, S03 e entrega final; janela de coleta | Documental | Grupo, conforme cronograma da disciplina | **Aberta** | Datas copiadas do cronograma oficial e registradas |
@@ -531,7 +531,7 @@ Regras adicionais derivadas deste documento:
 | D6 | O relatório diz que a proposta foi "finalizada com pendências externas" e "metodologicamente coerente" — é uma autoavaliação; não existe revisão independente nem do professor | RELATÓRIO §1 | Não citar como validação externa |
 | D7 | A proposta (§9) lista o S01 como incluindo "aceite do professor sobre a auditoria" e "pedido LAI enviado" — nenhuma das duas é comprovada | PROPOSTA §9 | Tratar como planejadas |
 | D8 | Autoria: cabeçalho traz apenas "@Someone"; enunciado exige papéis A/B/C (sugestão) sem nomes | PROPOSTA | P14 |
-| D9 | A lista de fontes da proposta cita o título "amplia em mais de 500 serviços digitais"; o título real da notícia de 05/10/2026 é "... em mais de 500% serviços digitais". Além disso, os números de serviços variam por data (05/10/2026: 1.492/1.118; 18/08/2026: 1.489/903; 27/12/2023: 1.387/936) | PROPOSTA vs. fonte conferida em 20/11/2026 | Corrigir o título na proposta com registro; citar sempre com a data da fonte |
+| D9 | A lista de fontes da proposta cita o título "amplia em mais de 500 serviços digitais"; o título real da notícia de 05/10/2026 é "... em mais de 500% serviços digitais". Além disso, os números de serviços variam por data (05/10/2026: 1.492/1.118; 18/08/2026: 1.489/903; 27/12/2023: 1.387/936) | PROPOSTA vs. fonte conferida em 20/11/2026 | **Título corrigido na proposta em 22/11/2026**; citar sempre com a data da fonte |
 
 Não foi encontrada divergência de conteúdo entre a proposta e o relatório quanto a RQs, pendências, tamanhos de amostra ou valores de poder (conferidos nesta consolidação).
 
@@ -553,3 +553,4 @@ Não foi encontrada divergência de conteúdo entre a proposta e o relatório qu
 | 1.9 | 20/11/2026 | P10: criado `docs/evidencias/P10_pedido_LAI_instrucoes.md` para o envio por Arthur. P10 segue aberta até haver protocolo |
 | 2.0 | 20/11/2026 | Criado `README.md` com tarefas e responsáveis (P10: Arthur) |
 | 2.1 | 20/11/2026 | Fontes do software conferidas no navegador (5 páginas); D9 registrada; evidências arquivadas |
+| 2.2 | 22/11/2026 | P10: envio do LAI informado pelo grupo em 22/11/2026; protocolo e captura pendentes. Versão observada dos pacotes registrada (S01_criterios §2.1). Correção do título da D9 na proposta |

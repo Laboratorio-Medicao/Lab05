@@ -276,7 +276,7 @@ Tipos: **Professor** (validação externa), **Grupo** (decisão dos integrantes)
 Acessadas em 16/11/2026.
 
 - Portal de Serviços da PBH e seu robots.txt
-- PBH: em uma década, PBH amplia em mais de 500 serviços digitais (05/10/2026)
+- PBH: em uma década, PBH amplia em mais de 500% serviços digitais (05/10/2026) [título conforme a notícia; corrigido em 22/11/2026, ver FONTE_DA_VERDADE D9]
 - PBH: Belo Horizonte é eleita cidade mais digital do Brasil pelo terceiro ano (18/08/2026)
 - PBH: área de modernização destaca principais resultados (27/12/2023)
 - PBH: Prefeitura lança novo Portal de Serviços (12/05/2020)

@@ -164,9 +164,9 @@ Observações: (i) os serviços listados são as **candidatas** da proposta, ain
 
 | Campo | Valor |
 |---|---|
-| Canal | _a preencher (canal de transparência da PBH)_ |
+| Canal | _a registrar (canal de transparência / LAI da PBH)_ |
 | Data do envio | **22/11/2026** (informada pelo grupo; hora e canal exato a registrar) |
-| Protocolo | _**a preencher: número + captura em `docs/evidencias/capturas/` (sem CPF/senha/token)**_ |
+| Protocolo | _a anexar depois: número + captura em `docs/evidencias/capturas/` (sem CPF/senha/token). Comprovante em posse do grupo_ |
 | Prazo legal de resposta | 20 dias, prorrogáveis por mais 10 (Lei 12.527/2011, art. 11) — conferir antes de citar. Referência a partir de 22/11/2026: ~12/12/2026 (até ~22/12/2026 se prorrogado); confirmar a contagem e o prazo que o sistema informar |
 | Resposta (data e arquivo) | _a preencher_ |
 
@@ -188,7 +188,7 @@ Observações: (i) os serviços listados são as **candidatas** da proposta, ain
 | P7 | **Encerrada** (HTML coletado, trecho arquivado sem tokens, método confirmado) | Marcos |
 | P8 | **Encerrada** — Termos de Uso lidos (§4.2); sem menção a automação/ferramentas; Política de Privacidade não lida | Grupo |
 | P9 | **Encerrada** — conferido no IBGE Cidades pelo navegador | Grupo |
-| P10 | **Enviado** (confirmado pelo grupo). Falta registrar data e protocolo na §5 e arquivar o comprovante; resposta/vencimento do prazo encerram a P10 depois | Grupo (A) |
+| P10 | **Enviado em 22/11/2026** (informado pelo grupo). Protocolo/comprovante a anexar depois; resposta ou vencimento do prazo registram o encerramento final | Grupo (A) |
 | Fontes PBH e SYDLE | **Verificadas** (5 fontes conferidas no navegador em 20/11/2026, §8); login gov.br pelo HTML (P7) | Grupo |
 
 ---

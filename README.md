@@ -31,7 +31,7 @@ Issue: [#16 — Critérios do software: real, em operação e alto impacto](http
 | P7 — HTML da página inicial | Registrar como o HTML foi obtido | Marcos | **Encerrada** |
 | P8 — Termos de uso | Ler e registrar os termos do Portal | Marcos | **Encerrada** (Política de Privacidade ainda não lida) |
 | P9 — Habitantes de BH (IBGE) | Conferir o número no IBGE Cidades | Marcos | **Encerrada** (2.315.560, Censo 2022) |
-| **P10 — Pedido via LAI** | **Enviar o pedido à PBH, guardar o protocolo e registrar** | **Arthur** | **Enviada em 22/11/2026 — falta registrar o protocolo (número + captura)** |
+| **P10 — Pedido via LAI** | **Enviar o pedido à PBH, guardar o protocolo e registrar** | **Arthur** | **Enviada em 22/11/2026** (protocolo a anexar depois) |
 | Fontes das notícias da PBH e da SYDLE | Abrir cada fonte, anotar URL, data de acesso e o trecho com o número | Marcos | **Encerrada** (5 fontes conferidas em 20/11/2026) |
 
 ### Para o Arthur

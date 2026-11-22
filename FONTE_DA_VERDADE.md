@@ -25,7 +25,7 @@ Fontes consultadas (links relativos):
 | Objetivo acadêmico | Planejar, executar e analisar um experimento sobre software real, em operação e de alto impacto; responder "o que o estudo mostrou?" e "o que isso significa para quem usa esse software?" | ENUNCIADO |
 | Software estudado | Portal de Serviços da Prefeitura de Belo Horizonte (PBH), construído sobre a plataforma SYDLE ONE | PROPOSTA §1 |
 | Estudo | Experimento intrassujeitos celular × computador (32 participantes analisáveis planejados) + auditoria WCAG complementar | PROPOSTA |
-| Integrantes | **Não confirmados.** O cabeçalho da proposta traz apenas "@Someone"; papéis A, B e C existem, mas sem nomes. Conferência da autoria é a pendência P14 | PROPOSTA, P14 |
+| Integrantes | **Não confirmados.** Em 22/11/2026 o cabeçalho passou a trazer só os primeiros nomes (Marcos A, Guilherme B, Arthur C), conforme a issue #15; nomes completos e conferência da autoria seguem na pendência P14 | PROPOSTA, P14 |
 | Sprint atual | **S01 (Proposta) fechada com pendências externas** em 17/11/2026. Piloto e aceite do professor **não têm evidência de execução**; pedido LAI informado como enviado em 22/11/2026, sem protocolo arquivado (ver §13) | RELATÓRIO |
 | Link repositório / GitHub Projects | A preencher (P14) | PROPOSTA §9 |
 
@@ -193,7 +193,7 @@ Todos os testes bicaudais, α = 0,05. **RQ1–RQ3 confirmatórias, família Holm
 | RQ1 | Não há diferença no número de tarefas concluídas entre celular e computador | Há diferença no número de tarefas concluídas entre celular e computador | Wilcoxon pareado sobre diferença celular − computador (`scipy.stats.wilcoxon`, `zero_method="wilcox"`). **Não** McNemar (tarefas de cada dispositivo vêm de conjuntos diferentes). Efeito: r de postos |
 | RQ2 | A média, entre participantes, da diferença do log do tempo gasto (teto 300 s) (celular − computador) é zero, isto é, a razão das médias geométricas dos tempos (celular/computador) é 1 | A média da diferença do log do tempo é diferente de zero, isto é, a razão das médias geométricas é diferente de 1 | t pareado nas diferenças das médias do log. Efeito: d_z. O exponencial da diferença média estima a razão das médias geométricas **com teto**, não a razão das médias aritméticas |
 | RQ3 | A diferença média de SUS (celular − computador) é zero | A diferença média de SUS é diferente de zero | t pareado. Efeito: d_z |
-| RQ4 | A taxa de erro por passo é a mesma entre passos com violação WCAG e passos sem violação detectada por axe e pelo checklist manual (rótulos permutáveis em relação à taxa de erro) | A taxa de erro por passo é diferente entre os dois grupos | **Nenhum teste inferencial nem p-valor.** Teste de permutação só se a validade puder ser defendida (P4) |
+| RQ4 | A taxa de erro por passo é a mesma entre passos com violação WCAG e passos sem violação detectada por axe e pelo checklist manual (rótulos permutáveis em relação à taxa de erro) | A taxa de erro por passo é diferente entre os dois grupos | **Nenhum teste inferencial nem p-valor.** H0/H1 são hipótese de trabalho; se P4 não resolver a favor de um teste, a RQ4 vira pergunta descritiva sem H0/H1. Teste de permutação só se a validade puder ser defendida (P4) |
 
 Nota: o RQ2 mede "tempo gasto com teto de 300 s", que **não** é o tempo até concluir quando a tarefa falha.
 
@@ -270,7 +270,7 @@ Em S1 o d_z efetivo de RQ2/RQ3 cai para 0,557; em S2, para 0,469.
 | Controle | Laboratório (in vitro) sobre software real | Ambiente, rede, roteiro e tarefas fixados; software não controlado e pode mudar |
 | Nível de evidência | Experimento único com amostra por conveniência | Controle interno alto, sem amostragem aleatória de BH: evidência causal local, generalização limitada |
 
-**Classificação sujeita a revisão na S03** conforme a execução real (ex.: coleta desbalanceada ou com perdas relevantes → passa a quase-experimento).
+**Classificação sujeita a revisão na S03** conforme a execução real. Gatilhos: sequências incompletas com análise só dos k blocos completos (k < 8; P2/P6), perdas que desbalanceiem as sequências, ou mudança do Portal que altere as tarefas → passa a quase-experimento.
 
 ---
 
@@ -444,7 +444,7 @@ Preservadas integralmente da PROPOSTA §10 e do RELATÓRIO §4. **Todas estão a
 | P11 | Necessidade de apreciação por comitê de ética | Professor | Professor ou instituição | **Aberta** | Decisão documentada |
 | P12 | Validação do uso de axe DevTools e Lighthouse (manuais) frente ao robots.txt e à ética do enunciado | Professor | Professor | **Aberta** | Aceite/recusa documentada; se recusa, auditoria removida |
 | P13 | Datas reais de S02, S03 e entrega final; janela de coleta | Documental | Grupo, conforme cronograma da disciplina | **Aberta** | Datas copiadas do cronograma oficial e registradas |
-| P14 | Link do repositório e do GitHub Projects; conferência da autoria no cabeçalho | Documental | Grupo | **Aberta** | Links preenchidos; nomes dos integrantes confirmados |
+| P14 | Link do repositório e do GitHub Projects; conferência da autoria no cabeçalho | Documental | Grupo | **Aberta** (cabeçalho com primeiros nomes) | Links preenchidos; nomes completos confirmados |
 
 **Não renumerar, agrupar nem remover.** Novas pendências devem receber P15 em diante.
 
@@ -530,7 +530,7 @@ Regras adicionais derivadas deste documento:
 | D5 | O relatório declara o texto "sem contradições internas relevantes" e a decisão de RQ4 descritiva/"indeterminado" foi adotada "por instrução, não por votação registrada" | RELATÓRIO §1, §6 | Registrar a concordância do grupo |
 | D6 | O relatório diz que a proposta foi "finalizada com pendências externas" e "metodologicamente coerente" — é uma autoavaliação; não existe revisão independente nem do professor | RELATÓRIO §1 | Não citar como validação externa |
 | D7 | A proposta (§9) lista o S01 como incluindo "aceite do professor sobre a auditoria" e "pedido LAI enviado" — nenhuma das duas é comprovada | PROPOSTA §9 | Tratar como planejadas |
-| D8 | Autoria: cabeçalho traz apenas "@Someone"; enunciado exige papéis A/B/C (sugestão) sem nomes | PROPOSTA | P14 |
+| D8 | Autoria: cabeçalho trazia "@Someone"; trocado em 22/11/2026 por primeiros nomes e papéis (da issue #15). Nomes completos a confirmar. Atenção: o README atribui o envio do LAI (papel A) a Arthur (papel C na #15) | PROPOSTA | P14 |
 | D9 | A lista de fontes da proposta cita o título "amplia em mais de 500 serviços digitais"; o título real da notícia de 05/10/2026 é "... em mais de 500% serviços digitais". Além disso, os números de serviços variam por data (05/10/2026: 1.492/1.118; 18/08/2026: 1.489/903; 27/12/2023: 1.387/936) | PROPOSTA vs. fonte conferida em 20/11/2026 | **Título corrigido na proposta em 22/11/2026**; citar sempre com a data da fonte |
 
 Não foi encontrada divergência de conteúdo entre a proposta e o relatório quanto a RQs, pendências, tamanhos de amostra ou valores de poder (conferidos nesta consolidação).
@@ -554,3 +554,4 @@ Não foi encontrada divergência de conteúdo entre a proposta e o relatório qu
 | 2.0 | 20/11/2026 | Criado `README.md` com tarefas e responsáveis (P10: Arthur) |
 | 2.1 | 20/11/2026 | Fontes do software conferidas no navegador (5 páginas); D9 registrada; evidências arquivadas |
 | 2.2 | 22/11/2026 | P10: envio do LAI informado pelo grupo em 22/11/2026; protocolo e captura pendentes. Versão observada dos pacotes registrada (S01_criterios §2.1). Correção do título da D9 na proposta |
+| 2.3 | 22/11/2026 | Issue #17: RQ4 explicitada como hipótese de trabalho sem teste; gatilhos de reclassificação das 7 categorias; cabeçalho da proposta sem "@Someone" (primeiros nomes da issue #15) |

@@ -1,6 +1,6 @@
 ---
 title: "LAB05 S01 — Proposta: Usabilidade e acessibilidade do Portal de Serviços da PBH"
-subtitle: "Versão revisada em 17/11/2026 (original de 16/11/2026) · @Someone"
+subtitle: "Versão revisada em 17/11/2026 (original de 16/11/2026) · Marcos (A), Guilherme (B), Arthur (C) · nomes completos a confirmar (P14)"
 ---
 
 Propomos um experimento intrassujeitos com 32 participantes analisáveis, comparando celular × computador no Portal de Serviços da PBH, junto com uma auditoria de acessibilidade WCAG complementar. Os participantes navegam manualmente pelo Portal. A auditoria usa as ferramentas axe DevTools e Lighthouse, acionadas manualmente por um integrante em páginas selecionadas. Não há crawler nem varredura automatizada em larga escala, porque o robots.txt do Portal contém `Disallow: /`.
@@ -83,7 +83,7 @@ São quatro questões de pesquisa, cada uma com um único par H0/H1 (bicaudais, 
 
 Fora das RQs, sem hipótese: a descrição das violações WCAG e do desempenho das páginas das tarefas (Q4 do GQM), o SEQ e o SUS contra a referência de 68 pontos, todos apenas descritivos.
 
-A RQ4 é exploratória: seu resultado não é apresentado como evidência confirmatória nem como evidência causal.
+A RQ4 é exploratória: seu resultado não é apresentado como evidência confirmatória nem como evidência causal. O par H0/H1 da RQ4 é uma **hipótese de trabalho** que orienta a descrição das taxas de erro por grupo de passos; **não há teste formal nem p-valor** nesta versão (a decisão sobre um teste de permutação depende de P4). Se P4 não for resolvida a favor de um teste, a RQ4 passa a ser redigida como pergunta descritiva, sem H0/H1.
 
 Variáveis:
 
@@ -138,7 +138,7 @@ Tarefas não concluídas: a regra será definida antes da coleta e aplicada igua
 | Controle | Laboratório (in vitro) sobre software real | Ambiente, rede, roteiro e tarefas são fixados pelo grupo; o software não é controlado e pode mudar durante a coleta. |
 | Nível de evidência | Experimento único com amostra por conveniência | Controle interno alto (contrabalanceamento, unidade de análise por participante), mas sem amostragem aleatória da população de BH: evidência causal local, generalização limitada. |
 
-A classificação será revisada na S03 conforme o que de fato for executado (por exemplo, se a coleta terminar desbalanceada ou com perdas relevantes, o estudo passa a quase-experimento).
+A classificação será revisada na S03 conforme o que de fato for executado. Gatilhos de reclassificação: (i) coleta que termine com sequências incompletas e análise só dos k blocos completos com k < 8 (seção 4, regra de fechamento, P2 e P6); (ii) perdas relevantes ou sessões inválidas que desbalanceiem as sequências; (iii) mudança do Portal durante a coleta que altere as tarefas. Nesses casos o procedimento passa de experimento controlado para quase-experimento, e a justificativa de Procedimentos e de Nível de evidência é reescrita.
 
 # 6. Coleta, instrumentação e ética
 

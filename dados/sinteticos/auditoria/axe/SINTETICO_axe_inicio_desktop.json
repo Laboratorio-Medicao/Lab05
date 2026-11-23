@@ -1,0 +1,42 @@
+{
+ "origem": "sintetico",
+ "aviso": "DADO SINTÉTICO",
+ "testEngine": {
+  "name": "axe-core",
+  "version": "0.0.0-sintetico"
+ },
+ "url": "https://sintetico.invalid/inicio",
+ "violations": [
+  {
+   "id": "link-name",
+   "impact": "serious",
+   "tags": [
+    "cat.name-role-value",
+    "wcag2a",
+    "wcag244"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-3"
+     ]
+    }
+   ]
+  }
+ ]
+}

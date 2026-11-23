@@ -1,0 +1,22 @@
+{
+ "origem": "sintetico",
+ "aviso": "DADO SINTÉTICO",
+ "lighthouseVersion": "0.0.0-sintetico",
+ "requestedUrl": "https://sintetico.invalid/inicio",
+ "configSettings": {
+  "formFactor": "mobile"
+ },
+ "categories": {
+  "accessibility": {
+   "score": 0.79
+  }
+ },
+ "audits": {
+  "largest-contentful-paint": {
+   "numericValue": 2800.5073272141076
+  },
+  "cumulative-layout-shift": {
+   "numericValue": 0.09166221879960118
+  }
+ }
+}

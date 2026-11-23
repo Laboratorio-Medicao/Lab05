@@ -1,0 +1,4 @@
+.claude/worktrees/
+__pycache__/
+.pytest_cache/
+dados/sinteticos/saida/

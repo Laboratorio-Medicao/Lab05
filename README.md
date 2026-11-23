@@ -1,7 +1,7 @@
 # LAB05 — Usabilidade e acessibilidade do Portal de Serviços da PBH
 
 Laboratório de Experimentação de Software · Engenharia de Software · PUC Minas (Campus Lourdes, noite, 2026/2) · Professor: Danilo Maia
-Atualizado em **20/11/2026** · Sprint atual: **S01 (Proposta)**
+Atualizado em **23/11/2026** · Sprint atual: **S01 (Proposta)**
 
 > **Leia primeiro:** [FONTE_DA_VERDADE.md](./FONTE_DA_VERDADE.md). Ela é a referência central do projeto: o que o professor exige, o que foi decidido, o que já foi feito e o que falta.
 
@@ -74,6 +74,18 @@ Nada disso foi respondido. Todas seguem **abertas** e não devem ser tratadas co
 Lab05/
 ├── README.md                 ← você está aqui
 ├── FONTE_DA_VERDADE.md       ← referência central (leia primeiro)
+├── requirements.txt          ← versões fixadas (numpy, scipy, pandas, matplotlib, pytest)
+├── dados/
+│   ├── dicionario_de_dados.md ← PROPOSTA, a confirmar com o papel B
+│   └── sinteticos/           ← dados FALSOS (SINTETICO_*), só para testar o código
+├── scripts/
+│   ├── esquema.py            ← dicionário em código (colunas, domínios, sequências)
+│   ├── validar_dados.py      ← validador dos dados
+│   ├── analise.py            ← RQ1–RQ4, Holm, checagem de ordem, auditoria Q4
+│   └── gerar_dados_sinteticos.py
+├── notebooks/
+│   └── analise_S02.py        ← notebook em formato percent (# %%)
+├── tests/                    ← pytest
 └── docs/
     ├── enunciado/            ← enunciado oficial do professor (PDF)
     ├── proposta/             ← proposta metodológica S01 (versão final)
@@ -84,13 +96,33 @@ Lab05/
         └── capturas/                      ← capturas e trechos arquivados
 ```
 
-Pastas previstas para quando houver conteúdo: `scripts/`, `dados/`, `instrumentos/`, `resultados/`.
+Pastas previstas para quando houver conteúdo: `dados/brutos/` (coleta real, imutável), `instrumentos/`, `resultados/` (só saídas de dados reais).
+
+## Como rodar a análise (issue #25)
+
+> **Hoje só existem dados sintéticos. Nada do que estes comandos produzem é resultado.**
+
+```bash
+pip install -r requirements.txt
+python scripts/gerar_dados_sinteticos.py                 # (re)gera dados/sinteticos/ (semente 20261117)
+python scripts/validar_dados.py dados/sinteticos         # relatório de validação; saída 1 se houver erro
+python scripts/analise.py dados/sinteticos --saida <pasta temporária>
+python notebooks/analise_S02.py                          # ou abra no VS Code como notebook (células # %%)
+python -m pytest
+```
+
+- Opções da análise: `--p1 {teto_300,tempo_registrado,excluir_tarefa}` e `--p2 {p2_provisoria,todos_analisaveis,blocos_completos_por_id}` (as primárias estão marcadas **PENDENTE** até o professor decidir P1 e P2; as demais saem como sensibilidade) e `--sem-teste-rq4` (se o professor recusar o teste da RQ4, P4).
+- A análise recusa misturar dado real e sintético e nunca grava saída sintética em `resultados/`. Sem `--saida`, sintético vai para `dados/sinteticos/saida/`.
+- Com dados reais: `dados/brutos/` + `dados/CHECKSUMS.sha256`, validar, conferir por segunda pessoa (FONTE_DA_VERDADE §2.3) e só então rodar `python scripts/analise.py dados/brutos` (saída em `resultados/`).
 
 ## Lacunas conhecidas (para ninguém se surpreender)
 
 - O script de poder estatístico (`power_analysis.py`) e o `results_v3_2.json`, citados na proposta, **não estão no repositório**.
 - O piloto (3 participantes), o termo de consentimento e a planilha de observação **ainda não existem**.
 - Os nomes dos integrantes e os papéis A/B/C **não estão confirmados** na documentação.
+- O dicionário de dados é **proposta do papel C** e ainda não foi confirmado com o papel B; o formato do export do axe DevTools precisa ser conferido com um arquivo real.
+- A análise (issue #25) foi rodada **só com dados sintéticos**: não há resultado. P1, P2 e P4 seguem pendentes com o professor.
+- Não há `.gitignore`: `__pycache__/`, `.pytest_cache/` e `dados/sinteticos/saida/` não devem ser commitados.
 
 ## Próximas etapas
 

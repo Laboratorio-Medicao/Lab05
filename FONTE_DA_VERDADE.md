@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 2.1 · criada em 20/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 2.5 · criada em 20/11/2026, atualizada em 23/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa sempre **exigido** (enunciado), **decidido** (professor), **planejado** (proposta), **executado** (evidência no repositório) e **resultado** (dado observado). Hoje existe apenas planejamento. **Não existe nenhum resultado empírico.**
@@ -246,7 +246,42 @@ Estimado por **simulação conjunta com Holm de 3** sobre RQ1–RQ3 (script `pow
 
 Em S1 o d_z efetivo de RQ2/RQ3 cai para 0,557; em S2, para 0,469.
 
-**Limitações (obrigatório repetir ao citar poder):** (i) são estimativas condicionadas a premissas, não garantias; (ii) poder da RQ1 < 0,80 mesmo em S1; (iii) a simulação da RQ2 não representa a massa de tarefas no teto, as tarefas não concluídas nem a relação falha–tempo; (iv) a RQ4 não tem poder calculado como confirmatória; (v) parâmetros de S1 e S2 foram escolhidos pelo grupo sem dados de apoio; (vi) **o script e o JSON não estão no repositório** (D1, §18).
+#### 6.5.1 Reconstrução v4 (issue #20, 23/11/2026) — **Executado, não Verificado**
+
+Como o v3.2 não está no repositório (D1), foi escrita uma **reconstrução compatível**: [`scripts/power_analysis.py`](./scripts/power_analysis.py) **v4.0**, saída em [`resultados/results_v4.json`](./resultados/results_v4.json), testes em [`tests/test_power_analysis.py`](./tests/test_power_analysis.py). É um **modelo novo**, escrito a partir da descrição da proposta; **não é o v3.2 reproduzido** e não confirma nem refuta os valores citados. Rodada única com R = 20.000 por célula, semente 20261117 (`SeedSequence(20261117).spawn`, uma semente filha por célula), Python 3.12.10, numpy 2.5.3, scipy 1.16.3, em 23/11/2026 (~39 s).
+
+Modelo (detalhes no cabeçalho do script e no JSON): 4 sequências × 8; 3 tarefas por conjunto; traço latente do participante comum às RQs; RQ1 por tarefa Bernoulli (logit = intercepto do dispositivo + u_i), interceptos por Gauss-Hermite para manter 90%/75% marginais em cada cenário, Wilcoxon pareado (`zero_method="wilcox"`, aproximação normal; p = 1 se todas as diferenças forem 0); RQ2/RQ3 como diferença pareada padronizada com d_z nominal 0,6 e t pareado; Holm de 3 calculado à mão. S1/S2 somam diferença de dificuldade A/B, efeito de período, variação entre tarefas e ruído de sequência (efeito aleatório por sequência, que **não** se cancela na média).
+
+**Regra de calibração (fixada antes da rodada, sem reajuste depois):** (a) DP de u_i (logit) tal que o poder da RQ1 no S0 com Holm seja 0,778 → **DP_u = 0,9964** (calibração com 50.000 réplicas, semente própria); (b) variância extra de S1/S2 = (0,6/d_z alvo)² − 1, dividida em **25% conjunto, 25% tarefa, 25% período, 25% sequência** → S1: δ_conjunto = 0,200, π_período = 0,200, σ_tarefa = 0,245, σ_sequência = 0,200; S2: 0,399 / 0,399 / 0,489 / 0,399 (em DP da diferença; na RQ1, as mesmas magnitudes em logit); (c) correlação RQ2–RQ3 = 0,5, fixada. Critério de compatibilidade com o citado: |Δ| ≤ 3·EP_MC, EP_MC = √(p(1−p)/R).
+
+**Citado (v3.2) × reproduzido (v4), poder com Holm, n = 32** (Δ = v4 − citado):
+
+| Cenário | RQ | Citado | v4 | Δ | Δ/EP_MC | Compatível (≤ 3 EP)? |
+|---|---|---|---|---|---|---|
+| S0 | RQ1 | 0,778 | 0,779 | +0,001 | +0,4 | Sim (é o alvo da calibração (a)) |
+| S0 | RQ2 | 0,883 | 0,871 | −0,012 | −5,0 | **Não** |
+| S0 | RQ3 | 0,875 | 0,870 | −0,005 | −2,0 | Sim |
+| S1 | RQ1 | 0,671 | 0,754 | +0,083 | +27,1 | **Não** |
+| S1 | RQ2 | 0,821 | 0,799 | −0,022 | −7,9 | **Não** |
+| S1 | RQ3 | 0,818 | 0,802 | −0,016 | −5,7 | **Não** |
+| S2 | RQ1 | 0,557 | 0,687 | +0,130 | +39,5 | **Não** |
+| S2 | RQ2 | 0,650 | 0,637 | −0,013 | −3,8 | **Não** |
+| S2 | RQ3 | 0,649 | 0,635 | −0,015 | −4,2 | **Não** |
+
+d_z efetivo (RQ2/RQ3): analítico 0,600 / 0,557 / 0,469 (S0/S1/S2, exato por construção da regra (b)); empírico agregado 0,599–0,600 / 0,557 / 0,467–0,469. Poder sem ajuste do t pareado no S0: 0,906 (RQ2) e 0,908 (RQ3), contra 0,908 analítico (t não central).
+
+**Erro tipo I sob H0, ruído de S1** (FWER = ≥ 1 rejeição com Holm; a proposta §7 diz "erro familiar"):
+
+| n | Sequências | FWER v4 | Citado | Δ/EP_MC | Sem ajuste por RQ (RQ1 / RQ2 / RQ3) |
+|---|---|---|---|---|---|
+| 24 | 8/8/4/4 (faltam as duas "computador primeiro") | 0,064 | 0,068 | −2,2 (compatível) | 0,050 / 0,071 / 0,074 |
+| 28 | 8/8/8/4 (falta computador-B/celular-A) | 0,061 | 0,073 | −6,8 (**não**) | 0,051 / 0,066 / 0,065 |
+| 32 | 8/8/8/8 | 0,061 | não simulado no v3.2 | — | 0,051 / 0,068 / 0,067 |
+| 32 (S0, sem ruído) | 8/8/8/8 | 0,044 | — | — | 0,050 / 0,049 / 0,050 |
+
+**Leitura:** só 2 dos 9 valores de poder ficam dentro de 3 EP_MC (um deles é o próprio alvo de calibração), e um dos dois valores de erro tipo I. A maior diferença é a RQ1 em S1/S2: no v4 o ruído de S1/S2 quase não reduz o poder da RQ1 (0,779 → 0,754 → 0,687), enquanto o citado cai para 0,671 e 0,557; isso indica que o v3.2 usava, na RQ1, perturbações bem maiores (ou de outra forma) do que as do v4, o que não é recuperável sem o script original. Em RQ2/RQ3 o v4 fica 0,005–0,022 abaixo do citado. No v4, o ruído de sequência infla o erro tipo I **mesmo com 8 por sequência** (FWER 0,061 no S1 balanceado), de modo que "mesmo n por sequência" não basta para manter 0,05 nesse modelo. Essas diferenças estão registradas na D1 (§18); proposta e relatório **não** foram alterados.
+
+**Limitações (obrigatório repetir ao citar poder):** (i) são estimativas condicionadas a premissas, não garantias; (ii) poder da RQ1 < 0,80 mesmo em S1; (iii) a simulação da RQ2 não representa a massa de tarefas no teto, as tarefas não concluídas nem a relação falha–tempo; (iv) a RQ4 não tem poder calculado como confirmatória; (v) parâmetros de S1 e S2 foram escolhidos pelo grupo sem dados de apoio (no v4, as proporções da regra (b), a correlação de 0,5 e a escala do ruído da RQ1 também são escolhas sem dados); (vi) **o script v3.2 e o `results_v3_2.json` continuam fora do repositório** (D1, §18); existe a reconstrução v4, que é outro modelo e **não reproduz** a maior parte dos valores citados (tabela acima).
 
 ### 6.6 Tarefa não concluída, abandono e teto de 300 s
 
@@ -335,7 +370,7 @@ Cada métrica recebe o teste permitido pela escala e pelo desenho pareado.
 
 - **Holm** sobre RQ1–RQ3 (α = 0,05 na família de 3). Teste primário de cada RQ fixado **antes** da coleta, sem escolher teste pelo resultado de normalidade.
 - **Controle de ordem:** verificar efeito de período e de conjunto (A × B) antes de interpretar o dispositivo. Com 8 por sequência o poder dessa checagem é baixo e **não calculado**; não encontrar efeito não prova que seja nulo.
-- **Erro tipo I:** sequências desbalanceadas podem elevá-lo acima de 0,05 (simulações n = 24 e 28: 0,068 e 0,073 no cenário realista; **n = 32 não foi simulado**). Por isso a meta é o mesmo n por sequência.
+- **Erro tipo I:** sequências desbalanceadas podem elevá-lo acima de 0,05 (simulações n = 24 e 28: 0,068 e 0,073 no cenário realista; **n = 32 não foi simulado**). Por isso a meta é o mesmo n por sequência. A reconstrução v4 (§6.5.1) simulou também n = 32 balanceado: FWER 0,061 no ruído de S1 (estimativa do modelo v4, não resultado).
 - **RQ4 — teste proposto (22/11/2026), a validar no P4:** a permutação de rótulos entre passos não é defensável (rótulos detectados, não randomizados; complexidade, posição e tipo de tarefa coincidem com violações; passos sequenciais; mesma página nos dois dispositivos; denominadores diferentes). Por isso a unidade é o **participante**: taxa por passo alcançado com × sem violação (dispositivos somados, indeterminados fora), Wilcoxon pareado sobre a diferença, permutação por inversão de sinais como sensibilidade e repetição por tarefa. Resolve as dependências (iii)–(v); **não** resolve a falta de randomização dos rótulos. p-valor exploratório, sem ajuste; poder não calculado. Um resultado indica associação nos passos observados, **não** causa e **não** se estende ao resto do Portal.
 - **Ferramentas:** Python (pandas, scipy, statsmodels) em notebook versionado; gráficos/dashboard reaproveitando a base do Lab04.
 
@@ -407,7 +442,8 @@ Legenda: **Verificado** · **Planejado** · **Em andamento** · **Pend. professo
 | Pedido via LAI (P10) | Enviado em 22/11/2026 (informado pelo grupo) | Nenhuma ainda (sem protocolo/captura) | Arquivar protocolo e captura |
 | Tarefas definitivas e conjuntos A/B | Planejado (candidatas) | PROPOSTA §4 | Definir e validar no piloto |
 | Planilha de observação, roteiro final, termo de consentimento, formulários SUS/SEQ | Planejado; **inexistentes no repositório** | Nenhuma | Produzir (integrante B) |
-| Script `power_analysis.py` e `results_v3_2.json` | Citados; **ausentes do repositório** | Nenhuma (D1) | Versionar no repositório |
+| Script `power_analysis.py` v3.2 e `results_v3_2.json` | Citados; **ausentes do repositório** | Nenhuma (D1) | Localizar e versionar, se existirem |
+| Reconstrução da simulação de poder (v4, issue #20) | **Executado** em 23/11/2026; **não** verificado por segunda pessoa; 7 dos 9 valores citados e 1 dos 2 de erro tipo I ficam fora de 3 EP_MC | `scripts/power_analysis.py`, `resultados/results_v4.json`, `tests/test_power_analysis.py` (§6.5.1) | Grupo decidir como tratar a divergência com o citado (D1) e conferir o script |
 | Piloto (3 participantes + auditoria de 3 páginas) | Planejado; **sem evidência de execução** | Nenhuma | Executar e registrar |
 | Coleta principal (S02) | Planejado | — | Aguardar P1–P3, P13 |
 | Auditoria completa axe/Lighthouse | Planejado; condicionado a P12 | — | Aguardar P12 |
@@ -467,9 +503,9 @@ Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critér
 
 ## 16. Estrutura dos artefatos do projeto
 
-**Convenção de pastas** (adotada em 20/11/2026): `docs/enunciado/`, `docs/proposta/`, `docs/relatorios/` para documentos; pastas futuras previstas: `scripts/` (análise e poder), `dados/` (coletas anonimizadas e JSON de auditoria), `instrumentos/` (termo, roteiro, planilha, formulários), `resultados/` (gráficos, dashboard). Só criar a pasta quando houver arquivo.
+**Convenção de pastas** (adotada em 20/11/2026): `docs/enunciado/`, `docs/proposta/`, `docs/relatorios/` para documentos; `scripts/` (análise e poder), `tests/` (testes dos scripts) e `resultados/` (saídas de simulação em JSON; depois, gráficos e dashboard) existem desde 23/11/2026; pastas futuras previstas: `dados/` (coletas anonimizadas e JSON de auditoria), `instrumentos/` (termo, roteiro, planilha, formulários). Só criar a pasta quando houver arquivo. Saídas em `resultados/` hoje são **estimativas** de simulação, não resultados empíricos.
 
-**Inventário verificado em 20/11/2026** (todo o conteúdo do repositório; `git status` limpo no início da sessão e sem commits listados):
+**Inventário verificado em 20/11/2026, atualizado em 23/11/2026 (issue #20)** (todo o conteúdo do repositório; `git status` limpo no início da sessão e sem commits listados):
 
 | Caminho | Finalidade |
 |---|---|
@@ -480,6 +516,11 @@ Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critér
 | `docs/evidencias/P10_pedido_LAI_instrucoes.md` | Instruções e texto pronto do pedido LAI para quem vai enviar (Arthur); tabela de retorno do protocolo |
 | `FONTE_DA_VERDADE.md` | Este documento (fica na raiz) |
 | `README.md` | Porta de entrada do repositório: resumo, regras, tarefas por pessoa (P10 com Arthur), estrutura |
+| `scripts/power_analysis.py` | Simulação de poder v4.0 (reconstrução compatível, issue #20; §6.5.1) |
+| `tests/test_power_analysis.py` | Testes pytest do script de poder (Holm, Wilcoxon, interceptos, tipo I, d_z, reprodutibilidade) |
+| `resultados/results_v4.json` | Saída da rodada única do v4 (R = 20.000, semente 20261117, 23/11/2026): parâmetros, calibração, poder, erro tipo I, citado × reproduzido. Estimativa, não resultado |
+| `requirements.txt` | Versões fixadas (numpy 2.5.3, scipy 1.16.3, pytest 9.1.1) |
+| `.gitignore` | Ignora `.claude/worktrees/` |
 
 **Citados nos documentos, mas NÃO presentes no repositório** (não tratar como existentes):
 
@@ -488,8 +529,8 @@ Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critér
 | `LAB05_S01_Proposta_FINAL.pdf` | RELATÓRIO §2 |
 | `LAB05_S01_Proposta_v2_pre_FINAL.md` | RELATÓRIO §2 |
 | `original_S01.txt` | RELATÓRIO §2 |
-| `power_analysis.py` (v3.2) | PROPOSTA §4 |
-| `results_v3_2.json` | PROPOSTA §4, RELATÓRIO §5 |
+| `power_analysis.py` (v3.2) — o v4 em `scripts/` é outro modelo, não este arquivo | PROPOSTA §4 |
+| `results_v3_2.json` — o `results_v4.json` não o substitui como evidência dos valores citados | PROPOSTA §4, RELATÓRIO §5 |
 
 **Inexistentes e ainda por produzir:** planilha de observação, termo de consentimento, formulários SUS/SEQ, roteiro final, dicionário de dados, dados coletados, JSON de auditoria, notebook de análise, gráficos/dashboard, documento e apresentação finais.
 
@@ -523,7 +564,7 @@ Regras adicionais derivadas deste documento:
 
 | ID | Descrição | Fontes | Tratamento |
 |---|---|---|---|
-| D1 | A proposta e o relatório afirmam que o poder foi conferido em `results_v3_2.json` (gerado por `power_analysis.py` v3.2), mas **nenhum dos dois arquivos está no repositório**. Os 9 valores de poder são, neste repositório, **não reproduzíveis nem verificáveis** | PROPOSTA §4, RELATÓRIO §5 vs. repositório | Manter os valores como "conforme citado"; versionar script e JSON antes de usar na S02/S03 |
+| D1 | A proposta e o relatório afirmam que o poder foi conferido em `results_v3_2.json` (gerado por `power_analysis.py` v3.2), mas **nenhum dos dois arquivos está no repositório**. Os 9 valores de poder são, neste repositório, **não reproduzíveis nem verificáveis** | PROPOSTA §4, RELATÓRIO §5 vs. repositório | Manter os valores como "conforme citado"; versionar script e JSON antes de usar na S02/S03. **Segue aberta para o v3.2.** Em 23/11/2026 (issue #20) foi versionada a reconstrução **v4** (`scripts/power_analysis.py`, `resultados/results_v4.json`; §6.5.1), modelo novo com regra de calibração fixada antes da rodada única (R = 20.000). Resultado da comparação: dos 9 valores de poder, só S0-RQ1 (alvo da calibração) e S0-RQ3 ficam dentro de 3 EP_MC; RQ1 em S1/S2 diverge muito (v4 0,754 e 0,687 contra 0,671 e 0,557; Δ/EP +27 e +40); RQ2/RQ3 ficam 0,005–0,022 abaixo do citado (Δ/EP −2 a −8). Erro tipo I (FWER): n = 24 compatível (0,064 × 0,068), n = 28 não (0,061 × 0,073). O v4 não verifica nem substitui os valores citados. `statsmodels` não está instalado no ambiente; o Holm foi implementado à mão e testado (§9 prevê statsmodels). **Decisão pendente do grupo:** manter os valores citados com a ressalva, passar a citar o v4, ou procurar o v3.2. Proposta e relatório não foram alterados |
 | D2 | O relatório lista `LAB05_S01_Proposta_FINAL.pdf`, `..._v2_pre_FINAL.md` e `original_S01.txt` como produzidos/preservados; nenhum está no repositório | RELATÓRIO §2 vs. repositório | Localizar e versionar, ou corrigir o relatório (com registro) |
 | D3 | O enunciado limita medições de fora a **no máximo 1 requisição por segundo**. A proposta cita robots.txt e termos de uso, mas **não menciona o limite**. O Lighthouse recarrega a página em cada execução (12–20 páginas × 3 execuções × 2 modos, ou seja, até cerca de 120 carregamentos), e o enunciado exige respeito ao robots.txt (`Disallow: /`) | ENUNCIADO §2 vs. PROPOSTA §6 | Incluir o limite explícito de 1 req/s no protocolo de auditoria e levar a P12 ao professor. Não alterar a proposta sem registro |
 | D4 | O enunciado pede "coleta piloto" na S01; a proposta a prevê, mas não há evidência de execução, e o relatório de fechamento não menciona o piloto como feito | ENUNCIADO §7, PROPOSTA §9, RELATÓRIO | Tratar como **não executado** até haver artefato |
@@ -556,3 +597,4 @@ Não foi encontrada divergência de conteúdo entre a proposta e o relatório qu
 | 2.2 | 22/11/2026 | P10: envio do LAI informado pelo grupo em 22/11/2026; protocolo e captura pendentes. Versão observada dos pacotes registrada (S01_criterios §2.1). Correção do título da D9 na proposta |
 | 2.3 | 22/11/2026 | Issue #17: RQ4 explicitada como hipótese de trabalho sem teste; gatilhos de reclassificação das 7 categorias; cabeçalho da proposta sem "@Someone" (primeiros nomes da issue #15) |
 | 2.4 | 22/11/2026 | RQ4 passa a ter teste exploratório proposto (participante como unidade, Wilcoxon pareado, permutação de sinais como sensibilidade), a validar no P4; reverte a nota de 2.3 de "sem teste" |
+| 2.5 | 23/11/2026 | Issue #20: reconstrução da simulação de poder **v4** (`scripts/power_analysis.py`, `tests/test_power_analysis.py`, `resultados/results_v4.json`, `requirements.txt`; `.gitignore` com `.claude/worktrees/`). Nova §6.5.1 com regra de calibração, tabela citado × reproduzido e erro tipo I (n = 24, 28, 32); D1 atualizada (segue aberta para o v3.2; 7 de 9 valores de poder e o FWER de n = 28 fora de 3 EP_MC); §9, §13 e §16 atualizadas; cabeçalho corrigido para a versão atual. Proposta e relatório não foram alterados |

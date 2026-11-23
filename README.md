@@ -1,7 +1,7 @@
 # LAB05 — Usabilidade e acessibilidade do Portal de Serviços da PBH
 
 Laboratório de Experimentação de Software · Engenharia de Software · PUC Minas (Campus Lourdes, noite, 2026/2) · Professor: Danilo Maia
-Atualizado em **20/11/2026** · Sprint atual: **S01 (Proposta)**
+Atualizado em **23/11/2026** · Sprint atual: **S01 (Proposta)**
 
 > **Leia primeiro:** [FONTE_DA_VERDADE.md](./FONTE_DA_VERDADE.md). Ela é a referência central do projeto: o que o professor exige, o que foi decidido, o que já foi feito e o que falta.
 
@@ -74,6 +74,13 @@ Nada disso foi respondido. Todas seguem **abertas** e não devem ser tratadas co
 Lab05/
 ├── README.md                 ← você está aqui
 ├── FONTE_DA_VERDADE.md       ← referência central (leia primeiro)
+├── requirements.txt          ← versões fixadas (numpy, scipy, pytest)
+├── scripts/
+│   └── power_analysis.py     ← simulação de poder v4 (reconstrução, issue #20)
+├── tests/
+│   └── test_power_analysis.py← testes do script de poder (pytest)
+├── resultados/
+│   └── results_v4.json       ← saída da simulação v4 (estimativa, não resultado)
 └── docs/
     ├── enunciado/            ← enunciado oficial do professor (PDF)
     ├── proposta/             ← proposta metodológica S01 (versão final)
@@ -84,11 +91,22 @@ Lab05/
         └── capturas/                      ← capturas e trechos arquivados
 ```
 
-Pastas previstas para quando houver conteúdo: `scripts/`, `dados/`, `instrumentos/`, `resultados/`.
+Pastas previstas para quando houver conteúdo: `dados/`, `instrumentos/`.
+
+### Como rodar a simulação de poder
+
+```
+pip install -r requirements.txt
+python scripts/power_analysis.py                 # rodada completa: R = 20.000 por célula, ~40 s
+python scripts/power_analysis.py --reps 2000 --out /tmp/teste.json   # rodada rápida
+python -m pytest tests
+```
+
+A rodada completa sobrescreve `resultados/results_v4.json`. O poder é **estimativa condicionada a premissas**, nunca resultado (ver FONTE_DA_VERDADE §6.5).
 
 ## Lacunas conhecidas (para ninguém se surpreender)
 
-- O script de poder estatístico (`power_analysis.py`) e o `results_v3_2.json`, citados na proposta, **não estão no repositório**.
+- O script de poder estatístico `power_analysis.py` **v3.2** e o `results_v3_2.json`, citados na proposta, **continuam fora do repositório**. Existe uma **reconstrução v4** (`scripts/power_analysis.py`, `resultados/results_v4.json`), que é outro modelo: ela **não reproduz** 7 dos 9 valores de poder citados (a RQ1 em S1/S2 é a maior diferença) nem o erro tipo I citado para n = 28. Detalhes e decisão pendente em FONTE_DA_VERDADE §6.5.1 e D1.
 - O piloto (3 participantes), o termo de consentimento e a planilha de observação **ainda não existem**.
 - Os nomes dos integrantes e os papéis A/B/C **não estão confirmados** na documentação.
 

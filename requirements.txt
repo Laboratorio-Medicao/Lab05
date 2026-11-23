@@ -1,0 +1,7 @@
+# Ambiente da análise do LAB05 (issue #25), Python 3.12.10.
+# statsmodels NÃO é usado: a correção de Holm está implementada em scripts/analise.py.
+numpy==2.5.3
+scipy==1.16.3
+pandas==3.0.6
+matplotlib==3.11.2
+pytest==9.1.1

@@ -1,0 +1,114 @@
+{
+ "origem": "sintetico",
+ "aviso": "DADO SINTÉTICO",
+ "testEngine": {
+  "name": "axe-core",
+  "version": "0.0.0-sintetico"
+ },
+ "url": "https://sintetico.invalid/servico-A3",
+ "violations": [
+  {
+   "id": "link-name",
+   "impact": "serious",
+   "tags": [
+    "cat.name-role-value",
+    "wcag2a",
+    "wcag244"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "image-alt",
+   "impact": "critical",
+   "tags": [
+    "cat.text-alternatives",
+    "wcag2a",
+    "wcag111"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "region",
+   "impact": "moderate",
+   "tags": [
+    "cat.keyboard",
+    "best-practice"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-3"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "cat.color",
+    "wcag2aa",
+    "wcag143"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    }
+   ]
+  }
+ ]
+}

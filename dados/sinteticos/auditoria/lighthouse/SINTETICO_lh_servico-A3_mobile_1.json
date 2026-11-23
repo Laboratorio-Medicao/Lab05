@@ -1,0 +1,22 @@
+{
+ "origem": "sintetico",
+ "aviso": "DADO SINTÉTICO",
+ "lighthouseVersion": "0.0.0-sintetico",
+ "requestedUrl": "https://sintetico.invalid/servico-A3",
+ "configSettings": {
+  "formFactor": "mobile"
+ },
+ "categories": {
+  "accessibility": {
+   "score": 0.77
+  }
+ },
+ "audits": {
+  "largest-contentful-paint": {
+   "numericValue": 2871.4233313225814
+  },
+  "cumulative-layout-shift": {
+   "numericValue": 0.24583290346308112
+  }
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "origem": "sintetico",
+ "aviso": "DADO SINTÉTICO",
+ "testEngine": {
+  "name": "axe-core",
+  "version": "0.0.0-sintetico"
+ },
+ "url": "https://sintetico.invalid/servico-A1",
+ "violations": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "cat.color",
+    "wcag2aa",
+    "wcag143"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-3"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "region",
+   "impact": "moderate",
+   "tags": [
+    "cat.keyboard",
+    "best-practice"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "heading-order",
+   "impact": "moderate",
+   "tags": [
+    "cat.semantics",
+    "best-practice"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "link-name",
+   "impact": "serious",
+   "tags": [
+    "cat.name-role-value",
+    "wcag2a",
+    "wcag244"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-3"
+     ]
+    }
+   ]
+  }
+ ]
+}

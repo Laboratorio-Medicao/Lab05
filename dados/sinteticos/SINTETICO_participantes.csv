@@ -1,0 +1,39 @@
+participante,sequencia,bloco,ordem_realizacao,data,faixa_etaria,uso_previo_portal,familiaridade_digital,valida,motivo_invalida,reposto_por,piloto,hash_ui_package,versao_chrome,versao_portal_obs,o_que_mais_atrapalhou,notas_moderador,origem
+P01,1,1,1,2026-12-01,18-24,nunca,2,1,,,1,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P02,2,1,2,2026-12-01,18-24,nunca,2,1,,,1,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P03,3,1,3,2026-12-01,35-44,raramente,4,1,,,1,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P04,2,1,4,2026-12-02,35-44,raramente,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P05,1,1,5,2026-12-02,18-24,raramente,3,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P06,4,1,6,2026-12-02,25-34,raramente,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P07,3,1,7,2026-12-02,45-59,as_vezes,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P08,2,2,8,2026-12-03,45-59,raramente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P09,4,2,9,2026-12-03,25-34,raramente,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P10,1,2,10,2026-12-03,25-34,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P11,3,2,11,2026-12-03,18-24,raramente,3,0,falha técnica (sintética),P12,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P12,3,2,12,2026-12-04,25-34,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P13,2,3,13,2026-12-04,35-44,nunca,3,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P14,4,3,14,2026-12-04,25-34,raramente,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P15,3,3,15,2026-12-04,25-34,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P16,1,3,16,2026-12-05,60+,as_vezes,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P17,4,4,17,2026-12-05,35-44,nunca,3,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P18,3,4,18,2026-12-05,18-24,as_vezes,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P19,2,4,19,2026-12-05,35-44,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P20,1,4,20,2026-12-06,45-59,raramente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P21,2,5,21,2026-12-06,18-24,frequentemente,3,0,falha técnica (sintética),P25,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P22,4,5,22,2026-12-06,25-34,nunca,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P23,1,5,23,2026-12-06,35-44,raramente,3,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P24,3,5,24,2026-12-07,25-34,as_vezes,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P25,2,5,25,2026-12-07,25-34,as_vezes,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P26,1,6,26,2026-12-07,25-34,nunca,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P27,3,6,27,2026-12-07,35-44,frequentemente,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P28,2,6,28,2026-12-08,60+,raramente,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P29,4,6,29,2026-12-08,18-24,as_vezes,3,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P30,2,7,30,2026-12-08,35-44,as_vezes,3,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P31,1,7,31,2026-12-08,25-34,as_vezes,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P32,3,7,32,2026-12-09,60+,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P33,4,7,33,2026-12-09,25-34,frequentemente,2,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P34,2,8,34,2026-12-09,25-34,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P35,3,8,35,2026-12-09,25-34,frequentemente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P36,1,8,36,2026-12-10,35-44,as_vezes,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P37,4,8,37,2026-12-10,60+,raramente,4,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico
+P38,1,9,38,2026-12-10,35-44,raramente,5,1,,,0,SINTETICO-hash-0000,000.0.0.0-sintetico,sintetico,texto sintético,,sintetico

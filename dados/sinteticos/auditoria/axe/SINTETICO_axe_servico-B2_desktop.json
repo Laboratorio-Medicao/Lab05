@@ -1,0 +1,103 @@
+{
+ "origem": "sintetico",
+ "aviso": "DADO SINTÉTICO",
+ "testEngine": {
+  "name": "axe-core",
+  "version": "0.0.0-sintetico"
+ },
+ "url": "https://sintetico.invalid/servico-B2",
+ "violations": [
+  {
+   "id": "heading-order",
+   "impact": "moderate",
+   "tags": [
+    "cat.semantics",
+    "best-practice"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "target-size",
+   "impact": "serious",
+   "tags": [
+    "cat.sensory-and-visual-cues",
+    "wcag22aa",
+    "wcag258"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "button-name",
+   "impact": "critical",
+   "tags": [
+    "cat.name-role-value",
+    "wcag2a",
+    "wcag412"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "region",
+   "impact": "moderate",
+   "tags": [
+    "cat.keyboard",
+    "best-practice"
+   ],
+   "nodes": [
+    {
+     "target": [
+      "#sintetico-0"
+     ]
+    },
+    {
+     "target": [
+      "#sintetico-1"
+     ]
+    }
+   ]
+  }
+ ]
+}

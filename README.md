@@ -79,13 +79,16 @@ Lab05/
 │   ├── dicionario_de_dados.md ← PROPOSTA, a confirmar com o papel B
 │   └── sinteticos/           ← dados FALSOS (SINTETICO_*), só para testar o código
 ├── scripts/
+│   ├── power_analysis.py     ← simulação de poder v4 (reconstrução, issue #20)
 │   ├── esquema.py            ← dicionário em código (colunas, domínios, sequências)
 │   ├── validar_dados.py      ← validador dos dados
 │   ├── analise.py            ← RQ1–RQ4, Holm, checagem de ordem, auditoria Q4
 │   └── gerar_dados_sinteticos.py
 ├── notebooks/
 │   └── analise_S02.py        ← notebook em formato percent (# %%)
-├── tests/                    ← pytest
+├── tests/                    ← pytest (análise, validador e poder)
+├── resultados/
+│   └── results_v4.json       ← saída da simulação v4 (estimativa, não resultado)
 └── docs/
     ├── enunciado/            ← enunciado oficial do professor (PDF)
     ├── proposta/             ← proposta metodológica S01 (versão final)
@@ -96,7 +99,7 @@ Lab05/
         └── capturas/                      ← capturas e trechos arquivados
 ```
 
-Pastas previstas para quando houver conteúdo: `dados/brutos/` (coleta real, imutável), `instrumentos/`, `resultados/` (só saídas de dados reais).
+Pastas previstas para quando houver conteúdo: `dados/brutos/` (coleta real, imutável), `instrumentos/`. `resultados/` guarda estimativas de simulação e, depois da coleta, saídas de dados reais; nunca saída sintética.
 
 ## Como rodar a análise (issue #25)
 
@@ -115,14 +118,25 @@ python -m pytest
 - A análise recusa misturar dado real e sintético e nunca grava saída sintética em `resultados/`. Sem `--saida`, sintético vai para `dados/sinteticos/saida/`.
 - Com dados reais: `dados/brutos/` + `dados/CHECKSUMS.sha256`, validar, conferir por segunda pessoa (FONTE_DA_VERDADE §2.3) e só então rodar `python scripts/analise.py dados/brutos` (saída em `resultados/`).
 
+### Como rodar a simulação de poder
+
+```
+pip install -r requirements.txt
+python scripts/power_analysis.py                 # rodada completa: R = 20.000 por célula, ~40 s
+python scripts/power_analysis.py --reps 2000 --out /tmp/teste.json   # rodada rápida
+python -m pytest tests
+```
+
+A rodada completa sobrescreve `resultados/results_v4.json`. O poder é **estimativa condicionada a premissas**, nunca resultado (ver FONTE_DA_VERDADE §6.5).
+
 ## Lacunas conhecidas (para ninguém se surpreender)
 
-- O script de poder estatístico (`power_analysis.py`) e o `results_v3_2.json`, citados na proposta, **não estão no repositório**.
+- O script de poder estatístico `power_analysis.py` **v3.2** e o `results_v3_2.json`, citados na proposta, **continuam fora do repositório**. Existe uma **reconstrução v4** (`scripts/power_analysis.py`, `resultados/results_v4.json`), que é outro modelo: ela **não reproduz** 7 dos 9 valores de poder citados (a RQ1 em S1/S2 é a maior diferença) nem o erro tipo I citado para n = 28. Detalhes e decisão pendente em FONTE_DA_VERDADE §6.5.1 e D1.
 - O piloto (3 participantes), o termo de consentimento e a planilha de observação **ainda não existem**.
 - Os nomes dos integrantes e os papéis A/B/C **não estão confirmados** na documentação.
 - O dicionário de dados é **proposta do papel C** e ainda não foi confirmado com o papel B; o formato do export do axe DevTools precisa ser conferido com um arquivo real.
 - A análise (issue #25) foi rodada **só com dados sintéticos**: não há resultado. P1, P2 e P4 seguem pendentes com o professor.
-- Não há `.gitignore`: `__pycache__/`, `.pytest_cache/` e `dados/sinteticos/saida/` não devem ser commitados.
+- `__pycache__/`, `.pytest_cache/` e `dados/sinteticos/saida/` estão no `.gitignore` e não devem ser commitados.
 
 ## Próximas etapas
 

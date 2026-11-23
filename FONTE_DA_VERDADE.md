@@ -1,9 +1,9 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 2.5 · criada em 20/11/2026, atualizada em 23/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 2.6 · criada em 20/11/2026, atualizada em 23/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
-> Convenção de leitura: este documento separa sempre **exigido** (enunciado), **decidido** (professor), **planejado** (proposta), **executado** (evidência no repositório) e **resultado** (dado observado). Hoje existe apenas planejamento. **Não existe nenhum resultado empírico.**
+> Convenção de leitura: este documento separa sempre **exigido** (enunciado), **decidido** (professor), **planejado** (proposta), **executado** (evidência no repositório) e **resultado** (dado observado). Hoje existe apenas planejamento. **Não existe nenhum resultado empírico.** Os dados em `dados/sinteticos/` (prefixo `SINTETICO_`) são falsos, feitos só para testar o código da análise.
 
 Fontes consultadas (links relativos):
 
@@ -447,7 +447,8 @@ Legenda: **Verificado** · **Planejado** · **Em andamento** · **Pend. professo
 | Piloto (3 participantes + auditoria de 3 páginas) | Planejado; **sem evidência de execução** | Nenhuma | Executar e registrar |
 | Coleta principal (S02) | Planejado | — | Aguardar P1–P3, P13 |
 | Auditoria completa axe/Lighthouse | Planejado; condicionado a P12 | — | Aguardar P12 |
-| Análise estatística e notebook | Planejado | — | Após coleta |
+| Dicionário de dados (`dados/dicionario_de_dados.md`) | **Proposta do papel C, a confirmar com o papel B** (issue #25) | `dados/dicionario_de_dados.md`, `scripts/esquema.py` | Revisar com o papel B antes da planilha de observação |
+| Análise estatística e notebook | **Em andamento** (issue #25): validador, análise, gerador sintético, notebook e testes prontos e rodados **só com dados sintéticos**; nenhum dado real, **nenhum resultado** | `scripts/validar_dados.py`, `scripts/analise.py`, `notebooks/analise_S02.py`, `tests/` | Confirmar dicionário (B); decisões P1, P2, P4; rodar com dados reais após a coleta e a validação por segunda pessoa |
 | Estimativa de impacto relativo (S03) | Planejado | — | Após análise |
 | Conversão em horas | Pend. grupo (P5) | — | Decidir se será feita |
 | Teste inferencial na RQ4 | Proposto pelo grupo em 22/11/2026; pend. validação do professor (P4) | Proposta §7 | Validar |
@@ -503,7 +504,7 @@ Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critér
 
 ## 16. Estrutura dos artefatos do projeto
 
-**Convenção de pastas** (adotada em 20/11/2026): `docs/enunciado/`, `docs/proposta/`, `docs/relatorios/` para documentos; `scripts/` (análise e poder), `tests/` (testes dos scripts) e `resultados/` (saídas de simulação em JSON; depois, gráficos e dashboard) existem desde 23/11/2026; pastas futuras previstas: `dados/` (coletas anonimizadas e JSON de auditoria), `instrumentos/` (termo, roteiro, planilha, formulários). Só criar a pasta quando houver arquivo. Saídas em `resultados/` hoje são **estimativas** de simulação, não resultados empíricos.
+**Convenção de pastas** (adotada em 20/11/2026): `docs/enunciado/`, `docs/proposta/`, `docs/relatorios/` para documentos; `scripts/` (análise e poder), `tests/` (testes dos scripts), `notebooks/`, `dados/` (coletas anonimizadas e JSON de auditoria; `dados/brutos/` imutável, `dados/sinteticos/` só dado falso) e `resultados/` (estimativas de simulação em JSON e, depois da coleta, saídas de dados reais: gráficos, dashboard; **nunca** saída de dados sintéticos) existem desde 23/11/2026; pastas futuras previstas: `instrumentos/` (termo, roteiro, planilha, formulários). Só criar a pasta quando houver arquivo. Saídas em `resultados/` hoje são **estimativas** de simulação, não resultados empíricos.
 
 **Inventário verificado em 20/11/2026, atualizado em 23/11/2026 (issue #20)** (todo o conteúdo do repositório; `git status` limpo no início da sessão e sem commits listados):
 
@@ -519,8 +520,17 @@ Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critér
 | `scripts/power_analysis.py` | Simulação de poder v4.0 (reconstrução compatível, issue #20; §6.5.1) |
 | `tests/test_power_analysis.py` | Testes pytest do script de poder (Holm, Wilcoxon, interceptos, tipo I, d_z, reprodutibilidade) |
 | `resultados/results_v4.json` | Saída da rodada única do v4 (R = 20.000, semente 20261117, 23/11/2026): parâmetros, calibração, poder, erro tipo I, citado × reproduzido. Estimativa, não resultado |
-| `requirements.txt` | Versões fixadas (numpy 2.5.3, scipy 1.16.3, pytest 9.1.1) |
-| `.gitignore` | Ignora `.claude/worktrees/` |
+| `.gitignore` | Ignora `.claude/worktrees/`, `__pycache__/`, `.pytest_cache/` e `dados/sinteticos/saida/` |
+| `.gitattributes` | Sem conversão de fim de linha em `dados/` (os checksums dependem dos bytes) |
+| `dados/dicionario_de_dados.md` | Dicionário de dados (issue #25, 23/11/2026): **proposta do papel C, a confirmar com o papel B** |
+| `dados/sinteticos/` | Dados **SINTÉTICOS** (prefixo `SINTETICO_`, `origem = sintetico`, URLs `.invalid`) com efeitos plantados, só para testar o código. **Não são resultado** |
+| `scripts/esquema.py` | Versão executável do dicionário (colunas, domínios, sequências) |
+| `scripts/validar_dados.py` | Validador (esquema, domínios, coerência, dado pessoal, origem, checksums). Passar nele não torna o dado "Verificado" (§2.3) |
+| `scripts/analise.py` | Análise RQ1–RQ4, Holm, checagem de ordem, descritivas e auditoria Q4; recusa misturar origem e grava sintético fora de `resultados/` |
+| `scripts/gerar_dados_sinteticos.py` | Gerador dos dados sintéticos (semente 20261117) |
+| `notebooks/analise_S02.py` | Notebook em formato percent (`# %%`), com aviso "dados sintéticos até a coleta; nada aqui é resultado" (D10) |
+| `tests/` | Testes pytest da análise e do validador |
+| `requirements.txt` | Versões fixadas do ambiente (numpy, scipy, pandas, matplotlib, pytest) |
 
 **Citados nos documentos, mas NÃO presentes no repositório** (não tratar como existentes):
 
@@ -532,7 +542,7 @@ Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critér
 | `power_analysis.py` (v3.2) — o v4 em `scripts/` é outro modelo, não este arquivo | PROPOSTA §4 |
 | `results_v3_2.json` — o `results_v4.json` não o substitui como evidência dos valores citados | PROPOSTA §4, RELATÓRIO §5 |
 
-**Inexistentes e ainda por produzir:** planilha de observação, termo de consentimento, formulários SUS/SEQ, roteiro final, dicionário de dados, dados coletados, JSON de auditoria, notebook de análise, gráficos/dashboard, documento e apresentação finais.
+**Inexistentes e ainda por produzir:** planilha de observação, termo de consentimento, formulários SUS/SEQ, roteiro final, dados coletados (reais), JSON de auditoria (real), gráficos/dashboard com dados reais, documento e apresentação finais. O dicionário de dados existe só como proposta; o notebook só roda com dados sintéticos.
 
 ---
 
@@ -573,6 +583,7 @@ Regras adicionais derivadas deste documento:
 | D7 | A proposta (§9) lista o S01 como incluindo "aceite do professor sobre a auditoria" e "pedido LAI enviado" — nenhuma das duas é comprovada | PROPOSTA §9 | Tratar como planejadas |
 | D8 | Autoria: cabeçalho trazia "@Someone"; trocado em 22/11/2026 por primeiros nomes e papéis (da issue #15). Nomes completos a confirmar. Atenção: o README atribui o envio do LAI (papel A) a Arthur (papel C na #15) | PROPOSTA | P14 |
 | D9 | A lista de fontes da proposta cita o título "amplia em mais de 500 serviços digitais"; o título real da notícia de 05/10/2026 é "... em mais de 500% serviços digitais". Além disso, os números de serviços variam por data (05/10/2026: 1.492/1.118; 18/08/2026: 1.489/903; 27/12/2023: 1.387/936) | PROPOSTA vs. fonte conferida em 20/11/2026 | **Título corrigido na proposta em 22/11/2026**; citar sempre com a data da fonte |
+| D10 | A proposta (§7) e a §9 desta fonte preveem "Python (pandas, scipy, statsmodels) em notebook versionado". Na issue #25: (i) o notebook é `notebooks/analise_S02.py` em **formato percent** (`# %%`), não `.ipynb`, para versionar sem saídas embutidas e rodar sem jupyter instalado (abre como notebook no VS Code); (ii) **statsmodels não está instalado** no ambiente, e a correção de Holm foi **implementada à mão** em `scripts/analise.py` (testada com o valor conhecido p = [0,01; 0,04; 0,03] → [0,03; 0,06; 0,06]) | PROPOSTA §7, FDV §9 vs. repositório | Ferramenta, não método: o teste e a correção são os mesmos. A proposta não foi alterada |
 
 Não foi encontrada divergência de conteúdo entre a proposta e o relatório quanto a RQs, pendências, tamanhos de amostra ou valores de poder (conferidos nesta consolidação).
 
@@ -598,3 +609,4 @@ Não foi encontrada divergência de conteúdo entre a proposta e o relatório qu
 | 2.3 | 22/11/2026 | Issue #17: RQ4 explicitada como hipótese de trabalho sem teste; gatilhos de reclassificação das 7 categorias; cabeçalho da proposta sem "@Someone" (primeiros nomes da issue #15) |
 | 2.4 | 22/11/2026 | RQ4 passa a ter teste exploratório proposto (participante como unidade, Wilcoxon pareado, permutação de sinais como sensibilidade), a validar no P4; reverte a nota de 2.3 de "sem teste" |
 | 2.5 | 23/11/2026 | Issue #20: reconstrução da simulação de poder **v4** (`scripts/power_analysis.py`, `tests/test_power_analysis.py`, `resultados/results_v4.json`, `requirements.txt`; `.gitignore` com `.claude/worktrees/`). Nova §6.5.1 com regra de calibração, tabela citado × reproduzido e erro tipo I (n = 24, 28, 32); D1 atualizada (segue aberta para o v3.2; 7 de 9 valores de poder e o FWER de n = 28 fora de 3 EP_MC); §9, §13 e §16 atualizadas; cabeçalho corrigido para a versão atual. Proposta e relatório não foram alterados |
+| 2.6 | 23/11/2026 | Issue #25: dicionário de dados (proposta, a confirmar com o papel B), validador, análise, gerador de dados sintéticos, notebook `.py` percent, testes e `requirements.txt`. Tudo rodado **só com dados sintéticos**: **nenhum resultado**. P1 e P2 entram como parâmetros (opção provisória marcada PENDENTE, demais variantes como sensibilidade); teste da RQ4 desligável (P4). D10 registrada. Nenhuma pendência encerrada. Merge com a 2.5 (issue #20): `resultados/` passa a abrigar estimativas de simulação e saídas reais, nunca sintéticas; `requirements.txt` unificado |

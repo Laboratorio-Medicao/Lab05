@@ -106,12 +106,12 @@ Feito pelo assistente (Claude em Chrome), no Chrome do Marcos, a pedido dele: um
 | A1 poda de árvore | Busca "poda de árvore" → 17 itens; 1º: "Árvore - Poda de Árvore em Passeios, Praças, etc." (`.../servicos+arvore-poda-de-arvore-em-passeios-pracas-etc+5e7a17e4d9521a26a9abf17a`). Texto: serviço só em logradouros públicos | Não |
 | A2 buraco | Busca "buraco" → 27 itens; 1º: "Tapa-Buraco" (`.../tapaburaco`). Há ao lado "Via Pública - Recapeamento" (possível erro de caminho) | Não |
 | A3 alvará de obra | Busca "alvará" → 248 itens, topo irrelevante (Extrato de Débitos, Alvará de Localização e Funcionamento, ISSQN). "alvará de obra" → 51 itens com **vários candidatos**: Licenciamento de Edificação/Alvará na Hora, Revalidação de Alvará de Construção, Comunicação de Início de Obra, Alvará/Dispensa para Execução de Obra em Logradouro Público, Licença de Demolição | Não verificado |
-| B2 iluminação pública | **Não testada** | — |
-| B3 licença para evento | **Não testada** | — |
+| B2 iluminação pública | Busca "iluminação" → 17 itens; topo com 3 serviços parecidos: "Luminária Apagada Durante a Noite", "Intermitente (Piscando)", "Quebrada ou Ausente". "Lâmpada queimada" cabe em mais de um | Não verificado (só a lista) |
+| B3 licença para evento | Busca "evento" → 11 itens; 1º "Autorização de Evento", 3º "Consulta Prévia de Evento" (dois candidatos) | Não verificado (só a lista) |
 
 **Achados para decidir antes do piloto:**
 1. **A3 não tem tela-alvo única.** O roteiro diz "página do serviço de alvará de construção/reforma com lista de documentos", mas o Portal tem pelo menos 4 serviços plausíveis. Escolher uma tela-alvo e dizer ao moderador o que fazer se o participante parar em outra. Sem isso, a conclusão da A3 depende do julgamento de cada moderador.
 2. A3 parece mais difícil que as demais (busca com 248 resultados): pode quebrar a equivalência A × B, que é objetivo do piloto.
 3. O "Conteúdo" do serviço abre fechado (acordeão): o critério "visualiza os documentos exigidos" precisa dizer se expandir a seção é necessário.
 4. O texto da página não é extraível por ferramenta de leitura de texto (conteúdo montado por JavaScript): o catálogo de passos precisa ser montado com navegação manual.
-5. B2 e B3 ainda precisam ser verificadas.
+5. B2 e B3 também têm mais de um serviço plausível (ver tabela). Definir a tela-alvo única de A3, B2 e B3 e a regra para quando o participante parar em outra. Falta abrir as páginas de A3, B2 e B3 para conferir login.

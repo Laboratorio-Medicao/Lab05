@@ -25,7 +25,7 @@ Divergências encontradas entre o roteiro (`docs/sessao/roteiro-sessao.md`) e o 
 - [ ] Planilhas: copiar `modelo_*.csv` para uma pasta **fora do git** durante a coleta
 - [ ] Celular Android + Chrome; computador ≥ 1366×768 + Chrome; anotar versões
 - [ ] Cronômetro; sala; gravação de tela só com consentimento no termo
-- [ ] 3 voluntários que não repetem e não são da análise final
+- [ ] ~~3 voluntários de fora~~ **Dispensado (decisão do Marcos, 24/11/2026):** não há como recrutar. Os 3 participantes do piloto serão integrantes do grupo ou conhecidos já à mão; ver desvio no §9
 - [ ] Alocação do piloto (uma sequência diferente por pessoa, FDV §6.3):
 
 | Participante | Sequência | 1º dispositivo / conjunto | 2º dispositivo / conjunto | Data | Moderador |
@@ -125,3 +125,15 @@ Revisáveis pelo grupo e pelo Guilherme (papel B, dono da issue).
 - **A3:** conclusão exige expandir "Exigências do Serviço?"; outros serviços de alvará contam como erro de caminho.
 - Questionário inicial do roteiro alinhado ao dicionário; roteiro agora manda registrar versão do Portal/Chrome.
 - Continua pendente: recrutar 3 pessoas, executar as sessões, auditoria (aceite do professor), preencher os dados reais.
+
+## 9. Desvio registrado: piloto sem participantes de fora
+
+**O que mudou:** a Proposta §9 prevê 3 participantes que não repetem e não entram na análise final. Sem recrutamento externo, o piloto usa pessoas do grupo (ou quem estiver disponível). Eles continuam fora da análise final (`piloto = 1`).
+
+**O que isso enfraquece (declarar no relatório):**
+- Quem escreveu, testou ou explorou as tarefas já conhece os caminhos. Neste projeto, o Guilherme escreveu as tarefas e o Marcos navegou nas 6 telas-alvo em 24/11/2026. Se forem participantes, os tempos e a taxa de conclusão sairão otimistas e **não servem** para julgar se A e B têm dificuldade parecida nem se cabem em 30 min.
+- Os objetivos "nenhuma tarefa exige login" e "planilha captura tudo" **continuam testáveis** com qualquer pessoa. Os objetivos "dificuldade parecida" e "30 min" ficam só como **indício fraco**.
+- Quando houver escolha: usar quem **menos** viu as tarefas (o Arthur, se não participou do roteiro) e quem nunca usou o Portal. Registrar `uso_previo_portal` e se a pessoa conhecia as tarefas em `notas_moderador`.
+- Outros colegas da disciplina ou da família, se algum aceitar, são melhores que o grupo, mesmo que não tenham sido "recrutados". Se aparecer alguém, usar.
+
+**Levar ao professor (junto com P12):** o piloto foi feito sem participantes externos; só valida a mecânica (login, planilha, cronometragem), não a equivalência A × B.

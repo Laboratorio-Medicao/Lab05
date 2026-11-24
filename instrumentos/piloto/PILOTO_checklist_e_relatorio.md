@@ -93,3 +93,25 @@ Limite de 1 requisição/segundo (D3). **Depende do aceite do professor (P12)** 
 **Problemas não resolvidos / levar ao professor:**
 
 **O piloto não prova:** dificuldade igual entre A e B (n=3); só detecta problema grosseiro.
+
+---
+
+## 7. Ensaio prévio de navegação (24/11/2026) — NÃO é dado do piloto
+
+Feito pelo assistente (Claude em Chrome), no Chrome do Marcos, a pedido dele: uma aba, sem login, sem clicar em "Solicitar", sem formulário, poucas requisições. É só um teste do material; **não** conta como sessão, não vai para `dados/` e não substitui a verificação feita pelo moderador no piloto.
+
+| Tarefa | O que se viu | Login? |
+|---|---|---|
+| B1 segunda via IPTU | Card "Guias - IPTU - Emissão" na página inicial abre `.../servicos+guias-iptu-emissao+5e838678d9521a26a96ee9d9`; página de serviço com botão "Solicitar" | Não até a página do serviço |
+| A1 poda de árvore | Busca "poda de árvore" → 17 itens; 1º: "Árvore - Poda de Árvore em Passeios, Praças, etc." (`.../servicos+arvore-poda-de-arvore-em-passeios-pracas-etc+5e7a17e4d9521a26a9abf17a`). Texto: serviço só em logradouros públicos | Não |
+| A2 buraco | Busca "buraco" → 27 itens; 1º: "Tapa-Buraco" (`.../tapaburaco`). Há ao lado "Via Pública - Recapeamento" (possível erro de caminho) | Não |
+| A3 alvará de obra | Busca "alvará" → 248 itens, topo irrelevante (Extrato de Débitos, Alvará de Localização e Funcionamento, ISSQN). "alvará de obra" → 51 itens com **vários candidatos**: Licenciamento de Edificação/Alvará na Hora, Revalidação de Alvará de Construção, Comunicação de Início de Obra, Alvará/Dispensa para Execução de Obra em Logradouro Público, Licença de Demolição | Não verificado |
+| B2 iluminação pública | **Não testada** | — |
+| B3 licença para evento | **Não testada** | — |
+
+**Achados para decidir antes do piloto:**
+1. **A3 não tem tela-alvo única.** O roteiro diz "página do serviço de alvará de construção/reforma com lista de documentos", mas o Portal tem pelo menos 4 serviços plausíveis. Escolher uma tela-alvo e dizer ao moderador o que fazer se o participante parar em outra. Sem isso, a conclusão da A3 depende do julgamento de cada moderador.
+2. A3 parece mais difícil que as demais (busca com 248 resultados): pode quebrar a equivalência A × B, que é objetivo do piloto.
+3. O "Conteúdo" do serviço abre fechado (acordeão): o critério "visualiza os documentos exigidos" precisa dizer se expandir a seção é necessário.
+4. O texto da página não é extraível por ferramenta de leitura de texto (conteúdo montado por JavaScript): o catálogo de passos precisa ser montado com navegação manual.
+5. B2 e B3 ainda precisam ser verificadas.

@@ -10,18 +10,18 @@ Divergências encontradas entre o roteiro (`docs/sessao/roteiro-sessao.md`) e o 
 
 | Item | Roteiro | Dicionário / esquema | Ação |
 |---|---|---|---|
-| Faixa etária | 18–24, 25–34, 35–44, 45–54, 55+ | `18-24`, `25-34`, `35-44`, `45-59`, `60+` | Alinhar (o esquema é proposta do papel C; B decide) |
-| Uso prévio do Portal | Sim / Não | `nunca`, `raramente`, `as_vezes`, `frequentemente` | Alinhar |
-| Familiaridade | Baixa / Média / Alta | inteiro 1–5 | Alinhar |
-| Versão do Portal | não registrada no roteiro | `hash_ui_package`, `versao_chrome`, `versao_portal_obs` | Incluir passo "anotar versão" antes da sessão (ver S01_criterios §2.1) |
+| Faixa etária | 18–24, 25–34, 35–44, 45–54, 55+ | `18-24`, `25-34`, `35-44`, `45-59`, `60+` | **Resolvido 24/11/2026:** roteiro alinhado ao dicionário |
+| Uso prévio do Portal | Sim / Não | `nunca`, `raramente`, `as_vezes`, `frequentemente` | **Resolvido:** roteiro alinhado |
+| Familiaridade | Baixa / Média / Alta | inteiro 1–5 | **Resolvido:** roteiro alinhado |
+| Versão do Portal | não registrada no roteiro | `hash_ui_package`, `versao_chrome`, `versao_portal_obs` | **Resolvido:** passo incluído na preparação do roteiro |
 | Passo do erro | "registrar em qual passo" | `passos.csv` exige `catalogo_passos.csv` congelado | Montar catálogo dos 6 caminhos **durante** o piloto |
-| Escala SEQ/SUS | "aplicar" | SEQ 1–7; SUS 1–5, 10 itens | Formulários SUS/SEQ ainda inexistentes (FDV §19) — criar |
+| Escala SEQ/SUS | "aplicar" | SEQ 1–7; SUS 1–5, 10 itens | **Criados** em `formularios-sus-seq.md`; texto do SUS a conferir com a fonte |
 | Sequência/bloco | "consultar alocação" | `sequencia` 1–4, `bloco`, `ordem_realizacao` | Tabela de alocação do piloto (abaixo) |
 
 ## 1. Preparação
 
 - [ ] Roteiro, tarefas A/B e termo revisados pelo grupo (issue #18, merge #33)
-- [ ] Formulários SUS (10 itens, versão em português a citar) e SEQ impressos/digitais
+- [x] Formulários SUS e SEQ escritos (`formularios-sus-seq.md`); [ ] conferir texto do SUS com a fonte; [ ] imprimir
 - [ ] Planilhas: copiar `modelo_*.csv` para uma pasta **fora do git** durante a coleta
 - [ ] Celular Android + Chrome; computador ≥ 1366×768 + Chrome; anotar versões
 - [ ] Cronômetro; sala; gravação de tela só com consentimento no termo
@@ -115,3 +115,13 @@ Feito pelo assistente (Claude em Chrome), no Chrome do Marcos, a pedido dele: um
 3. O "Conteúdo" do serviço abre fechado (acordeão): o critério "visualiza os documentos exigidos" precisa dizer se expandir a seção é necessário.
 4. O texto da página não é extraível por ferramenta de leitura de texto (conteúdo montado por JavaScript): o catálogo de passos precisa ser montado com navegação manual.
 5. B2 e B3 também têm mais de um serviço plausível (ver tabela). Definir a tela-alvo única de A3, B2 e B3 e a regra para quando o participante parar em outra. Falta abrir as páginas de A3, B2 e B3 para conferir login.
+
+## 8. Decisões tomadas em 24/11/2026 (a pedido do Marcos, que autorizou decidir)
+
+Revisáveis pelo grupo e pelo Guilherme (papel B, dono da issue).
+
+- **Telas-alvo únicas** definidas em `docs/sessao/tarefas-conjunto-a.md` e `-b.md`. As 6 páginas abriram sem login em 24/11/2026 (só a página do serviço; "Solicitar" não foi clicado).
+- **B2 reescrita** ("apagada de noite") para casar com um único serviço do Portal.
+- **A3:** conclusão exige expandir "Exigências do Serviço?"; outros serviços de alvará contam como erro de caminho.
+- Questionário inicial do roteiro alinhado ao dicionário; roteiro agora manda registrar versão do Portal/Chrome.
+- Continua pendente: recrutar 3 pessoas, executar as sessões, auditoria (aceite do professor), preencher os dados reais.

@@ -7,7 +7,9 @@
 
 - Dispositivos preparados: celular Android com Chrome atualizado + computador com Chrome, tela ≥ 1366×768
 - Portal aberto na página inicial: servicos.pbh.gov.br
-- Planilha de observação aberta
+- Planilha de observação aberta (modelos em `instrumentos/piloto/`)
+- Anotar na planilha: versão do Chrome, `hash_ui_package` e outras marcas de versão do Portal (ver `docs/evidencias/S01_criterios_do_software.md` §2.1)
+- Formulários SUS e SEQ prontos (`instrumentos/piloto/formularios-sus-seq.md`)
 - Cronômetro zerado
 - Consultar a alocação do participante para saber: qual dispositivo vem primeiro e qual conjunto de tarefas (A ou B) vai em cada dispositivo
 
@@ -41,9 +43,9 @@ Aguardar. Registrar o código do participante (P01, P02…) na planilha. **Não 
 
 Pedir que o participante responda:
 
-1. Faixa etária: ( ) 18–24 ( ) 25–34 ( ) 35–44 ( ) 45–54 ( ) 55+
-2. Já usou o Portal de Serviços da PBH antes? ( ) Sim ( ) Não
-3. Como você avalia sua familiaridade com tecnologia? ( ) Baixa ( ) Média ( ) Alta
+1. Faixa etária: ( ) 18–24 ( ) 25–34 ( ) 35–44 ( ) 45–59 ( ) 60+
+2. Com que frequência você já usou o Portal de Serviços da PBH? ( ) Nunca ( ) Raramente ( ) Às vezes ( ) Frequentemente
+3. De 1 a 5, quanto você se sente à vontade com tecnologia? (1 = nada à vontade, 5 = muito à vontade)
 
 ---
 

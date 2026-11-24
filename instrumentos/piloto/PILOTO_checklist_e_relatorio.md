@@ -137,3 +137,14 @@ Revisáveis pelo grupo e pelo Guilherme (papel B, dono da issue).
 - Outros colegas da disciplina ou da família, se algum aceitar, são melhores que o grupo, mesmo que não tenham sido "recrutados". Se aparecer alguém, usar.
 
 **Levar ao professor (junto com P12):** o piloto foi feito sem participantes externos; só valida a mecânica (login, planilha, cronometragem), não a equivalência A × B.
+
+## 10. Como validar os dados do piloto (testado em 24/11/2026)
+
+O validador precisa de Python ≥ 3.10 (o `requirements.txt` fixa `numpy==2.5.3`, que não instala no Python 3.9 do macOS; usei 3.12).
+
+```
+python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python scripts/validar_dados.py dados/brutos
+```
+
+Testado: com `dados/sinteticos` dá 0 erros. Com os `modelo_*.csv` em branco ele lê as 5 tabelas e a auditoria sem erro de esquema; os únicos erros são os esperados de pasta vazia (`origem` em branco, `dados/CHECKSUMS.sha256` ausente). Ou seja, as colunas das planilhas batem com o validador. Ainda falta testar com linhas reais.

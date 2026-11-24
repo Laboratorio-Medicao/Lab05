@@ -17,7 +17,7 @@
 
 > "Você notou um buraco grande na rua perto da sua casa e quer reportar para a Prefeitura consertar. Usando o Portal, descubra como fazer esse pedido."
 
-**Tela-alvo:** página do serviço de tapa-buraco / conservação de vias
+**Tela-alvo:** "Tapa-Buraco" (Via Pública - Recapeamento também é aceito)
 **Critério de conclusão:** participante chega à tela do serviço e declara que terminou
 
 ---
@@ -26,5 +26,5 @@
 
 > "Um amigo seu vai fazer uma reforma na casa dele e precisa saber quais documentos são necessários para tirar o alvará de obra na Prefeitura. Usando o Portal, descubra quais são esses documentos."
 
-**Tela-alvo:** página do serviço de alvará de construção/reforma com lista de documentos
+**Tela-alvo:** "Licenciamento de Edificação/Alvará na Hora" ou "Revalidação de Alvará de Construção"
 **Critério de conclusão:** participante visualiza os documentos exigidos e declara que terminou

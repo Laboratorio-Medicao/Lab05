@@ -8,7 +8,7 @@
 
 > "Você perdeu o boleto do IPTU e precisa emitir uma segunda via para pagar. Usando o Portal, descubra como fazer isso."
 
-**Tela-alvo:** página do serviço de emissão de segunda via de guia/IPTU
+**Tela-alvo:** "Guias - IPTU - Emissão"
 **Critério de conclusão:** participante chega à tela do serviço e declara que terminou
 
 ---
@@ -17,7 +17,7 @@
 
 > "Uma lâmpada do poste na sua rua está queimada há dias. Você quer avisar a Prefeitura para consertar. Usando o Portal, descubra como fazer esse pedido."
 
-**Tela-alvo:** página do serviço de manutenção de iluminação pública
+**Tela-alvo:** "Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite" (ou variante de manutenção)
 **Critério de conclusão:** participante chega à tela do serviço e declara que terminou
 
 ---
@@ -26,5 +26,5 @@
 
 > "Um grupo de amigos quer organizar uma festa de rua no bairro e precisa saber o que é necessário para obter autorização da Prefeitura. Usando o Portal, descubra como solicitar essa licença."
 
-**Tela-alvo:** página do serviço de licença/autorização para eventos
+**Tela-alvo:** "Autorização de Evento"
 **Critério de conclusão:** participante chega à tela do serviço e declara que terminou

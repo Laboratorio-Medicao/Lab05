@@ -33,10 +33,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import coleta  # noqa: E402
 import config as C  # noqa: E402
 import estatistica as E  # noqa: E402
+import impacto as IMP  # noqa: E402
 import tratamento as T  # noqa: E402
 import visualizacao as V  # noqa: E402
 
 NOME_BASE = "solicitacoes_analiticas.csv.gz"
+
+# Tabelas da estimativa de impacto (issue #29): chave em ``r`` -> nome do CSV
+NOMES_TABELAS_IMPACTO = {
+    "volume_anual_por_canal": "volume_anual_por_canal",
+    "impacto_por_servico": "impacto_por_servico_par",
+    "impacto_por_par": "impacto_por_par",
+}
 
 
 def _jsonavel(x):
@@ -68,6 +76,7 @@ def gravar_tabelas(r: dict, pasta: Path) -> list[Path]:
         "estratificado_por_par": "pares_ajustados_por_servico",
         "sensibilidade_horizonte": "sensibilidade_horizonte",
     }
+    nomes.update(NOMES_TABELAS_IMPACTO)
     saidas = []
     for chave, nome in nomes.items():
         df = r[chave]
@@ -111,17 +120,24 @@ def resumo_markdown(r: dict, q: dict) -> str:
           "A = primeiro canal. OR de Mantel–Haenszel > 1: A encerra mais em "
           f"{h} d. Delta de Cliff > 0: A mais lento. p com correção de Holm (6 pares).\n",
           "| Par (A × B) | Serviços (prop.) | OR MH [IC 95%] | p (CMH, Holm) | I² | "
-          "Serviços (tempo) | Delta combinado [IC 95%] | Magnitude | p (van Elteren, Holm) |",
-          "|---|---:|---|---|---:|---:|---|---|---|"]
+          "Serviços (tempo) | Delta combinado [IC 95%] | Magnitude | "
+          "Delta (ponderação alternativa) | Sinal consistente (D14) | p (van Elteren, Holm) |",
+          "|---|---:|---|---|---:|---:|---|---|---:|---|---|"]
     for _, x in r["estratificado_por_par"].iterrows():
         par = f"{C.ROTULO_CANAL[x['canal_a']]} × {C.ROTULO_CANAL[x['canal_b']]}"
         orr = ("n/d" if pd.isna(x.get("or_mh")) else
                f"{x['or_mh']:.2f} [{x['or_ic_lo']:.2f}; {x['or_ic_hi']:.2f}]")
         dl = ("n/d" if pd.isna(x.get("delta_combinado")) else
               f"{x['delta_combinado']:.3f} [{x['delta_ic_lo']:.3f}; {x['delta_ic_hi']:.3f}]")
+        harm = ("n/d" if pd.isna(x.get("delta_combinado_harmonico")) else
+                f"{x['delta_combinado_harmonico']:.3f}")
+        sc = x.get("delta_sinal_consistente")
+        sinais = "n/d" if pd.isna(sc) else ("sim" if bool(sc) else "**inconclusivo**")
         L.append(f"| {par} | {int(x['servicos_prop'])} | {orr} | {V._p(x.get('p_cmh_holm'))} | "
                  f"{V._n(x.get('heterogeneidade_i2'))} | {int(x['servicos_tempo'])} | {dl} | "
-                 f"{x.get('delta_magnitude', 'n/d')} | {V._p(x.get('p_van_elteren_holm'))} |")
+                 f"{x.get('delta_magnitude', 'n/d')} | {harm} | {sinais} | "
+                 f"{V._p(x.get('p_van_elteren_holm'))} |")
+    L += ["", V.texto_robustez(r["estratificado_por_par"])]
     par = r["pares_por_servico"]
     if len(par):
         L += ["", "## Testes por serviço e par\n",
@@ -131,7 +147,28 @@ def resumo_markdown(r: dict, q: dict) -> str:
               f"- Testes de proporção usados: {r['pressupostos']['testes_proporcao_por_servico']}",
               f"- Mediana da proporção de empates nos tempos: "
               f"{V._n(r['pressupostos']['empates_tempo_mediana_p_empate'], 3)}"]
+    L += resumo_impacto(r)
     return "\n".join(L) + "\n"
+
+
+def resumo_impacto(r: dict) -> list[str]:
+    """Seção "Impacto estimado" do resumo (issue #29). Vazia se não há par de impacto."""
+    return V.linhas_markdown_impacto(r) if "impacto_por_par" in r else []
+
+
+def calcular_impacto(r: dict, params: C.Parametros) -> dict:
+    """Estimativa de impacto (issue #29) a partir do resultado de ``analisar``."""
+    el = r["elegiveis"]
+    anos = IMP.anos_coorte(el)
+    datas = pd.to_datetime(el["data_criacao"])
+    por_servico = IMP.impacto_por_servico(r["pares_por_servico"], anos)
+    return {
+        "coorte": {"inicio": str(datas.min().date()), "fim": str(datas.max().date()),
+                   "anos": float(anos)},
+        "volume_anual_por_canal": IMP.volume_anual_por_canal(el),
+        "impacto_por_servico": por_servico,
+        "impacto_por_par": IMP.impacto_por_par(por_servico, params.semente),
+    }
 
 
 def executar(args: argparse.Namespace, log=print) -> dict:
@@ -179,10 +216,12 @@ def executar(args: argparse.Namespace, log=print) -> dict:
 
     log("[3/4] Analisando")
     r = E.analisar(base, params)
+    r.update(calcular_impacto(r, params))
     tabelas = gravar_tabelas(r, saida / "tabelas")
     resumo = {k: _jsonavel(v) for k, v in r.items()
               if k not in ("elegiveis", "celulas", "servico_canal", "pares_por_servico",
                            "omnibus_por_servico")}
+    resumo.pop("impacto_por_servico", None)  # granular: já sai em CSV (como pares_por_servico)
     (saida / "resultados.json").parent.mkdir(parents=True, exist_ok=True)
     (saida / "resultados.json").write_text(
         json.dumps(resumo, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

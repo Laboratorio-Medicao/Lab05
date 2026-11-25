@@ -1,0 +1,4 @@
+canal_a,canal_b,servicos,vol_b_ano_total,dif_mediana_ponderada_dias,dif_mediana_ponderada_dias_ic_lo,dif_mediana_ponderada_dias_ic_hi,dias_solicitacao_ano,dias_solicitacao_ano_ic_lo,dias_solicitacao_ano_ic_hi,encerradas_90d_ano,encerradas_90d_ano_ic_lo,encerradas_90d_ano_ic_hi
+portal_servicos,pbh_app,159,110551,-1.69024,-3.3715,-0.323433,-186607,-421157,-25214.2,-759.919,-1646.62,-7.50268
+portal_servicos,telefone_156,45,38470.2,2.31277,0.844274,4.49762,88972.8,34911,158072,348.243,17.9795,734.942
+pbh_app,telefone_156,45,38470.2,2.69341,1.02262,5.38049,103616,38193.7,186419,335.697,-154.355,829.314

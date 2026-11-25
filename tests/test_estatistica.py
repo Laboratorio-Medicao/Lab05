@@ -127,6 +127,85 @@ def test_teste_dos_sinais():
     assert math.isnan(E.teste_dos_sinais(0, 0))
 
 
+# --- ponderação alternativa do delta combinado (D14, #39) ---------------------
+
+def _cel(tempos, servico):
+    t = np.asarray(tempos, dtype=float)
+    return {"servico": servico, "n": len(t), "k_h": len(t), "k_enc": len(t), "tempos": t}
+
+
+def _linha_par(cel, ca="portal_servicos", cb="presencial"):
+    est = E.estratificado_por_par(cel, C.Parametros(min_celula=30))
+    return est.set_index(["canal_a", "canal_b"]).loc[(ca, cb)]
+
+
+def test_combinar_deltas_pesos_iguais_e_media():
+    d, ep, lo, hi = E.combinar_deltas(np.array([0.2, -0.1, 0.4]), np.array([0.05] * 3), np.ones(3))
+    assert d == pytest.approx(0.5 / 3)
+    assert ep == pytest.approx(math.sqrt(3 * 0.05 ** 2) / 3)
+    assert lo < d < hi
+
+
+def test_estratificado_ponderacao_dominada_por_um_servico():
+    rng = np.random.default_rng(3)
+    cel = {"grande": {"portal_servicos": _cel(rng.integers(0, 3, 3000), "Grande"),
+                      "presencial": _cel(rng.integers(10, 20, 40), "Grande")}}
+    for k in ("s2", "s3", "s4"):
+        cel[k] = {"portal_servicos": _cel(rng.integers(5, 10, 60), k),
+                  "presencial": _cel(rng.integers(0, 4, 60), k)}
+    est = E.estratificado_por_par(cel, C.Parametros(min_celula=30)).set_index(["canal_a", "canal_b"])
+    lin = est.loc[("portal_servicos", "presencial")]
+    assert lin["delta_combinado"] < 0 < lin["delta_combinado_harmonico"]
+    assert lin["servico_maior_peso"] == "Grande" and lin["fatia_maior_peso"] > 0.9
+    assert lin["delta_harm_ic_lo"] <= lin["delta_combinado_harmonico"] <= lin["delta_harm_ic_hi"]
+    assert lin["delta_harm_magnitude"] in {"desprezível", "pequena", "média", "grande"}
+    assert not bool(lin["delta_sinal_consistente"])
+    # par sem nenhum serviço válido (canal ausente): colunas novas vazias, sem erro
+    vazio = est.loc[("telefone_156", "presencial")]
+    assert pd.isna(vazio["delta_combinado_harmonico"]) and pd.isna(vazio["fatia_maior_peso"])
+    assert pd.isna(vazio["delta_sinal_consistente"])
+
+
+def test_combinar_deltas_bit_a_bit_igual_a_formula_antiga():
+    rng = np.random.default_rng(11)
+    for _ in range(20):
+        k = int(rng.integers(2, 30))
+        d = rng.uniform(-1, 1, k)
+        ep = rng.uniform(0.001, 0.2, k)
+        w = rng.integers(40, 100000, k).astype(float)
+        pooled, ep_c, lo, hi = E.combinar_deltas(d, ep, w)
+        # fórmula que estava inline em estratificado_por_par (variância = ep ** 2)
+        var = np.array([float(e) ** 2 for e in ep])
+        assert pooled == float((w * d).sum() / w.sum())
+        assert ep_c == math.sqrt(float((w ** 2 * var).sum()) / w.sum() ** 2)
+        assert (lo, hi) == E.ic_cliff(pooled, ep_c)
+
+
+def test_estratificado_tamanhos_iguais_pesos_concordam():
+    rng = np.random.default_rng(4)
+    cel = {k: {"portal_servicos": _cel(rng.integers(5, 10, 50), k),
+               "presencial": _cel(rng.integers(0, 4, 50), k)} for k in ("a", "b", "c")}
+    lin = _linha_par(cel)
+    assert lin["delta_combinado_harmonico"] == pytest.approx(lin["delta_combinado"])
+    assert bool(lin["delta_sinal_consistente"])
+
+
+def test_sinal_consistente_casos():
+    assert E._sinal_consistente(1, 1, 0) is False
+    assert E._sinal_consistente(1, -1, 1) is False
+    assert E._sinal_consistente(float("nan"), 1, 1) is False
+    assert E._sinal_consistente(-1, -1, -1) is True
+    assert E._sinal_consistente(0.2, 0.01, 3.0) is True
+
+
+def test_sinal_consistente_falso_com_delta_zero():
+    cel = {k: {"portal_servicos": _cel([1] * 40, k), "presencial": _cel([1] * 40, k)}
+           for k in ("a", "b")}
+    lin = _linha_par(cel)
+    assert lin["delta_combinado"] == 0
+    assert not bool(lin["delta_sinal_consistente"])
+
+
 # --- métricas sobre a base sintética --------------------------------------
 
 @pytest.fixture(scope="module")

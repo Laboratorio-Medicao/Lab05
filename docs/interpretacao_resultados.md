@@ -1,9 +1,9 @@
 # Interpretação dos resultados — LAB05 (issue #25)
 
-**Versão 1.0 · 24/11/2026** · Papel C (Análise e Impacto) · Metodologia v3.0
+**Versão 1.1 · 25/11/2026** · Papel C (Análise e Impacto) · Metodologia v3.0
 
 > Estudo **observacional**: tudo aqui é **associação, não causa**. "Encerrada" é encerramento administrativo, **não** prova que o problema do cidadão foi resolvido.
-> Nenhum número foi digitado à mão sem fonte: cada um aponta para um arquivo em `resultados/`, gerado por `python scripts/pipeline.py` com os dados reais (execução de 24/11/2026).
+> Nenhum número foi digitado à mão sem fonte: cada um aponta para um arquivo em `resultados/`, gerado por `python scripts/pipeline.py` com os dados reais (execução de 24/11/2026; colunas de sensibilidade na execução de 25/11/2026, #39).
 > A mudança de metodologia e as decisões de desenho (90 dias, ≥ 30 por célula, estratificação por serviço) **ainda não foram aprovadas pelo professor** (P15, P16).
 
 ## 1. Resposta curta
@@ -79,7 +79,7 @@ O delta combinado é uma média dos deltas por serviço com peso n_A × n_B, cal
 - No Tapa-Buraco, o Presencial tem só **217 encerradas** contra 94.968 do Portal e 133.634 do APP, e é bem mais lento (mediana de 8 dias contra 3 e 1). Esse único serviço responde por **toda** a vantagem dos canais digitais sobre o Presencial no delta combinado.
 - Com uma ponderação que não favorece o canal maior, ou olhando a mediana por serviço, o sinal **se inverte**: o Presencial passa a ser ligeiramente mais rápido. A contagem de serviços concorda (Portal mais lento em 17 de 20).
 - **Conclusão:** nos pares com Presencial, o delta combinado (−0,17 "pequena" e −0,39 "média") **não deve ser apresentado como resultado**. O tempo do Presencial frente aos canais digitais é **inconclusivo**. Nos três pares sem Presencial o sinal é o mesmo com qualquer ponderação e a magnitude segue desprezível, então a leitura da §3.3 se mantém.
-- **Não alteramos o pipeline.** O peso foi fixado antes de ver os resultados (FONTE_DA_VERDADE §6), e trocá-lo agora seria mudar a análise depois de ver os dados. Fica como **ameaça à validade de conclusão** e como sugestão de análise de sensibilidade, a decidir pelo grupo (registrada na FONTE_DA_VERDADE §18, D14). A figura `06_comparacao_pares_ajustada.png` e o painel mostram o delta combinado; ao apresentá-los, é preciso mencionar esta ressalva.
+- **A sensibilidade agora é gerada pelo pipeline (#39, D14).** A análise principal não mudou: o delta combinado continua com peso n_A × n_B, fixado antes de ver os resultados (FONTE_DA_VERDADE §6), e todas as colunas anteriores ficam idênticas. O pipeline passou a acrescentar, em `pares_ajustados_por_servico.csv`, o delta com peso n_A·n_B/(n_A+n_B) (`delta_combinado_harmonico`, com IC e magnitude), o serviço de maior peso e sua fatia (`servico_maior_peso`, `fatia_maior_peso`) e o indicador `delta_sinal_consistente`, que só é verdadeiro quando o delta combinado, o delta alternativo e a mediana por serviço têm o mesmo sinal. A figura `06_comparacao_pares_ajustada.png`, o painel e o resumo mostram o delta alternativo e marcam como **inconclusivo** o tempo dos pares em que os sinais discordam. A dominância por um serviço segue como **ameaça à validade de conclusão**. A tabela acima e o Apêndice ficam como verificação independente, feita a partir de `pares_por_servico.csv`. Portal × Presencial e PBH APP × Presencial seguem inconclusivos no tempo; Telefone 156 × Presencial tem sinais concordantes, mas só 2 serviços (Ouvidoria com ~100% do peso): não interpretar (§3).
 
 ## 5. Q4: onde a diferença entre canais é grande
 
@@ -140,7 +140,7 @@ Fonte: `resultados/tabelas/sensibilidade_horizonte.csv` (OR de Mantel–Haenszel
 - **Ameaças (#24, Marcos):** acrescentar a dominância do delta combinado por um serviço (§4) como ameaça de **conclusão**, e a confusão pelo tipo de serviço (§3.1) como exemplo concreto de ameaça **interna**.
 - **Impacto (#29):** usar só os pares com conclusão sustentada (Portal × APP e canais digitais × 156) e deixar claro que as diferenças típicas são desprezíveis. Uma estimativa de impacto baseada no Presencial ou nas medianas gerais seria **enganosa**.
 - **Apresentação:** a mensagem "a diferença está no serviço, não no canal" e o caso do Tapa-Buraco/JARI ilustram bem a confusão e são bons exemplos para a banca.
-- **Decisão do grupo:** incluir ou não, como sensibilidade no pipeline, o delta combinado com peso n_A·n_B/(n_A+n_B) e a mediana por serviço (D14).
+- **Sensibilidade da ponderação (D14, encerrada):** o delta combinado com peso n_A·n_B/(n_A+n_B), a mediana por serviço e o indicador de sinal consistente já saem do pipeline (#39); usar o rótulo "inconclusivo" da figura 06 e do painel ao citar o tempo dos pares com Presencial.
 
 ## Apêndice: verificação da ponderação (§4)
 

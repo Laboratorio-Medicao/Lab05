@@ -26,7 +26,9 @@ pip install -r requirements.txt
 python scripts/pipeline.py
 ```
 
-Em ~6 min (download) + ~1 min (processamento) o pipeline: baixa os 10 CSVs pela API do CKAN (1 req/s) para uma pasta temporária **fora do repositório**,
+No Windows (Git Bash): `py -3.12 -m venv .venv && source .venv/Scripts/activate`.
+
+Em ~8–9 min (download) + ~1 min (processamento) o pipeline: baixa os 10 CSVs pela API do CKAN (1 req/s) para uma pasta temporária **fora do repositório**,
 descarta as colunas de endereço na leitura, gera a base anonimizada, analisa e produz os gráficos. Os CSVs brutos são apagados ao final.
 
 | Variação | Comando |
@@ -91,4 +93,4 @@ Lab05/
 | P13 | Datas reais de S02, S03 e entrega final | Grupo |
 | P14 | Link do repositório / GitHub Projects; nomes completos dos integrantes | Grupo |
 
-Falta para a entrega: interpretar os resultados (S02/S03), estimar o impacto com números públicos e fonte, revisar as 7 categorias e preparar documento e apresentação de 10 minutos.
+Falta para a entrega: interpretar os resultados (S02/S03), revisar as 7 categorias e preparar documento e apresentação de 10 minutos. A estimativa de impacto já está em `docs/impacto.md` (sem revisão do grupo).

@@ -537,6 +537,28 @@ def _estratificar_proporcao(celulas: dict, ca: str, cb: str, min_celula: int):
     return est, chaves
 
 
+def combinar_deltas(deltas: np.ndarray, eps: np.ndarray,
+                    pesos: np.ndarray) -> tuple[float, float, float, float]:
+    """Delta de Cliff combinado entre estratos: média ponderada pelos ``pesos``.
+
+    O erro-padrão combinado é sqrt(Σ w²·ep²) / Σ w (estratos independentes) e o
+    IC é o de Cliff (``ic_cliff``). Devolve ``(delta, ep, ic_lo, ic_hi)``.
+    """
+    w = np.asarray(pesos, dtype=float)
+    d = np.asarray(deltas, dtype=float)
+    var = np.array([float(e) ** 2 for e in eps])
+    pooled = float((w * d).sum() / w.sum())
+    ep = math.sqrt(float((w ** 2 * var).sum()) / w.sum() ** 2)
+    lo, hi = ic_cliff(pooled, ep)
+    return pooled, ep, lo, hi
+
+
+def _sinal_consistente(*valores: float) -> bool:
+    """True só se todos os valores têm o mesmo sinal e nenhum é zero ou NaN."""
+    sinais = [float(np.sign(v)) for v in valores]
+    return bool(all(x != 0 and not math.isnan(x) for x in sinais) and len(set(sinais)) == 1)
+
+
 def estratificado_por_par(celulas: dict, p: C.Parametros) -> pd.DataFrame:
     """Compara cada par de canais ajustando por serviço (estratos = serviços)."""
     linhas = []
@@ -559,7 +581,7 @@ def estratificado_por_par(celulas: dict, p: C.Parametros) -> pd.DataFrame:
                 servicos_a_encerra_mais=a_maior, servicos_b_encerra_mais=b_maior,
                 p_sinais_prop=teste_dos_sinais(a_maior, b_maior))
         # --- tempo: delta combinado + van Elteren + consistência
-        pares_t, deltas, vars_, pesos = [], [], [], []
+        pares_t, deltas, eps, pesos, pesos_h, servicos = [], [], [], [], [], []
         for chave, por_canal in celulas.items():
             if ca in por_canal and cb in por_canal:
                 x, y = por_canal[ca]["tempos"], por_canal[cb]["tempos"]
@@ -567,24 +589,33 @@ def estratificado_por_par(celulas: dict, p: C.Parametros) -> pd.DataFrame:
                     cl = cliff(x, y)
                     pares_t.append((x, y))
                     deltas.append(cl["delta"])
-                    vars_.append(cl["ep"] ** 2)
+                    eps.append(cl["ep"])
                     pesos.append(len(x) * len(y))
+                    pesos_h.append(len(x) * len(y) / (len(x) + len(y)))
+                    servicos.append(por_canal[ca]["servico"])
         lin["servicos_tempo"] = len(pares_t)
         if pares_t:
             w = np.array(pesos, dtype=float)
             d = np.array(deltas)
-            pooled = float((w * d).sum() / w.sum())
-            ep = math.sqrt(float((w ** 2 * np.array(vars_)).sum()) / w.sum() ** 2)
-            lo, hi = ic_cliff(pooled, ep)
+            pooled, _, lo, hi = combinar_deltas(d, np.array(eps), w)
+            # sensibilidade (D14): peso n_A·n_B/(n_A+n_B), menos dominado pelo maior serviço
+            harm, _, harm_lo, harm_hi = combinar_deltas(d, np.array(eps), np.array(pesos_h))
+            i_max = int(np.argmax(w))
+            mediana = float(np.median(d))
             ve = van_elteren(pares_t)
             a_lento = int((d > 0).sum())
             b_lento = int((d < 0).sum())
             lin.update(delta_combinado=pooled, delta_ic_lo=lo, delta_ic_hi=hi,
                        delta_magnitude=magnitude_delta(pooled),
                        van_elteren_z=ve["z"], p_van_elteren=ve["p"],
-                       mediana_delta_servicos=float(np.median(d)),
+                       mediana_delta_servicos=mediana,
                        servicos_a_mais_lento=a_lento, servicos_b_mais_lento=b_lento,
-                       p_sinais_tempo=teste_dos_sinais(a_lento, b_lento))
+                       p_sinais_tempo=teste_dos_sinais(a_lento, b_lento),
+                       delta_combinado_harmonico=harm, delta_harm_ic_lo=harm_lo,
+                       delta_harm_ic_hi=harm_hi, delta_harm_magnitude=magnitude_delta(harm),
+                       servico_maior_peso=servicos[i_max],
+                       fatia_maior_peso=float(w[i_max] / w.sum()),
+                       delta_sinal_consistente=_sinal_consistente(pooled, harm, mediana))
         linhas.append(lin)
     df = pd.DataFrame(linhas)
     for col in ("p_cmh", "p_van_elteren", "p_sinais_prop", "p_sinais_tempo"):

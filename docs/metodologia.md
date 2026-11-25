@@ -65,17 +65,21 @@ normaliza canais, pseudonimiza o Id Ticket, remove duplicatas, classifica os reg
 
 ## 7. Classificação em sete categorias (Aula 8)
 
-| Categoria | Classificação | Justificativa |
-|---|---|---|
-| Natureza | Aplicada | Gestão de um serviço público em produção |
-| Objetivos | Descritiva e exploratória (comparativa) | Descreve e compara desempenho; não testa mecanismo |
-| Abordagem | Quantitativa | Métricas, testes e tamanho de efeito |
-| Procedimentos | Análise documental de dados secundários de operação (estudo observacional retrospectivo) | Dados abertos já existentes, sem intervenção |
-| Tempo | Longitudinal retrospectivo (mai/2020–jul/2023), comparação entre canais | Registros ao longo de ~3 anos |
-| Controle | Sem controle experimental; ajuste estatístico por serviço | O canal não foi atribuído pelo pesquisador |
-| Nível de evidência | Observacional: associação, não causa | Auto-seleção do canal e perfis diferentes de demanda |
+Revisada em 25/11/2026 (S03, issue #27), com base no que foi **executado** (pipeline, resultados e interpretação), e não mais só no planejado. A coluna "Muda?" compara com a classificação preliminar da S01/v3.0.
 
-Classificação sujeita a revisão na S03.
+| Categoria | Classificação | Justificativa (baseada no executado) | Muda em relação à S01/preliminar? |
+|---|---|---|---|
+| Natureza | Aplicada | Gestão de um serviço público em produção (BH Digital, PBH). O resultado serve a quem usa e a quem gere o serviço (`docs/conclusoes_limitacoes.md`) | Não |
+| Objetivos | Descritiva e exploratória-comparativa | Q1 e Q4 são descritivas (medianas, proporções, ranking de serviços). Q2 usa qui-quadrado r×2 (H-Q2); Q3 usa CMH, van Elteren e teste dos sinais (§3.1), mas só medem associação: nenhum teste busca o mecanismo causal (`docs/interpretacao_resultados.md` §1, §3) | Ajuste de redação: "comparativa" e o limite "sem mecanismo causal" ficam explícitos |
+| Abordagem | Quantitativa | Todas as medidas são numéricas: tempo de encerramento, proporção encerrada em ≤ 90 dias, tamanhos de efeito (`resultados/tabelas/`) | Não |
+| Procedimentos | Pesquisa documental com dados secundários de operação; estudo observacional retrospectivo (*ex post facto*) | Dados abertos da PBH já existentes (CKAN), coletados a 1 req/s e processados por `scripts/pipeline.py`; o pesquisador não interveio em nenhuma solicitação | Redação mais precisa: "análise documental" vira "pesquisa documental"; o procedimento é o mesmo |
+| Tempo | Retrospectivo; coorte retrospectiva no nível da solicitação, com análise agregada no período (sem estudo de tendência temporal) | Cada solicitação é acompanhada da criação ao encerramento ou ao corte (seguimento ≥ 90 d, Kaplan–Meier), mas os 3 anos (mai/2020–jul/2023) são analisados juntos, sem o ano como estratificador (I4) | Sim: o "longitudinal" preliminar sugeria estudo de evolução no tempo, que não foi feito |
+| Controle | Sem controle experimental; controle estatístico por estratificação por serviço | O canal não foi atribuído pelo pesquisador (autosseleção, I2). O serviço entra como estratificador (CMH, van Elteren, comparações dentro do serviço); urgência e perfil não estão nos dados, e a região existe na fonte, mas é descartada na leitura por privacidade (dicionário §2) | Não (redação mais precisa) |
+| Nível de evidência | Observacional: associação, não causa | O efeito global some em grande parte ao controlar o serviço (V de Cramér de 0,46 para mediana 0,040; ε² de 0,077 para 0,006, `docs/interpretacao_resultados.md` §3.1). O caso do Presencial, em que 88,7% das solicitações elegíveis são recursos à JARI (I1), mostra que a confusão existe e é grande | Não; agora com a evidência de que a confusão ocorre |
+
+### Por que não é um experimento
+
+Apesar de o laboratório se chamar "Experimento Final", o estudo **não é um experimento**: o canal não foi atribuído aleatoriamente nem pelo pesquisador. O enunciado aceita estudo observacional e análise de dados de operação (FAQ, §10) e exige **classificar corretamente** e discutir a força da evidência; é isso que a tabela acima faz. Essa força é limitada pela autosseleção do canal (I2): o cidadão escolhe por onde pedir, então qualquer diferença residual pode vir de quem escolhe e não do canal. Por isso o texto fala em associação, nunca em efeito do canal. Combinar este caminho com outro, como um survey com usuários, é sugerido como trabalho futuro, porque o enunciado valoriza a combinação de caminhos (§2b).
 
 ## 8. Ameaças à validade
 

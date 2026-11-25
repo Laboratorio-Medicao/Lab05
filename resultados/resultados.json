@@ -178,13 +178,13 @@
       "or_ic_lo": 0.8252509458798561,
       "or_ic_hi": 0.8587603156326218,
       "cmh_chi2": 288.2418977366943,
-      "p_cmh": 1.201253968387354e-64,
+      "p_cmh": 1.2012539683873539e-64,
       "heterogeneidade_q": 1392.2256058890353,
       "heterogeneidade_i2": 0.8865126461317268,
       "mediana_dif_risco_pp": -0.5861655142010432,
       "servicos_a_encerra_mais": 52,
       "servicos_b_encerra_mais": 94,
-      "p_sinais_prop": 0.0006398230663331793,
+      "p_sinais_prop": 0.0006398230663331788,
       "servicos_tempo": 149,
       "delta_combinado": 0.08825265985004278,
       "delta_ic_lo": 0.08489889390436424,
@@ -195,11 +195,11 @@
       "mediana_delta_servicos": 0.04760174418604651,
       "servicos_a_mais_lento": 98,
       "servicos_b_mais_lento": 51,
-      "p_sinais_tempo": 0.00014628394729286615,
-      "p_cmh_holm": 4.805015873549416e-64,
+      "p_sinais_tempo": 0.00014628394729286552,
+      "p_cmh_holm": 4.8050158735494156e-64,
       "p_van_elteren_holm": 0.0,
-      "p_sinais_prop_holm": 0.0038389383979990756,
-      "p_sinais_tempo_holm": 0.0007314197364643308
+      "p_sinais_prop_holm": 0.003838938397999073,
+      "p_sinais_tempo_holm": 0.0007314197364643276
     },
     {
       "canal_a": "portal_servicos",
@@ -210,7 +210,7 @@
       "or_ic_lo": 1.08722962249956,
       "or_ic_hi": 1.157409374890103,
       "cmh_chi2": 52.83837060456285,
-      "p_cmh": 3.621566318405383e-13,
+      "p_cmh": 3.621566318405381e-13,
       "heterogeneidade_q": 722.0134168166651,
       "heterogeneidade_i2": 0.939059304196874,
       "mediana_dif_risco_pp": 0.3231854224350128,
@@ -223,13 +223,13 @@
       "delta_ic_hi": -0.09928058887160449,
       "delta_magnitude": "desprezível",
       "van_elteren_z": -20.855301574025308,
-      "p_van_elteren": 1.3643545150362846e-96,
+      "p_van_elteren": 1.3643545150362842e-96,
       "mediana_delta_servicos": -0.057446638739277876,
       "servicos_a_mais_lento": 11,
       "servicos_b_mais_lento": 34,
       "p_sinais_tempo": 0.0008240823595997425,
-      "p_cmh_holm": 7.243132636810766e-13,
-      "p_van_elteren_holm": 5.4574180601451384e-96,
+      "p_cmh_holm": 7.243132636810762e-13,
+      "p_van_elteren_holm": 5.457418060145137e-96,
       "p_sinais_prop_holm": 1.0,
       "p_sinais_tempo_holm": 0.00329632943839897
     },
@@ -255,13 +255,13 @@
       "delta_ic_hi": -0.14429167760007552,
       "delta_magnitude": "pequena",
       "van_elteren_z": 7.8649833563192635,
-      "p_van_elteren": 3.691465252677958e-15,
+      "p_van_elteren": 3.691465252677959e-15,
       "mediana_delta_servicos": 0.10313335223365958,
       "servicos_a_mais_lento": 17,
       "servicos_b_mais_lento": 3,
       "p_sinais_tempo": 0.0025768280029296875,
       "p_cmh_holm": 0.0,
-      "p_van_elteren_holm": 1.1074395758033874e-14,
+      "p_van_elteren_holm": 1.1074395758033876e-14,
       "p_sinais_prop_holm": 0.713653564453125,
       "p_sinais_tempo_holm": 0.0077304840087890625
     },
@@ -274,7 +274,7 @@
       "or_ic_lo": 1.088124924535643,
       "or_ic_hi": 1.1544548714736385,
       "cmh_chi2": 58.38803174350792,
-      "p_cmh": 2.151961501125518e-14,
+      "p_cmh": 2.15196150112552e-14,
       "heterogeneidade_q": 803.4470740347828,
       "heterogeneidade_i2": 0.9452359695841084,
       "mediana_dif_risco_pp": 0.7805575411007792,
@@ -292,7 +292,7 @@
       "servicos_a_mais_lento": 8,
       "servicos_b_mais_lento": 37,
       "p_sinais_tempo": 1.5374090196473844e-05,
-      "p_cmh_holm": 6.455884503376554e-14,
+      "p_cmh_holm": 6.45588450337656e-14,
       "p_van_elteren_holm": 4.0114010771122105e-120,
       "p_sinais_prop_holm": 0.675782254228352,
       "p_sinais_tempo_holm": 9.224454117884306e-05
@@ -351,13 +351,13 @@
       "delta_ic_hi": 0.08409055788818567,
       "delta_magnitude": "desprezível",
       "van_elteren_z": 5.394428013812047,
-      "p_van_elteren": 6.874217901047864e-08,
+      "p_van_elteren": 6.874217901047863e-08,
       "mediana_delta_servicos": 0.2134571770594471,
       "servicos_a_mais_lento": 2,
       "servicos_b_mais_lento": 0,
       "p_sinais_tempo": 0.5,
       "p_cmh_holm": 5.229027101324757e-11,
-      "p_van_elteren_holm": 1.3748435802095728e-07,
+      "p_van_elteren_holm": 1.3748435802095725e-07,
       "p_sinais_prop_holm": 1.0,
       "p_sinais_tempo_holm": 0.6035156249999999
     }
@@ -418,7 +418,7 @@
         "delta_ic_lo": 0.4800906285686138,
         "delta_ic_hi": 0.649665858383092,
         "delta_magnitude": "grande",
-        "p_tempo_holm": 1.5836211641917715e-12
+        "p_tempo_holm": 1.5836211641917709e-12
       },
       {
         "servico": "Informação sobre Notificação de Trânsito - Multa",
@@ -446,7 +446,7 @@
         "delta_ic_lo": 0.3282885820226083,
         "delta_ic_hi": 0.5827512359158266,
         "delta_magnitude": "média",
-        "p_tempo_holm": 8.803551089674845e-08
+        "p_tempo_holm": 8.803551089674847e-08
       },
       {
         "servico": "Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",
@@ -460,7 +460,7 @@
         "delta_ic_lo": -0.6033837038393881,
         "delta_ic_hi": -0.17639616056173385,
         "delta_magnitude": "média",
-        "p_tempo_holm": 0.2220086824267018
+        "p_tempo_holm": 0.22200868242670174
       },
       {
         "servico": "Orientação para Construção ou Reforma de Passeio",
@@ -474,7 +474,7 @@
         "delta_ic_lo": 0.2914444774683246,
         "delta_ic_hi": 0.5158604625989701,
         "delta_magnitude": "média",
-        "p_tempo_holm": 0.0005886016168914455
+        "p_tempo_holm": 0.0005886016168914457
       },
       {
         "servico": "Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI",
@@ -488,7 +488,7 @@
         "delta_ic_lo": 0.3591994850508383,
         "delta_ic_hi": 0.43995746434639044,
         "delta_magnitude": "média",
-        "p_tempo_holm": 1.0488075708708859e-50
+        "p_tempo_holm": 1.0488075708708863e-50
       },
       {
         "servico": "Restituição - Fazenda - Taxa",
@@ -502,7 +502,7 @@
         "delta_ic_lo": 0.24295290743511033,
         "delta_ic_hi": 0.4956434910352397,
         "delta_magnitude": "média",
-        "p_tempo_holm": 0.0007084089698322111
+        "p_tempo_holm": 0.0007084089698322108
       },
       {
         "servico": "Coleta Seletiva (Porta a Porta) - Ocorrência/ Reclamação",
@@ -516,7 +516,7 @@
         "delta_ic_lo": 0.10466068254603904,
         "delta_ic_hi": 0.5582330311399375,
         "delta_magnitude": "média",
-        "p_tempo_holm": 0.7592210723555993
+        "p_tempo_holm": 0.7592210723555995
       },
       {
         "servico": "Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas",
@@ -530,7 +530,7 @@
         "delta_ic_lo": -0.44217815058088367,
         "delta_ic_hi": -0.2356470502066616,
         "delta_magnitude": "média",
-        "p_tempo_holm": 2.9299353118798025e-07
+        "p_tempo_holm": 2.9299353118798014e-07
       },
       {
         "servico": "Fornecedor - Atualização de Documentos no Cadastro",
@@ -558,7 +558,7 @@
         "delta_ic_lo": -0.4831363811873826,
         "delta_ic_hi": -0.10189734252875834,
         "delta_magnitude": "pequena",
-        "p_tempo_holm": 0.4599637844764026
+        "p_tempo_holm": 0.4599637844764025
       },
       {
         "servico": "Recurso de Perícia - Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão",
@@ -630,7 +630,7 @@
         "dif_risco_ic_lo_pp": 33.83372639688945,
         "dif_risco_ic_hi_pp": 44.1287579028042,
         "h_magnitude": "grande",
-        "p_prop_holm": 4.9390798112108085e-55
+        "p_prop_holm": 4.939079811210811e-55
       },
       {
         "servico": "Compensação de Débitos Municipais com Precatório Próprio",
@@ -644,7 +644,7 @@
         "dif_risco_ic_lo_pp": -48.195454048619,
         "dif_risco_ic_hi_pp": -21.539679917870565,
         "h_magnitude": "grande",
-        "p_prop_holm": 0.011059440992133214
+        "p_prop_holm": 0.01105944099213322
       },
       {
         "servico": "Programa Locação Social",
@@ -658,7 +658,7 @@
         "dif_risco_ic_lo_pp": -38.57244391026686,
         "dif_risco_ic_hi_pp": -23.526480452608396,
         "h_magnitude": "média",
-        "p_prop_holm": 2.287888888273067e-12
+        "p_prop_holm": 2.2878888882730678e-12
       },
       {
         "servico": "Plano de Gerenciamento de Resíduos de Serviços de Saúde - PGRSS",
@@ -672,7 +672,7 @@
         "dif_risco_ic_lo_pp": -30.85367133977676,
         "dif_risco_ic_hi_pp": -18.917555704600638,
         "h_magnitude": "média",
-        "p_prop_holm": 0.0003769701314882485
+        "p_prop_holm": 0.00037697013148824864
       },
       {
         "servico": "Comunicado de Falecimento de Beneficiário para Transferência de Titularidade",
@@ -700,7 +700,7 @@
         "dif_risco_ic_lo_pp": -25.774772807381492,
         "dif_risco_ic_hi_pp": -16.873081305633534,
         "h_magnitude": "média",
-        "p_prop_holm": 1.9409219117004026e-10
+        "p_prop_holm": 1.9409219117004037e-10
       },
       {
         "servico": "Licença de Mesa e Cadeira",
@@ -756,7 +756,7 @@
         "dif_risco_ic_lo_pp": -21.202149986119718,
         "dif_risco_ic_hi_pp": -8.11321255294082,
         "h_magnitude": "média",
-        "p_prop_holm": 0.4474586631374347
+        "p_prop_holm": 0.44745866313743443
       },
       {
         "servico": "Coleta de Animal Morto - Pequeno Porte",
@@ -770,7 +770,7 @@
         "dif_risco_ic_lo_pp": 10.175111636894009,
         "dif_risco_ic_hi_pp": 24.770295316148644,
         "h_magnitude": "média",
-        "p_prop_holm": 4.626655305737821e-12
+        "p_prop_holm": 4.626655305737823e-12
       },
       {
         "servico": "Restituição - Fazenda - ITBI",
@@ -784,7 +784,7 @@
         "dif_risco_ic_lo_pp": -19.418228196575463,
         "dif_risco_ic_hi_pp": -11.835499935240055,
         "h_magnitude": "pequena",
-        "p_prop_holm": 1.0218305606675943e-06
+        "p_prop_holm": 1.0218305606675945e-06
       },
       {
         "servico": "Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",
@@ -798,7 +798,7 @@
         "dif_risco_ic_lo_pp": -23.534044910460466,
         "dif_risco_ic_hi_pp": -5.7395825387523605,
         "h_magnitude": "pequena",
-        "p_prop_holm": 0.3264397296632997
+        "p_prop_holm": 0.32643972966329954
       },
       {
         "servico": "Caçamba em Ruas e Passeios - Fiscalização",
@@ -812,7 +812,7 @@
         "dif_risco_ic_lo_pp": -25.286273715088083,
         "dif_risco_ic_hi_pp": -5.304493538778638,
         "h_magnitude": "pequena",
-        "p_prop_holm": 0.1788509543372202
+        "p_prop_holm": 0.17885095433721998
       }
     ]
   },
@@ -835,7 +835,7 @@
       "or_mh": 1.1640577674913635,
       "or_ic_lo": 1.1373656235525271,
       "or_ic_hi": 1.1913763331659177,
-      "p_cmh": 3.1438381641686187e-38
+      "p_cmh": 3.1438381641686177e-38
     },
     {
       "horizonte_dias": 30,
@@ -855,7 +855,7 @@
       "or_mh": 1.1842749338755956,
       "or_ic_lo": 1.158812643464875,
       "or_ic_hi": 1.2102967006059924,
-      "p_cmh": 1.7187661182421803e-53
+      "p_cmh": 1.7187661182421808e-53
     },
     {
       "horizonte_dias": 30,
@@ -885,7 +885,7 @@
       "or_mh": 0.7701342263438068,
       "or_ic_lo": 0.7512034186551382,
       "or_ic_hi": 0.7895421025213103,
-      "p_cmh": 1.0770018340355496e-94
+      "p_cmh": 1.0770018340355499e-94
     },
     {
       "horizonte_dias": 180,
@@ -895,7 +895,7 @@
       "or_mh": 1.098912740316135,
       "or_ic_lo": 1.055222039901864,
       "or_ic_hi": 1.1444124223764558,
-      "p_cmh": 4.535690210413457e-06
+      "p_cmh": 4.535690210413453e-06
     },
     {
       "horizonte_dias": 180,
@@ -915,7 +915,7 @@
       "or_mh": 1.1852687407889329,
       "or_ic_lo": 1.1395953041271696,
       "or_ic_hi": 1.2327727069456327,
-      "p_cmh": 1.228984642680916e-17
+      "p_cmh": 1.2289846426809163e-17
     },
     {
       "horizonte_dias": 180,
@@ -935,7 +935,7 @@
       "or_mh": 0.5438338609980401,
       "or_ic_lo": 0.40378554713936826,
       "or_ic_hi": 0.7324563012800318,
-      "p_cmh": 6.0688818179318525e-05
+      "p_cmh": 6.068881817931854e-05
     }
   ],
   "pressupostos": {
@@ -947,5 +947,155 @@
     "empates_tempo_mediana_p_empate": 0.027408043933467657,
     "empates_tempo_maximo_p_empate": 0.44370316784109876,
     "independencia": "não verificável: a base não tem identificador do cidadão; o mesmo cidadão pode gerar várias solicitações"
-  }
+  },
+  "coorte": {
+    "inicio": "2020-05-11",
+    "fim": "2023-04-26",
+    "anos": 2.9596167008898013
+  },
+  "volume_anual_por_canal": [
+    {
+      "ano": 2020,
+      "canal": "pbh_app",
+      "solicitacoes": 17917,
+      "meses_cobertos": 8
+    },
+    {
+      "ano": 2020,
+      "canal": "portal_servicos",
+      "solicitacoes": 42538,
+      "meses_cobertos": 8
+    },
+    {
+      "ano": 2020,
+      "canal": "presencial",
+      "solicitacoes": 12,
+      "meses_cobertos": 3
+    },
+    {
+      "ano": 2020,
+      "canal": "telefone_156",
+      "solicitacoes": 13537,
+      "meses_cobertos": 7
+    },
+    {
+      "ano": 2021,
+      "canal": "pbh_app",
+      "solicitacoes": 104478,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2021,
+      "canal": "portal_servicos",
+      "solicitacoes": 166562,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2021,
+      "canal": "presencial",
+      "solicitacoes": 21641,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2021,
+      "canal": "telefone_156",
+      "solicitacoes": 41060,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "pbh_app",
+      "solicitacoes": 152793,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "portal_servicos",
+      "solicitacoes": 230079,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "presencial",
+      "solicitacoes": 21326,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "telefone_156",
+      "solicitacoes": 43467,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2023,
+      "canal": "pbh_app",
+      "solicitacoes": 54014,
+      "meses_cobertos": 4
+    },
+    {
+      "ano": 2023,
+      "canal": "portal_servicos",
+      "solicitacoes": 110395,
+      "meses_cobertos": 4
+    },
+    {
+      "ano": 2023,
+      "canal": "presencial",
+      "solicitacoes": 7078,
+      "meses_cobertos": 4
+    },
+    {
+      "ano": 2023,
+      "canal": "telefone_156",
+      "solicitacoes": 16029,
+      "meses_cobertos": 4
+    }
+  ],
+  "impacto_por_par": [
+    {
+      "canal_a": "portal_servicos",
+      "canal_b": "pbh_app",
+      "servicos": 159,
+      "vol_b_ano_total": 110550.80203515265,
+      "dif_mediana_ponderada_dias": -1.6902387146136189,
+      "dif_mediana_ponderada_dias_ic_lo": -3.37149990647745,
+      "dif_mediana_ponderada_dias_ic_hi": -0.3234330878471485,
+      "dias_solicitacao_ano": -186607.10349213693,
+      "dias_solicitacao_ano_ic_lo": -421156.5976179464,
+      "dias_solicitacao_ano_ic_hi": -25214.160326086985,
+      "encerradas_90d_ano": -759.9194432051746,
+      "encerradas_90d_ano_ic_lo": -1646.6186107209462,
+      "encerradas_90d_ano_ic_hi": -7.502675290123275
+    },
+    {
+      "canal_a": "portal_servicos",
+      "canal_b": "telefone_156",
+      "servicos": 45,
+      "vol_b_ano_total": 38470.18432007401,
+      "dif_mediana_ponderada_dias": 2.312773918160499,
+      "dif_mediana_ponderada_dias_ic_lo": 0.8442740246981988,
+      "dif_mediana_ponderada_dias_ic_hi": 4.4976226054740325,
+      "dias_solicitacao_ano": 88972.83892229418,
+      "dias_solicitacao_ano_ic_lo": 34910.981874421836,
+      "dias_solicitacao_ano_ic_hi": 158072.1964298103,
+      "encerradas_90d_ano": 348.2432294821798,
+      "encerradas_90d_ano_ic_lo": 17.979503210618795,
+      "encerradas_90d_ano_ic_hi": 734.9424802003653
+    },
+    {
+      "canal_a": "pbh_app",
+      "canal_b": "telefone_156",
+      "servicos": 45,
+      "vol_b_ano_total": 38470.18432007401,
+      "dif_mediana_ponderada_dias": 2.693413668022168,
+      "dif_mediana_ponderada_dias_ic_lo": 1.0226190030133104,
+      "dif_mediana_ponderada_dias_ic_hi": 5.38049495571225,
+      "dias_solicitacao_ano": 103616.12025901943,
+      "dias_solicitacao_ano_ic_lo": 38193.700037580944,
+      "dias_solicitacao_ano_ic_hi": 186418.73450508772,
+      "encerradas_90d_ano": 335.69652714564006,
+      "encerradas_90d_ano_ic_lo": -154.35461355259395,
+      "encerradas_90d_ano_ic_hi": 829.3136263765466
+    }
+  ]
 }

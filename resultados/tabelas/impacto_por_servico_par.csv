@@ -1,0 +1,250 @@
+servico,canal_a,canal_b,vol_a_ano,vol_b_ano,dif_mediana_dias,dif_taxa,dias_solicitacao_ano,encerradas_90d_ano
+Alteração de Licença (Credencial) - Feira da Av. Afonso Pena,portal_servicos,pbh_app,16.5562,23.9896,-1,0,-23.9896,0
+Árvore - Análise de Intervenção em Vegetação Motivada por Edificação,portal_servicos,pbh_app,246.991,22.6381,-9,-0.0314637,-203.743,-0.712278
+Árvore - Autorização para Supressão em Área Privada,portal_servicos,pbh_app,216.92,87.8492,-1,0.0261562,-87.8492,2.29781
+"Árvore - Corte ou Secção de Raiz de Árvore em Passeios, Praças, Etc",portal_servicos,pbh_app,174.685,527.771,-4,0,-2111.08,0
+"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",portal_servicos,pbh_app,2480.05,2075.61,-4,-0.011477,-8302.43,-23.8218
+"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",portal_servicos,telefone_156,2480.05,165.9,4,-0.0353274,663.599,-5.86082
+"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",pbh_app,telefone_156,2075.61,165.9,8,-0.0238504,1327.2,-3.95678
+"Árvore ? Poda de Árvore em Passeios, Praças, Etc",portal_servicos,pbh_app,3703.52,3781.23,-11,-0.0396068,-41593.6,-149.762
+"Árvore ? Poda de Árvore em Passeios, Praças, Etc",portal_servicos,telefone_156,3703.52,273.684,32,-0.00968203,8757.89,-2.64982
+"Árvore ? Poda de Árvore em Passeios, Praças, Etc",pbh_app,telefone_156,3781.23,273.684,43,0.0299247,11768.4,8.18992
+"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",portal_servicos,pbh_app,602.105,302.742,-15,-0.0810523,-4541.13,-24.5379
+"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",portal_servicos,telefone_156,602.105,28.3821,24.5,-0.00553151,695.36,-0.156995
+"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",pbh_app,telefone_156,302.742,28.3821,39.5,0.0755208,1121.09,2.14344
+"Árvore - Solicitação de Plantio em Passeios, Praças, etc.",portal_servicos,pbh_app,1345.11,307.81,-72.5,-0.133039,-22316.2,-40.9507
+"Árvore ? Transplantio de Árvore em Passeios, Praças, Etc",portal_servicos,pbh_app,17.232,16.2183,-7,-0.136029,-113.528,-2.20617
+"Árvores e Galhos Caídos em Ruas, Passeios e Praças - Recolhimento",portal_servicos,pbh_app,420.663,472.696,0,0.00231491,0,1.09425
+"Árvores e Galhos Caídos em Ruas, Passeios e Praças - Recolhimento",portal_servicos,telefone_156,420.663,109.812,5,0.0101205,549.058,1.11135
+"Árvores e Galhos Caídos em Ruas, Passeios e Praças - Recolhimento",pbh_app,telefone_156,472.696,109.812,5,0.00780558,549.058,0.857142
+Atendimento ao Consumidor - PROCON,portal_servicos,pbh_app,219.961,116.907,-4,-0.028844,-467.628,-3.37207
+"Aterro, Desaterro, Terraplanagem e Movimentação de Terra - Fiscalização",portal_servicos,pbh_app,23.3138,29.7336,-2.5,-0.127635,-74.334,-3.79505
+"Aterro, Desaterro, Terraplanagem e Movimentação de Terra - Fiscalização",portal_servicos,telefone_156,23.3138,67.5763,1.5,-0.100362,101.364,-6.78212
+"Aterro, Desaterro, Terraplanagem e Movimentação de Terra - Fiscalização",pbh_app,telefone_156,29.7336,67.5763,4,0.0272727,270.305,1.84299
+Atualização do Precatório,portal_servicos,pbh_app,134.139,22.6381,3,-0.00755668,67.9142,-0.171069
+Autorização para Afastamento - Feira da Afonso Pena,portal_servicos,pbh_app,39.5321,27.0305,6,0,162.183,0
+Autorização para Implantação de Parklet Licenciado (Varanda Urbana),portal_servicos,pbh_app,140.559,15.5426,,0.017036,,0.264782
+Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,portal_servicos,pbh_app,698.063,669.343,-7,-0.0378147,-4685.4,-25.311
+Boca de Lobo/ Bueiro - Limpeza,portal_servicos,pbh_app,340.923,555.815,-1,0.0196288,-555.815,10.91
+Boca de Lobo/ Bueiro - Limpeza,portal_servicos,telefone_156,340.923,29.0578,-3,-0.0159264,-87.1735,-0.462787
+Boca de Lobo/ Bueiro - Limpeza,pbh_app,telefone_156,555.815,29.0578,-2,-0.0355552,-58.1156,-1.03316
+"Boca de Lobo/ Bueiro - Manutenção de Quadro, Grelha e Cantoneira",portal_servicos,pbh_app,149.006,29.7336,-3,0.0548083,-89.2007,1.62965
+Caçamba em Ruas e Passeios - Fiscalização,portal_servicos,pbh_app,26.0169,58.7914,-6.5,-0.124571,-382.144,-7.32369
+Caçamba em Ruas e Passeios - Fiscalização,portal_servicos,telefone_156,26.0169,89.5386,-6.5,-0.1432,-582.001,-12.8219
+Caçamba em Ruas e Passeios - Fiscalização,pbh_app,telefone_156,58.7914,89.5386,0,-0.0186294,0,-1.66805
+"Camelôs, Ambulantes e Comércio em Vias Públicas - Fiscalização",portal_servicos,pbh_app,39.87,66.2248,-3.5,-0.0606192,-231.787,-4.01449
+"Camelôs, Ambulantes e Comércio em Vias Públicas - Fiscalização",portal_servicos,telefone_156,39.87,255.776,-0.5,-0.0445447,-127.888,-11.3935
+"Camelôs, Ambulantes e Comércio em Vias Públicas - Fiscalização",pbh_app,telefone_156,66.2248,255.776,3,0.0160745,767.329,4.11147
+Capina e Roçada - Ocorrência/ Reclamação,portal_servicos,pbh_app,341.598,253.411,0,-0.00915925,0,-2.32106
+"Cerca Elétrica, Arame Farpado e Similares - Fiscalização",portal_servicos,pbh_app,11.8259,14.5289,-6,0.0146179,-87.1735,0.212383
+Certidão de Endereço Oficial Mediante Requerimento,portal_servicos,pbh_app,365.25,203.067,-1,-0.000925069,-203.067,-0.187851
+Certidão de Endereço Temporário - Endereço Cidadão Mediante Requerimento,portal_servicos,pbh_app,37.167,39.5321,-1,0,-39.5321,0
+Certidão de Inteiro Teor/ Cópia de Processo - Fazenda,portal_servicos,pbh_app,453.099,27.3684,0,-0.00853426,0,-0.233569
+Certidão de Origem de Lote Mediante Requerimento,portal_servicos,pbh_app,130.76,16.5562,-4,-0.00516796,-66.2248,-0.0855617
+Certidão Negativa de Débitos - CND (casos não emitidos pela web),portal_servicos,pbh_app,323.691,39.5321,0,-0.00313152,0,-0.123796
+Cesto Coletor de Resíduo Leve (Lixeira) - Solicitação de Implantação em Via Pública,portal_servicos,pbh_app,27.0305,14.8668,-1,0,-14.8668,0
+Coleta de Animal Morto - Grande Porte,portal_servicos,pbh_app,22.9759,55.0747,0,0.00369903,0,0.203723
+Coleta de Animal Morto - Grande Porte,portal_servicos,telefone_156,22.9759,14.191,0,0.0329132,0,0.467072
+Coleta de Animal Morto - Grande Porte,pbh_app,telefone_156,55.0747,14.191,0,0.0292141,0,0.414579
+Coleta de Animal Morto - Pequeno Porte,portal_servicos,pbh_app,161.17,394.646,0,-0.0126432,0,-4.9896
+Coleta de Animal Morto - Pequeno Porte,portal_servicos,telefone_156,161.17,39.87,1,0.153075,39.87,6.10312
+Coleta de Animal Morto - Pequeno Porte,pbh_app,telefone_156,394.646,39.87,1,0.165719,39.87,6.60721
+Coleta de Lixo Domiciliar - Ocorrência/Reclamação,portal_servicos,pbh_app,37.167,33.1124,0.5,-0.0261596,16.5562,-0.866206
+Coleta Seletiva (Ponto a Ponto) - Solicitação de Implantação,portal_servicos,pbh_app,11.8259,23.6517,-9.5,-0.0142857,-224.691,-0.337882
+Coleta Seletiva (Porta a Porta) - Ocorrência/ Reclamação,portal_servicos,pbh_app,10.1364,29.3957,-4,-0.0321839,-117.583,-0.946068
+Coleta Seletiva (Porta a Porta) - Solicitação de Implantação,portal_servicos,pbh_app,24.3275,27.7063,-8,-0.00169377,-221.65,-0.046928
+"Comércio, Indústria ou Serviço com Risco à Segurança de Pessoas e Bens - Fiscalização",portal_servicos,pbh_app,29.7336,317.271,3,-0.0295527,951.812,-9.37621
+"Comércio, Indústria ou Serviço com Risco à Segurança de Pessoas e Bens - Fiscalização",portal_servicos,telefone_156,29.7336,27.3684,14,-0.0154321,383.158,-0.422352
+"Comércio, Indústria ou Serviço com Risco à Segurança de Pessoas e Bens - Fiscalização",pbh_app,telefone_156,317.271,27.3684,11,0.0141206,301.052,0.386459
+Compensação de Débitos Municipais com Precatório Próprio,portal_servicos,pbh_app,95.2826,10.4743,,-0.385152,,-4.03421
+Comunicado de Falecimento de Beneficiário para Transferência de Titularidade,portal_servicos,pbh_app,26.3548,15.8804,-11,-0.223677,-174.685,-3.55209
+"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",portal_servicos,pbh_app,432.151,378.765,-1,-0.0328946,-378.765,-12.4594
+"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",portal_servicos,telefone_156,432.151,462.898,4,0.0151373,1851.59,7.00701
+"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",pbh_app,telefone_156,378.765,462.898,5,0.0480319,2314.49,22.2339
+Consulta à Documentação de Identificação do Condutor Infrator - FICI,portal_servicos,pbh_app,25.0032,11.1501,-1,0,-11.1501,0
+"Controle de Animais Peçonhentos: Escorpiões, Aranhas, Lacraias, Lagartas",portal_servicos,pbh_app,119.948,183.808,-2,-0.022007,-367.615,-4.04506
+"Controle de Animais Peçonhentos: Escorpiões, Aranhas, Lacraias, Lagartas",portal_servicos,telefone_156,119.948,521.013,-1,-0.0118741,-521.013,-6.18656
+"Controle de Animais Peçonhentos: Escorpiões, Aranhas, Lacraias, Lagartas",pbh_app,telefone_156,183.808,521.013,1,0.0101329,521.013,5.2794
+"Controle de Roedores (ratos de telhado, ratazana, camundongos)",portal_servicos,pbh_app,556.491,838.96,-1,-0.00112948,-838.96,-0.947587
+"Controle de Roedores (ratos de telhado, ratazana, camundongos)",portal_servicos,telefone_156,556.491,4744.2,-1,-0.0142206,-4744.2,-67.4651
+"Controle de Roedores (ratos de telhado, ratazana, camundongos)",pbh_app,telefone_156,838.96,4744.2,0,-0.0130911,0,-62.1067
+"Controle de Vetores: Carrapatos, Percevejos, Pulgas, Barbeiros, Caramujos, Piolhos de Pombos",portal_servicos,pbh_app,37.5049,80.4158,-1,0.000567795,-80.4158,0.0456597
+"Controle de Vetores: Carrapatos, Percevejos, Pulgas, Barbeiros, Caramujos, Piolhos de Pombos",portal_servicos,telefone_156,37.5049,345.991,0,0.00356313,0,1.23281
+"Controle de Vetores: Carrapatos, Percevejos, Pulgas, Barbeiros, Caramujos, Piolhos de Pombos",pbh_app,telefone_156,80.4158,345.991,1,0.00299534,345.991,1.03636
+Coronavírus - Denúncia de Descumprimento por Estabelecimentos,portal_servicos,pbh_app,776.452,2008.71,4,0.0363123,8034.82,72.9408
+Coronavírus - Denúncia de Descumprimento por Estabelecimentos,portal_servicos,telefone_156,776.452,3353.47,2.5,0.00323185,8383.69,10.8379
+Coronavírus - Denúncia de Descumprimento por Estabelecimentos,pbh_app,telefone_156,2008.71,3353.47,-1.5,-0.0330805,-5030.21,-110.935
+Credencial de Estacionamento Reservado para Idoso,portal_servicos,pbh_app,1786.38,1113.66,0,0,0,0
+Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade,portal_servicos,pbh_app,207.797,146.303,-5,-0.0224075,-731.514,-3.27828
+Criação ou Extinção de Linha de Ônibus,portal_servicos,pbh_app,32.0988,78.0506,-6,-0.0768284,-468.304,-5.99651
+Declaração sobre Transporte ou Trânsito,portal_servicos,pbh_app,22.9759,42.2352,-2,-0.0871765,-84.4704,-3.68192
+Defesa Contra Autos Emitidos Pela Fiscalização de Controle Urbanístico e Ambiental (1° Instância),portal_servicos,pbh_app,6047.07,456.816,-4.5,-0.044185,-2055.67,-20.1844
+Defesa da Autuação de Trânsito - Vistas ao Processo,portal_servicos,pbh_app,84.1325,50.0065,1,0.0177195,50.0065,0.886091
+Denúncia sobre Alimentos Impróprios para Consumo,portal_servicos,pbh_app,30.7472,36.8291,-0.5,0.0442585,-18.4145,1.63
+Denúncia sobre Alimentos Impróprios para Consumo,portal_servicos,telefone_156,30.7472,266.926,1,0.0474753,266.926,12.6724
+Denúncia sobre Alimentos Impróprios para Consumo,pbh_app,telefone_156,36.8291,266.926,1.5,0.00321682,400.39,0.858653
+Denúncia sobre Condições de Higiene e Limpeza na Criação de Animais,portal_servicos,pbh_app,152.722,235.166,-14,-0.064528,-3292.32,-15.1748
+Denúncia sobre Condições de Higiene e Limpeza na Criação de Animais,portal_servicos,telefone_156,152.722,430.123,-1,-0.0121256,-430.123,-5.21549
+Denúncia sobre Condições de Higiene e Limpeza na Criação de Animais,pbh_app,telefone_156,235.166,430.123,13,0.0524025,5591.6,22.5395
+"Denúncia sobre Condições Sanitárias de Estabelecimentos de Interesse à Saúde (Escolas, Farmácias, Salões de Beleza e Outros)",portal_servicos,pbh_app,65.8869,49.3307,4,-0.00807868,197.323,-0.398527
+"Denúncia sobre Condições Sanitárias de Estabelecimentos de Interesse à Saúde (Escolas, Farmácias, Salões de Beleza e Outros)",portal_servicos,telefone_156,65.8869,83.7946,2,-0.0239868,167.589,-2.00996
+"Denúncia sobre Condições Sanitárias de Estabelecimentos de Interesse à Saúde (Escolas, Farmácias, Salões de Beleza e Outros)",pbh_app,telefone_156,49.3307,83.7946,-2,-0.0159081,-167.589,-1.33301
+Denúncia sobre Condições Sanitárias de Estabelecimentos de Saúde,portal_servicos,pbh_app,246.316,422.352,0,-0.00563731,0,-2.38093
+Denúncia sobre Condições Sanitárias de Estabelecimentos de Saúde,portal_servicos,telefone_156,246.316,832.878,1,-0.025712,832.878,-21.4149
+Denúncia sobre Condições Sanitárias de Estabelecimentos de Saúde,pbh_app,telefone_156,422.352,832.878,1,-0.0200746,832.878,-16.7197
+"Denúncia sobre Condições Sanitárias em Estabelecimentos de Alimentos (Indústrias, Restaurantes, Padarias, Lanchonetes, Bares e Outros)",portal_servicos,pbh_app,149.682,92.5796,2,0.00634361,185.159,0.587289
+"Denúncia sobre Condições Sanitárias em Estabelecimentos de Alimentos (Indústrias, Restaurantes, Padarias, Lanchonetes, Bares e Outros)",portal_servicos,telefone_156,149.682,443.639,2,0.00137366,887.277,0.609407
+"Denúncia sobre Condições Sanitárias em Estabelecimentos de Alimentos (Indústrias, Restaurantes, Padarias, Lanchonetes, Bares e Outros)",pbh_app,telefone_156,92.5796,443.639,0,-0.00496995,0,-2.20486
+Denúncias sobre Rede de Esgotos e Resíduos Sólidos em Estabelecimentos Comerciais ou Residências,portal_servicos,pbh_app,296.322,201.715,-6,0.0147087,-1210.29,2.96696
+Denúncias sobre Rede de Esgotos e Resíduos Sólidos em Estabelecimentos Comerciais ou Residências,portal_servicos,telefone_156,296.322,1549.19,10.5,0.0524722,16266.5,81.2892
+Denúncias sobre Rede de Esgotos e Resíduos Sólidos em Estabelecimentos Comerciais ou Residências,pbh_app,telefone_156,201.715,1549.19,16.5,0.0377635,25561.6,58.5028
+"Deposição Irregular de Lixo, Entulho, Material de Construção, Resíduos ou Poda de Árvore - Comunicação",portal_servicos,pbh_app,637.245,1279.56,1,0.00136693,1279.56,1.74907
+"Deposição Irregular de Lixo, Entulho, Material de Construção, Resíduos ou Poda de Árvore - Comunicação",portal_servicos,telefone_156,637.245,1452.55,4,0.0136784,5810.21,19.8685
+"Deposição Irregular de Lixo, Entulho, Material de Construção, Resíduos ou Poda de Árvore - Comunicação",pbh_app,telefone_156,1279.56,1452.55,3,0.0123114,4357.66,17.883
+Devolução de Mercadoria Apreendida pela Fiscalização,portal_servicos,pbh_app,14.5289,10.8122,,0.0501453,,0.542182
+Disponibilização de Documentos Referentes a Notificações de Trânsito,portal_servicos,pbh_app,1924.91,451.072,0,-0.00757032,0,-3.41476
+"Dispositivos de Segurança ? Implantação/ Manutenção de Ilha, Canteiro, Gradil, Rotatória",portal_servicos,pbh_app,62.1702,65.549,-13,0.0518826,-852.137,3.40085
+Dispositivos de Segurança - Implantação/ Manutenção de Redutor de Velocidade (quebra-molas),portal_servicos,pbh_app,506.822,337.544,-3,0.0215796,-1012.63,7.28405
+Dívida Ativa - Parcelamento Extraordinário,portal_servicos,pbh_app,494.659,106.433,0,-0.003656,0,-0.389118
+Drenagem - Manutenção de Sistema de Drenagem,portal_servicos,pbh_app,64.8733,10.4743,,-0.0262097,,-0.274529
+Elogio para o Operador do Transporte Coletivo (Convencional ou MOVE),portal_servicos,pbh_app,12.5016,15.8804,,0,,0
+Elogio/ Reclamação sobre Ações da BHTRANS,portal_servicos,pbh_app,55.4126,78.0506,-7,-0.0205628,-546.355,-1.60494
+Emissão de Cópia de Laudo de Perícia,portal_servicos,pbh_app,13.5153,16.2183,0,0,0,0
+Emissão de Documentos Digitais de Edificação,portal_servicos,pbh_app,2200.62,204.08,0,-0.00931225,0,-1.90045
+"Estabelecimento sem Licença ou Irregular (Comércio, Serviço e Industria) - Fiscalização",portal_servicos,pbh_app,466.277,387.55,1,-0.0154979,387.55,-6.00621
+"Estabelecimento sem Licença ou Irregular (Comércio, Serviço e Industria) - Fiscalização",portal_servicos,telefone_156,466.277,1171.1,9,0.0261509,10539.9,30.6253
+"Estabelecimento sem Licença ou Irregular (Comércio, Serviço e Industria) - Fiscalização",pbh_app,telefone_156,387.55,1171.1,8,0.0416488,9368.78,48.7748
+Exame de Leishmaniose Canina,portal_servicos,pbh_app,351.397,794.36,0,0.000856428,0,0.680312
+Exame de Leishmaniose Canina,portal_servicos,telefone_156,351.397,3915.71,0,0.00184741,0,7.23391
+Exame de Leishmaniose Canina,pbh_app,telefone_156,794.36,3915.71,0,0.000990981,0,3.88039
+Fachadas e Marquises Mal Conservadas - Fiscalização,portal_servicos,pbh_app,15.5426,21.6244,-4.5,0.00747283,-97.3099,0.161596
+"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",portal_servicos,pbh_app,21.9623,35.1397,11.5,-0.0596154,404.106,-2.09487
+"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",portal_servicos,telefone_156,21.9623,27.3684,21.5,-0.0269706,588.421,-0.738141
+"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",pbh_app,telefone_156,35.1397,27.3684,10,0.0326448,273.684,0.893437
+Fiscalização do Transporte Coletivo,portal_servicos,pbh_app,24.3275,95.6205,2,-0.0372497,191.241,-3.56184
+Fornecedor - Atualização de Documentos no Cadastro,portal_servicos,pbh_app,2738.53,16.5562,0,-0.000246761,0,-0.00408543
+Identificação do Condutor Infrator - FICI,portal_servicos,pbh_app,54234.4,16959.3,1,-2.4985e-05,16959.3,-0.423728
+Iluminação Pública - Manutenção de Braço da Luminária Empenado ou Quebrado,portal_servicos,pbh_app,10.1364,39.87,,0.0288136,,1.1488
+Iluminação Pública - Manutenção de Luminária Acesa Durante o Dia,portal_servicos,pbh_app,19.5971,48.9928,1,0.0448276,48.9928,2.19623
+Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,portal_servicos,pbh_app,664.951,1919.51,0,-0.0221893,0,-42.5925
+Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,portal_servicos,telefone_156,664.951,117.583,0,0.36913,0,43.4034
+Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,pbh_app,telefone_156,1919.51,117.583,0,0.39132,0,46.0124
+Iluminação Pública - Manutenção de Luminária Intermitente (Piscando),portal_servicos,pbh_app,132.787,454.789,0,0.00464481,0,2.1124
+Iluminação Pública - Manutenção de Luminária Quebrada ou Ausente,portal_servicos,pbh_app,38.5185,91.9038,1,0.0273478,91.9038,2.51336
+"Implantação de Radar, Detector de Avanço de Sinal ou de Faixa Exclusiva",portal_servicos,pbh_app,23.6517,25.679,-8.5,-0.0763158,-218.272,-1.95971
+"Implantação/ Manutenção de Ciclovia, Ciclofaixa ou Bicicletário",portal_servicos,pbh_app,16.8941,11.8259,,0.0971429,,1.1488
+Implantação - Manutenção de Sinalização Horizontal,portal_servicos,pbh_app,429.448,244.288,-3,-0.030691,-732.865,-7.49746
+Implantação - Manutenção de Sinalização Vertical,portal_servicos,pbh_app,700.766,355.114,-3,-0.0429549,-1065.34,-15.2539
+Implantação/ Manutenção - Faixa de Pedestres,portal_servicos,pbh_app,160.832,118.259,-6,0.0268908,-709.551,3.18006
+Informação sobre Notificação de Trânsito - Multa,portal_servicos,pbh_app,5891.64,917.349,-8,-0.0120485,-7338.79,-11.0527
+Informação sobre Transporte Coletivo,portal_servicos,pbh_app,25.679,17.9077,-4,-0.0635551,-71.6309,-1.13813
+Informe de Rendimentos Referente a Precatórios e a Requisições de Pequeno Valor - RPV,portal_servicos,pbh_app,81.4295,35.8154,-1,0,-35.8154,0
+Inscrição Municipal de Pessoa Jurídica - Acerto de Dados Cadastrais Devido a Problema no Processamento da REDESIM,portal_servicos,pbh_app,429.11,13.5153,0,-0.0015748,0,-0.0212839
+Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI,portal_servicos,pbh_app,8752.82,1081.22,0,-0.307248,0,-332.203
+"Interveniência na Transferência de Direitos em Lotes Titulados e Unidades Habitacionais (compra, venda e permuta)",portal_servicos,pbh_app,121.299,61.8323,-29,-0.137952,-1793.14,-8.52986
+"Invasão de Lotes, Terrenos e Áreas Públicas - Fiscalização",portal_servicos,pbh_app,157.791,185.159,-3,0.000132856,-555.477,0.0245995
+"Invasão de Lotes, Terrenos e Áreas Públicas - Fiscalização",portal_servicos,telefone_156,157.791,567.641,6,0.0924773,3405.85,52.4939
+"Invasão de Lotes, Terrenos e Áreas Públicas - Fiscalização",pbh_app,telefone_156,185.159,567.641,9,0.0923445,5108.77,52.4185
+IPTU - Revisão e Requerimentos,portal_servicos,pbh_app,2649.67,228.746,-9,0.0179428,-2058.71,4.10434
+ISSQN - Esclarecimentos sobre Legislação e Preenchimento de DES e NFS-e,portal_servicos,pbh_app,820.377,18.9214,2,-0.00247117,37.8427,-0.0467579
+Lei de Acesso à Informação - LAI,portal_servicos,pbh_app,1406.94,244.626,-2,-0.00990468,-489.253,-2.42295
+Lei de Acesso à Informação - LAI,portal_servicos,telefone_156,1406.94,574.061,0,-0.0138679,0,-7.96099
+Lei de Acesso à Informação - LAI,pbh_app,telefone_156,244.626,574.061,2,-0.00396317,1148.12,-2.2751
+Licença de Atividade em Banca de Jornais e Revistas,portal_servicos,pbh_app,177.726,23.9896,-42,0.0114068,-1007.56,0.273646
+Licença de Lavador de Veículo Automotor,portal_servicos,pbh_app,27.3684,10.4743,8,0.0123457,83.7946,0.129313
+Licença de Mesa e Cadeira,portal_servicos,pbh_app,348.018,11.1501,,0.212151,,2.3655
+Licença em Feira Promovida pelo Executivo,portal_servicos,pbh_app,74.334,42.2352,26.5,-0.008,1119.23,-0.337882
+Licença para Comércio de Alimento em Veículo Automotor/ Lanche Rápido,portal_servicos,pbh_app,62.1702,60.8187,-4,-0.044686,-243.275,-2.71774
+Licença para Comércio de Alimento em Veículo de Tração Humana - Ambulante,portal_servicos,pbh_app,119.272,117.245,-25,-0.00586166,-2931.12,-0.687249
+Licença para Comércio de Alimento em Veículo de Tração Humana Venda Frutas - Fruteiro,portal_servicos,pbh_app,10.1364,11.8259,,0,,0
+Lote Vago com Estado de Conservação Inadequado - Fiscalização,portal_servicos,pbh_app,491.618,569.668,2,0.0378496,1139.34,21.5617
+Lote Vago com Estado de Conservação Inadequado - Fiscalização,portal_servicos,telefone_156,491.618,1231.92,3,0.0196223,3695.75,24.173
+Lote Vago com Estado de Conservação Inadequado - Fiscalização,pbh_app,telefone_156,569.668,1231.92,1,-0.0182273,1231.92,-22.4545
+"Manutenção de Praças, Canteiros e Áreas Verdes",portal_servicos,pbh_app,313.892,398.025,-5,-0.0568203,-1990.12,-22.6159
+"Manutenção de Praças, Canteiros e Áreas Verdes",portal_servicos,telefone_156,313.892,24.3275,2,0.00578579,48.6549,0.140754
+"Manutenção de Praças, Canteiros e Áreas Verdes",pbh_app,telefone_156,398.025,24.3275,7,0.0626061,170.292,1.52305
+Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas,portal_servicos,pbh_app,64.1975,84.4704,12,0.0126316,1013.64,1.06699
+"Mesas, Cadeiras e Toldos na Via Pública - Fiscalização",portal_servicos,pbh_app,95.6205,187.524,0.5,-0.0205329,93.7621,-3.85042
+"Mesas, Cadeiras e Toldos na Via Pública - Fiscalização",portal_servicos,telefone_156,95.6205,158.804,2.5,0.0100594,397.011,1.59748
+"Mesas, Cadeiras e Toldos na Via Pública - Fiscalização",pbh_app,telefone_156,187.524,158.804,2,0.0305923,317.609,4.85819
+"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",portal_servicos,pbh_app,14.191,15.8804,0.5,0.0511651,7.94022,0.812525
+"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",portal_servicos,telefone_156,14.191,16.8941,14,0.120952,236.517,2.04338
+"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",pbh_app,telefone_156,15.8804,16.8941,13.5,0.0697872,228.07,1.17899
+Multa de Trânsito - Solicitação de Efeito Suspensivo,portal_servicos,pbh_app,226.719,187.524,-1,-0.0109209,-187.524,-2.04794
+Multas de Trânsito - Solicitação de Baixa,portal_servicos,pbh_app,599.74,467.628,0,-0.0165245,0,-7.7273
+Multas de Trânsito - Vistas de Recurso/ JARI,portal_servicos,pbh_app,58.1156,24.3275,2.5,0,60.8187,0
+Notificação de Trânsito - Disponibilização de Imagens (foto/vídeo),portal_servicos,pbh_app,508.174,314.23,5,-0.0209906,1571.15,-6.59588
+Objetos Esquecidos nos Veículos Táxi,portal_servicos,pbh_app,16.2183,14.191,2,0.014881,28.3821,0.211176
+Obra em Andamento Irregular- Fiscalização,portal_servicos,pbh_app,743.34,742.664,-1,-0.00300438,-742.664,-2.23125
+Obra em Andamento Irregular- Fiscalização,portal_servicos,telefone_156,743.34,2294.55,1,-0.000567328,2294.55,-1.30177
+Obra em Andamento Irregular- Fiscalização,pbh_app,telefone_156,742.664,2294.55,2,0.00243706,4589.11,5.59196
+"Obra em Ruas, Calçadas e Vias Públicas - Fiscalização",portal_servicos,pbh_app,76.0234,179.753,0,0.0257561,0,4.62973
+"Obra em Ruas, Calçadas e Vias Públicas - Fiscalização",portal_servicos,telefone_156,76.0234,365.25,2,-0.00919313,730.5,-3.35779
+"Obra em Ruas, Calçadas e Vias Públicas - Fiscalização",pbh_app,telefone_156,179.753,365.25,2,-0.0349492,730.5,-12.7652
+"Obstrução e Publicidade Irregular em Via Pública (Cone, Cavalete, Faixa, Cartaz, Panfleto, Banner, Lambe Lambe e Placa) - Fiscalização",portal_servicos,pbh_app,328.759,92.2417,-3,0.029752,-276.725,2.74438
+"Obstrução e Publicidade Irregular em Via Pública (Cone, Cavalete, Faixa, Cartaz, Panfleto, Banner, Lambe Lambe e Placa) - Fiscalização",portal_servicos,telefone_156,328.759,118.596,-2,0.017949,-237.193,2.12869
+"Obstrução e Publicidade Irregular em Via Pública (Cone, Cavalete, Faixa, Cartaz, Panfleto, Banner, Lambe Lambe e Placa) - Fiscalização",pbh_app,telefone_156,92.2417,118.596,1,-0.011803,118.596,-1.3998
+Ônibus - Implantação/ Manutenção de Ponto de Embarque/ Desembarque,portal_servicos,pbh_app,145.965,115.218,-8,-0.0229649,-921.741,-2.64596
+Ônibus - Solicitação de Alteração de Itinerário,portal_servicos,pbh_app,70.6173,45.614,0,0.114939,0,5.24282
+Ônibus - Solicitação de Alteração de Quadro de Horário,portal_servicos,pbh_app,65.549,95.2826,-1,-0.0708123,-95.2826,-6.74718
+Orientação para Construção ou Reforma de Passeio,portal_servicos,pbh_app,184.821,16.5562,-12.5,-0.0176846,-206.952,-0.29279
+Ouvidoria,portal_servicos,pbh_app,4568.16,3071.34,0,-0.0116718,0,-35.8482
+Ouvidoria,portal_servicos,telefone_156,4568.16,6988.07,0,0.0131057,0,91.5838
+Ouvidoria,pbh_app,telefone_156,3071.34,6988.07,0,0.0247776,0,173.147
+Passeio Público - Manutenção,portal_servicos,pbh_app,46.9655,10.1364,,0.0247002,,0.250373
+Perdão de Débitos - IPTU - Pessoa Física,portal_servicos,pbh_app,216.582,34.4639,13.5,0.0136735,465.263,0.471242
+Perdão de Débitos - ISSQN - TMCM - Pessoa Física,portal_servicos,pbh_app,31.423,11.488,-12,-0.129032,-137.856,-1.48232
+Plano de Gerenciamento de Resíduos de Serviços de Saúde - PGRSS,portal_servicos,pbh_app,1485.33,23.6517,0,-0.27111,0,-6.41222
+Plantão de Execução Fiscal - Procuradoria Geral do Município,portal_servicos,pbh_app,259.493,63.1839,1,-0.00390625,63.1839,-0.246812
+"Poda Irregular de Árvore, Corte ou Supressão - Fiscalização",portal_servicos,pbh_app,116.231,116.569,2,0.0110465,233.138,1.28768
+"Poda Irregular de Árvore, Corte ou Supressão - Fiscalização",portal_servicos,telefone_156,116.231,191.241,3,-0.021109,573.723,-4.0369
+"Poda Irregular de Árvore, Corte ou Supressão - Fiscalização",pbh_app,telefone_156,116.569,191.241,1,-0.0321555,191.241,-6.14944
+"Poluição Ambiental (Hídrica, Atmosférica ou do Solo) - Fiscalização",portal_servicos,pbh_app,180.091,154.75,-4,0.00858206,-618.999,1.32807
+"Poluição Ambiental (Hídrica, Atmosférica ou do Solo) - Fiscalização",portal_servicos,telefone_156,180.091,553.788,-2,0.0070594,-1107.58,3.90941
+"Poluição Ambiental (Hídrica, Atmosférica ou do Solo) - Fiscalização",pbh_app,telefone_156,154.75,553.788,2,-0.00152266,1107.58,-0.843229
+Poluição Sonora - Fiscalização,portal_servicos,pbh_app,1805.3,3852.53,0,0.00349898,0,13.4799
+Poluição Sonora - Fiscalização,portal_servicos,telefone_156,1805.3,3050.73,8,0.0311863,24405.9,95.1412
+Poluição Sonora - Fiscalização,pbh_app,telefone_156,3852.53,3050.73,8,0.0276874,24405.9,84.4668
+Ponto de Ônibus - Implantação/ Manutenção de Painel Eletrônico,portal_servicos,pbh_app,74.334,46.6277,0.5,0.00118577,23.3138,0.0552897
+Ponto Limpo - Solicitação de Implantação,portal_servicos,pbh_app,41.8973,23.3138,-23.5,-0.0184666,-547.875,-0.430527
+População em Situação de Rua - Informação de Localização,portal_servicos,pbh_app,256.452,163.197,1,0.0095991,163.197,1.56654
+Prevenção e Combate ao Mosquito Aedes aegypti,portal_servicos,pbh_app,189.552,311.527,1,0.0285572,311.527,8.89634
+Prevenção e Combate ao Mosquito Aedes aegypti,portal_servicos,telefone_156,189.552,684.21,1,0.00483264,684.21,3.30654
+Prevenção e Combate ao Mosquito Aedes aegypti,pbh_app,telefone_156,311.527,684.21,0,-0.0237246,0,-16.2326
+Profissional Autônomo - Baixa de Inscrição,portal_servicos,pbh_app,1199.82,219.285,0,-0.00244988,0,-0.537223
+Profissional Autônomo - Cancelamento de Inscrição,portal_servicos,pbh_app,382.482,94.6068,1,0.000151439,94.6068,0.0143271
+Profissional Autônomo - Pessoa Física - Inscrição e Atualização de Dados,portal_servicos,pbh_app,2577.02,368.291,0,0,0,0
+Programa Locação Social,portal_servicos,pbh_app,90.2144,118.259,-13,-0.313151,-1537.36,-37.0328
+Prorrogação de Prazo para Termo de Intimação - Vigilância Sanitária,portal_servicos,pbh_app,196.309,13.5153,5.5,-0.0257315,74.334,-0.347768
+"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",portal_servicos,pbh_app,56.0883,31.7609,-0.5,-0.0778006,-15.8804,-2.47101
+"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",portal_servicos,telefone_156,56.0883,55.0747,-10,-0.147831,-550.747,-8.14173
+"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",pbh_app,telefone_156,31.7609,55.0747,-9.5,-0.07003,-523.21,-3.85688
+Realização de Estudo de Circulação em Vias Públicas,portal_servicos,pbh_app,179.753,125.016,-6,-0.0355212,-750.097,-4.44073
+Reclamação de Ônibus (Transporte Coletivo),portal_servicos,pbh_app,2425.65,7167.82,0,-0.0113273,0,-81.1922
+Recurso / Agravo Contra Decisão Administrativa - Fazenda,portal_servicos,pbh_app,470.669,39.87,-1,-0.026823,-39.87,-1.06943
+Recurso Contra Decisão das Juntas Integradas de Julgamento Fiscal - 2ª Instância,portal_servicos,pbh_app,446.342,19.935,-14.5,-0.0981409,-289.058,-1.95644
+Recurso de Perícia - Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,portal_servicos,pbh_app,18.2456,18.9214,-26.5,-0.0218254,-501.416,-0.412966
+Recurso Referente aos Serviços de Edificações,portal_servicos,pbh_app,1526.21,19.5971,-1,-0.0120083,-19.5971,-0.235328
+"Reforma, Obra e Demolição de Imóvel Tombado - Fiscalização",portal_servicos,pbh_app,17.9077,15.8804,2.5,0.0618226,39.7011,0.981769
+"Reforma, Obra e Demolição de Imóvel Tombado - Fiscalização",portal_servicos,telefone_156,17.9077,13.8531,6,0.0685688,83.1189,0.949894
+"Reforma, Obra e Demolição de Imóvel Tombado - Fiscalização",pbh_app,telefone_156,15.8804,13.8531,3.5,0.00674624,48.486,0.0934566
+Remarcação de Perícia - Benefício da Gratuidade (Cartão BHBUS Benefício Inclusão),portal_servicos,pbh_app,38.1806,29.3957,-31,-0.0611332,-911.267,-1.79705
+Remoção de Deposições Clandestinas ou Irregulares - Bota-Fora,portal_servicos,pbh_app,61.8323,32.0988,0,-0.0167961,0,-0.539133
+Restituição de Valor de Guia da Política Urbana,portal_servicos,pbh_app,187.186,10.8122,-15,-0.181182,-162.183,-1.95898
+Restituição - Fazenda - IPTU,portal_servicos,pbh_app,950.461,180.429,-15.5,-0.134105,-2796.65,-24.1964
+Restituição - Fazenda - ISSQN,portal_servicos,pbh_app,495.334,10.8122,-5,-0.185923,-54.0611,-2.01023
+Restituição - Fazenda - ITBI,portal_servicos,pbh_app,633.866,86.4977,-13,-0.161389,-1124.47,-13.9598
+Restituição - Fazenda - Taxa,portal_servicos,pbh_app,262.534,18.5835,-16,-0.172131,-297.336,-3.19879
+Revisão de Taxas e ISS Autônomo,portal_servicos,pbh_app,1661.7,40.2079,-1,-0.0145239,-40.2079,-0.583976
+Segunda Via de Escritura de Imóveis Regularizados pela Urbel,portal_servicos,pbh_app,11.1501,19.2593,1,0.0446571,19.2593,0.860062
+Semáforo - Implantação e Manutenção,portal_servicos,pbh_app,44.2625,22.9759,1,0.0209924,22.9759,0.48232
+Sugestão sobre Transporte Coletivo,portal_servicos,pbh_app,22.6381,24.6654,-8,0.00776937,-197.323,0.191634
+Tapa-Buraco,portal_servicos,pbh_app,32139.3,45157.2,-2,0.00327816,-90314.4,148.033
+Tapa-Buraco,portal_servicos,telefone_156,32139.3,133.463,16,0.203451,2135.41,27.1533
+Tapa-Buraco,pbh_app,telefone_156,45157.2,133.463,18,0.200173,2402.34,26.7158
+TÁXI - Reclamação do Comportamento do Taxista,portal_servicos,pbh_app,48.9928,111.501,7,0.120481,780.506,13.4337
+Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério do Bonfim,portal_servicos,pbh_app,48.3171,13.1774,-6,-0.011655,-79.0643,-0.153583
+Varrição - Ocorrência/ Reclamação,portal_servicos,pbh_app,38.1806,28.0442,0,-0.0442478,0,-1.24089
+Veículos Abandonados ou Carcaças - Fiscalização,portal_servicos,pbh_app,332.138,646.705,0,-0.0153604,0,-9.93365
+Veículos Abandonados ou Carcaças - Fiscalização,portal_servicos,telefone_156,332.138,628.122,3,-0.0166526,1884.37,-10.4599
+Veículos Abandonados ou Carcaças - Fiscalização,pbh_app,telefone_156,646.705,628.122,3,-0.00129225,1884.37,-0.811693

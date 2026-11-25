@@ -44,13 +44,14 @@ class Cliente:
 
     def __init__(self, intervalo_s: float = C.INTERVALO_MIN_REQUISICOES_S):
         self.intervalo_s = intervalo_s
-        self._ultima = 0.0
+        self._ultima = float("-inf")
 
     def _esperar(self) -> None:
-        falta = self.intervalo_s - (time.monotonic() - self._ultima)
-        if falta > 0:
+        # laço: time.sleep pode acordar antes, então reconfere o relógio
+        # perf_counter: no Python 3.12/Windows, time.monotonic tem resolução de 15,625 ms
+        while (falta := self.intervalo_s - (time.perf_counter() - self._ultima)) > 0:
             time.sleep(falta)
-        self._ultima = time.monotonic()
+        self._ultima = time.perf_counter()
 
     def _abrir(self, url: str):
         self._esperar()

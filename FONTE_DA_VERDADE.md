@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.1 · criada em 20/11/2026, atualizada em 24/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.5 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -175,7 +175,7 @@ A análise é executada pelo código; os números vêm de `resultados/resumo.md`
 
 ## 10. Ameaças à validade
 
-Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, externa, com mitigação). Principais: confusão residual por perfil da demanda; encerramento administrativo ≠ resolução; censura à direita; independência não verificável; cobertura só até jul/2023; poucos serviços em comum entre alguns canais.
+Revistas em 25/11/2026 com os resultados reais (issue #24), com evidência, mitigação e risco remanescente para cada uma: ver [METODOLOGIA §8](./docs/metodologia.md) (IDs C1–C7, I1–I4, K1–K5, E1–E4). As principais: **I1**, confusão pelo tipo de serviço (efeito cerca de 10 vezes menor dentro do serviço); **C2**, um serviço domina o efeito combinado dos pares com Presencial (Tapa-Buraco no tempo, JARI no OR), sem sensibilidade equivalente para o OR; **K1**, "encerrada" é encerramento administrativo, não resolução; **E1**, só Belo Horizonte, de mai/2020 a jul/2023.
 
 ## 11. Impacto
 
@@ -199,6 +199,7 @@ Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, ex
 | Pipeline (coleta, tratamento, análise, gráficos) | **Executado** com os dados reais em 24/11/2026: 10 CSVs, 1.480.736 registros, ~44 s a partir dos CSVs locais | `resultados/`, `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Reexecutar por outro integrante a partir do README (verificação por segunda pessoa) |
 | Testes automatizados | **55 testes passando** (dados sintéticos), 24/11/2026 | `tests/` | Rodar `python -m pytest` |
 | Interpretação dos resultados | **Executado** (v1.0, 24/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issue #25) | Revisão por outro integrante; decidir D14 |
+| Ameaças à validade revisadas | **Executado** (25/11/2026; sem revisão do grupo) | `docs/metodologia.md` §8 (#24) | Revisão por outro integrante |
 | Impacto, relatório | **Pendente** | — | #29 (impacto), #31 (documento final) |
 | Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
@@ -326,3 +327,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 2.6 | 23/11/2026 | Issue #25: dicionário de dados (proposta, a confirmar com o papel B), validador, análise, gerador de dados sintéticos, notebook `.py` percent, testes e `requirements.txt`. Tudo rodado **só com dados sintéticos**: **nenhum resultado**. P1 e P2 entram como parâmetros (opção provisória marcada PENDENTE, demais variantes como sensibilidade); teste da RQ4 desligável (P4). D10 registrada. Nenhuma pendência encerrada. Merge com a 2.5 (issue #20): `resultados/` passa a abrigar estimativas de simulação e saídas reais, nunca sintéticas; `requirements.txt` unificado |
 | 3.0 | 24/11/2026 | **Mudança de metodologia** (registro obrigatório): o experimento com participantes (celular × computador, SUS/SEQ, sessões, auditoria Lighthouse) é substituído por análise de **dados abertos de operação** da PBH por canal de atendimento. Motivo: a coleta com participantes exige recrutamento e sessões em número inviável para o grupo. Nova pergunta: para um mesmo serviço, tempo e taxa de encerramento diferem por canal? Validada a fonte (CKAN, CC-BY): **cobertura mai/2020–jul/2023, sem 2024–2026** (D11). Implementados pipeline (`scripts/`), testes (55), dicionário, metodologia e resultados reais. Material antigo arquivado em `docs/arquivo/` ou removido (§16). P1–P4, P6, P11, P12 marcadas obsoletas; novas P15 (professor aprovar a mudança), P16 (validar decisões de desenho), P17 (consultar a PBH). D1, D3, D10 encerradas/superadas; D11–D13 abertas. **Nenhuma aprovação do professor foi registrada** |
 | 3.1 | 24/11/2026 | Issue #25 (reescrita para a metodologia v3.0): criado `docs/interpretacao_resultados.md` com a resposta a Q1–Q4, sensibilidade e limites; §9 e §13 atualizadas. Registrada a D14 (dominância do Tapa-Buraco no delta combinado dos pares com Presencial). Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Issue #22 (32 sessões) fechada como obsoleta |
+| 3.5 | 25/11/2026 | Issue #24: ameaças à validade revistas com os resultados reais (IDs C1–C7, I1–I4, K1–K5, E1–E4), com evidência, mitigação e risco remanescente. Nenhum resultado alterado |

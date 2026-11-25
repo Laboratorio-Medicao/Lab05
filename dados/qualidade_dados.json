@@ -1,0 +1,238 @@
+{
+  "linhas_brutas": 1480736,
+  "ausentes_brutos": {
+    "id_ticket": 0,
+    "servico": 0,
+    "fase_atual": 0,
+    "situacao_atual": 0,
+    "canal_original": 0,
+    "orgao_normatizador": 0,
+    "data_encerramento": 135239,
+    "data_criacao": 0
+  },
+  "registros_sem_id": 0,
+  "duplicatas": {
+    "criterio": "Id Ticket idêntico; permanece o registro do arquivo mais recente",
+    "removidas": 0,
+    "ids_com_conteudo_conflitante": 0
+  },
+  "datas_invalidas": {
+    "criacao": 0,
+    "encerramento": 0
+  },
+  "linhas_base": 1480736,
+  "status_registro": {
+    "encerrada": 1345496,
+    "aberta": 135233,
+    "inconsistente": 7
+  },
+  "motivos_inconsistencia": {
+    "encerrada_sem_data": 6,
+    "aberta_com_data_encerramento": 1
+  },
+  "canais_originais": {
+    "Portal": 637959,
+    "Portal Mobile": 364820,
+    "Integração entre Sistemas": 274702,
+    "Telefônico": 126087,
+    "Presencial": 53298,
+    "Origem Interna": 23862,
+    "E-mail": 8
+  },
+  "canais_normalizados": {
+    "portal_servicos": 637959,
+    "pbh_app": 364820,
+    "integracao_sistemas": 274702,
+    "telefone_156": 126087,
+    "presencial": 53298,
+    "origem_interna": 23862,
+    "email": 8
+  },
+  "canais_nao_mapeados": [],
+  "servicos_distintos": 460,
+  "periodo_criacao": [
+    "2020-05-11",
+    "2023-07-31"
+  ],
+  "corte_observacao_por_arquivo": {
+    "dadosabertos_bhdigital_2020_mai-dez.csv": "2023-07-21",
+    "dadosabertos_bhdigital_2021.csv": "2023-07-24",
+    "dadosabertos_bhdigital_2022.csv": "2023-07-25",
+    "dadosabertos_bhdigital_2023_abr.csv": "2023-07-25",
+    "dadosabertos_bhdigital_2023_fev.csv": "2023-07-25",
+    "dadosabertos_bhdigital_2023_jan.csv": "2023-07-25",
+    "dadosabertos_bhdigital_2023_jul.csv": "2023-08-04",
+    "dadosabertos_bhdigital_2023_jun.csv": "2023-07-25",
+    "dadosabertos_bhdigital_2023_mai.csv": "2023-07-25",
+    "dadosabertos_bhdigital_2023_mar.csv": "2023-07-25"
+  },
+  "tempo_dias_encerradas": {
+    "n": 1345496,
+    "min": 0.0,
+    "mediana": 3.0,
+    "p99": 286.0,
+    "max": 1109.0
+  },
+  "arquivos": [
+    {
+      "arquivo": "dadosabertos_bhdigital_2020_mai-dez.csv",
+      "codificacao": "cp1252",
+      "linhas": 89337,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2021.csv",
+      "codificacao": "cp1252",
+      "linhas": 439591,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2022.csv",
+      "codificacao": "cp1252",
+      "linhas": 529854,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_jan.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 75556,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_fev.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 62378,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_mar.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 63249,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_abr.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 54430,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_mai.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 62404,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_jun.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 50047,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_jul.csv",
+      "codificacao": "utf-8-sig",
+      "linhas": 53890,
+      "colunas_descartadas": [
+        "bairro",
+        "coordenadas",
+        "ind tp pbh app",
+        "nivel acesso",
+        "nome logradouro",
+        "numero logradouro",
+        "orgao responsavel",
+        "regional"
+      ]
+    }
+  ],
+  "colunas_descartadas_na_leitura": [
+    "bairro",
+    "coordenadas",
+    "ind tp pbh app",
+    "nivel acesso",
+    "nome logradouro",
+    "numero logradouro",
+    "orgao responsavel",
+    "regional"
+  ]
+}

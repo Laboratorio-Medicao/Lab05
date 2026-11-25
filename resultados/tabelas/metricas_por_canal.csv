@@ -1,0 +1,5 @@
+canal,rotulo,solicitacoes,encerradas,abertas,taxa_encerramento_corte,taxa_encerramento_90d,taxa_ic_lo,taxa_ic_hi,mediana_dias,q1_dias,q3_dias,p90_dias,media_dias,pct_encerradas_mesmo_dia,mediana_km_dias,servicos
+portal_servicos,Portal de Serviços,549574,513093,36481,0.933619,0.869961,0.869069,0.870848,3,0,16,57,23.1312,0.287061,3,414
+pbh_app,PBH APP,329202,316235,12967,0.960611,0.907264,0.906268,0.90825,3,0,14,45,20.7376,0.270776,3,366
+telefone_156,Telefone 156,114093,108184,5909,0.948209,0.848439,0.846347,0.850508,20,9,38,95,43.7666,0.0345615,21,68
+presencial,Presencial (BH Resolve),50057,5732,44325,0.114509,0.106279,0.103609,0.109009,4,1,20,55,20.9839,0.223308,,83

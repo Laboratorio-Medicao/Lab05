@@ -1,0 +1,6 @@
+etapa,registros
+Registros na base analítica (sem duplicatas),1480736
+Excluídos: inconsistentes,7
+"Excluídos: canal não comparável (integração, origem interna, e-mail)",298570
+Excluídos: seguimento < 90 dias (coorte imatura),139233
+Elegíveis (análise principal),1042926

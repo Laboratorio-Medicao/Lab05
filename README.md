@@ -1,7 +1,7 @@
 # LAB05 — Canais de atendimento da PBH: tempo e taxa de encerramento
 
 Laboratório de Experimentação de Software · Engenharia de Software · PUC Minas (Campus Lourdes, noite, 2026/2) · Professor: Danilo Maia
-Atualizado em **24/11/2026** · Metodologia **v3.0** (dados abertos; sem participantes)
+Atualizado em **25/11/2026** · Metodologia **v3.0** (dados abertos; sem participantes)
 
 > **Leia primeiro:** [FONTE_DA_VERDADE.md](./FONTE_DA_VERDADE.md) (referência central) e [docs/metodologia.md](./docs/metodologia.md).
 
@@ -93,4 +93,4 @@ Lab05/
 | P13 | Datas reais de S02, S03 e entrega final | Grupo |
 | P14 | Link do repositório / GitHub Projects; nomes completos dos integrantes | Grupo |
 
-Falta para a entrega: interpretar os resultados (S02/S03), revisar as 7 categorias e preparar documento e apresentação de 10 minutos. A estimativa de impacto já está em `docs/impacto.md` (sem revisão do grupo).
+Falta para a entrega: revisão do trio (interpretação, ameaças, impacto, categorias e conclusões), nomes e links (P14), resposta do professor (P15, P16) e a apresentação de 10 minutos. O documento final e a apresentação são mantidos fora do repositório.

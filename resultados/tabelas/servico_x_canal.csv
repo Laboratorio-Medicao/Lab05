@@ -1,0 +1,932 @@
+servico_chave,servico,canal,solicitacoes,encerradas,taxa_encerramento_90d,mediana_dias,celula_valida_proporcao,celula_valida_tempo
+abertura de processo de registro imaterial,Abertura de Processo de Registro Imaterial,portal_servicos,1,1,1,31,False,False
+abertura de processo de tombamento,Abertura de Processo de Tombamento,pbh_app,4,4,1,9,False,False
+abertura de processo de tombamento,Abertura de Processo de Tombamento,portal_servicos,69,67,0.971014,7,True,True
+acessibilidade no transporte coletivo,Acessibilidade no Transporte Coletivo,pbh_app,146,137,0.931507,1,True,True
+acessibilidade no transporte coletivo,Acessibilidade no Transporte Coletivo,portal_servicos,18,16,0.722222,2,False,False
+agravo para revisao de taxas,Agravo para Revisão de Taxas,pbh_app,15,14,0.4,126.5,False,False
+agravo para revisao de taxas,Agravo para Revisão de Taxas,portal_servicos,946,704,0.245243,147,True,True
+ajuste de conduta reconsideracao contra indeferimento ou revogacao,Ajuste de Conduta - Reconsideração contra Indeferimento ou Revogação,portal_servicos,4,4,1,0,False,False
+ajuste de conduta solicitacao,Ajuste de Conduta - Solicitação,pbh_app,4,4,1,0.5,False,False
+ajuste de conduta solicitacao,Ajuste de Conduta - Solicitação,portal_servicos,56,45,0.571429,2,True,True
+alteracao de licenca credencial feira da av afonso pena,Alteração de Licença (Credencial) - Feira da Av. Afonso Pena,pbh_app,71,71,1,9,True,True
+alteracao de licenca credencial feira da av afonso pena,Alteração de Licença (Credencial) - Feira da Av. Afonso Pena,portal_servicos,49,49,1,10,True,True
+alteracao de licenca credencial feira da av afonso pena,Alteração de Licença (Credencial) - Feira da Av. Afonso Pena,presencial,243,243,0.962963,4,True,True
+alteracao de permissividade viaria,Alteração de Permissividade Viária,portal_servicos,1,1,1,21,False,False
+alteracao de programacao de sinalizacao semaforica,Alteração de Programação de Sinalização Semafórica,pbh_app,20,12,0.6,17.5,False,False
+alteracao de programacao de sinalizacao semaforica,Alteração de Programação de Sinalização Semafórica,portal_servicos,52,35,0.596154,14,True,True
+alteracao de representante legal de licenciamento de empreendimento de impacto processos iniciados a partir de 12 06 20,Alteração de Representante Legal de Licenciamento de Empreendimento de Impacto (processos iniciados a partir de 12/06/20),portal_servicos,11,11,0.818182,1,False,False
+alteracao do responsavel tecnico vigilancia sanitaria,Alteração do Responsável Técnico - Vigilância Sanitária,pbh_app,9,9,1,13,False,False
+alteracao do responsavel tecnico vigilancia sanitaria,Alteração do Responsável Técnico - Vigilância Sanitária,portal_servicos,150,149,0.993333,4,True,True
+alteracao retificacao de alvara de obra em logradouro publico,Alteração/ Retificação de Alvará de Obra em Logradouro Público,pbh_app,1,0,0,,False,False
+alteracao retificacao de alvara de obra em logradouro publico,Alteração/ Retificação de Alvará de Obra em Logradouro Público,portal_servicos,18,18,0.722222,71.5,False,False
+alvara de autorizacao sanitaria para veiculos que comercializam alimentos para consumo humano e orgaos publicos sem ficha de inscricao cadastral fic,Alvará de Autorização Sanitária para Veículos que Comercializam Alimentos para Consumo Humano e Órgãos Públicos sem Ficha de Inscrição Cadastral - FIC,pbh_app,18,12,0.666667,21,False,False
+alvara de autorizacao sanitaria para veiculos que comercializam alimentos para consumo humano e orgaos publicos sem ficha de inscricao cadastral fic,Alvará de Autorização Sanitária para Veículos que Comercializam Alimentos para Consumo Humano e Órgãos Públicos sem Ficha de Inscrição Cadastral - FIC,portal_servicos,169,54,0.242604,24,True,True
+alvara de urbanizacao,Alvará de Urbanização,pbh_app,1,1,1,11,False,False
+alvara de urbanizacao,Alvará de Urbanização,portal_servicos,13,13,0.923077,13,False,False
+alvara dispensa para execucao de obra em logradouro publico,Alvará/ Dispensa para Execução de Obra em Logradouro Público,pbh_app,2,0,0,,False,False
+alvara dispensa para execucao de obra em logradouro publico,Alvará/ Dispensa para Execução de Obra em Logradouro Público,portal_servicos,365,92,0.241096,41,True,True
+analise de relatorio fotografico para baixa de construcao,Análise de Relatório Fotográfico para Baixa de Construção,pbh_app,16,16,1,15,False,False
+analise de relatorio fotografico para baixa de construcao,Análise de Relatório Fotográfico para Baixa de Construção,portal_servicos,2126,2012,0.92333,21,True,True
+analise para implantacao de drenagem,Análise para Implantação de Drenagem,pbh_app,14,5,0.357143,12,False,False
+analise para implantacao de drenagem,Análise para Implantação de Drenagem,portal_servicos,41,19,0.414634,14,True,False
+anuencia do municipio para retificacao ou revisao de area,Anuência do Município para Retificação ou Revisão de Área,pbh_app,3,3,1,0,False,False
+anuencia do municipio para retificacao ou revisao de area,Anuência do Município para Retificação ou Revisão de Área,portal_servicos,142,136,0.943662,1,True,True
+anuencia para tombamento patrimonio cultural,Anuência para Tombamento - Patrimônio Cultural,portal_servicos,5,5,1,4,False,False
+apoio a eventos e projetos de potencial turistico,Apoio a Eventos e Projetos de Potencial Turístico,pbh_app,2,2,1,3.5,False,False
+apoio a eventos e projetos de potencial turistico,Apoio a Eventos e Projetos de Potencial Turístico,portal_servicos,38,38,1,7,True,True
+aprovacao de projeto de instalacoes fisicas de estabelecimento assistencial de saude eas,Aprovação de Projeto de Instalações Físicas de Estabelecimento Assistencial de Saúde - EAS,pbh_app,2,1,0.5,62,False,False
+aprovacao de projeto de instalacoes fisicas de estabelecimento assistencial de saude eas,Aprovação de Projeto de Instalações Físicas de Estabelecimento Assistencial de Saúde - EAS,portal_servicos,267,157,0.490637,24,True,True
+areas verdes municipais protegidas implantacao e revitalizacao,Áreas Verdes Municipais Protegidas - Implantação e Revitalização,pbh_app,7,2,0,178.5,False,False
+areas verdes municipais protegidas implantacao e revitalizacao,Áreas Verdes Municipais Protegidas - Implantação e Revitalização,portal_servicos,33,15,0.212121,108,True,False
+arvore analise de intervencao em vegetacao motivada por edificacao,Árvore - Análise de Intervenção em Vegetação Motivada por Edificação,pbh_app,67,67,1,0,True,True
+arvore analise de intervencao em vegetacao motivada por edificacao,Árvore - Análise de Intervenção em Vegetação Motivada por Edificação,portal_servicos,731,728,0.968536,9,True,True
+arvore autorizacao para intervencao em vegetacao motivada por edificacao,Árvore ? Autorização para Intervenção em Vegetação Motivada por Edificação,pbh_app,4,4,1,0.5,False,False
+arvore autorizacao para intervencao em vegetacao motivada por edificacao,Árvore ? Autorização para Intervenção em Vegetação Motivada por Edificação,portal_servicos,195,194,0.989744,2,True,True
+arvore autorizacao para plantio em passeios pracas etc,"Árvore - Autorização para Plantio em Passeios, Praças, etc.",pbh_app,8,5,0.625,5,False,False
+arvore autorizacao para plantio em passeios pracas etc,"Árvore - Autorização para Plantio em Passeios, Praças, etc.",portal_servicos,17,13,0.705882,5,False,False
+arvore autorizacao para supressao em area privada,Árvore - Autorização para Supressão em Área Privada,pbh_app,260,240,0.911538,2,True,True
+arvore autorizacao para supressao em area privada,Árvore - Autorização para Supressão em Área Privada,portal_servicos,642,609,0.937695,3,True,True
+arvore corte ou seccao de raiz de arvore em passeios pracas etc,"Árvore - Corte ou Secção de Raiz de Árvore em Passeios, Praças, Etc",pbh_app,1562,1273,0.545455,39,True,True
+arvore corte ou seccao de raiz de arvore em passeios pracas etc,"Árvore - Corte ou Secção de Raiz de Árvore em Passeios, Praças, Etc",portal_servicos,517,425,0.545455,43,True,True
+arvore corte ou seccao de raiz de arvore em passeios pracas etc,"Árvore - Corte ou Secção de Raiz de Árvore em Passeios, Praças, Etc",telefone_156,20,19,0.65,39,False,False
+arvore corte ou supressao de arvore em passeios pracas etc,"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",pbh_app,6143,4922,0.524011,40,True,True
+arvore corte ou supressao de arvore em passeios pracas etc,"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",portal_servicos,7340,5937,0.512534,44,True,True
+arvore corte ou supressao de arvore em passeios pracas etc,"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",presencial,3,3,1,34,False,False
+arvore corte ou supressao de arvore em passeios pracas etc,"Árvore ? Corte ou Supressão de Árvore em Passeios, Praças, Etc",telefone_156,491,434,0.547862,48,True,True
+arvore orientacao tecnica de plantio para fins de baixa de construcao,Árvore - Orientação Técnica de Plantio para Fins de Baixa de Construção,pbh_app,4,4,1,7.5,False,False
+arvore orientacao tecnica de plantio para fins de baixa de construcao,Árvore - Orientação Técnica de Plantio para Fins de Baixa de Construção,portal_servicos,63,62,0.984127,8,True,True
+arvore poda de arvore em passeios pracas etc,"Árvore ? Poda de Árvore em Passeios, Praças, Etc",pbh_app,11191,8330,0.438567,60,True,True
+arvore poda de arvore em passeios pracas etc,"Árvore ? Poda de Árvore em Passeios, Praças, Etc",portal_servicos,10961,7912,0.39896,71,True,True
+arvore poda de arvore em passeios pracas etc,"Árvore ? Poda de Árvore em Passeios, Praças, Etc",presencial,11,11,1,9,False,False
+arvore poda de arvore em passeios pracas etc,"Árvore ? Poda de Árvore em Passeios, Praças, Etc",telefone_156,810,691,0.408642,103,True,True
+arvore recurso para autorizacao nao concedida para supressao em area privada,Árvore - Recurso para Autorização não Concedida para Supressão em Área Privada,pbh_app,7,5,0.571429,3,False,False
+arvore recurso para autorizacao nao concedida para supressao em area privada,Árvore - Recurso para Autorização não Concedida para Supressão em Área Privada,portal_servicos,11,11,0.909091,1,False,False
+arvore recurso para corte ou supressao em passeios pracas etc,"Árvore - Recurso para Corte ou Supressão em Passeios, Praças, etc.",pbh_app,29,22,0.724138,4,False,False
+arvore recurso para corte ou supressao em passeios pracas etc,"Árvore - Recurso para Corte ou Supressão em Passeios, Praças, etc.",portal_servicos,75,52,0.64,1.5,True,True
+arvore retirada de toco destoca de arvore em passeios pracas etc,"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",pbh_app,896,704,0.456473,71,True,True
+arvore retirada de toco destoca de arvore em passeios pracas etc,"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",portal_servicos,1782,1290,0.375421,86,True,True
+arvore retirada de toco destoca de arvore em passeios pracas etc,"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",presencial,9,9,1,3,False,False
+arvore retirada de toco destoca de arvore em passeios pracas etc,"Árvore ? Retirada de Toco/ Destoca de Árvore em Passeios, Praças, Etc",telefone_156,84,74,0.380952,110.5,True,True
+arvore solicitacao de plantio em passeios pracas etc,"Árvore - Solicitação de Plantio em Passeios, Praças, etc.",pbh_app,911,620,0.458836,26.5,True,True
+arvore solicitacao de plantio em passeios pracas etc,"Árvore - Solicitação de Plantio em Passeios, Praças, etc.",portal_servicos,3981,2681,0.325798,99,True,True
+arvore solicitacao de plantio em passeios pracas etc,"Árvore - Solicitação de Plantio em Passeios, Praças, etc.",telefone_156,23,14,0.304348,81.5,False,False
+arvore transplantio de arvore em passeios pracas etc,"Árvore ? Transplantio de Árvore em Passeios, Praças, Etc",pbh_app,48,41,0.645833,21,True,True
+arvore transplantio de arvore em passeios pracas etc,"Árvore ? Transplantio de Árvore em Passeios, Praças, Etc",portal_servicos,51,34,0.509804,28,True,True
+arvore transplantio de arvore em passeios pracas etc,"Árvore ? Transplantio de Árvore em Passeios, Praças, Etc",telefone_156,5,5,1,11,False,False
+arvores e galhos caidos em ruas passeios e pracas recolhimento,"Árvores e Galhos Caídos em Ruas, Passeios e Praças - Recolhimento",pbh_app,1399,1377,0.927806,7,True,True
+arvores e galhos caidos em ruas passeios e pracas recolhimento,"Árvores e Galhos Caídos em Ruas, Passeios e Praças - Recolhimento",portal_servicos,1245,1224,0.93012,7,True,True
+arvores e galhos caidos em ruas passeios e pracas recolhimento,"Árvores e Galhos Caídos em Ruas, Passeios e Praças - Recolhimento",telefone_156,325,325,0.92,12,True,True
+atendimento ao consumidor procon,Atendimento ao Consumidor - PROCON,pbh_app,346,333,0.956647,54,True,True
+atendimento ao consumidor procon,Atendimento ao Consumidor - PROCON,portal_servicos,651,609,0.927803,58,True,True
+atendimento as condicionantes da licenca ambiental ou do parecer de licenciamento urbanistico processos iniciados a partir de 12 06 20,Atendimento às Condicionantes da Licença Ambiental ou do Parecer de Licenciamento Urbanístico (processos iniciados a partir de 12/06/20),pbh_app,2,2,0.5,109,False,False
+atendimento as condicionantes da licenca ambiental ou do parecer de licenciamento urbanistico processos iniciados a partir de 12 06 20,Atendimento às Condicionantes da Licença Ambiental ou do Parecer de Licenciamento Urbanístico (processos iniciados a partir de 12/06/20),portal_servicos,2511,2151,0.641975,36,True,True
+aterro desaterro terraplanagem e movimentacao de terra fiscalizacao,"Aterro, Desaterro, Terraplanagem e Movimentação de Terra - Fiscalização",pbh_app,88,86,0.852273,12.5,True,True
+aterro desaterro terraplanagem e movimentacao de terra fiscalizacao,"Aterro, Desaterro, Terraplanagem e Movimentação de Terra - Fiscalização",portal_servicos,69,64,0.724638,15,True,True
+aterro desaterro terraplanagem e movimentacao de terra fiscalizacao,"Aterro, Desaterro, Terraplanagem e Movimentação de Terra - Fiscalização",telefone_156,200,190,0.825,16.5,True,True
+atestado de conformidade de obra em bem protegido,Atestado de Conformidade de Obra em Bem Protegido,pbh_app,2,2,1,1,False,False
+atestado de conformidade de obra em bem protegido,Atestado de Conformidade de Obra em Bem Protegido,portal_servicos,35,34,0.885714,14.5,True,True
+atualizacao cadastral de informacao urbanistica,Atualização Cadastral de Informação Urbanística,pbh_app,15,15,1,1,False,False
+atualizacao cadastral de informacao urbanistica,Atualização Cadastral de Informação Urbanística,portal_servicos,239,239,1,1,True,True
+atualizacao cadastral de informacao urbanistica,Atualização Cadastral de Informação Urbanística,presencial,33,33,1,1,True,True
+atualizacao do precatorio,Atualização do Precatório,pbh_app,67,67,1,17,True,True
+atualizacao do precatorio,Atualização do Precatório,portal_servicos,397,397,0.992443,14,True,True
+autorizacao de parklet operacional,Autorização de Parklet Operacional,pbh_app,1,1,1,5,False,False
+autorizacao de parklet operacional,Autorização de Parklet Operacional,portal_servicos,118,96,0.644068,42.5,True,True
+autorizacao de trafego para carro de som trio eletrico ou minitrio eletrico atve,"Autorização de Tráfego para Carro de Som, Trio Elétrico ou Minitrio Elétrico - ATVE",pbh_app,16,16,1,1.5,False,False
+autorizacao de trafego para carro de som trio eletrico ou minitrio eletrico atve,"Autorização de Tráfego para Carro de Som, Trio Elétrico ou Minitrio Elétrico - ATVE",portal_servicos,52,50,0.961538,9,True,True
+autorizacao para afastamento feira da afonso pena,Autorização para Afastamento - Feira da Afonso Pena,pbh_app,80,80,1,11,True,True
+autorizacao para afastamento feira da afonso pena,Autorização para Afastamento - Feira da Afonso Pena,portal_servicos,117,117,1,5,True,True
+autorizacao para afastamento feira da afonso pena,Autorização para Afastamento - Feira da Afonso Pena,presencial,244,243,0.995902,2,True,True
+autorizacao para comercializacao de retinoicos,Autorização para Comercialização de Retinóicos,pbh_app,3,3,0.666667,40,False,False
+autorizacao para comercializacao de retinoicos,Autorização para Comercialização de Retinóicos,portal_servicos,91,91,0.945055,39,True,True
+autorizacao para exercicio de atividade do grupo iii nao admitida para via especifica,"Autorização para Exercício de Atividade do Grupo III, não Admitida para Via Específica",portal_servicos,12,12,0.833333,49,False,False
+autorizacao para implantacao de parklet licenciado varanda urbana,Autorização para Implantação de Parklet Licenciado (Varanda Urbana),pbh_app,46,23,0.456522,22,True,False
+autorizacao para implantacao de parklet licenciado varanda urbana,Autorização para Implantação de Parklet Licenciado (Varanda Urbana),portal_servicos,416,233,0.473558,24,True,True
+autorizacao para instalacao de infraestrutura de telecomunicacoes em imovel publico municipal,Autorização para Instalação de Infraestrutura de Telecomunicações em Imóvel Público Municipal,portal_servicos,7,7,1,0,False,False
+autorizacao para o uso de misoprostol,Autorização para o Uso de Misoprostol,portal_servicos,2,2,0.5,74.5,False,False
+baixa de construcao para regularizacao de edificacao,Baixa de Construção para Regularização de Edificação,pbh_app,7,7,1,4,False,False
+baixa de construcao para regularizacao de edificacao,Baixa de Construção para Regularização de Edificação,portal_servicos,500,475,0.93,12,True,True
+baixa de responsabilidade tecnica vigilancia sanitaria,Baixa de Responsabilidade Técnica - Vigilância Sanitária,pbh_app,27,26,0.962963,3.5,False,False
+baixa de responsabilidade tecnica vigilancia sanitaria,Baixa de Responsabilidade Técnica - Vigilância Sanitária,portal_servicos,125,124,0.984,3,True,True
+beneficio da gratuidade cartao bhbus beneficio inclusao,Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,pbh_app,1981,1974,0.966179,6,True,True
+beneficio da gratuidade cartao bhbus beneficio inclusao,Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,portal_servicos,2066,2052,0.928364,13,True,True
+bh nota 10 reconsideracao,BH Nota 10 - Reconsideração,pbh_app,14,12,0.428571,95.5,False,False
+bh nota 10 reconsideracao,BH Nota 10 - Reconsideração,portal_servicos,147,137,0.469388,82,True,True
+bhiss digital validacao de procuracao por processo eletronico,BHISS DIGITAL - Validação de Procuração por Processo Eletrônico,pbh_app,18,18,1,0.5,False,False
+bhiss digital validacao de procuracao por processo eletronico,BHISS DIGITAL - Validação de Procuração por Processo Eletrônico,portal_servicos,4472,4472,0.992844,1,True,True
+boca de lobo bueiro implantacao,Boca de Lobo/ Bueiro - Implantação,pbh_app,29,18,0.517241,20.5,False,False
+boca de lobo bueiro implantacao,Boca de Lobo/ Bueiro - Implantação,portal_servicos,61,39,0.606557,10,True,True
+boca de lobo bueiro limpeza,Boca de Lobo/ Bueiro - Limpeza,pbh_app,1645,1611,0.917933,10,True,True
+boca de lobo bueiro limpeza,Boca de Lobo/ Bueiro - Limpeza,portal_servicos,1009,993,0.937562,11,True,True
+boca de lobo bueiro limpeza,Boca de Lobo/ Bueiro - Limpeza,presencial,4,3,0.75,0,False,False
+boca de lobo bueiro limpeza,Boca de Lobo/ Bueiro - Limpeza,telefone_156,86,86,0.953488,8,True,True
+boca de lobo bueiro manutencao de quadro grelha e cantoneira,"Boca de Lobo/ Bueiro - Manutenção de Quadro, Grelha e Cantoneira",pbh_app,88,78,0.829545,7,True,True
+boca de lobo bueiro manutencao de quadro grelha e cantoneira,"Boca de Lobo/ Bueiro - Manutenção de Quadro, Grelha e Cantoneira",portal_servicos,441,399,0.884354,10,True,True
+cacamba em ruas e passeios fiscalizacao,Caçamba em Ruas e Passeios - Fiscalização,pbh_app,174,168,0.890805,12,True,True
+cacamba em ruas e passeios fiscalizacao,Caçamba em Ruas e Passeios - Fiscalização,portal_servicos,77,76,0.766234,18.5,True,True
+cacamba em ruas e passeios fiscalizacao,Caçamba em Ruas e Passeios - Fiscalização,telefone_156,265,257,0.909434,12,True,True
+cadastro de lote pelo levantamento de 1942 jk,Cadastro de Lote pelo Levantamento de 1942 - JK,pbh_app,3,3,1,7,False,False
+cadastro de lote pelo levantamento de 1942 jk,Cadastro de Lote pelo Levantamento de 1942 - JK,portal_servicos,89,89,0.977528,9,True,True
+cadastro de lote pelo levantamento de 1942 jk,Cadastro de Lote pelo Levantamento de 1942 - JK,presencial,5,5,1,5,False,False
+cadastro de lote regularizado por baixa de construcao lote r,Cadastro de Lote Regularizado por Baixa de Construção (Lote R),pbh_app,4,4,1,1,False,False
+cadastro de lote regularizado por baixa de construcao lote r,Cadastro de Lote Regularizado por Baixa de Construção (Lote R),portal_servicos,42,42,0.97619,10.5,True,True
+cadastro de lote regularizado por baixa de construcao lote r,Cadastro de Lote Regularizado por Baixa de Construção (Lote R),presencial,3,3,1,16,False,False
+cadastro de requerimento para baixa de construcao,Cadastro de Requerimento para Baixa de Construção,pbh_app,3,3,1,1,False,False
+cadastro de requerimento para baixa de construcao,Cadastro de Requerimento para Baixa de Construção,portal_servicos,235,228,0.970213,2,True,True
+cadep baixa no cadastro de engenho de publicidade pessoa juridica ou equiparada pj,CADEP - Baixa no Cadastro de Engenho de Publicidade - Pessoa Jurídica ou Equiparada - PJ,pbh_app,8,8,0.625,35,False,False
+cadep baixa no cadastro de engenho de publicidade pessoa juridica ou equiparada pj,CADEP - Baixa no Cadastro de Engenho de Publicidade - Pessoa Jurídica ou Equiparada - PJ,portal_servicos,620,612,0.679032,44,True,True
+camelos ambulantes e comercio em vias publicas fiscalizacao,"Camelôs, Ambulantes e Comércio em Vias Públicas - Fiscalização",pbh_app,196,187,0.882653,14,True,True
+camelos ambulantes e comercio em vias publicas fiscalizacao,"Camelôs, Ambulantes e Comércio em Vias Públicas - Fiscalização",portal_servicos,118,108,0.822034,17.5,True,True
+camelos ambulantes e comercio em vias publicas fiscalizacao,"Camelôs, Ambulantes e Comércio em Vias Públicas - Fiscalização",telefone_156,757,731,0.866579,17,True,True
+cancelamento de alvara de obra em logradouro publico,Cancelamento de Alvará de Obra em Logradouro Público,portal_servicos,53,45,0.792453,4,True,True
+cancelamento de processo de edificacao,Cancelamento de Processo de Edificação,pbh_app,5,5,1,31,False,False
+cancelamento de processo de edificacao,Cancelamento de Processo de Edificação,portal_servicos,192,192,0.989583,20,True,True
+cancelamento de processo de edificacao,Cancelamento de Processo de Edificação,presencial,1,1,1,6,False,False
+capina e rocada ocorrencia reclamacao,Capina e Roçada - Ocorrência/ Reclamação,pbh_app,750,747,0.993333,1,True,True
+capina e rocada ocorrencia reclamacao,Capina e Roçada - Ocorrência/ Reclamação,portal_servicos,1011,998,0.984174,1,True,True
+carta de grau de protecao patrimonio cultural,Carta de Grau de Proteção - Patrimônio Cultural,pbh_app,14,14,1,11,False,False
+carta de grau de protecao patrimonio cultural,Carta de Grau de Proteção - Patrimônio Cultural,portal_servicos,380,380,1,7,True,True
+cartao bhbus ocorrencias ressarcimento e bloqueio,Cartão BHBUS / Ocorrências - Ressarcimento e Bloqueio,pbh_app,42,42,1,1,True,True
+cartao bhbus ocorrencias ressarcimento e bloqueio,Cartão BHBUS / Ocorrências - Ressarcimento e Bloqueio,portal_servicos,23,23,1,1,False,False
+cerca eletrica arame farpado e similares fiscalizacao,"Cerca Elétrica, Arame Farpado e Similares - Fiscalização",pbh_app,43,39,0.813953,13,True,True
+cerca eletrica arame farpado e similares fiscalizacao,"Cerca Elétrica, Arame Farpado e Similares - Fiscalização",portal_servicos,35,33,0.828571,19,True,True
+cerca eletrica arame farpado e similares fiscalizacao,"Cerca Elétrica, Arame Farpado e Similares - Fiscalização",telefone_156,18,18,0.777778,25,False,False
+certidao de denominacao de logradouro mediante requerimento,Certidão de Denominação de Logradouro Mediante Requerimento,pbh_app,26,26,1,1,False,False
+certidao de denominacao de logradouro mediante requerimento,Certidão de Denominação de Logradouro Mediante Requerimento,portal_servicos,82,82,1,2,True,True
+certidao de denominacao de logradouro mediante requerimento,Certidão de Denominação de Logradouro Mediante Requerimento,presencial,3,3,1,2,False,False
+certidao de endereco oficial mediante requerimento,Certidão de Endereço Oficial Mediante Requerimento,pbh_app,601,601,1,0,True,True
+certidao de endereco oficial mediante requerimento,Certidão de Endereço Oficial Mediante Requerimento,portal_servicos,1081,1081,0.999075,1,True,True
+certidao de endereco oficial mediante requerimento,Certidão de Endereço Oficial Mediante Requerimento,presencial,1146,1146,0.999127,0,True,True
+certidao de endereco temporario endereco cidadao mediante requerimento,Certidão de Endereço Temporário - Endereço Cidadão Mediante Requerimento,pbh_app,117,117,1,0,True,True
+certidao de endereco temporario endereco cidadao mediante requerimento,Certidão de Endereço Temporário - Endereço Cidadão Mediante Requerimento,portal_servicos,110,110,1,1,True,True
+certidao de endereco temporario endereco cidadao mediante requerimento,Certidão de Endereço Temporário - Endereço Cidadão Mediante Requerimento,presencial,3,3,1,1,False,False
+certidao de inteiro teor copia de processo ambiental,Certidão de Inteiro Teor/ Cópia de Processo Ambiental,portal_servicos,10,10,1,8,False,False
+certidao de inteiro teor copia de processo fazenda,Certidão de Inteiro Teor/ Cópia de Processo - Fazenda,pbh_app,81,81,0.987654,0,True,True
+certidao de inteiro teor copia de processo fazenda,Certidão de Inteiro Teor/ Cópia de Processo - Fazenda,portal_servicos,1341,1337,0.97912,0,True,True
+certidao de inteiro teor copia de processo patrimonio cultural,Certidão de Inteiro Teor/ Cópia de Processo - Patrimônio Cultural,portal_servicos,10,10,1,1.5,False,False
+certidao de inteiro teor copia de processo vigilancia sanitaria,Certidão de Inteiro Teor/ Cópia de Processo - Vigilância Sanitária,pbh_app,1,1,1,21,False,False
+certidao de inteiro teor copia de processo vigilancia sanitaria,Certidão de Inteiro Teor/ Cópia de Processo - Vigilância Sanitária,portal_servicos,7,5,0.571429,13,False,False
+certidao de jurisdicao mediante requerimento,Certidão de Jurisdição Mediante Requerimento,pbh_app,3,3,1,1,False,False
+certidao de jurisdicao mediante requerimento,Certidão de Jurisdição Mediante Requerimento,portal_servicos,6,6,1,3,False,False
+certidao de jurisdicao mediante requerimento,Certidão de Jurisdição Mediante Requerimento,presencial,6,6,1,3,False,False
+certidao de origem de lote mediante requerimento,Certidão de Origem de Lote Mediante Requerimento,pbh_app,49,49,1,4,True,True
+certidao de origem de lote mediante requerimento,Certidão de Origem de Lote Mediante Requerimento,portal_servicos,387,387,0.994832,8,True,True
+certidao de origem de lote mediante requerimento,Certidão de Origem de Lote Mediante Requerimento,presencial,249,249,1,6,True,True
+certidao de tombamento,Certidão de Tombamento,pbh_app,3,3,1,6,False,False
+certidao de tombamento,Certidão de Tombamento,portal_servicos,122,122,1,3,True,True
+certidao de transferencia do direito de construir 2a via de documentos,Certidão de Transferência do Direito de Construir - 2ª Via de Documentos,pbh_app,3,3,1,29,False,False
+certidao de transferencia do direito de construir 2a via de documentos,Certidão de Transferência do Direito de Construir - 2ª Via de Documentos,portal_servicos,33,33,1,12,True,True
+certidao issqn para fins junto ao inss,Certidão - ISSQN para Fins Junto ao INSS,pbh_app,27,25,0.925926,1,False,False
+certidao issqn para fins junto ao inss,Certidão - ISSQN para Fins Junto ao INSS,portal_servicos,68,57,0.823529,1,True,True
+certidao negativa de aprovacao de lote mediante requerimento,Certidão Negativa de Aprovação de Lote Mediante Requerimento,pbh_app,1,1,1,4,False,False
+certidao negativa de aprovacao de lote mediante requerimento,Certidão Negativa de Aprovação de Lote Mediante Requerimento,portal_servicos,52,52,1,2,True,True
+certidao negativa de aprovacao de lote mediante requerimento,Certidão Negativa de Aprovação de Lote Mediante Requerimento,presencial,60,60,1,1,True,True
+certidao negativa de debitos cnd casos nao emitidos pela web,Certidão Negativa de Débitos - CND (casos não emitidos pela web),pbh_app,117,117,1,0,True,True
+certidao negativa de debitos cnd casos nao emitidos pela web,Certidão Negativa de Débitos - CND (casos não emitidos pela web),portal_servicos,958,957,0.996868,0,True,True
+certificado de credito verde expedicao do ccv,Certificado de Crédito Verde ? Expedição do CCV,portal_servicos,2,2,1,20.5,False,False
+cesto coletor comunitario residuo domiciliar vilas e favelas implantacao,Cesto Coletor Comunitário (Resíduo Domiciliar - Vilas e Favelas) - Implantação,pbh_app,22,21,0.909091,3,False,False
+cesto coletor comunitario residuo domiciliar vilas e favelas implantacao,Cesto Coletor Comunitário (Resíduo Domiciliar - Vilas e Favelas) - Implantação,portal_servicos,22,22,1,3,False,False
+cesto coletor comunitario residuo domiciliar vilas e favelas ocorrencia reclamacao,Cesto Coletor Comunitário - (Resíduo Domiciliar - Vilas e Favelas) - Ocorrência/Reclamação,pbh_app,4,3,0.75,31,False,False
+cesto coletor comunitario residuo domiciliar vilas e favelas ocorrencia reclamacao,Cesto Coletor Comunitário - (Resíduo Domiciliar - Vilas e Favelas) - Ocorrência/Reclamação,portal_servicos,15,15,1,1,False,False
+cesto coletor de residuo leve lixeira ocorrencia reclamacao,Cesto Coletor de Resíduo Leve (Lixeira) - Ocorrência/Reclamação,pbh_app,16,16,1,8,False,False
+cesto coletor de residuo leve lixeira ocorrencia reclamacao,Cesto Coletor de Resíduo Leve (Lixeira) - Ocorrência/Reclamação,portal_servicos,101,101,1,10,True,True
+cesto coletor de residuo leve lixeira solicitacao de implantacao em via publica,Cesto Coletor de Resíduo Leve (Lixeira) - Solicitação de Implantação em Via Pública,pbh_app,44,44,1,1,True,True
+cesto coletor de residuo leve lixeira solicitacao de implantacao em via publica,Cesto Coletor de Resíduo Leve (Lixeira) - Solicitação de Implantação em Via Pública,portal_servicos,80,80,1,2,True,True
+coleta de animal morto grande porte,Coleta de Animal Morto - Grande Porte,pbh_app,163,162,0.981595,1,True,True
+coleta de animal morto grande porte,Coleta de Animal Morto - Grande Porte,portal_servicos,68,68,0.985294,1,True,True
+coleta de animal morto grande porte,Coleta de Animal Morto - Grande Porte,telefone_156,42,42,0.952381,1,True,True
+coleta de animal morto pequeno porte,Coleta de Animal Morto - Pequeno Porte,pbh_app,1168,1157,0.962329,1,True,True
+coleta de animal morto pequeno porte,Coleta de Animal Morto - Pequeno Porte,portal_servicos,477,472,0.949686,1,True,True
+coleta de animal morto pequeno porte,Coleta de Animal Morto - Pequeno Porte,telefone_156,118,117,0.79661,2,True,True
+coleta de lixo domiciliar ocorrencia reclamacao,Coleta de Lixo Domiciliar - Ocorrência/Reclamação,pbh_app,98,98,0.989796,3,True,True
+coleta de lixo domiciliar ocorrencia reclamacao,Coleta de Lixo Domiciliar - Ocorrência/Reclamação,portal_servicos,110,106,0.963636,2.5,True,True
+coleta de lixo domiciliar solicitacao de implantacao,Coleta de Lixo Domiciliar - Solicitação de Implantação,pbh_app,12,12,1,4,False,False
+coleta de lixo domiciliar solicitacao de implantacao,Coleta de Lixo Domiciliar - Solicitação de Implantação,portal_servicos,10,10,1,2.5,False,False
+coleta seletiva ponto a ponto ocorrencia reclamacao,Coleta Seletiva (Ponto a Ponto) - Ocorrência/ Reclamação,pbh_app,75,74,0.986667,3.5,True,True
+coleta seletiva ponto a ponto ocorrencia reclamacao,Coleta Seletiva (Ponto a Ponto) - Ocorrência/ Reclamação,portal_servicos,25,24,0.96,7,False,False
+coleta seletiva ponto a ponto solicitacao de implantacao,Coleta Seletiva (Ponto a Ponto) - Solicitação de Implantação,pbh_app,70,70,0.985714,18.5,True,True
+coleta seletiva ponto a ponto solicitacao de implantacao,Coleta Seletiva (Ponto a Ponto) - Solicitação de Implantação,portal_servicos,35,35,0.971429,28,True,True
+coleta seletiva porta a porta ocorrencia reclamacao,Coleta Seletiva (Porta a Porta) - Ocorrência/ Reclamação,pbh_app,87,86,0.965517,3,True,True
+coleta seletiva porta a porta ocorrencia reclamacao,Coleta Seletiva (Porta a Porta) - Ocorrência/ Reclamação,portal_servicos,30,30,0.933333,7,True,True
+coleta seletiva porta a porta solicitacao de implantacao,Coleta Seletiva (Porta a Porta) - Solicitação de Implantação,pbh_app,82,82,0.987805,19,True,True
+coleta seletiva porta a porta solicitacao de implantacao,Coleta Seletiva (Porta a Porta) - Solicitação de Implantação,portal_servicos,72,72,0.986111,27,True,True
+comercio industria ou servico com risco a seguranca de pessoas e bens fiscalizacao,"Comércio, Indústria ou Serviço com Risco à Segurança de Pessoas e Bens - Fiscalização",pbh_app,939,822,0.779553,16,True,True
+comercio industria ou servico com risco a seguranca de pessoas e bens fiscalizacao,"Comércio, Indústria ou Serviço com Risco à Segurança de Pessoas e Bens - Fiscalização",portal_servicos,88,75,0.75,13,True,True
+comercio industria ou servico com risco a seguranca de pessoas e bens fiscalizacao,"Comércio, Indústria ou Serviço com Risco à Segurança de Pessoas e Bens - Fiscalização",telefone_156,81,75,0.765432,27,True,True
+compensacao de debitos municipais com precatorio proprio,Compensação de Débitos Municipais com Precatório Próprio,pbh_app,31,29,0.870968,1,True,False
+compensacao de debitos municipais com precatorio proprio,Compensação de Débitos Municipais com Precatório Próprio,portal_servicos,282,254,0.485816,64.5,True,True
+compensacao de debitos municipais com precatorios de terceiros,Compensação de Débitos Municipais com Precatórios de Terceiros,pbh_app,8,8,1,1.5,False,False
+compensacao de debitos municipais com precatorios de terceiros,Compensação de Débitos Municipais com Precatórios de Terceiros,portal_servicos,59,57,0.728814,4,True,True
+compra de jazigo perpetuo cemiterio da consolacao,Compra de Jazigo Perpétuo - Cemitério da Consolação,pbh_app,4,4,1,4,False,False
+compra de jazigo perpetuo cemiterio da consolacao,Compra de Jazigo Perpétuo - Cemitério da Consolação,portal_servicos,1,1,1,18,False,False
+compra de jazigo perpetuo cemiterio da paz,Compra de Jazigo Perpétuo - Cemitério da Paz,pbh_app,8,8,0.875,10.5,False,False
+compra de jazigo perpetuo cemiterio da paz,Compra de Jazigo Perpétuo - Cemitério da Paz,portal_servicos,4,2,0.5,9,False,False
+compra de jazigo perpetuo cemiterio da saudade,Compra de Jazigo Perpétuo - Cemitério da Saudade,pbh_app,3,3,1,3,False,False
+compra de jazigo perpetuo cemiterio da saudade,Compra de Jazigo Perpétuo - Cemitério da Saudade,portal_servicos,2,2,1,0.5,False,False
+compra de jazigo perpetuo cemiterio do bonfim,Compra de Jazigo Perpétuo - Cemitério do Bonfim,pbh_app,9,9,1,6,False,False
+compra de jazigo perpetuo cemiterio do bonfim,Compra de Jazigo Perpétuo - Cemitério do Bonfim,portal_servicos,5,5,1,3,False,False
+comprovante de pagamento de valores para baixa de construcao,Comprovante de Pagamento de Valores para Baixa de Construção,pbh_app,8,8,1,1,False,False
+comprovante de pagamento de valores para baixa de construcao,Comprovante de Pagamento de Valores para Baixa de Construção,portal_servicos,388,379,0.948454,12,True,True
+comprovante de pagamento de valores para baixa de construcao,Comprovante de Pagamento de Valores para Baixa de Construção,presencial,42,41,0.97619,12,True,True
+comunicacao da fabricacao de produtos dispensados de registro atraves do anexo x,Comunicação da Fabricação de Produtos Dispensados de Registro - Através do Anexo X,portal_servicos,15,15,1,1,False,False
+comunicacao de inicio de obra de edificacao processos iniciados antes de 13 10 14,Comunicação de Início de Obra de Edificação (processos iniciados antes de 13/10/14),portal_servicos,9,8,0.888889,13,False,False
+comunicacao de inicio de obra de edificacao processos iniciados entre 13 10 14 e 20 04 21,Comunicação de Início de Obra de Edificação (processos iniciados entre 13/10/14 e 20/04/21),portal_servicos,1,1,1,1,False,False
+comunicacao de inicio de obra em logradouro publico,Comunicação de Início de Obra em Logradouro Público,portal_servicos,77,66,0.701299,18,True,True
+comunicacao de termino de obra em logradouro publico,Comunicação de Término de Obra em Logradouro Público,portal_servicos,74,58,0.648649,19.5,True,True
+comunicado de falecimento de beneficiario para transferencia de titularidade,Comunicado de Falecimento de Beneficiário para Transferência de Titularidade,pbh_app,47,38,0.659574,47,True,True
+comunicado de falecimento de beneficiario para transferencia de titularidade,Comunicado de Falecimento de Beneficiário para Transferência de Titularidade,portal_servicos,78,50,0.435897,58,True,True
+comunicado de falecimento de beneficiario para transferencia de titularidade,Comunicado de Falecimento de Beneficiário para Transferência de Titularidade,presencial,2,2,0.5,50.5,False,False
+comunicado de separacao ou divorcio de beneficiario para transferencia de titularidade,Comunicado de Separação ou Divórcio de Beneficiário para Transferência de Titularidade,pbh_app,15,13,0.733333,44,False,False
+comunicado de separacao ou divorcio de beneficiario para transferencia de titularidade,Comunicado de Separação ou Divórcio de Beneficiário para Transferência de Titularidade,portal_servicos,35,21,0.428571,48,True,False
+construcao ausencia de acessibilidade ou manutencao do passeio fiscalizacao,"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",pbh_app,1121,1025,0.76628,24,True,True
+construcao ausencia de acessibilidade ou manutencao do passeio fiscalizacao,"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",portal_servicos,1279,1140,0.733385,25,True,True
+construcao ausencia de acessibilidade ou manutencao do passeio fiscalizacao,"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",presencial,1,1,1,20,False,False
+construcao ausencia de acessibilidade ou manutencao do passeio fiscalizacao,"Construção, Ausência de Acessibilidade ou Manutenção do Passeio - Fiscalização",telefone_156,1370,1228,0.718248,29,True,True
+consulta a documentacao de identificacao do condutor infrator fici,Consulta à Documentação de Identificação do Condutor Infrator - FICI,pbh_app,33,33,1,2,True,True
+consulta a documentacao de identificacao do condutor infrator fici,Consulta à Documentação de Identificação do Condutor Infrator - FICI,portal_servicos,74,74,1,3,True,True
+contencao de encostas manutencao,Contenção de Encostas - Manutenção,pbh_app,2,2,0.5,54.5,False,False
+contencao de encostas manutencao,Contenção de Encostas - Manutenção,portal_servicos,11,6,0.454545,27,False,False
+controle de animais peconhentos escorpioes aranhas lacraias lagartas,"Controle de Animais Peçonhentos: Escorpiões, Aranhas, Lacraias, Lagartas",pbh_app,544,542,0.9375,20,True,True
+controle de animais peconhentos escorpioes aranhas lacraias lagartas,"Controle de Animais Peçonhentos: Escorpiões, Aranhas, Lacraias, Lagartas",portal_servicos,355,348,0.915493,22,True,True
+controle de animais peconhentos escorpioes aranhas lacraias lagartas,"Controle de Animais Peçonhentos: Escorpiões, Aranhas, Lacraias, Lagartas",telefone_156,1542,1522,0.927367,21,True,True
+controle de roedores ratos de telhado ratazana camundongos,"Controle de Roedores (ratos de telhado, ratazana, camundongos)",pbh_app,2483,2461,0.93677,20,True,True
+controle de roedores ratos de telhado ratazana camundongos,"Controle de Roedores (ratos de telhado, ratazana, camundongos)",portal_servicos,1647,1631,0.935641,21,True,True
+controle de roedores ratos de telhado ratazana camundongos,"Controle de Roedores (ratos de telhado, ratazana, camundongos)",telefone_156,14041,13935,0.949861,20,True,True
+controle de vetores carrapatos percevejos pulgas barbeiros caramujos piolhos de pombos,"Controle de Vetores: Carrapatos, Percevejos, Pulgas, Barbeiros, Caramujos, Piolhos de Pombos",pbh_app,238,234,0.945378,20,True,True
+controle de vetores carrapatos percevejos pulgas barbeiros caramujos piolhos de pombos,"Controle de Vetores: Carrapatos, Percevejos, Pulgas, Barbeiros, Caramujos, Piolhos de Pombos",portal_servicos,111,108,0.945946,21,True,True
+controle de vetores carrapatos percevejos pulgas barbeiros caramujos piolhos de pombos,"Controle de Vetores: Carrapatos, Percevejos, Pulgas, Barbeiros, Caramujos, Piolhos de Pombos",telefone_156,1024,1013,0.942383,21,True,True
+copia de processo arquivado da politica urbana,Cópia de Processo Arquivado da Política Urbana,pbh_app,4,4,1,1.5,False,False
+copia de processo arquivado da politica urbana,Cópia de Processo Arquivado da Política Urbana,portal_servicos,136,133,0.941176,2,True,True
+copia de processo arquivado da politica urbana,Cópia de Processo Arquivado da Política Urbana,presencial,5,5,0.8,55,False,False
+copia de processo em tramite na politica urbana,Cópia de Processo em Trâmite na Política Urbana,pbh_app,4,4,1,0.5,False,False
+copia de processo em tramite na politica urbana,Cópia de Processo em Trâmite na Política Urbana,portal_servicos,87,87,0.954023,10,True,True
+copia de processo em tramite na politica urbana,Cópia de Processo em Trâmite na Política Urbana,presencial,3,3,1,11,False,False
+copia digital ou consulta de projetos arquitetonicos patrimonio cultural,Cópia Digital ou Consulta de Projetos Arquitetônicos - Patrimônio Cultural,pbh_app,6,5,0.833333,0,False,False
+copia digital ou consulta de projetos arquitetonicos patrimonio cultural,Cópia Digital ou Consulta de Projetos Arquitetônicos - Patrimônio Cultural,portal_servicos,80,80,0.975,1,True,True
+copia e ou consulta de dossie de tombamento,Cópia e/ou Consulta de Dossiê de Tombamento,portal_servicos,4,4,1,1,False,False
+coronavirus denuncia de descumprimento por estabelecimentos,Coronavírus - Denúncia de Descumprimento por Estabelecimentos,pbh_app,5945,5861,0.880572,17,True,True
+coronavirus denuncia de descumprimento por estabelecimentos,Coronavírus - Denúncia de Descumprimento por Estabelecimentos,portal_servicos,2298,2277,0.916884,13,True,True
+coronavirus denuncia de descumprimento por estabelecimentos,Coronavírus - Denúncia de Descumprimento por Estabelecimentos,telefone_156,9925,9822,0.913652,15.5,True,True
+credencial de estacionamento reservado para idoso,Credencial de Estacionamento Reservado para Idoso,pbh_app,3296,3296,1,6,True,True
+credencial de estacionamento reservado para idoso,Credencial de Estacionamento Reservado para Idoso,portal_servicos,5287,5287,1,6,True,True
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade,pbh_app,433,431,0.861432,6,True,True
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade,portal_servicos,615,614,0.839024,11,True,True
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade recurso,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade - Recurso,pbh_app,21,21,1,4,False,False
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade recurso,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade - Recurso,portal_servicos,20,20,1,6.5,False,False
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade remarcacao da avaliacao inicial,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade - Remarcação da Avaliação Inicial,pbh_app,23,23,0.913043,5,False,False
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade remarcacao da avaliacao inicial,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade - Remarcação da Avaliação Inicial,portal_servicos,41,41,0.95122,27,True,True
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade remarcacao do recurso,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade - Remarcação do Recurso,pbh_app,7,7,1,5,False,False
+credencial de estacionamento reservado para pessoas com deficiencia com comprometimento de mobilidade remarcacao do recurso,Credencial de Estacionamento Reservado para Pessoas com Deficiência com Comprometimento de Mobilidade - Remarcação do Recurso,portal_servicos,6,6,1,17.5,False,False
+criacao ou extincao de linha de onibus,Criação ou Extinção de Linha de Ônibus,pbh_app,231,224,0.961039,5,True,True
+criacao ou extincao de linha de onibus,Criação ou Extinção de Linha de Ônibus,portal_servicos,95,90,0.884211,11,True,True
+criacao ou extincao de linha de onibus,Criação ou Extinção de Linha de Ônibus,presencial,1,1,1,8,False,False
+declaracao sobre transporte ou transito,Declaração sobre Transporte ou Trânsito,pbh_app,125,120,0.896,2,True,True
+declaracao sobre transporte ou transito,Declaração sobre Transporte ou Trânsito,portal_servicos,68,64,0.808824,4,True,True
+declaracao sobre transporte ou transito,Declaração sobre Transporte ou Trânsito,presencial,2,1,0.5,9,False,False
+declaracoes feira da afonso pena,Declarações - Feira da Afonso Pena,pbh_app,12,12,1,1,False,False
+declaracoes feira da afonso pena,Declarações - Feira da Afonso Pena,portal_servicos,5,5,0.8,11,False,False
+declaracoes feira da afonso pena,Declarações - Feira da Afonso Pena,presencial,4,4,1,3,False,False
+defesa contra autos emitidos pela fiscalizacao de controle urbanistico e ambiental 1 instancia,Defesa Contra Autos Emitidos Pela Fiscalização de Controle Urbanístico e Ambiental (1° Instância),pbh_app,1352,1286,0.718935,51.5,True,True
+defesa contra autos emitidos pela fiscalizacao de controle urbanistico e ambiental 1 instancia,Defesa Contra Autos Emitidos Pela Fiscalização de Controle Urbanístico e Ambiental (1° Instância),portal_servicos,17897,16866,0.67475,56,True,True
+defesa contra autos emitidos pela fiscalizacao de controle urbanistico e ambiental 1 instancia,Defesa Contra Autos Emitidos Pela Fiscalização de Controle Urbanístico e Ambiental (1° Instância),presencial,34,30,0.676471,45.5,True,True
+defesa da autuacao de transito vistas ao processo,Defesa da Autuação de Trânsito - Vistas ao Processo,pbh_app,148,145,0.966216,2,True,True
+defesa da autuacao de transito vistas ao processo,Defesa da Autuação de Trânsito - Vistas ao Processo,portal_servicos,249,247,0.983936,1,True,True
+denuncia sobre alimentos improprios para consumo,Denúncia sobre Alimentos Impróprios para Consumo,pbh_app,109,98,0.834862,5.5,True,True
+denuncia sobre alimentos improprios para consumo,Denúncia sobre Alimentos Impróprios para Consumo,portal_servicos,91,83,0.879121,6,True,True
+denuncia sobre alimentos improprios para consumo,Denúncia sobre Alimentos Impróprios para Consumo,telefone_156,790,707,0.831646,7,True,True
+denuncia sobre condicoes de higiene e limpeza na criacao de animais,Denúncia sobre Condições de Higiene e Limpeza na Criação de Animais,pbh_app,696,577,0.708333,15,True,True
+denuncia sobre condicoes de higiene e limpeza na criacao de animais,Denúncia sobre Condições de Higiene e Limpeza na Criação de Animais,portal_servicos,452,373,0.643805,29,True,True
+denuncia sobre condicoes de higiene e limpeza na criacao de animais,Denúncia sobre Condições de Higiene e Limpeza na Criação de Animais,telefone_156,1273,1090,0.655931,28,True,True
+denuncia sobre condicoes sanitarias de estabelecimentos de interesse a saude escolas farmacias saloes de beleza e outros,"Denúncia sobre Condições Sanitárias de Estabelecimentos de Interesse à Saúde (Escolas, Farmácias, Salões de Beleza e Outros)",pbh_app,146,119,0.726027,11,True,True
+denuncia sobre condicoes sanitarias de estabelecimentos de interesse a saude escolas farmacias saloes de beleza e outros,"Denúncia sobre Condições Sanitárias de Estabelecimentos de Interesse à Saúde (Escolas, Farmácias, Salões de Beleza e Outros)",portal_servicos,195,157,0.717949,7,True,True
+denuncia sobre condicoes sanitarias de estabelecimentos de interesse a saude escolas farmacias saloes de beleza e outros,"Denúncia sobre Condições Sanitárias de Estabelecimentos de Interesse à Saúde (Escolas, Farmácias, Salões de Beleza e Outros)",telefone_156,248,205,0.741935,9,True,True
+denuncia sobre condicoes sanitarias de estabelecimentos de saude,Denúncia sobre Condições Sanitárias de Estabelecimentos de Saúde,pbh_app,1250,1122,0.8424,7,True,True
+denuncia sobre condicoes sanitarias de estabelecimentos de saude,Denúncia sobre Condições Sanitárias de Estabelecimentos de Saúde,portal_servicos,729,663,0.836763,7,True,True
+denuncia sobre condicoes sanitarias de estabelecimentos de saude,Denúncia sobre Condições Sanitárias de Estabelecimentos de Saúde,telefone_156,2465,2270,0.862475,8,True,True
+denuncia sobre condicoes sanitarias em estabelecimentos de alimentos industrias restaurantes padarias lanchonetes bares e outros,"Denúncia sobre Condições Sanitárias em Estabelecimentos de Alimentos (Indústrias, Restaurantes, Padarias, Lanchonetes, Bares e Outros)",pbh_app,274,220,0.693431,9,True,True
+denuncia sobre condicoes sanitarias em estabelecimentos de alimentos industrias restaurantes padarias lanchonetes bares e outros,"Denúncia sobre Condições Sanitárias em Estabelecimentos de Alimentos (Indústrias, Restaurantes, Padarias, Lanchonetes, Bares e Outros)",portal_servicos,443,348,0.699774,7,True,True
+denuncia sobre condicoes sanitarias em estabelecimentos de alimentos industrias restaurantes padarias lanchonetes bares e outros,"Denúncia sobre Condições Sanitárias em Estabelecimentos de Alimentos (Indústrias, Restaurantes, Padarias, Lanchonetes, Bares e Outros)",telefone_156,1313,1063,0.698401,9,True,True
+denuncia sobre medicamentos cosmeticos e materiais de limpeza inadequados para utilizacao,"Denúncia sobre Medicamentos, Cosméticos e Materiais de Limpeza Inadequados para Utilização",pbh_app,9,7,0.666667,26,False,False
+denuncia sobre medicamentos cosmeticos e materiais de limpeza inadequados para utilizacao,"Denúncia sobre Medicamentos, Cosméticos e Materiais de Limpeza Inadequados para Utilização",portal_servicos,8,7,0.625,19,False,False
+denuncia sobre medicamentos cosmeticos e materiais de limpeza inadequados para utilizacao,"Denúncia sobre Medicamentos, Cosméticos e Materiais de Limpeza Inadequados para Utilização",telefone_156,14,12,0.785714,5,False,False
+denuncias sobre rede de esgotos e residuos solidos em estabelecimentos comerciais ou residencias,Denúncias sobre Rede de Esgotos e Resíduos Sólidos em Estabelecimentos Comerciais ou Residências,pbh_app,597,487,0.643216,17,True,True
+denuncias sobre rede de esgotos e residuos solidos em estabelecimentos comerciais ou residencias,Denúncias sobre Rede de Esgotos e Resíduos Sólidos em Estabelecimentos Comerciais ou Residências,portal_servicos,877,709,0.657925,23,True,True
+denuncias sobre rede de esgotos e residuos solidos em estabelecimentos comerciais ou residencias,Denúncias sobre Rede de Esgotos e Resíduos Sólidos em Estabelecimentos Comerciais ou Residências,telefone_156,4585,3688,0.605453,33.5,True,True
+deposicao irregular de lixo entulho material de construcao residuos ou poda de arvore comunicacao,"Deposição Irregular de Lixo, Entulho, Material de Construção, Resíduos ou Poda de Árvore - Comunicação",pbh_app,3787,3508,0.810404,18,True,True
+deposicao irregular de lixo entulho material de construcao residuos ou poda de arvore comunicacao,"Deposição Irregular de Lixo, Entulho, Material de Construção, Resíduos ou Poda de Árvore - Comunicação",portal_servicos,1886,1767,0.811771,17,True,True
+deposicao irregular de lixo entulho material de construcao residuos ou poda de arvore comunicacao,"Deposição Irregular de Lixo, Entulho, Material de Construção, Resíduos ou Poda de Árvore - Comunicação",telefone_156,4299,3998,0.798093,21,True,True
+desarquivamento de processo da politica urbana,Desarquivamento de Processo da Política Urbana,pbh_app,8,8,0.875,1,False,False
+desarquivamento de processo da politica urbana,Desarquivamento de Processo da Política Urbana,portal_servicos,340,321,0.779412,3,True,True
+desarquivamento de processo da politica urbana,Desarquivamento de Processo da Política Urbana,presencial,10,9,0.5,30,False,False
+desistencia de defesa ou recurso referente a fiscalizacao de controle urbanistico e ambiental,Desistência de Defesa ou Recurso Referente à Fiscalização de Controle Urbanístico e Ambiental,pbh_app,5,4,0.8,6.5,False,False
+desistencia de defesa ou recurso referente a fiscalizacao de controle urbanistico e ambiental,Desistência de Defesa ou Recurso Referente à Fiscalização de Controle Urbanístico e Ambiental,portal_servicos,37,35,0.945946,1,True,True
+devolucao de mercadoria apreendida pela fiscalizacao,Devolução de Mercadoria Apreendida pela Fiscalização,pbh_app,32,21,0.53125,10,True,False
+devolucao de mercadoria apreendida pela fiscalizacao,Devolução de Mercadoria Apreendida pela Fiscalização,portal_servicos,43,28,0.581395,12.5,True,False
+diretrizes ambientais complementares,Diretrizes Ambientais Complementares,pbh_app,3,3,0.666667,68,False,False
+diretrizes ambientais complementares,Diretrizes Ambientais Complementares,portal_servicos,749,666,0.680908,6,True,True
+disponibilizacao de documentos referentes a notificacoes de transito,Disponibilização de Documentos Referentes a Notificações de Trânsito,pbh_app,1335,1328,0.994757,1,True,True
+disponibilizacao de documentos referentes a notificacoes de transito,Disponibilização de Documentos Referentes a Notificações de Trânsito,portal_servicos,5697,5626,0.987186,1,True,True
+dispositivos de seguranca implantacao manutencao de ilha canteiro gradil rotatoria,"Dispositivos de Segurança ? Implantação/ Manutenção de Ilha, Canteiro, Gradil, Rotatória",pbh_app,194,141,0.654639,17,True,True
+dispositivos de seguranca implantacao manutencao de ilha canteiro gradil rotatoria,"Dispositivos de Segurança ? Implantação/ Manutenção de Ilha, Canteiro, Gradil, Rotatória",portal_servicos,184,150,0.706522,30,True,True
+dispositivos de seguranca implantacao manutencao de ilha canteiro gradil rotatoria,"Dispositivos de Segurança ? Implantação/ Manutenção de Ilha, Canteiro, Gradil, Rotatória",telefone_156,1,1,1,7,False,False
+dispositivos de seguranca implantacao manutencao de redutor de velocidade quebra molas,Dispositivos de Segurança - Implantação/ Manutenção de Redutor de Velocidade (quebra-molas),pbh_app,999,891,0.753754,23,True,True
+dispositivos de seguranca implantacao manutencao de redutor de velocidade quebra molas,Dispositivos de Segurança - Implantação/ Manutenção de Redutor de Velocidade (quebra-molas),portal_servicos,1500,1363,0.775333,26,True,True
+dispositivos de seguranca implantacao manutencao de redutor de velocidade quebra molas,Dispositivos de Segurança - Implantação/ Manutenção de Redutor de Velocidade (quebra-molas),telefone_156,6,6,0.833333,25,False,False
+divida ativa parcelamento extraordinario,Dívida Ativa - Parcelamento Extraordinário,pbh_app,315,315,0.996825,1,True,True
+divida ativa parcelamento extraordinario,Dívida Ativa - Parcelamento Extraordinário,portal_servicos,1464,1457,0.993169,1,True,True
+doencas transmitidas por alimentos bebidas surto,Doenças Transmitidas por Alimentos/ Bebidas - Surto,pbh_app,2,2,1,6,False,False
+doencas transmitidas por alimentos bebidas surto,Doenças Transmitidas por Alimentos/ Bebidas - Surto,portal_servicos,1,1,1,6,False,False
+doencas transmitidas por alimentos bebidas surto,Doenças Transmitidas por Alimentos/ Bebidas - Surto,telefone_156,24,21,0.791667,8,False,False
+drenagem manutencao de sistema de drenagem,Drenagem - Manutenção de Sistema de Drenagem,pbh_app,31,27,0.83871,13,True,False
+drenagem manutencao de sistema de drenagem,Drenagem - Manutenção de Sistema de Drenagem,portal_servicos,192,168,0.8125,7.5,True,True
+elevadores escadas e esteiras rolantes fiscalizacao,"Elevadores, Escadas e Esteiras Rolantes - Fiscalização",pbh_app,21,20,0.761905,39.5,False,False
+elevadores escadas e esteiras rolantes fiscalizacao,"Elevadores, Escadas e Esteiras Rolantes - Fiscalização",portal_servicos,13,12,0.692308,50.5,False,False
+elevadores escadas e esteiras rolantes fiscalizacao,"Elevadores, Escadas e Esteiras Rolantes - Fiscalização",telefone_156,18,14,0.611111,35.5,False,False
+elogio a taxista ou transportador escolar,Elogio à Taxista ou Transportador Escolar,pbh_app,8,4,0.375,27,False,False
+elogio a taxista ou transportador escolar,Elogio à Taxista ou Transportador Escolar,portal_servicos,2,1,0.5,9,False,False
+elogio para o operador do transporte coletivo convencional ou move,Elogio para o Operador do Transporte Coletivo (Convencional ou MOVE),pbh_app,47,0,0,,True,False
+elogio para o operador do transporte coletivo convencional ou move,Elogio para o Operador do Transporte Coletivo (Convencional ou MOVE),portal_servicos,37,0,0,,True,False
+elogio para o operador do transporte suplementar,Elogio para o Operador do Transporte Suplementar,pbh_app,1,1,1,0,False,False
+elogio para o operador do transporte suplementar,Elogio para o Operador do Transporte Suplementar,portal_servicos,1,1,1,18,False,False
+elogio reclamacao sobre acoes da bhtrans,Elogio/ Reclamação sobre Ações da BHTRANS,pbh_app,231,189,0.770563,3,True,True
+elogio reclamacao sobre acoes da bhtrans,Elogio/ Reclamação sobre Ações da BHTRANS,portal_servicos,164,140,0.75,10,True,True
+elogio reclamacao sobre acoes da bhtrans,Elogio/ Reclamação sobre Ações da BHTRANS,presencial,11,5,0.454545,7,False,False
+emissao de copia de laudo de pericia,Emissão de Cópia de Laudo de Perícia,pbh_app,48,48,1,2,True,True
+emissao de copia de laudo de pericia,Emissão de Cópia de Laudo de Perícia,portal_servicos,40,40,1,2,True,True
+emissao de copia de laudo de pericia,Emissão de Cópia de Laudo de Perícia,telefone_156,1,1,1,7,False,False
+emissao de documentos digitais de edificacao,Emissão de Documentos Digitais de Edificação,pbh_app,604,603,0.995033,3,True,True
+emissao de documentos digitais de edificacao,Emissão de Documentos Digitais de Edificação,portal_servicos,6513,6501,0.985721,3,True,True
+emissao de documentos digitais de edificacao,Emissão de Documentos Digitais de Edificação,presencial,168,167,0.994048,3,True,True
+emissao de parecer de enquadramento para empreendimento habitacional de interesse social ehis,Emissão de Parecer de Enquadramento para Empreendimento Habitacional de Interesse Social - EHIS,pbh_app,1,0,0,,False,False
+emissao de parecer de enquadramento para empreendimento habitacional de interesse social ehis,Emissão de Parecer de Enquadramento para Empreendimento Habitacional de Interesse Social - EHIS,portal_servicos,5,1,0,223,False,False
+entrega de documento para regularizacao de parcelamento do solo lei 9074 05 ex officio iniciativa da pbh,Entrega de Documento para Regularização de Parcelamento do Solo: Lei 9074/05/ Ex offício - Iniciativa da PBH,pbh_app,3,3,1,3,False,False
+entrega de documento para regularizacao de parcelamento do solo lei 9074 05 ex officio iniciativa da pbh,Entrega de Documento para Regularização de Parcelamento do Solo: Lei 9074/05/ Ex offício - Iniciativa da PBH,portal_servicos,9,9,1,4,False,False
+entrega de recibos do bolsa moradia,Entrega de Recibos do Bolsa Moradia,pbh_app,18,18,0.277778,131,False,False
+entrega de recibos do bolsa moradia,Entrega de Recibos do Bolsa Moradia,portal_servicos,4,3,0.5,83,False,False
+entrega de recibos do bolsa moradia,Entrega de Recibos do Bolsa Moradia,presencial,266,0,0,,True,False
+escada manutencao de escadas,Escada ? Manutenção de Escadas,pbh_app,6,6,0.833333,36.5,False,False
+escada manutencao de escadas,Escada ? Manutenção de Escadas,portal_servicos,25,22,0.84,9,False,False
+esclarecimentos sobre exclusao indeferimento de opcao do simples nacional por motivo de debitos tributarios,Esclarecimentos sobre Exclusão/ Indeferimento de Opção do Simples Nacional por Motivo de Débitos Tributários,pbh_app,12,12,1,1.5,False,False
+esclarecimentos sobre exclusao indeferimento de opcao do simples nacional por motivo de debitos tributarios,Esclarecimentos sobre Exclusão/ Indeferimento de Opção do Simples Nacional por Motivo de Débitos Tributários,portal_servicos,907,907,0.998897,1,True,True
+escolar reclamacao sobre transportador escolar,ESCOLAR ? Reclamação sobre Transportador Escolar,pbh_app,55,27,0.436364,27,True,False
+escolar reclamacao sobre transportador escolar,ESCOLAR ? Reclamação sobre Transportador Escolar,portal_servicos,19,10,0.421053,15.5,False,False
+estabelecimento sem licenca ou irregular comercio servico e industria fiscalizacao,"Estabelecimento sem Licença ou Irregular (Comércio, Serviço e Industria) - Fiscalização",pbh_app,1147,998,0.774194,17,True,True
+estabelecimento sem licenca ou irregular comercio servico e industria fiscalizacao,"Estabelecimento sem Licença ou Irregular (Comércio, Serviço e Industria) - Fiscalização",portal_servicos,1380,1178,0.758696,16,True,True
+estabelecimento sem licenca ou irregular comercio servico e industria fiscalizacao,"Estabelecimento sem Licença ou Irregular (Comércio, Serviço e Industria) - Fiscalização",telefone_156,3466,2992,0.732545,25,True,True
+exame de leishmaniose canina,Exame de Leishmaniose Canina,pbh_app,2351,2341,0.954913,13,True,True
+exame de leishmaniose canina,Exame de Leishmaniose Canina,portal_servicos,1040,1040,0.955769,13,True,True
+exame de leishmaniose canina,Exame de Leishmaniose Canina,telefone_156,11589,11568,0.953922,13,True,True
+exclusao de imovel de zona de especial interesse social zeis,Exclusão de Imóvel de Zona de Especial Interesse Social - Zeis,pbh_app,2,2,1,2.5,False,False
+exclusao de imovel de zona de especial interesse social zeis,Exclusão de Imóvel de Zona de Especial Interesse Social - Zeis,portal_servicos,4,4,0.75,59.5,False,False
+extincao de creditos tributarios e nao tributarios mediante dacao em pagamento,Extinção de Créditos Tributários e não Tributários Mediante Dação em Pagamento,pbh_app,11,11,1,1,False,False
+extincao de creditos tributarios e nao tributarios mediante dacao em pagamento,Extinção de Créditos Tributários e não Tributários Mediante Dação em Pagamento,portal_servicos,30,29,0.866667,1,True,False
+fachadas e marquises mal conservadas fiscalizacao,Fachadas e Marquises Mal Conservadas - Fiscalização,pbh_app,64,58,0.796875,23.5,True,True
+fachadas e marquises mal conservadas fiscalizacao,Fachadas e Marquises Mal Conservadas - Fiscalização,portal_servicos,46,45,0.804348,28,True,True
+fachadas e marquises mal conservadas fiscalizacao,Fachadas e Marquises Mal Conservadas - Fiscalização,telefone_156,21,19,0.714286,39,False,False
+feiras eventos circos e parques de diversao fiscalizacao,"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",pbh_app,104,93,0.798077,17,True,True
+feiras eventos circos e parques de diversao fiscalizacao,"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",portal_servicos,65,58,0.738462,5.5,True,True
+feiras eventos circos e parques de diversao fiscalizacao,"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",telefone_156,81,79,0.765432,27,True,True
+fiscalizacao do transporte clandestino de escolares,Fiscalização do Transporte Clandestino de Escolares,pbh_app,9,7,0.777778,58,False,False
+fiscalizacao do transporte clandestino de escolares,Fiscalização do Transporte Clandestino de Escolares,portal_servicos,3,1,0.333333,15,False,False
+fiscalizacao do transporte clandestino de passageiros,Fiscalização do Transporte Clandestino de Passageiros,pbh_app,3,1,0.333333,35,False,False
+fiscalizacao do transporte coletivo,Fiscalização do Transporte Coletivo,pbh_app,283,233,0.745583,9,True,True
+fiscalizacao do transporte coletivo,Fiscalização do Transporte Coletivo,portal_servicos,72,59,0.708333,7,True,True
+fiscalizacao do transporte coletivo,Fiscalização do Transporte Coletivo,telefone_156,3,3,0.333333,137,False,False
+fornecedor alteracao de dados cadastrais e ou inclusao de linhas,Fornecedor - Alteração de Dados Cadastrais e/ou Inclusão de Linhas,pbh_app,5,5,1,1,False,False
+fornecedor alteracao de dados cadastrais e ou inclusao de linhas,Fornecedor - Alteração de Dados Cadastrais e/ou Inclusão de Linhas,portal_servicos,343,340,0.991254,0,True,True
+fornecedor atualizacao de documentos no cadastro,Fornecedor - Atualização de Documentos no Cadastro,pbh_app,49,49,1,0,True,True
+fornecedor atualizacao de documentos no cadastro,Fornecedor - Atualização de Documentos no Cadastro,portal_servicos,8105,8104,0.999753,0,True,True
+fornecedor cadastro,Fornecedor - Cadastro,pbh_app,13,13,1,1,False,False
+fornecedor cadastro,Fornecedor - Cadastro,portal_servicos,1140,1140,0.999123,1,True,True
+fornecedor do ramo de engenharia alteracao de dados cadastrais e ou inclusao de linhas,Fornecedor do Ramo de Engenharia - Alteração de Dados Cadastrais e/ou Inclusão de Linhas,portal_servicos,46,44,0.956522,0,True,True
+fornecedor do ramo de engenharia atualizacao de documentos no cadastro,Fornecedor do Ramo de Engenharia - Atualização de Documentos no Cadastro,pbh_app,1,1,1,1,False,False
+fornecedor do ramo de engenharia atualizacao de documentos no cadastro,Fornecedor do Ramo de Engenharia - Atualização de Documentos no Cadastro,portal_servicos,438,438,1,0,True,True
+fornecedor do ramo de engenharia cadastro,Fornecedor do Ramo de Engenharia - Cadastro,portal_servicos,67,66,0.985075,1,True,True
+fornecedor do ramo de engenharia renovacao do certificado de registro cadastral,Fornecedor do Ramo de Engenharia - Renovação do Certificado de Registro Cadastral,portal_servicos,97,97,1,0,True,True
+fornecedor recurso contra indeferimentos no cadastro,Fornecedor - Recurso Contra Indeferimentos no Cadastro,portal_servicos,1,1,1,0,False,False
+fornecedor renovacao do certificado de registro cadastral,Fornecedor - Renovação do Certificado de Registro Cadastral,pbh_app,8,8,1,5,False,False
+fornecedor renovacao do certificado de registro cadastral,Fornecedor - Renovação do Certificado de Registro Cadastral,portal_servicos,783,781,0.993614,3,True,True
+fornecedor revisao de preco e ou troca de marca,Fornecedor - Revisão de Preço e/ou Troca de Marca,portal_servicos,1,1,1,0,False,False
+gestao dos projetos culturais,Gestão dos Projetos Culturais,portal_servicos,9,0,0,,False,False
+guias multa de transito nao inscritas em divida ativa,Guias - Multa de Trânsito - Não Inscritas em Dívida Ativa,pbh_app,1,1,1,4,False,False
+guias multa de transito nao inscritas em divida ativa,Guias - Multa de Trânsito - Não Inscritas em Dívida Ativa,portal_servicos,4,4,1,8,False,False
+identificacao do condutor infrator fici,Identificação do Condutor Infrator - FICI,pbh_app,50193,50193,0.9999,1,True,True
+identificacao do condutor infrator fici,Identificação do Condutor Infrator - FICI,portal_servicos,160513,160513,0.999875,0,True,True
+identificacao do condutor infrator fici,Identificação do Condutor Infrator - FICI,telefone_156,4,4,1,2,False,False
+iluminacao publica ampliacao da rede municipal de iluminacao publica,Iluminação Pública - Ampliação da Rede Municipal de Iluminação Pública,pbh_app,28,17,0,160,False,False
+iluminacao publica ampliacao da rede municipal de iluminacao publica,Iluminação Pública - Ampliação da Rede Municipal de Iluminação Pública,portal_servicos,43,9,0,160,True,False
+iluminacao publica manutencao de braco da luminaria empenado ou quebrado,Iluminação Pública - Manutenção de Braço da Luminária Empenado ou Quebrado,pbh_app,118,91,0.771186,2,True,True
+iluminacao publica manutencao de braco da luminaria empenado ou quebrado,Iluminação Pública - Manutenção de Braço da Luminária Empenado ou Quebrado,portal_servicos,30,24,0.8,1,True,False
+iluminacao publica manutencao de braco da luminaria empenado ou quebrado,Iluminação Pública - Manutenção de Braço da Luminária Empenado ou Quebrado,telefone_156,3,1,0.333333,2,False,False
+iluminacao publica manutencao de luminaria acesa durante o dia,Iluminação Pública - Manutenção de Luminária Acesa Durante o Dia,pbh_app,145,126,0.868966,2,True,True
+iluminacao publica manutencao de luminaria acesa durante o dia,Iluminação Pública - Manutenção de Luminária Acesa Durante o Dia,portal_servicos,58,53,0.913793,1,True,True
+iluminacao publica manutencao de luminaria acesa durante o dia,Iluminação Pública - Manutenção de Luminária Acesa Durante o Dia,telefone_156,4,4,1,2,False,False
+iluminacao publica manutencao de luminaria apagada durante a noite,Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,pbh_app,5681,4304,0.753388,1,True,True
+iluminacao publica manutencao de luminaria apagada durante a noite,Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,portal_servicos,1968,1449,0.731199,1,True,True
+iluminacao publica manutencao de luminaria apagada durante a noite,Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,telefone_156,348,126,0.362069,1,True,True
+iluminacao publica manutencao de luminaria intermitente piscando,Iluminação Pública - Manutenção de Luminária Intermitente (Piscando),pbh_app,1346,1238,0.919019,1,True,True
+iluminacao publica manutencao de luminaria intermitente piscando,Iluminação Pública - Manutenção de Luminária Intermitente (Piscando),portal_servicos,393,364,0.923664,1,True,True
+iluminacao publica manutencao de luminaria intermitente piscando,Iluminação Pública - Manutenção de Luminária Intermitente (Piscando),presencial,1,1,1,1,False,False
+iluminacao publica manutencao de luminaria intermitente piscando,Iluminação Pública - Manutenção de Luminária Intermitente (Piscando),telefone_156,25,18,0.72,2,False,False
+iluminacao publica manutencao de luminaria quebrada ou ausente,Iluminação Pública - Manutenção de Luminária Quebrada ou Ausente,pbh_app,272,224,0.823529,2,True,True
+iluminacao publica manutencao de luminaria quebrada ou ausente,Iluminação Pública - Manutenção de Luminária Quebrada ou Ausente,portal_servicos,114,97,0.850877,1,True,True
+iluminacao publica manutencao de luminaria quebrada ou ausente,Iluminação Pública - Manutenção de Luminária Quebrada ou Ausente,telefone_156,3,1,0.333333,2,False,False
+iluminacao publica realocacao de unidades de iluminacao publica,Iluminação Pública - Realocação de Unidades de Iluminação Pública,pbh_app,11,3,0.0909091,152,False,False
+iluminacao publica realocacao de unidades de iluminacao publica,Iluminação Pública - Realocação de Unidades de Iluminação Pública,portal_servicos,14,8,0.142857,117,False,False
+implantacao de espaco operacional,Implantação de Espaço Operacional,pbh_app,1,1,1,31,False,False
+implantacao de espaco operacional,Implantação de Espaço Operacional,portal_servicos,22,21,0.909091,25,False,False
+implantacao de radar detector de avanco de sinal ou de faixa exclusiva,"Implantação de Radar, Detector de Avanço de Sinal ou de Faixa Exclusiva",pbh_app,76,73,0.776316,26,True,True
+implantacao de radar detector de avanco de sinal ou de faixa exclusiva,"Implantação de Radar, Detector de Avanço de Sinal ou de Faixa Exclusiva",portal_servicos,70,68,0.7,34.5,True,True
+implantacao manutencao de ciclovia ciclofaixa ou bicicletario,"Implantação/ Manutenção de Ciclovia, Ciclofaixa ou Bicicletário",pbh_app,35,17,0.342857,52,True,False
+implantacao manutencao de ciclovia ciclofaixa ou bicicletario,"Implantação/ Manutenção de Ciclovia, Ciclofaixa ou Bicicletário",portal_servicos,50,35,0.44,51,True,True
+implantacao manutencao de sinalizacao horizontal,Implantação - Manutenção de Sinalização Horizontal,pbh_app,723,557,0.697095,21,True,True
+implantacao manutencao de sinalizacao horizontal,Implantação - Manutenção de Sinalização Horizontal,portal_servicos,1271,975,0.666404,24,True,True
+implantacao manutencao de sinalizacao horizontal,Implantação - Manutenção de Sinalização Horizontal,presencial,2,2,1,36,False,False
+implantacao manutencao de sinalizacao horizontal,Implantação - Manutenção de Sinalização Horizontal,telefone_156,1,1,1,27,False,False
+implantacao manutencao de sinalizacao vertical,Implantação - Manutenção de Sinalização Vertical,pbh_app,1051,962,0.818268,21,True,True
+implantacao manutencao de sinalizacao vertical,Implantação - Manutenção de Sinalização Vertical,portal_servicos,2074,1924,0.775313,24,True,True
+implantacao manutencao de sinalizacao vertical,Implantação - Manutenção de Sinalização Vertical,telefone_156,2,2,1,21.5,False,False
+implantacao manutencao faixa de pedestres,Implantação/ Manutenção - Faixa de Pedestres,pbh_app,350,269,0.7,23,True,True
+implantacao manutencao faixa de pedestres,Implantação/ Manutenção - Faixa de Pedestres,portal_servicos,476,384,0.726891,29,True,True
+implantacao manutencao faixa de pedestres,Implantação/ Manutenção - Faixa de Pedestres,telefone_156,1,1,1,21,False,False
+impugnacao ao tombamento provisorio patrimonio cultural,Impugnação ao Tombamento Provisório - Patrimônio Cultural,portal_servicos,3,3,1,11,False,False
+impugnacao em regularizacao fundiaria de interesse social reurb s,Impugnação em Regularização Fundiária de Interesse Social - REURB-S,pbh_app,1,1,1,11,False,False
+impugnacao em regularizacao fundiaria de interesse social reurb s,Impugnação em Regularização Fundiária de Interesse Social - REURB-S,portal_servicos,1,0,0,,False,False
+individualizacao de valores de regularizacao onerosa de edificacao lei 9 074 05,Individualização de Valores de Regularização Onerosa de Edificação (Lei 9.074/05),pbh_app,6,6,1,25.5,False,False
+individualizacao de valores de regularizacao onerosa de edificacao lei 9 074 05,Individualização de Valores de Regularização Onerosa de Edificação (Lei 9.074/05),portal_servicos,50,50,0.96,25.5,True,True
+informacao basica para edificacao mediante requerimento,Informação Básica para Edificação Mediante Requerimento,pbh_app,4,4,1,7,False,False
+informacao basica para edificacao mediante requerimento,Informação Básica para Edificação Mediante Requerimento,portal_servicos,50,50,0.98,7,True,True
+informacao basica para edificacao mediante requerimento,Informação Básica para Edificação Mediante Requerimento,presencial,16,16,1,10.5,False,False
+informacao sobre notificacao de transito multa,Informação sobre Notificação de Trânsito - Multa,pbh_app,2715,2651,0.968692,1,True,True
+informacao sobre notificacao de transito multa,Informação sobre Notificação de Trânsito - Multa,portal_servicos,17437,16869,0.956644,9,True,True
+informacao sobre notificacao de transito multa,Informação sobre Notificação de Trânsito - Multa,presencial,69,63,0.884058,3,True,True
+informacao sobre transporte coletivo,Informação sobre Transporte Coletivo,pbh_app,53,51,0.90566,2,True,True
+informacao sobre transporte coletivo,Informação sobre Transporte Coletivo,portal_servicos,76,69,0.842105,6,True,True
+informacao sobre transporte coletivo,Informação sobre Transporte Coletivo,presencial,5,5,1,1,False,False
+informe de rendimentos referente a precatorios e a requisicoes de pequeno valor rpv,Informe de Rendimentos Referente a Precatórios e a Requisições de Pequeno Valor - RPV,pbh_app,106,106,1,2,True,True
+informe de rendimentos referente a precatorios e a requisicoes de pequeno valor rpv,Informe de Rendimentos Referente a Precatórios e a Requisições de Pequeno Valor - RPV,portal_servicos,241,241,1,3,True,True
+inscricao municipal de pessoa juridica acerto de dados cadastrais devido a problema no processamento da redesim,Inscrição Municipal de Pessoa Jurídica - Acerto de Dados Cadastrais Devido a Problema no Processamento da REDESIM,pbh_app,40,40,1,1,True,True
+inscricao municipal de pessoa juridica acerto de dados cadastrais devido a problema no processamento da redesim,Inscrição Municipal de Pessoa Jurídica - Acerto de Dados Cadastrais Devido a Problema no Processamento da REDESIM,portal_servicos,1270,1269,0.998425,1,True,True
+inscricao no programa adote um bem cultural adotante,Inscrição no Programa Adote um Bem Cultural - Adotante,pbh_app,1,1,1,3,False,False
+interposicao de recurso na junta administrativa de recursos de infracoes jari,Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI,pbh_app,3200,2083,0.65,1,True,True
+interposicao de recurso na junta administrativa de recursos de infracoes jari,Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI,portal_servicos,25905,8893,0.342752,1,True,True
+interposicao de recurso na junta administrativa de recursos de infracoes jari,Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI,presencial,44391,522,0.0117366,0,True,True
+interveniencia na transferencia de direitos em lotes titulados e unidades habitacionais compra venda e permuta,"Interveniência na Transferência de Direitos em Lotes Titulados e Unidades Habitacionais (compra, venda e permuta)",pbh_app,183,159,0.639344,44,True,True
+interveniencia na transferencia de direitos em lotes titulados e unidades habitacionais compra venda e permuta,"Interveniência na Transferência de Direitos em Lotes Titulados e Unidades Habitacionais (compra, venda e permuta)",portal_servicos,359,308,0.501393,73,True,True
+interveniencia na transferencia de direitos em lotes titulados e unidades habitacionais compra venda e permuta,"Interveniência na Transferência de Direitos em Lotes Titulados e Unidades Habitacionais (compra, venda e permuta)",presencial,3,3,0,364,False,False
+invasao de lotes terrenos e areas publicas fiscalizacao,"Invasão de Lotes, Terrenos e Áreas Públicas - Fiscalização",pbh_app,548,518,0.864964,4,True,True
+invasao de lotes terrenos e areas publicas fiscalizacao,"Invasão de Lotes, Terrenos e Áreas Públicas - Fiscalização",portal_servicos,467,445,0.865096,7,True,True
+invasao de lotes terrenos e areas publicas fiscalizacao,"Invasão de Lotes, Terrenos e Áreas Públicas - Fiscalização",telefone_156,1680,1556,0.772619,13,True,True
+iptu migracao dos lancamentos de imovel arrematado em hasta publica para cpf ou cnpj,IPTU - Migração dos Lançamentos de Imóvel Arrematado em Hasta Pública para CPF ou CNPJ,pbh_app,12,11,0.666667,41,False,False
+iptu migracao dos lancamentos de imovel arrematado em hasta publica para cpf ou cnpj,IPTU - Migração dos Lançamentos de Imóvel Arrematado em Hasta Pública para CPF ou CNPJ,portal_servicos,33,29,0.636364,53,True,False
+iptu revisao e requerimentos,IPTU - Revisão e Requerimentos,pbh_app,677,592,0.509601,61,True,True
+iptu revisao e requerimentos,IPTU - Revisão e Requerimentos,portal_servicos,7842,7231,0.527544,70,True,True
+isencao de taxas tflf tfs para associacao civil sem fins lucrativos,Isenção de Taxas (TFLF / TFS) para Associação Civil sem Fins Lucrativos,pbh_app,14,14,0.857143,67,False,False
+isencao de taxas tflf tfs para associacao civil sem fins lucrativos,Isenção de Taxas (TFLF / TFS) para Associação Civil sem Fins Lucrativos,portal_servicos,257,257,0.603113,84,True,True
+issqn cancelamento de autorizacao para impressao de documentos fiscais aidf,ISSQN - Cancelamento de Autorização para Impressão de Documentos Fiscais ? AIDF,pbh_app,6,6,1,7,False,False
+issqn cancelamento de autorizacao para impressao de documentos fiscais aidf,ISSQN - Cancelamento de Autorização para Impressão de Documentos Fiscais ? AIDF,portal_servicos,158,155,0.981013,17,True,True
+issqn cancelamento parcelamento espontaneo pessoa juridica pj,ISSQN - Cancelamento Parcelamento Espontâneo - Pessoa Jurídica - PJ,pbh_app,3,3,1,0,False,False
+issqn cancelamento parcelamento espontaneo pessoa juridica pj,ISSQN - Cancelamento Parcelamento Espontâneo - Pessoa Jurídica - PJ,portal_servicos,60,57,0.85,24,True,True
+issqn copia do auto de infracao e termo de intimacao aiti,ISSQN - Cópia do Auto de Infração e Termo de Intimação - AITI,pbh_app,26,26,1,1,False,False
+issqn copia do auto de infracao e termo de intimacao aiti,ISSQN - Cópia do Auto de Infração e Termo de Intimação - AITI,portal_servicos,195,193,0.969231,0,True,True
+issqn credenciamento de estabelecimento grafico,ISSQN - Credenciamento de Estabelecimento Gráfico,pbh_app,1,0,0,,False,False
+issqn credenciamento de estabelecimento grafico,ISSQN - Credenciamento de Estabelecimento Gráfico,portal_servicos,47,47,1,13,True,True
+issqn desbloqueio de documentos fiscais,ISSQN - Desbloqueio de Documentos Fiscais,pbh_app,2,2,1,32.5,False,False
+issqn desbloqueio de documentos fiscais,ISSQN - Desbloqueio de Documentos Fiscais,portal_servicos,100,100,1,19,True,True
+issqn diversao publica e eventos em geral comunicacao pedido de autorizacao e informacoes,"ISSQN - Diversão Pública e Eventos em Geral - Comunicação, Pedido de Autorização e Informações",pbh_app,7,7,0.857143,3,False,False
+issqn diversao publica e eventos em geral comunicacao pedido de autorizacao e informacoes,"ISSQN - Diversão Pública e Eventos em Geral - Comunicação, Pedido de Autorização e Informações",portal_servicos,95,95,0.968421,4,True,True
+issqn documentos fiscais em regime especial,ISSQN - Documentos Fiscais em Regime Especial,pbh_app,3,2,0,182,False,False
+issqn documentos fiscais em regime especial,ISSQN - Documentos Fiscais em Regime Especial,portal_servicos,159,158,0.72327,15,True,True
+issqn esclarecimentos sobre legislacao e preenchimento de des e nfs e,ISSQN - Esclarecimentos sobre Legislação e Preenchimento de DES e NFS-e,pbh_app,56,56,1,12,True,True
+issqn esclarecimentos sobre legislacao e preenchimento de des e nfs e,ISSQN - Esclarecimentos sobre Legislação e Preenchimento de DES e NFS-e,portal_servicos,2428,2427,0.997529,10,True,True
+issqn fiscalizacao atendimento a solicitacao intimacao do fisco,ISSQN - Fiscalização - Atendimento a Solicitação/ Intimação do Fisco,pbh_app,2,2,1,10.5,False,False
+issqn fiscalizacao atendimento a solicitacao intimacao do fisco,ISSQN - Fiscalização - Atendimento a Solicitação/ Intimação do Fisco,portal_servicos,10,10,0.9,1,False,False
+issqn inscricao municipal inapta com apuracao fiscal atualizacao cadastral de pessoa juridica,ISSQN - Inscrição Municipal Inapta com Apuração Fiscal - Atualização Cadastral de Pessoa Jurídica,pbh_app,5,5,0.8,1,False,False
+issqn inscricao municipal inapta com apuracao fiscal atualizacao cadastral de pessoa juridica,ISSQN - Inscrição Municipal Inapta com Apuração Fiscal - Atualização Cadastral de Pessoa Jurídica,portal_servicos,208,208,0.855769,6.5,True,True
+issqn inscricao municipal inapta com endereco desconhecido atualizacao cadastral de pessoa juridica,ISSQN - Inscrição Municipal Inapta com Endereço Desconhecido - Atualização Cadastral de Pessoa Jurídica,pbh_app,3,3,0,124,False,False
+issqn inscricao municipal inapta com endereco desconhecido atualizacao cadastral de pessoa juridica,ISSQN - Inscrição Municipal Inapta com Endereço Desconhecido - Atualização Cadastral de Pessoa Jurídica,portal_servicos,100,96,0.4,107,True,True
+issqn inscricao municipal inapta sem movimentacao economica atualizacao cadastral de pessoa juridica,ISSQN - Inscrição Municipal Inapta sem Movimentação Econômica - Atualização Cadastral de Pessoa Jurídica,pbh_app,3,3,1,0,False,False
+issqn inscricao municipal inapta sem movimentacao economica atualizacao cadastral de pessoa juridica,ISSQN - Inscrição Municipal Inapta sem Movimentação Econômica - Atualização Cadastral de Pessoa Jurídica,portal_servicos,723,723,1,1,True,True
+issqn reativacao de inscricao municipal baixada de oficio,ISSQN - Reativação de Inscrição Municipal Baixada de Ofício,pbh_app,19,19,1,0,False,False
+issqn reativacao de inscricao municipal baixada de oficio,ISSQN - Reativação de Inscrição Municipal Baixada de Ofício,portal_servicos,310,310,1,0,True,True
+issqn reclamacoes contra autos de infracao aiti ainf e termo de verificacao fiscal tvf,ISSQN - Reclamações contra Autos de Infração (AITI/AINF) e Termo de Verificação Fiscal (TVF),pbh_app,7,7,0.857143,3,False,False
+issqn reclamacoes contra autos de infracao aiti ainf e termo de verificacao fiscal tvf,ISSQN - Reclamações contra Autos de Infração (AITI/AINF) e Termo de Verificação Fiscal (TVF),portal_servicos,185,158,0.745946,8,True,True
+issqn reconsideracao da data da baixa pessoa juridica,ISSQN - Reconsideração da Data da Baixa - Pessoa Jurídica,pbh_app,1,1,1,6,False,False
+issqn reconsideracao da data da baixa pessoa juridica,ISSQN - Reconsideração da Data da Baixa - Pessoa Jurídica,portal_servicos,12,12,0.75,9,False,False
+issqn regime de estimativa cadastro alteracao e cancelamento,"ISSQN - Regime de Estimativa - Cadastro, Alteração e Cancelamento",pbh_app,12,12,1,7.5,False,False
+issqn regime de estimativa cadastro alteracao e cancelamento,"ISSQN - Regime de Estimativa - Cadastro, Alteração e Cancelamento",portal_servicos,258,233,0.895349,5,True,True
+issqn regime de estimativa revisao de lancamento inscrito em divida ativa,ISSQN - Regime de Estimativa - Revisão de Lançamento Inscrito em Dívida Ativa,pbh_app,1,1,1,32,False,False
+issqn regime de estimativa revisao de lancamento inscrito em divida ativa,ISSQN - Regime de Estimativa - Revisão de Lançamento Inscrito em Dívida Ativa,portal_servicos,82,81,0.560976,89,True,True
+itbi cartorios de notas duvidas,ITBI - Cartórios de Notas - Dúvidas,pbh_app,10,10,1,0,False,False
+itbi cartorios de notas duvidas,ITBI - Cartórios de Notas - Dúvidas,portal_servicos,159,157,0.981132,0,True,True
+itbi extensao de imunidade tributaria,ITBI - Extensão de Imunidade Tributária,portal_servicos,12,11,0.916667,49,False,False
+juntada de documentos de defesa recurso referentes a fiscalizacao de controle urbanistico e ambiental,Juntada de Documentos de Defesa/ Recurso Referentes à Fiscalização de Controle Urbanístico e Ambiental,pbh_app,4,4,1,0.5,False,False
+juntada de documentos de defesa recurso referentes a fiscalizacao de controle urbanistico e ambiental,Juntada de Documentos de Defesa/ Recurso Referentes à Fiscalização de Controle Urbanístico e Ambiental,portal_servicos,98,98,0.989796,1,True,True
+legislacao fazenda consultas fiscais tributarias formais,Legislação - Fazenda - Consultas Fiscais Tributárias Formais,pbh_app,2,2,1,0,False,False
+legislacao fazenda consultas fiscais tributarias formais,Legislação - Fazenda - Consultas Fiscais Tributárias Formais,portal_servicos,178,174,0.949438,0,True,True
+lei de acesso a informacao lai,Lei de Acesso à Informação - LAI,pbh_app,724,723,0.993094,15,True,True
+lei de acesso a informacao lai,Lei de Acesso à Informação - LAI,portal_servicos,4164,4160,0.983189,17,True,True
+lei de acesso a informacao lai,Lei de Acesso à Informação - LAI,presencial,2,2,1,24,False,False
+lei de acesso a informacao lai,Lei de Acesso à Informação - LAI,telefone_156,1699,1699,0.997057,17,True,True
+licenca de atividade em banca de jornais e revistas,Licença de Atividade em Banca de Jornais e Revistas,pbh_app,71,66,0,182,True,True
+licenca de atividade em banca de jornais e revistas,Licença de Atividade em Banca de Jornais e Revistas,portal_servicos,526,429,0.0114068,224,True,True
+licenca de atividade em banca de jornais e revistas,Licença de Atividade em Banca de Jornais e Revistas,presencial,16,10,0.0625,126.5,False,False
+licenca de cacamba,Licença de Caçamba,pbh_app,13,13,0,123,False,False
+licenca de cacamba,Licença de Caçamba,portal_servicos,279,253,0.0609319,112,True,True
+licenca de cacamba,Licença de Caçamba,presencial,1,1,0,98,False,False
+licenca de engenho de publicidade,Licença de Engenho de Publicidade,pbh_app,19,19,0,128,False,False
+licenca de engenho de publicidade,Licença de Engenho de Publicidade,portal_servicos,2186,2035,0.0402562,105,True,True
+licenca de engraxate,Licença de Engraxate,pbh_app,3,3,0.333333,135,False,False
+licenca de engraxate,Licença de Engraxate,portal_servicos,16,16,0.0625,150.5,False,False
+licenca de engraxate,Licença de Engraxate,presencial,6,6,0,122,False,False
+licenca de feira promovida por particular,Licença de Feira Promovida por Particular,portal_servicos,19,16,0,115.5,False,False
+licenca de lavador de veiculo automotor,Licença de Lavador de Veículo Automotor,pbh_app,31,31,0,106,True,True
+licenca de lavador de veiculo automotor,Licença de Lavador de Veículo Automotor,portal_servicos,81,79,0.0123457,98,True,True
+licenca de lavador de veiculo automotor,Licença de Lavador de Veículo Automotor,presencial,41,41,0,99,True,True
+licenca de mesa e cadeira,Licença de Mesa e Cadeira,pbh_app,33,7,0.212121,34,True,False
+licenca de mesa e cadeira,Licença de Mesa e Cadeira,portal_servicos,1030,517,0.424272,35,True,True
+licenca de toldo,Licença de Toldo,pbh_app,1,0,0,,False,False
+licenca de toldo,Licença de Toldo,portal_servicos,348,175,0.462644,21,True,True
+licenca em feira promovida pelo executivo,Licença em Feira Promovida pelo Executivo,pbh_app,125,80,0.008,250.5,True,True
+licenca em feira promovida pelo executivo,Licença em Feira Promovida pelo Executivo,portal_servicos,220,123,0,224,True,True
+licenca em feira promovida pelo executivo,Licença em Feira Promovida pelo Executivo,presencial,72,30,0.0138889,178.5,True,True
+licenca para comercio de alimento em veiculo automotor lanche rapido,Licença para Comércio de Alimento em Veículo Automotor/ Lanche Rápido,pbh_app,180,177,0.0555556,106,True,True
+licenca para comercio de alimento em veiculo automotor lanche rapido,Licença para Comércio de Alimento em Veículo Automotor/ Lanche Rápido,portal_servicos,184,173,0.0108696,110,True,True
+licenca para comercio de alimento em veiculo automotor lanche rapido,Licença para Comércio de Alimento em Veículo Automotor/ Lanche Rápido,presencial,39,36,0.025641,108.5,True,True
+licenca para comercio de alimento em veiculo de tracao humana ambulante,Licença para Comércio de Alimento em Veículo de Tração Humana - Ambulante,pbh_app,347,333,0.0115274,125,True,True
+licenca para comercio de alimento em veiculo de tracao humana ambulante,Licença para Comércio de Alimento em Veículo de Tração Humana - Ambulante,portal_servicos,353,341,0.00566572,150,True,True
+licenca para comercio de alimento em veiculo de tracao humana ambulante,Licença para Comércio de Alimento em Veículo de Tração Humana - Ambulante,presencial,125,97,0,114,True,True
+licenca para comercio de alimento em veiculo de tracao humana atividade compulsoria ambulante da pampulha,Licença para Comércio de Alimento em Veículo de Tração Humana Atividade Compulsória - Ambulante da Pampulha,pbh_app,16,15,0,120,False,False
+licenca para comercio de alimento em veiculo de tracao humana atividade compulsoria ambulante da pampulha,Licença para Comércio de Alimento em Veículo de Tração Humana Atividade Compulsória - Ambulante da Pampulha,portal_servicos,21,21,0,164,False,False
+licenca para comercio de alimento em veiculo de tracao humana atividade compulsoria ambulante da pampulha,Licença para Comércio de Alimento em Veículo de Tração Humana Atividade Compulsória - Ambulante da Pampulha,presencial,1,1,0,124,False,False
+licenca para comercio de alimento em veiculo de tracao humana venda frutas fruteiro,Licença para Comércio de Alimento em Veículo de Tração Humana Venda Frutas - Fruteiro,pbh_app,35,25,0,167,True,False
+licenca para comercio de alimento em veiculo de tracao humana venda frutas fruteiro,Licença para Comércio de Alimento em Veículo de Tração Humana Venda Frutas - Fruteiro,portal_servicos,30,17,0,220,True,False
+licenca para comercio de alimento em veiculo de tracao humana venda frutas fruteiro,Licença para Comércio de Alimento em Veículo de Tração Humana Venda Frutas - Fruteiro,presencial,8,3,0,338,False,False
+licenca para comercio em logradouro publico por pessoa com deficiencia ambulante,Licença para Comércio em Logradouro Público por Pessoa com Deficiência - Ambulante,pbh_app,28,26,0,154,False,False
+licenca para comercio em logradouro publico por pessoa com deficiencia ambulante,Licença para Comércio em Logradouro Público por Pessoa com Deficiência - Ambulante,portal_servicos,62,58,0,191.5,True,True
+licenca para comercio em logradouro publico por pessoa com deficiencia ambulante,Licença para Comércio em Logradouro Público por Pessoa com Deficiência - Ambulante,presencial,20,18,0.05,119,False,False
+licencas complementares de posturas,Licenças Complementares de Posturas,portal_servicos,48,44,0.625,51,True,True
+licenciamento ambiental de empreendimentos de impacto,Licenciamento Ambiental de Empreendimentos de Impacto,portal_servicos,216,56,0.203704,14,True,True
+licenciamento ambiental simplificado las,Licenciamento Ambiental Simplificado - LAS,pbh_app,3,3,1,1,False,False
+licenciamento ambiental simplificado las,Licenciamento Ambiental Simplificado - LAS,portal_servicos,256,242,0.824219,7,True,True
+licenciamento de infraestrutura de telecomunicacao,Licenciamento de Infraestrutura de Telecomunicação,portal_servicos,10,8,0.8,48.5,False,False
+licenciamento de veiculos e equipamentos para coleta e transporte de residuos solidos especiais rse e licenciamento de veiculos para coleta e transporte de residuos de servicos de saude rss,Licenciamento de Veículos e Equipamentos para Coleta e Transporte de Resíduos Sólidos Especiais- RSE e Licenciamento de Veículos para Coleta e Transporte de Resíduos de Serviços de Saúde - RSS,pbh_app,1,1,1,4,False,False
+licenciamento de veiculos e equipamentos para coleta e transporte de residuos solidos especiais rse e licenciamento de veiculos para coleta e transporte de residuos de servicos de saude rss,Licenciamento de Veículos e Equipamentos para Coleta e Transporte de Resíduos Sólidos Especiais- RSE e Licenciamento de Veículos para Coleta e Transporte de Resíduos de Serviços de Saúde - RSS,portal_servicos,211,202,0.862559,23,True,True
+licenciamento infraestrutura de telecomunicacao parecer previo da secretaria municipal de meio ambiente,Licenciamento Infraestrutura de Telecomunicação - Parecer Prévio da Secretaria Municipal de Meio Ambiente,portal_servicos,1,1,1,2,False,False
+licenciamento urbanistico de empreendimento de impacto,Licenciamento Urbanístico de Empreendimento de Impacto,portal_servicos,68,27,0.352941,14,True,False
+limpeza de corregos e nascentes ocorrencias reclamacao,Limpeza de Córregos e Nascentes - Ocorrências/ Reclamação,pbh_app,26,26,1,2,False,False
+limpeza de corregos e nascentes ocorrencias reclamacao,Limpeza de Córregos e Nascentes - Ocorrências/ Reclamação,portal_servicos,34,33,0.970588,1,True,True
+lote vago com estado de conservacao inadequado fiscalizacao,Lote Vago com Estado de Conservação Inadequado - Fiscalização,pbh_app,1686,1550,0.73191,28,True,True
+lote vago com estado de conservacao inadequado fiscalizacao,Lote Vago com Estado de Conservação Inadequado - Fiscalização,portal_servicos,1455,1350,0.769759,26,True,True
+lote vago com estado de conservacao inadequado fiscalizacao,Lote Vago com Estado de Conservação Inadequado - Fiscalização,telefone_156,3646,3342,0.750137,29,True,True
+loteamento clandestino fiscalizacao,Loteamento Clandestino - Fiscalização,pbh_app,18,17,0.888889,27,False,False
+loteamento clandestino fiscalizacao,Loteamento Clandestino - Fiscalização,portal_servicos,21,19,0.857143,19,False,False
+loteamento clandestino fiscalizacao,Loteamento Clandestino - Fiscalização,telefone_156,4,4,1,28,False,False
+manifestacao da suplan para zoneamentos especificos,Manifestação da SUPLAN para Zoneamentos Específicos,pbh_app,3,3,1,1,False,False
+manifestacao da suplan para zoneamentos especificos,Manifestação da SUPLAN para Zoneamentos Específicos,portal_servicos,55,55,0.981818,12,True,True
+manifestacao de interesse em chamamento publico para instalacao de engenho de publicidade,Manifestação de Interesse em Chamamento Público para Instalação de Engenho de Publicidade,pbh_app,1,1,1,30,False,False
+manifestacao de interesse em chamamento publico para instalacao de engenho de publicidade,Manifestação de Interesse em Chamamento Público para Instalação de Engenho de Publicidade,portal_servicos,5,5,1,43,False,False
+manutencao de passarelas,Manutenção de Passarelas,pbh_app,2,0,0,,False,False
+manutencao de passarelas,Manutenção de Passarelas,portal_servicos,9,0,0,,False,False
+manutencao de pracas canteiros e areas verdes,"Manutenção de Praças, Canteiros e Áreas Verdes",pbh_app,1178,993,0.687606,16,True,True
+manutencao de pracas canteiros e areas verdes,"Manutenção de Praças, Canteiros e Áreas Verdes",portal_servicos,929,741,0.630786,21,True,True
+manutencao de pracas canteiros e areas verdes,"Manutenção de Praças, Canteiros e Áreas Verdes",presencial,6,4,0.666667,12,False,False
+manutencao de pracas canteiros e areas verdes,"Manutenção de Praças, Canteiros e Áreas Verdes",telefone_156,72,58,0.625,23,True,True
+mapeamento de areas de atuacao de flanelinhas em vias publicas,Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas,pbh_app,250,248,0.94,33,True,True
+mapeamento de areas de atuacao de flanelinhas em vias publicas,Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas,portal_servicos,190,182,0.952632,21,True,True
+mapeamento de areas de atuacao de flanelinhas em vias publicas,Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas,telefone_156,19,19,1,36,False,False
+meio fio construcao implantacao,Meio-Fio - Construção/ Implantação,pbh_app,2,0,0,,False,False
+meio fio construcao implantacao,Meio-Fio - Construção/ Implantação,portal_servicos,6,5,0.833333,6,False,False
+meio fio manutencao,Meio-Fio - Manutenção,pbh_app,10,7,0.7,7,False,False
+meio fio manutencao,Meio-Fio - Manutenção,portal_servicos,36,28,0.694444,5,True,False
+mesas cadeiras e toldos na via publica fiscalizacao,"Mesas, Cadeiras e Toldos na Via Pública - Fiscalização",pbh_app,555,495,0.783784,22,True,True
+mesas cadeiras e toldos na via publica fiscalizacao,"Mesas, Cadeiras e Toldos na Via Pública - Fiscalização",portal_servicos,283,242,0.763251,21.5,True,True
+mesas cadeiras e toldos na via publica fiscalizacao,"Mesas, Cadeiras e Toldos na Via Pública - Fiscalização",telefone_156,470,421,0.753191,24,True,True
+migracao para alvara na hora alteracao de modalidade de licenciamento de edificacao,Migração para Alvará na Hora - Alteração de Modalidade de Licenciamento de Edificação,portal_servicos,29,29,1,1,False,False
+mobiliario urbano banca de jornal e revista cabine de onibus e parklet fiscalizacao,"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",pbh_app,47,45,0.829787,13,True,True
+mobiliario urbano banca de jornal e revista cabine de onibus e parklet fiscalizacao,"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",portal_servicos,42,38,0.880952,12.5,True,True
+mobiliario urbano banca de jornal e revista cabine de onibus e parklet fiscalizacao,"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",telefone_156,50,48,0.76,26.5,True,True
+mobiliario urbano instalado em logradouro,Mobiliário Urbano Instalado em Logradouro,pbh_app,8,1,0.125,55,False,False
+mobiliario urbano instalado em logradouro,Mobiliário Urbano Instalado em Logradouro,portal_servicos,78,21,0.192308,54,True,False
+mobilidade segura para idosos,?Mobilidade Segura para Idosos,pbh_app,2,2,1,2,False,False
+mobilidade segura para idosos,?Mobilidade Segura para Idosos,portal_servicos,1,1,1,4,False,False
+multa de transito solicitacao de efeito suspensivo,Multa de Trânsito - Solicitação de Efeito Suspensivo,pbh_app,555,555,0.985586,1,True,True
+multa de transito solicitacao de efeito suspensivo,Multa de Trânsito - Solicitação de Efeito Suspensivo,portal_servicos,671,670,0.974665,2,True,True
+multas de transito solicitacao de baixa,Multas de Trânsito - Solicitação de Baixa,pbh_app,1384,1379,0.796243,16,True,True
+multas de transito solicitacao de baixa,Multas de Trânsito - Solicitação de Baixa,portal_servicos,1775,1764,0.779718,16,True,True
+multas de transito vistas de recurso jari,Multas de Trânsito - Vistas de Recurso/ JARI,pbh_app,72,72,1,3.5,True,True
+multas de transito vistas de recurso jari,Multas de Trânsito - Vistas de Recurso/ JARI,portal_servicos,172,172,1,1,True,True
+multas de transportes vistas de recursos jari,Multas de Transportes ? Vistas de Recursos / JARI,pbh_app,11,11,1,29,False,False
+multas de transportes vistas de recursos jari,Multas de Transportes ? Vistas de Recursos / JARI,portal_servicos,15,15,1,7,False,False
+notificacao de transito disponibilizacao de imagens foto video,Notificação de Trânsito - Disponibilização de Imagens (foto/vídeo),pbh_app,930,922,0.973118,14,True,True
+notificacao de transito disponibilizacao de imagens foto video,Notificação de Trânsito - Disponibilização de Imagens (foto/vídeo),portal_servicos,1504,1461,0.952128,9,True,True
+objetos esquecidos nos veiculos taxi,Objetos Esquecidos nos Veículos Táxi,pbh_app,42,42,0.880952,4,True,True
+objetos esquecidos nos veiculos taxi,Objetos Esquecidos nos Veículos Táxi,portal_servicos,48,45,0.895833,2,True,True
+obra em andamento irregular fiscalizacao,Obra em Andamento Irregular- Fiscalização,pbh_app,2198,2079,0.804823,22,True,True
+obra em andamento irregular fiscalizacao,Obra em Andamento Irregular- Fiscalização,portal_servicos,2200,2102,0.801818,23,True,True
+obra em andamento irregular fiscalizacao,Obra em Andamento Irregular- Fiscalização,telefone_156,6791,6445,0.802386,24,True,True
+obra em ruas calcadas e vias publicas fiscalizacao,"Obra em Ruas, Calçadas e Vias Públicas - Fiscalização",pbh_app,532,494,0.836466,15,True,True
+obra em ruas calcadas e vias publicas fiscalizacao,"Obra em Ruas, Calçadas e Vias Públicas - Fiscalização",portal_servicos,225,213,0.862222,15,True,True
+obra em ruas calcadas e vias publicas fiscalizacao,"Obra em Ruas, Calçadas e Vias Públicas - Fiscalização",telefone_156,1081,1025,0.871415,17,True,True
+obstrucao e publicidade irregular em via publica cone cavalete faixa cartaz panfleto banner lambe lambe e placa fiscalizacao,"Obstrução e Publicidade Irregular em Via Pública (Cone, Cavalete, Faixa, Cartaz, Panfleto, Banner, Lambe Lambe e Placa) - Fiscalização",pbh_app,273,251,0.831502,18,True,True
+obstrucao e publicidade irregular em via publica cone cavalete faixa cartaz panfleto banner lambe lambe e placa fiscalizacao,"Obstrução e Publicidade Irregular em Via Pública (Cone, Cavalete, Faixa, Cartaz, Panfleto, Banner, Lambe Lambe e Placa) - Fiscalização",portal_servicos,973,905,0.861254,21,True,True
+obstrucao e publicidade irregular em via publica cone cavalete faixa cartaz panfleto banner lambe lambe e placa fiscalizacao,"Obstrução e Publicidade Irregular em Via Pública (Cone, Cavalete, Faixa, Cartaz, Panfleto, Banner, Lambe Lambe e Placa) - Fiscalização",telefone_156,351,326,0.843305,19,True,True
+oficio ao gabinete da politica urbana,Ofício ao Gabinete da Política Urbana,pbh_app,8,8,1,3.5,False,False
+oficio ao gabinete da politica urbana,Ofício ao Gabinete da Política Urbana,portal_servicos,85,83,0.941176,13,True,True
+oficio ao gabinete da politica urbana,Ofício ao Gabinete da Política Urbana,presencial,34,34,1,11,True,True
+onibus implantacao manutencao de ponto de embarque desembarque,Ônibus - Implantação/ Manutenção de Ponto de Embarque/ Desembarque,pbh_app,341,306,0.812317,18,True,True
+onibus implantacao manutencao de ponto de embarque desembarque,Ônibus - Implantação/ Manutenção de Ponto de Embarque/ Desembarque,portal_servicos,432,387,0.789352,26,True,True
+onibus implantacao manutencao de ponto de embarque desembarque,Ônibus - Implantação/ Manutenção de Ponto de Embarque/ Desembarque,presencial,2,2,0.5,203,False,False
+onibus solicitacao de alteracao de itinerario,Ônibus - Solicitação de Alteração de Itinerário,pbh_app,135,122,0.688889,24,True,True
+onibus solicitacao de alteracao de itinerario,Ônibus - Solicitação de Alteração de Itinerário,portal_servicos,209,189,0.803828,24,True,True
+onibus solicitacao de alteracao de quadro de horario,Ônibus - Solicitação de Alteração de Quadro de Horário,pbh_app,282,265,0.900709,14,True,True
+onibus solicitacao de alteracao de quadro de horario,Ônibus - Solicitação de Alteração de Quadro de Horário,portal_servicos,194,179,0.829897,15,True,True
+onibus solicitacao de alteracao de quadro de horario,Ônibus - Solicitação de Alteração de Quadro de Horário,presencial,1,1,1,10,False,False
+orientacao para construcao ou reforma de passeio,Orientação para Construção ou Reforma de Passeio,pbh_app,49,47,0.959184,1,True,True
+orientacao para construcao ou reforma de passeio,Orientação para Construção ou Reforma de Passeio,portal_servicos,547,530,0.941499,13.5,True,True
+orientacao para construcao ou reforma de passeio,Orientação para Construção ou Reforma de Passeio,presencial,1,0,0,,False,False
+ouvidoria,Ouvidoria,pbh_app,9090,8828,0.888669,21,True,True
+ouvidoria,Ouvidoria,portal_servicos,13520,12975,0.876997,21,True,True
+ouvidoria,Ouvidoria,presencial,1372,1332,0.906706,21,True,True
+ouvidoria,Ouvidoria,telefone_156,20682,19652,0.863891,21,True,True
+palestras educativas referentes a seguranca no transito,Palestras Educativas Referentes a Segurança no Trânsito,portal_servicos,1,1,1,0,False,False
+parecer para acesso por logradouro no qual atividade nao e admitida extensao de uso,Parecer para Acesso por Logradouro no qual Atividade não é Admitida (Extensão de Uso),pbh_app,1,1,1,2,False,False
+parecer para acesso por logradouro no qual atividade nao e admitida extensao de uso,Parecer para Acesso por Logradouro no qual Atividade não é Admitida (Extensão de Uso),portal_servicos,4,4,1,5.5,False,False
+passeio publico manutencao,Passeio Público - Manutenção,pbh_app,30,25,0.766667,13,True,False
+passeio publico manutencao,Passeio Público - Manutenção,portal_servicos,139,114,0.791367,4,True,True
+perdao de debitos iptu pessoa fisica,Perdão de Débitos - IPTU - Pessoa Física,pbh_app,102,93,0.352941,125,True,True
+perdao de debitos iptu pessoa fisica,Perdão de Débitos - IPTU - Pessoa Física,portal_servicos,641,586,0.366615,111.5,True,True
+perdao de debitos issqn tmcm pessoa fisica,Perdão de Débitos - ISSQN - TMCM - Pessoa Física,pbh_app,34,34,1,24,True,True
+perdao de debitos issqn tmcm pessoa fisica,Perdão de Débitos - ISSQN - TMCM - Pessoa Física,portal_servicos,93,89,0.870968,36,True,True
+perdao de debitos issqn tmcm pessoa fisica,Perdão de Débitos - ISSQN - TMCM - Pessoa Física,presencial,2,1,0.5,63,False,False
+perdao de debitos pessoa juridica,Perdão de Débitos - Pessoa Jurídica,pbh_app,8,2,0.125,123.5,False,False
+perdao de debitos pessoa juridica,Perdão de Débitos - Pessoa Jurídica,portal_servicos,46,42,0.630435,72,True,True
+perdao de debitos pessoa juridica,Perdão de Débitos - Pessoa Jurídica,presencial,1,0,0,,False,False
+peticionamento em protocolo de obra em logradouro publico,Peticionamento em Protocolo de Obra em Logradouro Público,pbh_app,1,1,1,14,False,False
+peticionamento em protocolo de obra em logradouro publico,Peticionamento em Protocolo de Obra em Logradouro Público,portal_servicos,33,27,0.727273,10,True,False
+peticionamento em protocolo de parcelamento do solo,Peticionamento em Protocolo de Parcelamento do Solo,pbh_app,14,13,0.928571,10,False,False
+peticionamento em protocolo de parcelamento do solo,Peticionamento em Protocolo de Parcelamento do Solo,portal_servicos,1666,1602,0.931573,1,True,True
+peticionamento em protocolo de parcelamento do solo,Peticionamento em Protocolo de Parcelamento do Solo,presencial,2,1,0.5,38,False,False
+peticionamento relativo a alvara de urbanizacao emitido,Peticionamento Relativo à Alvará de Urbanização Emitido,portal_servicos,26,26,0.961538,6.5,False,False
+pintura de fachada de bem protegido,Pintura de Fachada de Bem Protegido,portal_servicos,5,5,0.8,8,False,False
+plano de gerenciamento de residuos de servicos de saude pgrss,Plano de Gerenciamento de Resíduos de Serviços de Saúde - PGRSS,pbh_app,70,70,0.942857,28,True,True
+plano de gerenciamento de residuos de servicos de saude pgrss,Plano de Gerenciamento de Resíduos de Serviços de Saúde - PGRSS,portal_servicos,4396,3860,0.671747,28,True,True
+plano de gerenciamento de residuos solidos especiais pgrse,Plano de Gerenciamento de Resíduos Sólidos Especiais - PGRSE,presencial,2,1,0,260,False,False
+plantao de execucao fiscal procuradoria geral do municipio,Plantão de Execução Fiscal - Procuradoria Geral do Município,pbh_app,187,187,1,6,True,True
+plantao de execucao fiscal procuradoria geral do municipio,Plantão de Execução Fiscal - Procuradoria Geral do Município,portal_servicos,768,766,0.996094,5,True,True
+plantao de execucao fiscal procuradoria geral do municipio,Plantão de Execução Fiscal - Procuradoria Geral do Município,presencial,141,141,1,7,True,True
+poda irregular de arvore corte ou supressao fiscalizacao,"Poda Irregular de Árvore, Corte ou Supressão - Fiscalização",pbh_app,345,310,0.8,20,True,True
+poda irregular de arvore corte ou supressao fiscalizacao,"Poda Irregular de Árvore, Corte ou Supressão - Fiscalização",portal_servicos,344,318,0.811047,18,True,True
+poda irregular de arvore corte ou supressao fiscalizacao,"Poda Irregular de Árvore, Corte ou Supressão - Fiscalização",telefone_156,566,536,0.832155,21,True,True
+poluicao ambiental hidrica atmosferica ou do solo fiscalizacao,"Poluição Ambiental (Hídrica, Atmosférica ou do Solo) - Fiscalização",pbh_app,458,430,0.805677,19,True,True
+poluicao ambiental hidrica atmosferica ou do solo fiscalizacao,"Poluição Ambiental (Hídrica, Atmosférica ou do Solo) - Fiscalização",portal_servicos,533,513,0.814259,23,True,True
+poluicao ambiental hidrica atmosferica ou do solo fiscalizacao,"Poluição Ambiental (Hídrica, Atmosférica ou do Solo) - Fiscalização",telefone_156,1639,1552,0.8072,21,True,True
+poluicao sonora fiscalizacao,Poluição Sonora - Fiscalização,pbh_app,11402,10914,0.874847,11,True,True
+poluicao sonora fiscalizacao,Poluição Sonora - Fiscalização,portal_servicos,5343,5123,0.878345,11,True,True
+poluicao sonora fiscalizacao,Poluição Sonora - Fiscalização,telefone_156,9029,8670,0.847159,19,True,True
+ponto de onibus implantacao manutencao de painel eletronico,Ponto de Ônibus - Implantação/ Manutenção de Painel Eletrônico,pbh_app,138,124,0.826087,5.5,True,True
+ponto de onibus implantacao manutencao de painel eletronico,Ponto de Ônibus - Implantação/ Manutenção de Painel Eletrônico,portal_servicos,220,211,0.827273,5,True,True
+ponto limpo solicitacao de implantacao,Ponto Limpo - Solicitação de Implantação,pbh_app,69,46,0.550725,48,True,True
+ponto limpo solicitacao de implantacao,Ponto Limpo - Solicitação de Implantação,portal_servicos,124,86,0.532258,71.5,True,True
+populacao em situacao de rua informacao de localizacao,População em Situação de Rua - Informação de Localização,pbh_app,483,463,0.94824,9,True,True
+populacao em situacao de rua informacao de localizacao,População em Situação de Rua - Informação de Localização,portal_servicos,759,733,0.957839,8,True,True
+prevencao e combate ao mosquito aedes aegypti,Prevenção e Combate ao Mosquito Aedes aegypti,pbh_app,922,901,0.894794,24,True,True
+prevencao e combate ao mosquito aedes aegypti,Prevenção e Combate ao Mosquito Aedes aegypti,portal_servicos,561,551,0.923351,23,True,True
+prevencao e combate ao mosquito aedes aegypti,Prevenção e Combate ao Mosquito Aedes aegypti,telefone_156,2025,1986,0.918519,24,True,True
+processos e correspondencias ao compur,Processos e Correspondências ao COMPUR,portal_servicos,8,8,0.875,19.5,False,False
+proemp programa de incentivo a instalacao e ampliacao de empresa duvidas,PROEMP - Programa de Incentivo à Instalação e Ampliação de Empresa - Dúvidas,portal_servicos,1,1,0,92,False,False
+profissional autonomo baixa de inscricao,Profissional Autônomo - Baixa de Inscrição,pbh_app,649,648,0.989214,1,True,True
+profissional autonomo baixa de inscricao,Profissional Autônomo - Baixa de Inscrição,portal_servicos,3551,3547,0.986764,1,True,True
+profissional autonomo baixa no cadastro de engenho de publicidade cadep,Profissional Autônomo - Baixa no Cadastro de Engenho de Publicidade - CADEP,pbh_app,7,7,1,1,False,False
+profissional autonomo baixa no cadastro de engenho de publicidade cadep,Profissional Autônomo - Baixa no Cadastro de Engenho de Publicidade - CADEP,portal_servicos,37,37,0.891892,7,True,True
+profissional autonomo cancelamento de inscricao,Profissional Autônomo - Cancelamento de Inscrição,pbh_app,280,279,0.985714,2,True,True
+profissional autonomo cancelamento de inscricao,Profissional Autônomo - Cancelamento de Inscrição,portal_servicos,1132,1131,0.985866,1,True,True
+profissional autonomo pessoa fisica inscricao e atualizacao de dados,Profissional Autônomo - Pessoa Física - Inscrição e Atualização de Dados,pbh_app,1090,1090,1,1,True,True
+profissional autonomo pessoa fisica inscricao e atualizacao de dados,Profissional Autônomo - Pessoa Física - Inscrição e Atualização de Dados,portal_servicos,7627,7627,1,1,True,True
+programa locacao social,Programa Locação Social,pbh_app,350,261,0.691429,8,True,True
+programa locacao social,Programa Locação Social,portal_servicos,267,115,0.378277,21,True,True
+programa o jovem e a mobilidade,Programa ?O Jovem e a Mobilidade?,pbh_app,2,2,1,3,False,False
+projeto de arte urbana,Projeto de Arte Urbana,pbh_app,2,2,1,7,False,False
+projeto de arte urbana,Projeto de Arte Urbana,portal_servicos,17,17,0.823529,32,False,False
+prorrogacao de prazo para termo de intimacao vigilancia sanitaria,Prorrogação de Prazo para Termo de Intimação - Vigilância Sanitária,pbh_app,40,39,0.95,19,True,True
+prorrogacao de prazo para termo de intimacao vigilancia sanitaria,Prorrogação de Prazo para Termo de Intimação - Vigilância Sanitária,portal_servicos,581,562,0.924269,13.5,True,True
+protocolo em processo de parcelamento do solo iniciado antes do portal de parcelamento do solo,Protocolo em Processo de Parcelamento do Solo Iniciado Antes do Portal de Parcelamento do Solo,pbh_app,3,3,1,0,False,False
+protocolo em processo de parcelamento do solo iniciado antes do portal de parcelamento do solo,Protocolo em Processo de Parcelamento do Solo Iniciado Antes do Portal de Parcelamento do Solo,portal_servicos,200,139,0.55,5,True,True
+protocolo em processo de parcelamento do solo iniciado antes do portal de parcelamento do solo,Protocolo em Processo de Parcelamento do Solo Iniciado Antes do Portal de Parcelamento do Solo,presencial,2,2,0.5,91.5,False,False
+publicidade irregular na propriedade anuncio placa totem outdoor e painel fiscalizacao,"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",pbh_app,94,82,0.776596,30.5,True,True
+publicidade irregular na propriedade anuncio placa totem outdoor e painel fiscalizacao,"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",portal_servicos,166,145,0.698795,31,True,True
+publicidade irregular na propriedade anuncio placa totem outdoor e painel fiscalizacao,"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",telefone_156,163,156,0.846626,21,True,True
+radiacao eletromagnetica de antenas de telecomunicacao vistoria,Radiação Eletromagnética de Antenas de Telecomunicação - Vistoria,pbh_app,8,8,1,16.5,False,False
+radiacao eletromagnetica de antenas de telecomunicacao vistoria,Radiação Eletromagnética de Antenas de Telecomunicação - Vistoria,portal_servicos,7,7,1,20,False,False
+ratificacao para revisao de taxas,Ratificação para Revisão de Taxas,pbh_app,3,3,0.666667,78,False,False
+ratificacao para revisao de taxas,Ratificação para Revisão de Taxas,portal_servicos,71,64,0.492958,82,True,True
+realizacao de estudo de circulacao em vias publicas,Realização de Estudo de Circulação em Vias Públicas,pbh_app,370,316,0.678378,27,True,True
+realizacao de estudo de circulacao em vias publicas,Realização de Estudo de Circulação em Vias Públicas,portal_servicos,532,453,0.642857,33,True,True
+realizacao de estudo de circulacao em vias publicas,Realização de Estudo de Circulação em Vias Públicas,presencial,1,1,1,35,False,False
+reclamacao de onibus transporte coletivo,Reclamação de Ônibus (Transporte Coletivo),pbh_app,21214,20561,0.962713,15,True,True
+reclamacao de onibus transporte coletivo,Reclamação de Ônibus (Transporte Coletivo),portal_servicos,7179,6938,0.951386,15,True,True
+reclamacoes denuncias feira da av afonso pena,Reclamações/ Denúncias - Feira da Av. Afonso Pena,pbh_app,6,6,1,3,False,False
+reclamacoes denuncias feira da av afonso pena,Reclamações/ Denúncias - Feira da Av. Afonso Pena,portal_servicos,6,6,1,0.5,False,False
+reconhecimento de imunidade tributaria,Reconhecimento de Imunidade Tributária,pbh_app,14,13,0.785714,9,False,False
+reconhecimento de imunidade tributaria,Reconhecimento de Imunidade Tributária,portal_servicos,387,349,0.653747,39,True,True
+recurso agravo contra decisao administrativa fazenda,Recurso / Agravo Contra Decisão Administrativa - Fazenda,pbh_app,118,115,0.940678,1,True,True
+recurso agravo contra decisao administrativa fazenda,Recurso / Agravo Contra Decisão Administrativa - Fazenda,portal_servicos,1393,1337,0.913855,2,True,True
+recurso contra decisao das juntas integradas de julgamento fiscal 2a instancia,Recurso Contra Decisão das Juntas Integradas de Julgamento Fiscal - 2ª Instância,pbh_app,59,43,0.59322,43,True,True
+recurso contra decisao das juntas integradas de julgamento fiscal 2a instancia,Recurso Contra Decisão das Juntas Integradas de Julgamento Fiscal - 2ª Instância,portal_servicos,1321,950,0.495079,57.5,True,True
+recurso contra decisao das juntas integradas de julgamento fiscal 2a instancia,Recurso Contra Decisão das Juntas Integradas de Julgamento Fiscal - 2ª Instância,presencial,23,17,0.26087,117,False,False
+recurso contra indeferimento de posse admissao,Recurso Contra Indeferimento de Posse/ Admissão,pbh_app,15,15,0.933333,9,False,False
+recurso contra indeferimento de posse admissao,Recurso Contra Indeferimento de Posse/ Admissão,portal_servicos,36,29,0.638889,40,True,False
+recurso de discordancia de area de preservacao permanente gerada por recurso hidrico app hidrica,Recurso de Discordância de Área de Preservação Permanente Gerada por Recurso Hídrico (APP Hídrica),portal_servicos,2,2,1,23,False,False
+recurso de existencia de area de preservacao permanente app declividade,Recurso de Existência de Área de Preservação Permanente - APP - Declividade,portal_servicos,1,1,0,129,False,False
+recurso de pericia beneficio da gratuidade cartao bhbus beneficio inclusao,Recurso de Perícia - Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,pbh_app,56,55,0.910714,6,True,True
+recurso de pericia beneficio da gratuidade cartao bhbus beneficio inclusao,Recurso de Perícia - Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,portal_servicos,54,54,0.888889,32.5,True,True
+recurso feira da afonso pena,Recurso - Feira da Afonso Pena,pbh_app,31,31,0.967742,1,True,True
+recurso feira da afonso pena,Recurso - Feira da Afonso Pena,portal_servicos,15,15,1,2,False,False
+recurso feira da afonso pena,Recurso - Feira da Afonso Pena,presencial,20,20,0.9,15,False,False
+recurso referente a atividade em banca de jornais e revistas,Recurso Referente a Atividade em Banca de Jornais e Revistas,pbh_app,1,1,1,35,False,False
+recurso referente a atividade em banca de jornais e revistas,Recurso Referente a Atividade em Banca de Jornais e Revistas,portal_servicos,49,45,0.77551,67,True,True
+recurso referente a atividade em banca de jornais e revistas,Recurso Referente a Atividade em Banca de Jornais e Revistas,presencial,7,7,1,37,False,False
+recurso referente a comercio de alimento em veiculo automotor,Recurso Referente a Comércio de Alimento em Veículo Automotor,pbh_app,18,18,0.944444,42,False,False
+recurso referente a comercio de alimento em veiculo automotor,Recurso Referente a Comércio de Alimento em Veículo Automotor,portal_servicos,10,10,1,34,False,False
+recurso referente a comercio de alimento em veiculo automotor,Recurso Referente a Comércio de Alimento em Veículo Automotor,presencial,13,12,0.923077,24.5,False,False
+recurso referente a comercio de alimento em veiculo de tracao humana,Recurso Referente a Comércio de Alimento em Veículo de Tração Humana,pbh_app,20,19,0.95,28,False,False
+recurso referente a comercio de alimento em veiculo de tracao humana,Recurso Referente a Comércio de Alimento em Veículo de Tração Humana,portal_servicos,9,9,0.888889,59,False,False
+recurso referente a comercio de alimento em veiculo de tracao humana,Recurso Referente a Comércio de Alimento em Veículo de Tração Humana,presencial,24,22,0.916667,36.5,False,False
+recurso referente a comercio de alimento em veiculo de tracao humana atividade compulsoria,Recurso Referente a Comércio de Alimento em Veículo de Tração Humana Atividade Compulsória,pbh_app,1,1,1,32,False,False
+recurso referente a comercio de alimento em veiculo de tracao humana venda frutas,Recurso Referente a Comércio de Alimento em Veículo de Tração Humana Venda Frutas,presencial,4,4,1,31.5,False,False
+recurso referente a comercio em logradouro publico por pessoa com deficiencia,Recurso Referente a Comércio em Logradouro Público por Pessoa com Deficiência,pbh_app,2,2,1,34.5,False,False
+recurso referente a comercio em logradouro publico por pessoa com deficiencia,Recurso Referente a Comércio em Logradouro Público por Pessoa com Deficiência,portal_servicos,2,2,1,49,False,False
+recurso referente a comercio em logradouro publico por pessoa com deficiencia,Recurso Referente a Comércio em Logradouro Público por Pessoa com Deficiência,presencial,6,6,1,42,False,False
+recurso referente a engenho de publicidade,Recurso Referente a Engenho de Publicidade,pbh_app,2,2,1,49,False,False
+recurso referente a engenho de publicidade,Recurso Referente a Engenho de Publicidade,portal_servicos,125,123,0.616,70,True,True
+recurso referente a engraxate,Recurso Referente a Engraxate,portal_servicos,2,2,0.5,65,False,False
+recurso referente a feira promovida pelo executivo,Recurso Referente a Feira Promovida pelo Executivo,pbh_app,6,6,0.166667,122,False,False
+recurso referente a feira promovida pelo executivo,Recurso Referente a Feira Promovida pelo Executivo,portal_servicos,24,20,0.375,96,False,False
+recurso referente a feira promovida pelo executivo,Recurso Referente a Feira Promovida pelo Executivo,presencial,10,9,0.7,75,False,False
+recurso referente a lavador de veiculo automotor,Recurso Referente a Lavador de Veículo Automotor,pbh_app,3,3,1,6,False,False
+recurso referente a lavador de veiculo automotor,Recurso Referente a Lavador de Veículo Automotor,portal_servicos,6,6,1,35.5,False,False
+recurso referente a lavador de veiculo automotor,Recurso Referente a Lavador de Veículo Automotor,presencial,84,83,0.964286,32,True,True
+recurso referente a licenca de cacamba,Recurso Referente à Licença de Caçamba,pbh_app,4,3,0.75,7,False,False
+recurso referente a licenca de cacamba,Recurso Referente à Licença de Caçamba,portal_servicos,15,15,1,6,False,False
+recurso referente ao atendimento as condicionantes da licenca ambiental ou do plu processos iniciados a partir de 12 06 20,Recurso Referente ao Atendimento às Condicionantes da Licença Ambiental ou do PLU (processos iniciados a partir de 12/06/20),portal_servicos,411,400,0.919708,6,True,True
+recurso referente ao licenciamento de empreendimento de impacto a partir de 12 06 2020,Recurso Referente ao Licenciamento de Empreendimento de Impacto (a partir de 12/06/2020),pbh_app,2,2,1,10.5,False,False
+recurso referente ao licenciamento de empreendimento de impacto a partir de 12 06 2020,Recurso Referente ao Licenciamento de Empreendimento de Impacto (a partir de 12/06/2020),portal_servicos,520,510,0.940385,2,True,True
+recurso referente ao licenciamento de infraestrutura de telecomunicacao,Recurso Referente ao Licenciamento de Infraestrutura de Telecomunicação,portal_servicos,2,0,0,,False,False
+recurso referente aos servicos de edificacoes,Recurso Referente aos Serviços de Edificações,pbh_app,58,57,0.965517,27,True,True
+recurso referente aos servicos de edificacoes,Recurso Referente aos Serviços de Edificações,portal_servicos,4517,4481,0.953509,28,True,True
+recurso referente aos servicos de edificacoes,Recurso Referente aos Serviços de Edificações,presencial,19,19,1,25,False,False
+recurso referente aos servicos de mobiliario urbano,Recurso Referente aos Serviços de Mobiliário Urbano,pbh_app,4,0,0,,False,False
+recurso referente aos servicos de mobiliario urbano,Recurso Referente aos Serviços de Mobiliário Urbano,portal_servicos,77,0,0,,True,False
+recurso referente aos servicos prestados pela politica urbana,Recurso Referente aos Serviços Prestados pela Política Urbana,pbh_app,7,7,1,1,False,False
+recurso referente aos servicos prestados pela politica urbana,Recurso Referente aos Serviços Prestados pela Política Urbana,portal_servicos,706,690,0.958924,2,True,True
+recurso referente aos servicos prestados pela politica urbana,Recurso Referente aos Serviços Prestados pela Política Urbana,presencial,20,19,0.9,11,False,False
+reforma obra e demolicao de imovel tombado fiscalizacao,"Reforma, Obra e Demolição de Imóvel Tombado - Fiscalização",pbh_app,47,44,0.787234,13.5,True,True
+reforma obra e demolicao de imovel tombado fiscalizacao,"Reforma, Obra e Demolição de Imóvel Tombado - Fiscalização",portal_servicos,53,50,0.849057,11,True,True
+reforma obra e demolicao de imovel tombado fiscalizacao,"Reforma, Obra e Demolição de Imóvel Tombado - Fiscalização",telefone_156,41,39,0.780488,17,True,True
+registro de livros de medicamentos e transfusoes na vigilancia sanitaria,Registro de Livros de Medicamentos e Transfusões na Vigilância Sanitária,portal_servicos,25,23,0.84,35,False,False
+registro historico documental,Registro Histórico Documental,pbh_app,3,3,1,0,False,False
+registro historico documental,Registro Histórico Documental,portal_servicos,76,75,0.986842,4,True,True
+regularizacao de edificacao de carater social lei 9 074 05 valor venal ate 2 5x a isencao do iptu ex officio,"Regularização de Edificação de Caráter Social: Lei 9.074/05 valor venal até 2,5x a isenção do IPTU/ Ex Offício",pbh_app,19,18,0.736842,16.5,False,False
+regularizacao de edificacao de carater social lei 9 074 05 valor venal ate 2 5x a isencao do iptu ex officio,"Regularização de Edificação de Caráter Social: Lei 9.074/05 valor venal até 2,5x a isenção do IPTU/ Ex Offício",portal_servicos,77,67,0.662338,16,True,True
+regularizacao de edificacao de carater social lei 9 074 05 valor venal ate 2 5x a isencao do iptu ex officio,"Regularização de Edificação de Caráter Social: Lei 9.074/05 valor venal até 2,5x a isenção do IPTU/ Ex Offício",presencial,10,8,0.8,41.5,False,False
+relatorio de transferencia do direito de construir,Relatório de Transferência do Direito de Construir,pbh_app,3,3,1,5,False,False
+relatorio de transferencia do direito de construir,Relatório de Transferência do Direito de Construir,portal_servicos,21,21,1,11,False,False
+remarcacao da vistoria de edificacao,Remarcação da Vistoria de Edificação,pbh_app,9,9,1,1,False,False
+remarcacao da vistoria de edificacao,Remarcação da Vistoria de Edificação,portal_servicos,501,497,0.992016,1,True,True
+remarcacao de pericia beneficio da gratuidade cartao bhbus beneficio inclusao,Remarcação de Perícia - Benefício da Gratuidade (Cartão BHBUS Benefício Inclusão),pbh_app,87,87,0.91954,16,True,True
+remarcacao de pericia beneficio da gratuidade cartao bhbus beneficio inclusao,Remarcação de Perícia - Benefício da Gratuidade (Cartão BHBUS Benefício Inclusão),portal_servicos,113,111,0.858407,47,True,True
+remissao iptu prejuizo por desastre natural,Remissão - IPTU - Prejuízo por Desastre Natural,pbh_app,13,12,0.692308,73.5,False,False
+remissao iptu prejuizo por desastre natural,Remissão - IPTU - Prejuízo por Desastre Natural,portal_servicos,86,85,0.534884,89,True,True
+remocao de deposicoes clandestinas ou irregulares bota fora,Remoção de Deposições Clandestinas ou Irregulares - Bota-Fora,pbh_app,95,94,0.989474,2,True,True
+remocao de deposicoes clandestinas ou irregulares bota fora,Remoção de Deposições Clandestinas ou Irregulares - Bota-Fora,portal_servicos,183,179,0.972678,2,True,True
+renovacao de alvara de obra em logradouro publico,Renovação de Alvará de Obra em Logradouro Público,portal_servicos,164,142,0.768293,14.5,True,True
+renuncia de jazigo cemiterio da paz,Renúncia de Jazigo - Cemitério da Paz,pbh_app,4,3,0.75,55,False,False
+renuncia de jazigo cemiterio da saudade,Renúncia de Jazigo - Cemitério da Saudade,pbh_app,1,1,1,40,False,False
+renuncia de jazigo cemiterio da saudade,Renúncia de Jazigo - Cemitério da Saudade,portal_servicos,1,1,1,4,False,False
+renuncia de jazigo cemiterio do bonfim,Renúncia de Jazigo - Cemitério do Bonfim,portal_servicos,1,1,1,13,False,False
+residuo solido especial de saude fiscalizacao,Resíduo Sólido Especial de Saúde - Fiscalização,pbh_app,15,15,0.933333,6,False,False
+residuo solido especial de saude fiscalizacao,Resíduo Sólido Especial de Saúde - Fiscalização,portal_servicos,8,8,0.875,13.5,False,False
+residuo solido especial de saude fiscalizacao,Resíduo Sólido Especial de Saúde - Fiscalização,telefone_156,16,16,0.875,31.5,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio da consolacao,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério da Consolação",pbh_app,3,3,1,8,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio da consolacao,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério da Consolação",portal_servicos,3,3,1,7,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio da paz,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério da Paz",pbh_app,7,6,0.714286,21.5,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio da paz,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério da Paz",portal_servicos,2,2,1,2,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio da saudade,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério da Saudade",portal_servicos,1,1,0,136,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio do bonfim,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério do Bonfim",pbh_app,2,2,0.5,61,False,False
+restituicao de taxas de sepultamento velorio e transferencia cemiterio do bonfim,"Restituição de Taxas de Sepultamento, Velório e Transferência - Cemitério do Bonfim",portal_servicos,4,4,0.75,1.5,False,False
+restituicao de valor de guia da politica urbana,Restituição de Valor de Guia da Política Urbana,pbh_app,32,32,0.9375,2,True,True
+restituicao de valor de guia da politica urbana,Restituição de Valor de Guia da Política Urbana,portal_servicos,554,544,0.756318,17,True,True
+restituicao de valor de guia da politica urbana,Restituição de Valor de Guia da Política Urbana,presencial,20,19,0.5,70,False,False
+restituicao de valor de guia do meio ambiente,Restituição de Valor de Guia do Meio Ambiente,pbh_app,4,3,0.75,11,False,False
+restituicao de valor de guia do meio ambiente,Restituição de Valor de Guia do Meio Ambiente,portal_servicos,36,31,0.583333,34,True,True
+restituicao fazenda iptu,Restituição - Fazenda - IPTU,pbh_app,534,504,0.840824,18.5,True,True
+restituicao fazenda iptu,Restituição - Fazenda - IPTU,portal_servicos,2813,2673,0.706719,34,True,True
+restituicao fazenda issqn,Restituição - Fazenda - ISSQN,pbh_app,32,31,0.90625,3,True,True
+restituicao fazenda issqn,Restituição - Fazenda - ISSQN,portal_servicos,1466,1233,0.720327,8,True,True
+restituicao fazenda itbi,Restituição - Fazenda - ITBI,pbh_app,256,253,0.925781,16,True,True
+restituicao fazenda itbi,Restituição - Fazenda - ITBI,portal_servicos,1876,1838,0.764392,29,True,True
+restituicao fazenda taxa,Restituição - Fazenda - Taxa,pbh_app,55,55,0.963636,4,True,True
+restituicao fazenda taxa,Restituição - Fazenda - Taxa,portal_servicos,777,751,0.791506,20,True,True
+restituicao taxa de velorio capela velorio do barreiro,Restituição Taxa de Velório - Capela Velório do Barreiro,pbh_app,1,1,1,1,False,False
+restituicao taxa de velorio capela velorio do barreiro,Restituição Taxa de Velório - Capela Velório do Barreiro,portal_servicos,2,2,1,17,False,False
+retificacao de documento da politica urbana,Retificação de Documento da Política Urbana,pbh_app,24,24,1,0.5,False,False
+retificacao de documento da politica urbana,Retificação de Documento da Política Urbana,portal_servicos,560,554,0.967857,3.5,True,True
+retificacao de documento da politica urbana,Retificação de Documento da Política Urbana,presencial,488,487,0.995902,2,True,True
+retificacao de documento de edificacoes,Retificação de Documento de Edificações,pbh_app,6,6,1,5,False,False
+retificacao de documento de edificacoes,Retificação de Documento de Edificações,portal_servicos,792,784,0.973485,5,True,True
+retificacao de documento de edificacoes,Retificação de Documento de Edificações,presencial,9,9,1,5,False,False
+revalidacao de alvara de construcao,Revalidação de Alvará de Construção,pbh_app,24,24,1,30.5,False,False
+revalidacao de alvara de construcao,Revalidação de Alvará de Construção,portal_servicos,574,573,0.968641,30,True,True
+revalidacao de planta de parcelamento do solo cp,Revalidação de Planta de Parcelamento do Solo (CP),pbh_app,1,0,0,,False,False
+revalidacao de planta de parcelamento do solo cp,Revalidação de Planta de Parcelamento do Solo (CP),portal_servicos,42,34,0.738095,39.5,True,True
+revalidacao de planta de parcelamento do solo cp,Revalidação de Planta de Parcelamento do Solo (CP),presencial,2,2,1,45,False,False
+revisao de taxas e iss autonomo,Revisão de Taxas e ISS Autônomo,pbh_app,119,119,0.857143,2,True,True
+revisao de taxas e iss autonomo,Revisão de Taxas e ISS Autônomo,portal_servicos,4918,4846,0.842619,3,True,True
+sarjeta implantacao,Sarjeta - Implantação,pbh_app,8,5,0.625,50,False,False
+sarjeta implantacao,Sarjeta - Implantação,portal_servicos,5,2,0.4,12.5,False,False
+sarjeta manutencao,Sarjeta - Manutenção,pbh_app,29,22,0.724138,20,False,False
+sarjeta manutencao,Sarjeta - Manutenção,portal_servicos,131,94,0.59542,26.5,True,True
+segunda via de credencial de feirante feira da afonso pena,Segunda Via de Credencial de Feirante - Feira da Afonso Pena,pbh_app,4,4,1,22,False,False
+segunda via de credencial de feirante feira da afonso pena,Segunda Via de Credencial de Feirante - Feira da Afonso Pena,portal_servicos,4,4,0.75,6,False,False
+segunda via de credencial de feirante feira da afonso pena,Segunda Via de Credencial de Feirante - Feira da Afonso Pena,presencial,25,21,0.72,18,False,False
+segunda via de escritura de imoveis regularizados pela urbel,Segunda Via de Escritura de Imóveis Regularizados pela Urbel,pbh_app,57,57,0.894737,14,True,True
+segunda via de escritura de imoveis regularizados pela urbel,Segunda Via de Escritura de Imóveis Regularizados pela Urbel,portal_servicos,33,33,0.939394,13,True,True
+semaforo implantacao e manutencao,Semáforo - Implantação e Manutenção,pbh_app,68,53,0.75,15,True,True
+semaforo implantacao e manutencao,Semáforo - Implantação e Manutenção,portal_servicos,131,106,0.770992,14,True,True
+simples nacional reclamacao contra lancamento do issqn,Simples Nacional - Reclamação contra Lançamento do ISSQN,pbh_app,5,5,1,0,False,False
+simples nacional reclamacao contra lancamento do issqn,Simples Nacional - Reclamação contra Lançamento do ISSQN,portal_servicos,214,211,0.929907,8,True,True
+simples nacional reconsideracao contra atos,Simples Nacional - Reconsideração Contra Atos,pbh_app,10,10,1,1,False,False
+simples nacional reconsideracao contra atos,Simples Nacional - Reconsideração Contra Atos,portal_servicos,1639,1619,0.981696,4,True,True
+simplifique sugestoes de simplificacao de servicos e procedimentos,Simplifique - Sugestões de Simplificação de Serviços e Procedimentos,pbh_app,16,16,1,22.5,False,False
+simplifique sugestoes de simplificacao de servicos e procedimentos,Simplifique - Sugestões de Simplificação de Serviços e Procedimentos,portal_servicos,66,62,0.893939,20.5,True,True
+solicitacao de abertura de chamamento publico para instalacao de engenho de publicidade,Solicitação de Abertura de Chamamento Público para Instalação de Engenho de Publicidade,portal_servicos,101,66,0,128,True,True
+solicitacao de desinterdicao do estabelecimento vigilancia sanitaria,Solicitação de Desinterdição do Estabelecimento - Vigilância Sanitária,pbh_app,12,11,0.833333,12,False,False
+solicitacao de desinterdicao do estabelecimento vigilancia sanitaria,Solicitação de Desinterdição do Estabelecimento - Vigilância Sanitária,portal_servicos,75,70,0.8,8,True,True
+solicitacao de urgencia aprovacao de projeto de instalacoes fisicas de estabelecimento assistencial de saude eas,Solicitação de Urgência - Aprovação de Projeto de Instalações Físicas de Estabelecimento Assistencial de Saúde - EAS,pbh_app,1,1,1,1,False,False
+solicitacao de urgencia aprovacao de projeto de instalacoes fisicas de estabelecimento assistencial de saude eas,Solicitação de Urgência - Aprovação de Projeto de Instalações Físicas de Estabelecimento Assistencial de Saúde - EAS,portal_servicos,28,28,0.928571,28,False,False
+solicitacao de urgencia para vistoria do alvara de autorizacao sanitaria,Solicitação de Urgência para Vistoria do Alvará de Autorização Sanitária,pbh_app,5,4,0.8,1.5,False,False
+solicitacao de urgencia para vistoria do alvara de autorizacao sanitaria,Solicitação de Urgência para Vistoria do Alvará de Autorização Sanitária,portal_servicos,92,86,0.934783,3,True,True
+solicitacao de vistoria de imovel para bolsa moradia,Solicitação de Vistoria de Imóvel para Bolsa Moradia,pbh_app,5,4,0.6,22.5,False,False
+solicitacao de vistoria de imovel para bolsa moradia,Solicitação de Vistoria de Imóvel para Bolsa Moradia,portal_servicos,1,0,0,,False,False
+solicitacao de vistoria de imovel para bolsa moradia,Solicitação de Vistoria de Imóvel para Bolsa Moradia,presencial,13,10,0.307692,96,False,False
+substituicao ou inclusao de responsavel tecnico a de edificacao processos iniciados antes de 20 04 21 ou 27 07 21,Substituição ou Inclusão de Responsável Técnico(a) de Edificação (processos iniciados antes de 20/04/21 ou 27/07/21),pbh_app,1,1,1,30,False,False
+substituicao ou inclusao de responsavel tecnico a de edificacao processos iniciados antes de 20 04 21 ou 27 07 21,Substituição ou Inclusão de Responsável Técnico(a) de Edificação (processos iniciados antes de 20/04/21 ou 27/07/21),portal_servicos,353,353,0.988669,27,True,True
+substituicao ou inclusao de responsavel tecnico a responsavel legal de edificacao,Substituição ou Inclusão de Responsável Técnico(a)/ Responsável Legal de Edificação,portal_servicos,45,40,0.866667,7.5,True,True
+sugestao sobre transporte coletivo,Sugestão sobre Transporte Coletivo,pbh_app,73,59,0.753425,6,True,True
+sugestao sobre transporte coletivo,Sugestão sobre Transporte Coletivo,portal_servicos,67,55,0.761194,14,True,True
+suporte tecnico informatica fazenda,Suporte Técnico Informática - Fazenda,pbh_app,13,12,0.923077,1,False,False
+suporte tecnico informatica fazenda,Suporte Técnico Informática - Fazenda,portal_servicos,224,223,0.995536,1,True,True
+tapa buraco,Tapa-Buraco,pbh_app,133648,133634,0.977388,1,True,True
+tapa buraco,Tapa-Buraco,portal_servicos,95120,94968,0.980667,3,True,True
+tapa buraco,Tapa-Buraco,presencial,219,217,0.990868,8,True,True
+tapa buraco,Tapa-Buraco,telefone_156,395,395,0.777215,19,True,True
+taxi cobranca abusiva sonegacao de troco,TÁXI - Cobrança Abusiva/ Sonegação de Troco,pbh_app,8,8,0.875,31.5,False,False
+taxi cobranca abusiva sonegacao de troco,TÁXI - Cobrança Abusiva/ Sonegação de Troco,portal_servicos,1,1,1,1,False,False
+taxi implantacao de ponto,TÁXI - Implantação de Ponto,pbh_app,12,11,0.583333,47,False,False
+taxi implantacao de ponto,TÁXI - Implantação de Ponto,portal_servicos,6,4,0.666667,7,False,False
+taxi reclamacao de aumento de itinerario pelo taxista,TÁXI - Reclamação de Aumento de Itinerário pelo Taxista,pbh_app,5,3,0.6,12,False,False
+taxi reclamacao de aumento de itinerario pelo taxista,TÁXI - Reclamação de Aumento de Itinerário pelo Taxista,portal_servicos,4,3,0.75,3,False,False
+taxi reclamacao de estado de conservacao,TÁXI - Reclamação de Estado de Conservação,portal_servicos,2,0,0,,False,False
+taxi reclamacao de recusa de viagem,TÁXI - Reclamação de Recusa de Viagem,pbh_app,20,15,0.65,20,False,False
+taxi reclamacao de recusa de viagem,TÁXI - Reclamação de Recusa de Viagem,portal_servicos,9,6,0.555556,32,False,False
+taxi reclamacao do comportamento do taxista,TÁXI - Reclamação do Comportamento do Taxista,pbh_app,330,219,0.548485,27,True,True
+taxi reclamacao do comportamento do taxista,TÁXI - Reclamação do Comportamento do Taxista,portal_servicos,145,106,0.668966,20,True,True
+taxi reclamacao do comportamento do taxista pessoa com deficiencia,TÁXI - Reclamação do Comportamento do Taxista - Pessoa com Deficiência,pbh_app,2,2,1,38.5,False,False
+taxi reclamacao do comportamento do taxista pessoa com deficiencia,TÁXI - Reclamação do Comportamento do Taxista - Pessoa com Deficiência,portal_servicos,3,3,1,41,False,False
+transferencia de concessao perpetua de uso de jazigo cemiterio da consolacao,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério da Consolação,portal_servicos,1,1,1,0,False,False
+transferencia de concessao perpetua de uso de jazigo cemiterio da paz,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério da Paz,pbh_app,10,9,0.8,38,False,False
+transferencia de concessao perpetua de uso de jazigo cemiterio da paz,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério da Paz,portal_servicos,13,11,0.769231,15,False,False
+transferencia de concessao perpetua de uso de jazigo cemiterio da saudade,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério da Saudade,pbh_app,10,10,0.9,1.5,False,False
+transferencia de concessao perpetua de uso de jazigo cemiterio da saudade,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério da Saudade,portal_servicos,5,3,0.6,1,False,False
+transferencia de concessao perpetua de uso de jazigo cemiterio do bonfim,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério do Bonfim,pbh_app,39,36,0.871795,19,True,True
+transferencia de concessao perpetua de uso de jazigo cemiterio do bonfim,Transferência de Concessão Perpétua de Uso de Jazigo - Cemitério do Bonfim,portal_servicos,143,133,0.86014,25,True,True
+transferencia de titularidade feira da av afonso pena,Transferência de Titularidade - Feira da Av. Afonso Pena,presencial,58,51,0.62069,31,True,True
+transferencia ou inclusao de requerente de edificacao,Transferência ou Inclusão de Requerente de Edificação,pbh_app,1,1,1,0,False,False
+transferencia ou inclusao de requerente de edificacao,Transferência ou Inclusão de Requerente de Edificação,portal_servicos,183,182,0.983607,25.5,True,True
+transferencia ou inclusao de requerente de edificacao,Transferência ou Inclusão de Requerente de Edificação,presencial,2,2,1,25,False,False
+troca de responsavel tecnico responsavel legal de parcelamento do solo,Troca de Responsável Técnico/ Responsável Legal de Parcelamento do Solo,portal_servicos,11,11,1,30,False,False
+varricao ocorrencia reclamacao,Varrição - Ocorrência/ Reclamação,pbh_app,83,83,1,2,True,True
+varricao ocorrencia reclamacao,Varrição - Ocorrência/ Reclamação,portal_servicos,113,109,0.955752,2,True,True
+varricao solicitacao de implantacao,Varrição - Solicitação de Implantação,pbh_app,28,28,1,1,False,False
+varricao solicitacao de implantacao,Varrição - Solicitação de Implantação,portal_servicos,35,35,1,1,True,True
+veiculos abandonados ou carcacas fiscalizacao,Veículos Abandonados ou Carcaças - Fiscalização,pbh_app,1914,1762,0.734587,32,True,True
+veiculos abandonados ou carcacas fiscalizacao,Veículos Abandonados ou Carcaças - Fiscalização,portal_servicos,983,910,0.719227,32,True,True
+veiculos abandonados ou carcacas fiscalizacao,Veículos Abandonados ou Carcaças - Fiscalização,telefone_156,1859,1746,0.73588,35,True,True
+verificacao de geometria de lote,Verificação de Geometria de Lote,pbh_app,6,6,1,23,False,False
+verificacao de geometria de lote,Verificação de Geometria de Lote,portal_servicos,175,174,0.988571,32,True,True
+verificacao de geometria de lote,Verificação de Geometria de Lote,presencial,12,12,1,21.5,False,False
+verificacao de origem de lote,Verificação de Origem de Lote,pbh_app,5,5,1,0,False,False
+verificacao de origem de lote,Verificação de Origem de Lote,portal_servicos,64,55,0.765625,34,True,True
+verificacao de origem de lote,Verificação de Origem de Lote,presencial,12,9,0.666667,42,False,False
+via publica desobstrucao,Via Pública - Desobstrução,pbh_app,13,12,0.846154,4.5,False,False
+via publica desobstrucao,Via Pública - Desobstrução,portal_servicos,40,37,0.875,7,True,True
+via publica patrolamento,Via Pública - Patrolamento,pbh_app,10,9,0.8,11,False,False
+via publica patrolamento,Via Pública - Patrolamento,portal_servicos,39,29,0.692308,35,True,False
+vistoria de obra de edificacao,Vistoria de Obra de Edificação,pbh_app,13,12,0.846154,10.5,False,False
+vistoria de obra de edificacao,Vistoria de Obra de Edificação,portal_servicos,1890,1789,0.907937,28,True,True
+vistoria de obra em logradouro publico,Vistoria de Obra em Logradouro Público,pbh_app,1,1,0,181,False,False
+vistoria de obra em logradouro publico,Vistoria de Obra em Logradouro Público,portal_servicos,5,5,0.4,131,False,False
+vistoria para acompanhamento de obra,Vistoria para Acompanhamento de Obra,pbh_app,6,6,0.833333,29,False,False
+vistoria para acompanhamento de obra,Vistoria para Acompanhamento de Obra,portal_servicos,332,307,0.819277,31,True,True
+vistoria para verificacao da implantacao do pgrss pgrse,Vistoria para Verificação da Implantação do PGRSS / PGRSE,portal_servicos,114,110,0.877193,17.5,True,True

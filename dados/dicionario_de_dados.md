@@ -1,149 +1,105 @@
-# Dicionário de dados — LAB05
+# Dicionário de dados — LAB05 (canais de atendimento da PBH)
 
-> **PROPOSTA do papel C (Análise), a confirmar com o papel B (Instrumentação e Operação, Guilherme).** Criada em 23/11/2026 na issue #25. Nada aqui foi acordado com quem vai coletar: nomes de colunas, códigos e regras podem mudar. Quando mudar, atualizar junto `scripts/esquema.py` (versão executável deste dicionário) e os testes.
->
-> **Não existe dado coletado.** Os únicos dados do repositório são **sintéticos** (`dados/sinteticos/`, prefixo `SINTETICO_`, coluna `origem = sintetico`), feitos só para testar o código. **Nada é resultado** (FONTE_DA_VERDADE §2.3).
+Atualizado em 24/11/2026. Descreve (1) a fonte, (2) o que o pipeline lê e descarta e (3) a base analítica.
+O código que implementa este dicionário está em `scripts/config.py` e `scripts/tratamento.py`.
 
-Fontes do desenho: FONTE_DA_VERDADE §5.2, §6, §8 e §9; Proposta §3, §4, §6 e §7.
+## 1. Fonte
 
-## 1. Organização das pastas
+| Item | Valor (conferido na API do CKAN em 24/11/2026) |
+|---|---|
+| Conjunto | Solicitações dos cidadãos, por meio dos canais de atendimento da PBH |
+| Página | https://ckan.pbh.gov.br/dataset/solicitacoes-dos-cidadaos-por-meio-dos-canais-de-atendimento-da-pbh |
+| API | `https://ckan.pbh.gov.br/api/3/action/package_show?id=solicitacoes-dos-cidadaos-por-meio-dos-canais-de-atendimento-da-pbh` |
+| Licença | Creative Commons Attribution (`cc-by`): uso livre com citação da fonte |
+| Mantenedor | SUMOG — Subsecretaria de Modernização da Gestão (PBH) |
+| Periodicidade declarada | "Mensal" (descrição do dataset) |
+| Cobertura real dos arquivos | **maio/2020 a julho/2023** (10 CSVs: 2020 mai–dez, 2021, 2022, 2023 jan a jul). **Não há 2024, 2025 nem 2026** |
+| Dicionário oficial | PDF "SUMOG - Dicionário de dados - Solicitações BHDIGITAL", atualizado em 25/07/2023 (2 páginas) |
+| Acesso automatizado | O CKAN devolve HTTP 403 ao user-agent padrão de bibliotecas; aceita um user-agent identificado. O pipeline se identifica e respeita 1 requisição/segundo |
 
-| Caminho | Conteúdo | Regra |
+O campo `metadata_modified` do dataset indica 10/06/2026, mas os arquivos de dados foram publicados em julho/agosto de 2023. O dataset
+"Solicitações de Serviço e Incidentes" (mesmo CKAN, até o 3º trimestre de 2026) é outra coisa: chamados de TI atendidos pela Prodabel,
+sem coluna de canal; **não** é usado.
+
+## 2. Colunas do CSV original
+
+Separador `;`. Codificação: UTF-8 com BOM (2023) ou cp1252 (2020–2022); o pipeline detecta. Datas: `AAAA-MM-DD` (2020–2022) e `DD/MM/AAAA` (2023),
+apesar de o cabeçalho dizer `YYYY-MM-DD` em todos.
+
+| Coluna original | Descrição (dicionário oficial da PBH) | Destino |
 |---|---|---|
-| `dados/brutos/` | Tabelas reais anonimizadas (`participantes.csv`, `sessoes.csv`, `sus.csv`, `catalogo_passos.csv`, `passos.csv`) e `auditoria/` | **Imutável** depois do commit: correção entra como novo arquivo ou nova versão, com registro na FONTE_DA_VERDADE §19 |
-| `dados/brutos/auditoria/` | `indice.csv`, `axe/*.json`, `lighthouse/*.json` exportados manualmente | JSON exatamente como exportado (sem editar) |
-| `dados/CHECKSUMS.sha256` | `sha256  caminho` de cada bruto, caminho relativo a `dados/` (ex.: `brutos/sessoes.csv`) | Gerado ao versionar os brutos; o validador confere |
-| `dados/sinteticos/` | Mesmas tabelas com prefixo `SINTETICO_` e `SINTETICO_CHECKSUMS.sha256` | Só dado falso; **nunca** gravar em `resultados/` |
-| `resultados/` | Saídas da análise de **dados reais** | Criada só quando houver coleta |
+| Id Ticket | Identificador da solicitação | **Pseudonimizado** (`id_hash`) |
+| Nome Servico | Nome do serviço solicitado | Mantida (`servico`, `servico_chave`) |
+| Data de criação (YYYY-MM-DD) | Data em que a solicitação foi realizada | Mantida (`data_criacao`) |
+| Data de encerramento (YYYY-MM-DD) | Data em que foi encerrada | Mantida (`data_encerramento`) |
+| Fase Atual | "Novo, em andamento ou encerrada" | Mantida (`fase_atual`) |
+| Situacao Atendimento Atual | Situação atual da tramitação | Mantida, **sem interpretar** (`situacao_atual`) |
+| Canal Captacao | Canal usado pelo cidadão | Normalizada (`canal`, `canal_original`) |
+| Orgao Normatizador | Órgão que normatiza o serviço | Mantida (`orgao_normatizador`) |
+| Orgao Responsavel | Órgão responsável pela etapa atual | **Descartada na leitura** |
+| Nome Logradouro | Logradouro do endereço do serviço | **Descartada na leitura (endereço)** |
+| Numero Logradouro | Número do imóvel | **Descartada na leitura (endereço)** |
+| Bairro | Bairro | **Descartada na leitura (localização)** |
+| Regional | Regional administrativa | **Descartada na leitura (localização)** |
+| Coordenadas | Latitude/longitude (Sirgas 2000) | **Descartada na leitura (localização)** |
+| Ind Tp Pbh App | "Se o serviço está disponível no Aplicativo PBH APP" | Descartada: é atributo do serviço, **não** o canal usado |
+| Nivel Acesso | Público, restrito ou sigiloso | Descartada (99,3% "Restrito"; sem uso na análise) |
 
-Formato: CSV UTF-8, separador vírgula, cabeçalho na 1ª linha, decimal com ponto, booleanos como `0`/`1`, datas `AAAA-MM-DD`, texto vazio = célula vazia.
+A leitura usa **lista branca**: só as 8 colunas mantidas são carregadas. As demais nunca chegam à memória nem a disco.
 
-## 2. Regras gerais
+## 3. Canais (`Canal Captacao` → `canal`)
 
-- **Sem dado pessoal.** Nenhuma coluna de nome, e-mail, telefone, CPF, RG, endereço, contato, data de nascimento. O validador recusa colunas com esses nomes e procura padrões de e-mail, CPF e telefone nos textos livres.
-- **Código do participante** `P\d\d` (P01, P02, …), atribuído na sessão, sem tabela de correspondência com nome no repositório.
-- **Origem:** toda tabela tem a coluna `origem` com `real` ou `sintetico`. É proibido misturar: o validador e a análise recusam conjunto com as duas origens, e a origem precisa bater com o nome do arquivo (prefixo `SINTETICO_` ⇔ `sintetico`).
-- **Diferenças** na análise são sempre **celular − computador**, por participante.
-- Passar no validador **não** torna o dado "Verificado": isso exige conferência por segunda pessoa, com registro (FONTE_DA_VERDADE §2.3).
+| Valor original | `canal` | Comparável? | Fundamento |
+|---|---|---|---|
+| Portal | `portal_servicos` | Sim | Dicionário: "Portal de Serviços" |
+| Portal Mobile | `pbh_app` | Sim | Dicionário: "Aplicativo PBH APP (Portal Mobile)" |
+| Telefônico | `telefone_156` | Sim | Introdução do dicionário: "Central de Atendimento Telefônico - 156" |
+| Presencial | `presencial` | Sim | Introdução: "Central de Atendimento Presencial BH Resolve" |
+| Integração entre Sistemas | `integracao_sistemas` | **Não** | Aparece nos dados; **significado não documentado** |
+| Origem Interna | `origem_interna` | **Não** | Idem |
+| E-mail | `email` | **Não** | 8 registros; não documentado |
+| outro valor | `nao_mapeado` | **Não** | Registrado no relatório de qualidade |
 
-## 3. `participantes.csv` (1 linha por pessoa que teve sessão, inclusive piloto e sessões inválidas)
+## 4. Base analítica (`dados/processados/solicitacoes_analiticas.csv.gz`)
 
-| Coluna | Tipo | Domínio / regra |
+Gerada pelo pipeline; **não versionada** (`.gitignore`), pois é reproduzível (~38 MB).
+
+| Coluna | Tipo | Descrição |
 |---|---|---|
-| `participante` | texto | `P\d\d`, único |
-| `sequencia` | inteiro | 1 = celular-A/computador-B; 2 = celular-B/computador-A; 3 = computador-A/celular-B; 4 = computador-B/celular-A (FDV §6.3) |
-| `bloco` | inteiro ≥ 1 | Bloco sorteado de 4 em que a pessoa foi alocada; reposição fica no mesmo bloco e sequência |
-| `ordem_realizacao` | inteiro ≥ 1 | Ordem cronológica das sessões, única; usada pela regra P2 ("8 primeiros por sequência") |
-| `data` | data | `AAAA-MM-DD` da sessão |
-| `faixa_etaria` | categoria | `18-24`, `25-34`, `35-44`, `45-59`, `60+` (faixas **a confirmar** com o questionário do papel B) |
-| `uso_previo_portal` | categoria | `nunca`, `raramente`, `as_vezes`, `frequentemente` (a confirmar) |
-| `familiaridade_digital` | inteiro | 1–5, autoavaliação (a confirmar) |
-| `valida` | 0/1 | 0 = sessão inválida (falha técnica, interrupção); entra só na descrição |
-| `motivo_invalida` | texto | Obrigatório se `valida = 0` |
-| `reposto_por` | texto | Código de quem repôs a sessão inválida; precisa existir e estar na **mesma sequência** |
-| `piloto` | 0/1 | 1 = piloto (3 pessoas), nunca entra na análise final |
-| `hash_ui_package` | texto | Hash(es) `ui-package` observados na sessão (ver `docs/evidencias/S01_criterios_do_software.md` §2.1) |
-| `versao_chrome` | texto | Versão do Chrome usada |
-| `versao_portal_obs` | texto | Outras marcas de versão observadas (ex.: `window.SYDLE.app.hash`) |
-| `o_que_mais_atrapalhou` | texto livre | Resposta aberta; **triada contra dado pessoal** antes do commit |
-| `notas_moderador` | texto livre | Idem |
-| `origem` | categoria | `real` ou `sintetico` |
+| `id_hash` | texto | 16 primeiros hex do SHA-256 do Id Ticket |
+| `arquivo_origem` | texto | CSV de origem |
+| `servico_chave` | texto | Nome do serviço sem acento/pontuação, minúsculo (chave de comparação "mesmo serviço") |
+| `servico` | texto | Nome legível (prefere variante sem "?") |
+| `canal`, `canal_original`, `comparavel` | texto, texto, bool | Ver §3 |
+| `data_criacao`, `data_encerramento` | data | `data_encerramento` só existe para `encerrada` |
+| `mes_criacao` | texto `AAAA-MM` | |
+| `fase_atual`, `situacao_atual`, `orgao_normatizador` | texto | Como na fonte |
+| `status_registro` | `encerrada` / `aberta` / `inconsistente` | Ver §5 |
+| `motivo_inconsistencia` | texto | Ver §5; vazio se não inconsistente |
+| `tempo_dias` | número | Dias entre criação e encerramento. **Vazio (nunca 0) para aberta e inconsistente** |
+| `seguimento_dias` | inteiro | Dias entre a criação e o corte de observação do arquivo |
 
-Analisável = `valida = 1` e `piloto = 0`. Meta: 8 analisáveis por sequência; o validador avisa quando há falta ou excedente.
+Arquivos versionados da coleta: `dados/manifesto_coleta.json` (URLs, tamanhos, SHA-256 dos CSVs, SHA-256 da base) e
+`dados/qualidade_dados.json` (contagens de ausentes, datas inválidas, duplicatas, inconsistências, colunas descartadas).
 
-## 4. `sessoes.csv` (1 linha por tarefa: 6 por participante válido)
+## 5. Classificação dos registros
 
-| Coluna | Tipo | Domínio / regra |
-|---|---|---|
-| `participante` | texto | Existe em `participantes.csv` |
-| `dispositivo` | categoria | `celular`, `computador` |
-| `conjunto` | categoria | `A`, `B`; coerente com a sequência |
-| `periodo` | inteiro | 1 = primeiro dispositivo, 2 = segundo; coerente com a sequência |
-| `tarefa_id` | texto | `A1`–`A3`, `B1`–`B3` (letra = conjunto). Mapa código → tarefa real a definir após o piloto |
-| `ordem_tarefa` | inteiro | 1–3, ordem sorteada dentro do conjunto |
-| `concluida` | 0/1 | 1 ⇔ `motivo_fim = concluida` |
-| `tempo_s` | decimal | (0, 300]; `tempo_s = 300` ⇔ `motivo_fim = teto`. Cronômetro conforme FDV §6.3 |
-| `motivo_fim` | categoria | `concluida`, `teto`, `abandono`, `ajuda`, `falha_tecnica` |
-| `pediu_ajuda` | 0/1 | 1 ⇒ não concluída; `motivo_fim = ajuda` ⇒ 1 |
-| `erros` | inteiro ≥ 0 | Total de erros da tarefa (clique em caminho errado, volta, busca refeita) = soma de `n_erros` em `passos.csv`, inclusive `fora_do_caminho` |
-| `seq` | inteiro | SEQ pós-tarefa, 1–7 |
-| `origem` | categoria | `real` ou `sintetico` |
+| Status | Regra |
+|---|---|
+| `encerrada` | Fase "Encerrado" **e** data de encerramento válida **e** ≥ data de criação |
+| `aberta` | Fase "Novo" ou "Em andamento" **e** sem data de encerramento |
+| `inconsistente` | Qualquer outro caso, com o primeiro motivo aplicável: `servico_ausente`, `canal_ausente`, `criacao_invalida`, `criacao_fora_do_periodo` (antes de 01/05/2020 ou após o corte), `fase_desconhecida`, `encerrada_sem_data`, `encerramento_invalido`, `aberta_com_data_encerramento`, `encerramento_anterior_a_criacao` |
 
-Regras extras: participante válido tem exatamente 3 tarefas distintas por dispositivo, com `ordem_tarefa` 1, 2 e 3. `falha_tecnica` só pode aparecer em sessão inválida (`valida = 0`), que é reposta (regra P2, item 1).
+- **Duplicatas:** mesmo Id Ticket; fica o registro do arquivo mais recente. Registros iguais exceto pelo Id **não** são duplicatas (a mesma demanda no mesmo dia é comum).
+- **Corte de observação:** a PBH não publica a data de extração; usa-se como proxy a **maior data de encerramento de cada arquivo** (21/07/2023 a 04/08/2023). É uma inferência.
+- **Ausentes:** data de encerramento ausente é esperada para solicitações abertas; para as demais colunas obrigatórias, o registro vira inconsistente.
 
-**Tempo de abandono e de pedido de ajuda antes de 300 s (P1, pendente):** o moderador registra o tempo transcorrido no evento. A análise tem três variantes fixadas antes da coleta (`teto_300` provisória; `tempo_registrado` e `excluir_tarefa` como sensibilidade) até o professor decidir.
+## 6. Limitações conhecidas da fonte (não inventar o que a PBH não documentou)
 
-## 5. `sus.csv` (2 linhas por participante válido: uma por dispositivo)
-
-| Coluna | Tipo | Domínio / regra |
-|---|---|---|
-| `participante`, `dispositivo` | texto | Par único |
-| `item_1` … `item_10` | inteiro | 1–5, na ordem do questionário SUS em português (versão validada a registrar) |
-| `origem` | categoria | `real` ou `sintetico` |
-
-O escore **não** é digitado: o script calcula (ímpares x − 1, pares 5 − x, soma × 2,5).
-
-## 6. `catalogo_passos.csv` (1 linha por passo previsto de cada tarefa, por dispositivo)
-
-**Congelado com commit antes do cruzamento com os erros** (RQ4): o validador imprime um hash do catálogo para citar na mensagem do commit de congelamento. O rótulo é por dispositivo porque o layout é responsivo.
-
-| Coluna | Tipo | Domínio / regra |
-|---|---|---|
-| `tarefa_id` | texto | Igual a `sessoes.csv` |
-| `passo_id` | texto | Identificador do passo no caminho previsto (ex.: `p1`…`pN`); `fora_do_caminho` é reservado e não entra aqui |
-| `dispositivo` | categoria | `celular`, `computador` |
-| `pagina_url` | texto | Página do passo (a mesma do índice da auditoria) |
-| `elemento` | texto | Elemento usado no passo (campo, botão, link, região), descrito ou seletor |
-| `rotulo_wcag` | categoria | `com_violacao`, `sem_violacao_detectada` (= não detectada por axe nem checklist manual; nunca "sem violação"), `indeterminado` |
-| `regras_axe` | texto | Regras violadas **no elemento**, separadas por `;`; violação só do checklist manual entra como `manual:<critério WCAG>`. Obrigatório se `com_violacao` |
-| `motivo_indeterminado` | texto | Obrigatório se `indeterminado` |
-| `origem` | categoria | `real` ou `sintetico` |
-
-Chave única: (`tarefa_id`, `passo_id`, `dispositivo`).
-
-## 7. `passos.csv` (1 linha por participante × tarefa × passo do catálogo)
-
-| Coluna | Tipo | Domínio / regra |
-|---|---|---|
-| `participante`, `dispositivo`, `tarefa_id` | texto | Iguais a `sessoes.csv` |
-| `passo_id` | texto | Existe no catálogo para a tarefa e o dispositivo, ou `fora_do_caminho` |
-| `alcancado` | 0/1 | O participante chegou ao passo |
-| `n_erros` | inteiro ≥ 0 | Erros registrados no passo; > 0 exige `alcancado = 1` |
-| `origem` | categoria | `real` ou `sintetico` |
-
-**Erro fora do caminho previsto:** registrado em uma linha com `passo_id = fora_do_caminho` (e `alcancado = 1`). Conta no total de erros da tarefa, mas **não** entra na RQ4; a análise reporta quantos foram.
-
-Na RQ4 (exploratória), por participante: taxa = erros ÷ passos alcançados, em passos com violação e sem violação detectada, dispositivos somados, indeterminados e `fora_do_caminho` fora; entra quem alcançou ≥ 1 passo em cada grupo.
-
-## 8. Auditoria (Q4 e rótulos da RQ4)
-
-`auditoria/indice.csv` (sintético: `SINTETICO_indice.csv`), 1 linha por JSON exportado:
-
-| Coluna | Tipo | Domínio / regra |
-|---|---|---|
-| `arquivo` | texto | Caminho relativo a `auditoria/` (ex.: `axe/inicio_mobile.json`) |
-| `pagina_url` | texto | Página auditada |
-| `data` | data | `AAAA-MM-DD` |
-| `versao_chrome` | texto | Versão do Chrome |
-| `ferramenta` | categoria | `axe`, `lighthouse` |
-| `modo` | categoria | `mobile`, `desktop` |
-| `execucao` | inteiro | 1–3 (Lighthouse: 3 execuções por página e modo; axe: 1) |
-| `origem` | categoria | `real` ou `sintetico` |
-
-Formatos aceitos pelo leitor (`analise.normalizar_axe`):
-
-1. **axe-core JSON** (objeto com `violations`, cada uma com `id`, `impact`, `tags`, `nodes`) — formato principal;
-2. lista de objetos no formato 1;
-3. export da extensão **axe DevTools** com `allIssues` (ou `issues`), um item por nó, com `ruleId` e `impact`. **Este formato foi inferido e precisa ser conferido com um export real no piloto.**
-
-Lighthouse: JSON padrão do relatório (`categories.accessibility.score`, `audits["largest-contentful-paint"].numericValue` em ms, `audits["cumulative-layout-shift"].numericValue`).
-
-Contagem: "por regra" = 1 por regra violada na página; "por nó" = soma dos elementos afetados. Top 10 só com tags WCAG (`wcag2a`, `wcag2aa`, `wcag21a`, `wcag21aa`, `wcag22aa`); `best-practice` aparece à parte. Nota Lighthouse é ordinal (mediana/distribuição). LCP e CLS: mediana das 3 execuções no modo mobile.
-
-A auditoria depende do aceite do professor (P12) e do limite de 1 requisição/segundo (D3).
-
-## 9. Pendências deste dicionário
-
-- Confirmar com o papel B: nomes de colunas, faixas do questionário, como a planilha de observação registra o passo do erro, e quem preenche `catalogo_passos.csv`.
-- Confirmar o formato real do export do axe DevTools (formato 3 acima).
-- P1 (tempo de abandono/ajuda), P2 (fechamento) e P4 (teste da RQ4) seguem com o professor.
+1. Cobertura termina em jul/2023.
+2. O significado de "Integração entre Sistemas" e "Origem Interna", e a regra de `Situacao Atendimento Atual`, não estão documentados. Não se classifica o encerramento em "resolvido" ou "negado".
+3. O travessão "–" dos nomes de serviço aparece como "?" em todos os arquivos (perda na origem).
+4. Datas só têm resolução de dia; "0 dia" significa encerrada no mesmo dia civil.
+5. Não há identificador do cidadão: não se verifica independência entre solicitações.
+6. A coluna `Ind Tp Pbh App` vem vazia em todo o arquivo de jul/2023 (não é usada).
+7. O canal Presencial tem comportamento próprio de registro (86% das suas solicitações são recursos JARI, que permanecem "Em andamento"); por isso a comparação é feita dentro do mesmo serviço.

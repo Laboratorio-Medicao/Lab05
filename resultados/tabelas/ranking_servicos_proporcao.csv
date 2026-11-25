@@ -1,0 +1,16 @@
+servico,canal_a,canal_b,n_a,n_b,taxa_a,taxa_b,dif_risco_pp,dif_risco_ic_lo_pp,dif_risco_ic_hi_pp,h_magnitude,p_prop_holm
+Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI,pbh_app,presencial,3200,44391,0.65,0.0117366,63.8263,62.1534,65.4629,grande,0
+Iluminação Pública - Manutenção de Luminária Apagada Durante a Noite,pbh_app,telefone_156,5681,348,0.753388,0.362069,39.132,33.8337,44.1288,grande,4.93908e-55
+Compensação de Débitos Municipais com Precatório Próprio,portal_servicos,pbh_app,282,31,0.485816,0.870968,-38.5152,-48.1955,-21.5397,grande,0.0110594
+Programa Locação Social,portal_servicos,pbh_app,267,350,0.378277,0.691429,-31.3151,-38.5724,-23.5265,média,2.28789e-12
+Plano de Gerenciamento de Resíduos de Serviços de Saúde - PGRSS,portal_servicos,pbh_app,4396,70,0.671747,0.942857,-27.111,-30.8537,-18.9176,média,0.00037697
+Comunicado de Falecimento de Beneficiário para Transferência de Titularidade,portal_servicos,pbh_app,78,47,0.435897,0.659574,-22.3677,-38.1838,-4.30755,pequena,1
+Tapa-Buraco,telefone_156,presencial,395,219,0.777215,0.990868,-21.3652,-25.7748,-16.8731,média,1.94092e-10
+Licença de Mesa e Cadeira,portal_servicos,pbh_app,1030,33,0.424272,0.212121,21.2151,4.4084,32.1812,pequena,1
+Restituição - Fazenda - ISSQN,portal_servicos,pbh_app,1466,32,0.720327,0.90625,-18.5923,-25.1628,-3.58137,pequena,1
+Restituição de Valor de Guia da Política Urbana,portal_servicos,pbh_app,554,32,0.756318,0.9375,-18.1182,-23.9863,-3.81352,média,1
+Restituição - Fazenda - Taxa,portal_servicos,pbh_app,777,55,0.791506,0.963636,-17.2131,-21.2021,-8.11321,média,0.447459
+Coleta de Animal Morto - Pequeno Porte,pbh_app,telefone_156,1168,118,0.962329,0.79661,16.5719,10.1751,24.7703,média,4.62666e-12
+Restituição - Fazenda - ITBI,portal_servicos,pbh_app,1876,256,0.764392,0.925781,-16.1389,-19.4182,-11.8355,pequena,1.02183e-06
+"Publicidade Irregular na Propriedade (Anúncio, Placa, Totem, Outdoor e Painel) - Fiscalização",portal_servicos,telefone_156,166,163,0.698795,0.846626,-14.7831,-23.534,-5.73958,pequena,0.32644
+Caçamba em Ruas e Passeios - Fiscalização,portal_servicos,telefone_156,77,265,0.766234,0.909434,-14.32,-25.2863,-5.30449,pequena,0.178851

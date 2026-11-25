@@ -1,148 +1,94 @@
-# LAB05 — Usabilidade e acessibilidade do Portal de Serviços da PBH
+# LAB05 — Canais de atendimento da PBH: tempo e taxa de encerramento
 
 Laboratório de Experimentação de Software · Engenharia de Software · PUC Minas (Campus Lourdes, noite, 2026/2) · Professor: Danilo Maia
-Atualizado em **23/11/2026** · Sprint atual: **S01 (Proposta)**
+Atualizado em **24/11/2026** · Metodologia **v3.0** (dados abertos; sem participantes)
 
-> **Leia primeiro:** [FONTE_DA_VERDADE.md](./FONTE_DA_VERDADE.md). Ela é a referência central do projeto: o que o professor exige, o que foi decidido, o que já foi feito e o que falta.
+> **Leia primeiro:** [FONTE_DA_VERDADE.md](./FONTE_DA_VERDADE.md) (referência central) e [docs/metodologia.md](./docs/metodologia.md).
 
 ## O que é o projeto
 
-Experimento com pessoas comparando **celular × computador** no [Portal de Serviços da PBH](https://servicos.pbh.gov.br) (plataforma SYDLE ONE), mais uma auditoria de acessibilidade (WCAG) com axe DevTools e Lighthouse.
+Análise **observacional** dos dados abertos de solicitações dos cidadãos de Belo Horizonte (BH Digital), por canal: Portal de Serviços, PBH APP, Telefone 156 e Presencial (BH Resolve).
 
-- **Pergunta:** o cidadão encontra e inicia um serviço com a mesma eficácia, eficiência e satisfação no celular e no computador?
-- **Amostra planejada:** 32 participantes analisáveis, 8 por sequência de contrabalanceamento.
-- **Importante:** hoje existe **só planejamento**. Não há coleta nem resultado. Nenhum número de estimativa (como o poder estatístico) é resultado.
+**Pergunta:** para um mesmo serviço, o tempo de encerramento e a proporção de solicitações encerradas diferem conforme o canal?
 
-## Regras do grupo (leia antes de mexer em qualquer coisa)
+- **Fonte:** [CKAN da PBH](https://ckan.pbh.gov.br/dataset/solicitacoes-dos-cidadaos-por-meio-dos-canais-de-atendimento-da-pbh), licença CC-BY.
+- **Cobertura real: maio/2020 a julho/2023.** O dataset não tem 2024–2026.
+- **Sem participantes, sem sessões, sem planilhas manuais.** A metodologia anterior (experimento com pessoas) foi descontinuada; ver [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md).
+- Resultado = **associação**, não causa. Encerrada não significa resolvida.
 
-1. **Sem crawler nem varredura** no Portal. Navegação manual e uso pontual. O robots.txt do Portal tem `Disallow: /`.
-2. **Sem teste de carga** em sistema de terceiros. No máximo 1 requisição por segundo.
-3. **Sem login, sem formulário enviado, sem dado pessoal** nos testes com o Portal.
-4. **Não inventar** números, fontes, aprovações ou resultados. O que não foi comprovado fica como pendência.
-5. **Não commitar** HTML completo do Portal: ele contém tokens de autorização. Só os trechos já redigidos em `docs/evidencias/capturas/`.
-6. Antes de mudar uma decisão metodológica, registre o motivo na [FONTE_DA_VERDADE.md](./FONTE_DA_VERDADE.md) §19.
+## Como reproduzir (um comando)
 
-## O que precisa ser feito agora (issue #16: critérios do software)
+Requer Python 3.12 e acesso à internet (~400 MB de download).
 
-Issue: [#16 — Critérios do software: real, em operação e alto impacto](https://github.com/Laboratorio-Medicao/Lab05/issues/16) (parte da #15).
+```bash
+python3.12 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/pipeline.py
+```
 
-| Pendência | O que fazer | Quem | Situação |
-|---|---|---|---|
-| P7 — HTML da página inicial | Registrar como o HTML foi obtido | Marcos | **Encerrada** |
-| P8 — Termos de uso | Ler e registrar os termos do Portal | Marcos | **Encerrada** (Política de Privacidade ainda não lida) |
-| P9 — Habitantes de BH (IBGE) | Conferir o número no IBGE Cidades | Marcos | **Encerrada** (2.315.560, Censo 2022) |
-| **P10 — Pedido via LAI** | **Enviar o pedido à PBH, guardar o protocolo e registrar** | **Arthur** | **Enviada em 22/11/2026** (protocolo a anexar depois) |
-| Fontes das notícias da PBH e da SYDLE | Abrir cada fonte, anotar URL, data de acesso e o trecho com o número | Marcos | **Encerrada** (5 fontes conferidas em 20/11/2026) |
+Em ~6 min (download) + ~1 min (processamento) o pipeline: baixa os 10 CSVs pela API do CKAN (1 req/s) para uma pasta temporária **fora do repositório**,
+descarta as colunas de endereço na leitura, gera a base anonimizada, analisa e produz os gráficos. Os CSVs brutos são apagados ao final.
 
-### Para o Arthur
-
-@ALuiz19 — **Arthur, a P10 é sua.**
-
-1. Abra [docs/evidencias/P10_pedido_LAI_instrucoes.md](./docs/evidencias/P10_pedido_LAI_instrucoes.md). Tem o passo a passo e o **texto do pedido pronto para copiar e colar**.
-2. Envie o pedido pelo canal de LAI da PBH (o Portal tem um cartão "Lei de Acesso à Informação – LAI").
-3. Se pedir login gov.br, use a **sua própria conta** e não compartilhe senha nem códigos.
-4. Guarde o **número do protocolo** e uma captura da tela (sem CPF nem dados sensíveis) em `docs/evidencias/capturas/`.
-5. Preencha a tabela da seção 5 do arquivo e avise o grupo.
-
-Para a issue #16 basta o **protocolo**; a resposta da PBH pode chegar depois (prazo legal: 20 dias, prorrogáveis por 10).
-
-## Dependem do professor (o grupo precisa levar a pergunta)
-
-Nada disso foi respondido. Todas seguem **abertas** e não devem ser tratadas como aprovadas.
-
-| Pendência | Pergunta ao professor |
+| Variação | Comando |
 |---|---|
-| P12 | Pode usar axe DevTools e Lighthouse, acionados manualmente, apesar do `Disallow: /` do Portal? (informar que a leitura dos termos foi feita por assistente de IA no navegador de um integrante, com autorização dele) |
-| P11 | Precisa de comitê de ética? |
-| P1 | Como tratar o tempo da tarefa abandonada antes de 300 s ou encerrada por pedido de ajuda? |
-| P2 | A regra provisória de fechamento dos blocos (8 por sequência) está ok? |
-| P3 | Haverá critério de exclusão por proporção de tarefas no teto de 300 s? |
+| Guardar os CSVs para não baixar de novo (pasta fora do repo) | `python scripts/pipeline.py --cache-dir ~/.cache/lab05` |
+| Usar CSVs já baixados (sem rede) | `python scripts/pipeline.py --entrada ~/pasta_com_csvs` |
+| Só a análise, a partir da base pronta | `python scripts/pipeline.py --base dados/processados/solicitacoes_analiticas.csv.gz` |
+| Outros parâmetros | `--horizonte-dias 90` `--min-celula 30` |
+| Testes | `python -m pytest` |
 
-## Dependem do grupo
+O pipeline recusa pastas de CSV bruto dentro do repositório (os originais têm logradouro, número e coordenadas).
 
-| Pendência | Decisão |
+## Onde estão os resultados
+
+| Saída | Caminho |
 |---|---|
-| P4 | O teste exploratório proposto para a RQ4 (Wilcoxon pareado por participante sobre a diferença na taxa de erro por passo alcançado, com permutação de sinais como sensibilidade) está adequado? |
-| P5 | Faremos a conversão do impacto em horas? |
-| P6 | Qual o n mínimo abaixo de 32? |
-| P13 | Datas reais de S02, S03 e entrega final (do cronograma da disciplina) |
-| P14 | Link do repositório e do GitHub Projects; confirmar nomes dos integrantes |
+| Resumo (números gerados pelo código) | `resultados/resumo.md` |
+| Painel interativo-estático (abra no navegador) | `resultados/painel.html` |
+| Gráficos (PNG) | `resultados/figuras/` |
+| Tabelas (CSV) | `resultados/tabelas/` |
+| Todos os resultados em JSON | `resultados/resultados.json` |
+| Manifesto da coleta (URLs, tamanhos, SHA-256) e relatório de qualidade | `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` |
+| Base analítica anonimizada (não versionada) | `dados/processados/solicitacoes_analiticas.csv.gz` |
 
-## Como o repositório está organizado
+## Estrutura
 
 ```
 Lab05/
-├── README.md                 ← você está aqui
-├── FONTE_DA_VERDADE.md       ← referência central (leia primeiro)
-├── requirements.txt          ← versões fixadas (numpy, scipy, pandas, matplotlib, pytest)
-├── dados/
-│   ├── dicionario_de_dados.md ← PROPOSTA, a confirmar com o papel B
-│   └── sinteticos/           ← dados FALSOS (SINTETICO_*), só para testar o código
+├── README.md · FONTE_DA_VERDADE.md · requirements.txt
 ├── scripts/
-│   ├── power_analysis.py     ← simulação de poder v4 (reconstrução, issue #20)
-│   ├── esquema.py            ← dicionário em código (colunas, domínios, sequências)
-│   ├── validar_dados.py      ← validador dos dados
-│   ├── analise.py            ← RQ1–RQ4, Holm, checagem de ordem, auditoria Q4
-│   └── gerar_dados_sinteticos.py
-├── notebooks/
-│   └── analise_S02.py        ← notebook em formato percent (# %%)
-├── tests/                    ← pytest (análise, validador e poder)
-├── resultados/
-│   └── results_v4.json       ← saída da simulação v4 (estimativa, não resultado)
+│   ├── config.py         ← fonte, mapa de canais, lista branca de colunas, parâmetros
+│   ├── coleta.py         ← download via API do CKAN (1 req/s, fora do repo)
+│   ├── tratamento.py     ← leitura, anonimização, normalização, classificação
+│   ├── estatistica.py    ← métricas, testes, tamanhos de efeito, Holm
+│   ├── visualizacao.py   ← gráficos e painel HTML
+│   └── pipeline.py       ← orquestra tudo (ponto de entrada)
+├── tests/                ← pytest, só com dados sintéticos (tests/sintetico.py)
+├── dados/                ← dicionário, manifesto, qualidade (e base processada, ignorada pelo git)
+├── resultados/           ← saídas do pipeline com dados reais
 └── docs/
-    ├── enunciado/            ← enunciado oficial do professor (PDF)
-    ├── proposta/             ← proposta metodológica S01 (versão final)
-    ├── relatorios/           ← relatório de fechamento da S01
-    └── evidencias/           ← evidências dos critérios do software
-        ├── S01_criterios_do_software.md   ← registro principal (issue #16)
-        ├── P10_pedido_LAI_instrucoes.md   ← instruções do pedido LAI
-        └── capturas/                      ← capturas e trechos arquivados
+    ├── metodologia.md    ← problema, GQM, métricas, análise, 7 categorias, ameaças
+    ├── enunciado/        ← enunciado oficial (PDF)
+    ├── evidencias/       ← critérios do software (real / em operação / alto impacto)
+    └── arquivo/          ← metodologia anterior, DESCONTINUADA (só histórico)
 ```
 
-Pastas previstas para quando houver conteúdo: `dados/brutos/` (coleta real, imutável), `instrumentos/`. `resultados/` guarda estimativas de simulação e, depois da coleta, saídas de dados reais; nunca saída sintética.
+## Regras do grupo
 
-## Como rodar a análise (issue #25)
+1. **Nunca** versionar CSV bruto da PBH (tem endereço e coordenadas) nem colunas de localização.
+2. Respeitar o limite de 1 requisição por segundo ao CKAN (já implementado) e identificar o acesso (user-agent).
+3. **Não inventar** números, fontes, aprovações ou resultados; o que não foi comprovado fica como pendência.
+4. Qualquer mudança em horizonte, mínimo por célula, definições ou testes é decisão metodológica: registrar na [FONTE_DA_VERDADE](./FONTE_DA_VERDADE.md) §19.
+5. Não interpretar as "situações" de atendimento nem os canais "Integração entre Sistemas"/"Origem Interna" além do que a PBH documenta.
 
-> **Hoje só existem dados sintéticos. Nada do que estes comandos produzem é resultado.**
+## Pendências principais (detalhes na FONTE_DA_VERDADE §14)
 
-```bash
-pip install -r requirements.txt
-python scripts/gerar_dados_sinteticos.py                 # (re)gera dados/sinteticos/ (semente 20261117)
-python scripts/validar_dados.py dados/sinteticos         # relatório de validação; saída 1 se houver erro
-python scripts/analise.py dados/sinteticos --saida <pasta temporária>
-python notebooks/analise_S02.py                          # ou abra no VS Code como notebook (células # %%)
-python -m pytest
-```
-
-- Opções da análise: `--p1 {teto_300,tempo_registrado,excluir_tarefa}` e `--p2 {p2_provisoria,todos_analisaveis,blocos_completos_por_id}` (as primárias estão marcadas **PENDENTE** até o professor decidir P1 e P2; as demais saem como sensibilidade) e `--sem-teste-rq4` (se o professor recusar o teste da RQ4, P4).
-- A análise recusa misturar dado real e sintético e nunca grava saída sintética em `resultados/`. Sem `--saida`, sintético vai para `dados/sinteticos/saida/`.
-- Com dados reais: `dados/brutos/` + `dados/CHECKSUMS.sha256`, validar, conferir por segunda pessoa (FONTE_DA_VERDADE §2.3) e só então rodar `python scripts/analise.py dados/brutos` (saída em `resultados/`).
-
-### Como rodar a simulação de poder
-
-```
-pip install -r requirements.txt
-python scripts/power_analysis.py                 # rodada completa: R = 20.000 por célula, ~40 s
-python scripts/power_analysis.py --reps 2000 --out /tmp/teste.json   # rodada rápida
-python -m pytest tests
-```
-
-A rodada completa sobrescreve `resultados/results_v4.json`. O poder é **estimativa condicionada a premissas**, nunca resultado (ver FONTE_DA_VERDADE §6.5).
-
-## Lacunas conhecidas (para ninguém se surpreender)
-
-- O script de poder estatístico `power_analysis.py` **v3.2** e o `results_v3_2.json`, citados na proposta, **continuam fora do repositório**. Existe uma **reconstrução v4** (`scripts/power_analysis.py`, `resultados/results_v4.json`), que é outro modelo: ela **não reproduz** 7 dos 9 valores de poder citados (a RQ1 em S1/S2 é a maior diferença) nem o erro tipo I citado para n = 28. Detalhes e decisão pendente em FONTE_DA_VERDADE §6.5.1 e D1.
-- O piloto (3 participantes), o termo de consentimento e a planilha de observação **ainda não existem**.
-- Os nomes dos integrantes e os papéis A/B/C **não estão confirmados** na documentação.
-- O dicionário de dados é **proposta do papel C** e ainda não foi confirmado com o papel B; o formato do export do axe DevTools precisa ser conferido com um arquivo real.
-- A análise (issue #25) foi rodada **só com dados sintéticos**: não há resultado. P1, P2 e P4 seguem pendentes com o professor.
-- `__pycache__/`, `.pytest_cache/` e `dados/sinteticos/saida/` estão no `.gitignore` e não devem ser commitados.
-
-## Próximas etapas
-
-| Etapa | Conteúdo | Data |
+| ID | Pendência | Quem |
 |---|---|---|
-| S01 | Proposta, evidências do software, piloto | A confirmar (P13) |
-| S02 | Coleta (32 sessões analisáveis), auditoria, análise | A confirmar (P13) |
-| S03 | Impacto, 7 categorias revisadas, conclusões, rascunhos | A confirmar (P13) |
-| Final | Documento e apresentação de 10 minutos | A confirmar (P13) |
+| P15 | Professor aprovar a mudança de metodologia (dados abertos no lugar de participantes) | Grupo leva ao professor |
+| P16 | Professor validar as decisões de desenho: coorte madura de 90 dias, mínimo de 30 por célula, estratificação por serviço | Professor |
+| P17 | Confirmar com a PBH (SUMOG) se existem dados posteriores a jul/2023 e o significado dos canais/situações não documentados | Grupo |
+| P13 | Datas reais de S02, S03 e entrega final | Grupo |
+| P14 | Link do repositório / GitHub Projects; nomes completos dos integrantes | Grupo |
+
+Falta para a entrega: interpretar os resultados (S02/S03), estimar o impacto com números públicos e fonte, revisar as 7 categorias e preparar documento e apresentação de 10 minutos.

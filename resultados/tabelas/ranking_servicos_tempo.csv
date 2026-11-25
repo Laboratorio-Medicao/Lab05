@@ -1,0 +1,16 @@
+servico,canal_a,canal_b,n_a,n_b,mediana_a,mediana_b,delta_cliff,delta_ic_lo,delta_ic_hi,delta_magnitude,p_tempo_holm
+Tapa-Buraco,pbh_app,telefone_156,133648,395,1,19,-0.719772,-0.749026,-0.687717,grande,1.49579e-141
+Árvore - Análise de Intervenção em Vegetação Motivada por Edificação,portal_servicos,pbh_app,731,67,9,0,0.570937,0.480091,0.649666,grande,1.58362e-12
+Informação sobre Notificação de Trânsito - Multa,portal_servicos,pbh_app,17437,2715,9,1,0.515143,0.498966,0.530961,grande,0
+Autorização para Afastamento - Feira da Afonso Pena,pbh_app,presencial,80,244,11,2,0.465072,0.328289,0.582751,média,8.80355e-08
+"Mobiliário Urbano (Banca de Jornal e Revista, Cabine de Ônibus e Parklet) - Fiscalização",portal_servicos,telefone_156,42,50,12.5,26.5,-0.412281,-0.603384,-0.176396,média,0.222009
+Orientação para Construção ou Reforma de Passeio,portal_servicos,pbh_app,547,49,13.5,1,0.409835,0.291444,0.51586,média,0.000588602
+Interposição de Recurso na Junta Administrativa de Recursos de Infrações - JARI,pbh_app,presencial,3200,44391,1,0,0.400356,0.359199,0.439957,média,1.04881e-50
+Restituição - Fazenda - Taxa,portal_servicos,pbh_app,777,55,20,4,0.376274,0.242953,0.495643,média,0.000708409
+Coleta Seletiva (Porta a Porta) - Ocorrência/ Reclamação,portal_servicos,pbh_app,30,87,7,3,0.351938,0.104661,0.558233,média,0.759221
+Mapeamento de Áreas de Atuação de Flanelinhas em Vias Públicas,portal_servicos,pbh_app,190,250,21,33,-0.343052,-0.442178,-0.235647,média,2.92994e-07
+Fornecedor - Atualização de Documentos no Cadastro,portal_servicos,pbh_app,8105,49,0,0,-0.321408,-0.460052,-0.167465,pequena,2.33748e-06
+"Feiras, Eventos, Circos e Parques de Diversão - Fiscalização",portal_servicos,telefone_156,65,81,5.5,27,-0.30467,-0.483136,-0.101897,pequena,0.459964
+Recurso de Perícia - Benefício da Gratuidade - Cartão BHBUS Benefício Inclusão,portal_servicos,pbh_app,54,56,32.5,6,0.284512,0.0673194,0.47596,pequena,1
+Perdão de Débitos - ISSQN - TMCM - Pessoa Física,portal_servicos,pbh_app,93,34,36,24,0.278586,0.0499299,0.479492,pequena,1
+Declaração sobre Transporte ou Trânsito,portal_servicos,pbh_app,68,125,4,2,0.278125,0.106132,0.433959,pequena,0.346546

@@ -91,3 +91,13 @@ def test_recusa_entrada_dentro_do_repositorio(tmp_path):
 def test_cli_retorna_erro_amigavel(tmp_path, capsys):
     rc = P.main(["--entrada", str(C.RAIZ / "dados"), "--saida", str(tmp_path)])
     assert rc == 1 and "ERRO" in capsys.readouterr().err
+
+
+def test_saidas_trazem_ponderacao_alternativa(execucao):
+    tmp, _ = execucao
+    resumo = (tmp / "res/resumo.md").read_text(encoding="utf-8")
+    painel = (tmp / "res/painel.html").read_text(encoding="utf-8")
+    assert "ponderação alternativa" in resumo and "ponderação alternativa" in painel
+    import pandas as pd
+    cols = pd.read_csv(tmp / "res/tabelas/pares_ajustados_por_servico.csv").columns
+    assert {"delta_combinado_harmonico", "servico_maior_peso", "delta_sinal_consistente"} <= set(cols)

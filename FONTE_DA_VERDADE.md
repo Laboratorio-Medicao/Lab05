@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.3 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.4 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -153,7 +153,7 @@ Detalhe completo na [METODOLOGIA §6](./docs/metodologia.md) e no cabeçalho de 
 2. **Elegível:** não inconsistente, canal comparável (Portal, PBH APP, Telefone 156, Presencial), seguimento ≥ **90 dias** (coorte madura; decisão do grupo, **P16**).
 3. **Tempo:** dias entre criação e encerramento, só de encerradas. **Taxa:** % encerrada em ≤ 90 dias (medida de proporção testada) e até o corte (descritiva).
 4. **Mesmo serviço:** estratificação por serviço; célula serviço × canal precisa de ≥ 30 registros (**P16**).
-5. **Testes:** qui-quadrado/Fisher, Mann–Whitney, Kruskal–Wallis, CMH, van Elteren, teste dos sinais; efeitos (diferença de risco, OR, h, delta de Cliff, ε², V); Holm por família; sensibilidade em 30 e 180 dias.
+5. **Testes:** qui-quadrado/Fisher, Mann–Whitney, Kruskal–Wallis, CMH, van Elteren, teste dos sinais; efeitos (diferença de risco, OR, h, delta de Cliff, ε², V); Holm por família; sensibilidade em 30 e 180 dias e do delta combinado (peso n_A·n_B/(n_A+n_B) e mediana por serviço; o tempo do par é inconclusivo quando os sinais discordam; acrescentada em 25/11/2026, depois de ver os resultados; D14, #39).
 6. Com n ≥ 10⁵ o p-valor é quase sempre minúsculo: **interpretar por tamanho de efeito e consistência entre serviços**.
 
 ## 7. Sete categorias da pesquisa
@@ -166,11 +166,11 @@ Ver [METODOLOGIA §7](./docs/metodologia.md): aplicada; descritiva e exploratór
 
 ## 9. Plano de análise e resultados
 
-A análise é executada pelo código; os números vêm de `resultados/resumo.md`, `resultados/tabelas/` e `resultados/painel.html`. **Esta fonte não repete os números** para não divergirem do que o pipeline produz. A interpretação (S02, issue #25) está em [docs/interpretacao_resultados.md](./docs/interpretacao_resultados.md), versão 1.0 de 24/11/2026, **ainda sem revisão do grupo**. Conclusões:
+A análise é executada pelo código; os números vêm de `resultados/resumo.md`, `resultados/tabelas/` e `resultados/painel.html`. **Esta fonte não repete os números** para não divergirem do que o pipeline produz. A interpretação (S02, issue #25) está em [docs/interpretacao_resultados.md](./docs/interpretacao_resultados.md), versão 1.1 de 25/11/2026, **ainda sem revisão do grupo**. Conclusões:
 
 - A maior parte da diferença global entre canais vem do **tipo de serviço** que cada canal atende. Dentro do mesmo serviço, o efeito típico é cerca de 10 vezes menor (interpretação §3.1).
 - O Presencial parece encerrar muito menos, mas 88,7% de suas solicitações elegíveis são recurso à JARI, que permanece "em andamento". O OR de Mantel–Haenszel nos pares com Presencial é **dominado por esse serviço**; a mediana da diferença de risco por serviço fica perto de zero.
-- O delta combinado de tempo nos pares com Presencial é **dominado pelo Tapa-Buraco** (peso n_A × n_B) e inverte de sinal com outra ponderação ou com a mediana por serviço: **resultado inconclusivo**, que não deve ser apresentado como achado (D14).
+- O delta combinado de tempo nos pares com Presencial é **dominado pelo Tapa-Buraco** (peso n_A × n_B) e inverte de sinal com outra ponderação ou com a mediana por serviço: **resultado inconclusivo**, que não deve ser apresentado como achado (D14). Desde o #39 o pipeline gera essa sensibilidade e a figura 06, o painel e o resumo marcam esses pares como "inconclusivo".
 - Telefone 156: mais lento em ~3/4 dos serviços em comum (consistente), com magnitude **desprezível**; sem sentido consistente na proporção encerrada.
 - Portal × PBH APP: o APP encerra um pouco mais e um pouco mais rápido de forma consistente, com magnitude desprezível. É o resultado mais robusto.
 - Todas as afirmações são associação em dados observacionais.
@@ -199,8 +199,8 @@ Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, ex
 | Reorientação para dados abertos | **Executado** (código, docs, testes); **não aprovado pelo professor** (P15) | `scripts/`, `docs/metodologia.md` | Levar ao professor |
 | Validação da fonte | **Executado** em 24/11/2026 (cobertura, colunas, licença, API) | DICIONÁRIO §1 | Confirmar com a PBH se há dados > jul/2023 (P17) |
 | Pipeline (coleta, tratamento, análise, gráficos) | **Verificado** em 25/11/2026 (reexecução do zero com download real, por agente de IA a pedido do Arthur; reproduzido com ressalvas): 10 CSVs e base com os mesmos SHA-256, 1.480.736 registros | `docs/evidencias/verificacao_pipeline.md`, `resultados/`, `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Reexecução por um integrante (opcional, reforça a verificação, §2.3) |
-| Testes automatizados | **57 testes passando** (dados sintéticos), 25/11/2026 | `tests/` | Rodar `python -m pytest` |
-| Interpretação dos resultados | **Executado** (v1.0, 24/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issue #25) | Revisão por outro integrante; decidir D14 |
+| Testes automatizados | **64 testes passando** (dados sintéticos), 25/11/2026 | `tests/` | Rodar `python -m pytest` |
+| Interpretação dos resultados | **Executado** (v1.1, 25/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issues #25 e #39) | Revisão por outro integrante |
 | Impacto, relatório | **Pendente** | — | #29 (impacto), #31 (documento final) |
 | Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
@@ -301,7 +301,7 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | D11 | O pedido inicial supunha dados de 2024, 2025 e 2026; a fonte termina em **jul/2023** | **Resolvida pela fonte**: escopo ajustado; P17 pergunta à PBH se há dados novos |
 | D12 | Auditoria Lighthouse de 24/11/2026 gerada antes do aceite do professor (P12) | Arquivada, fora da análise |
 | D13 | `metadata_modified` do dataset (10/06/2026) não corresponde à data dos arquivos (jul/ago 2023) | Registrada; não indica dados novos |
-| D14 | O delta de Cliff combinado (`estratificado_por_par`) pondera cada serviço por n_A × n_B (encerradas). Nos pares com Presencial, o Tapa-Buraco (217 encerradas presenciais) recebe 44% a 68% do peso e define o sinal; com peso n_A·n_B/(n_A+n_B) ou pela mediana por serviço o sinal se inverte | **Aberta** (grupo): pipeline **não alterado**, porque o peso foi fixado antes dos resultados. Resultado tratado como inconclusivo em `docs/interpretacao_resultados.md` §4; decidir se a ponderação alternativa entra como sensibilidade (registrar na §19) |
+| D14 | O delta de Cliff combinado (`estratificado_por_par`) pondera cada serviço por n_A × n_B (encerradas). Nos pares com Presencial, o Tapa-Buraco (217 encerradas presenciais) recebe 44% a 68% do peso e define o sinal; com peso n_A·n_B/(n_A+n_B) ou pela mediana por serviço o sinal se inverte | **Encerrada** em 25/11/2026: sensibilidade incorporada ao pipeline (#39), com colunas novas em `pares_ajustados_por_servico.csv` (delta com peso alternativo, serviço de maior peso, `delta_sinal_consistente`), figura 06, painel e resumo. Análise principal inalterada (peso n_A × n_B, nenhuma coluna antiga mudou); Portal × Presencial e PBH APP × Presencial seguem **inconclusivos** no tempo; Telefone 156 × Presencial tem sinais concordantes, mas só 2 serviços (Ouvidoria com ~100% do peso): não interpretar (interpretação §3). Decisão: opção A da issue #39, escolhida pelo Arthur em 25/11/2026 (aprovação dos planos) |
 
 ---
 
@@ -330,3 +330,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 3.1 | 24/11/2026 | Issue #25 (reescrita para a metodologia v3.0): criado `docs/interpretacao_resultados.md` com a resposta a Q1–Q4, sensibilidade e limites; §9 e §13 atualizadas. Registrada a D14 (dominância do Tapa-Buraco no delta combinado dos pares com Presencial). Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Issue #22 (32 sessões) fechada como obsoleta |
 | 3.2 | 25/11/2026 | Issue #37: hipóteses H0/H1 (Q2, Q3), variáveis, objetos, design, instrumentação e operação em docs/metodologia.md §3.1; cada hipótese aponta para o teste e a coluna existentes. Nenhum teste, parâmetro ou resultado alterado. Hipóteses formalizadas após os resultados (limitação registrada) |
 | 3.3 | 25/11/2026 | Issue #38: verificação do pipeline por reexecução do zero (venv novo, download real do CKAN, 57 testes), feita por um agente de IA a pedido do Arthur. CSVs e base com os mesmos SHA-256; diferenças só no manifesto (origem do download), fim de linha, a última casa decimal de 41 números de `resultados.json` e os bytes da figura 04 (renderização do matplotlib). Achados corrigidos: intervalo de 1 req/s (a resolução de 15,625 ms de `time.monotonic()` no Python 3.12/Windows deixava o intervalo real até ~16 ms abaixo do pedido; corrigido com relógio `perf_counter` e laço de reconferência, com teste novo) em `scripts/coleta.py` e testes portáveis (`encoding="utf-8"`); linha para Windows no README. Registrado em `docs/evidencias/verificacao_pipeline.md`; §13 atualizada. Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada |
+| 3.4 | 25/11/2026 | Issue #39 (opção A): o pipeline passa a gerar a sensibilidade da ponderação do delta combinado (peso n_A·n_B/(n_A+n_B), serviço de maior peso e indicador de sinal consistente) e a figura 06, o painel e o resumo marcam como "inconclusivo" o tempo dos pares em que os sinais discordam (Portal × Presencial e PBH APP × Presencial). **Mudança metodológica registrada:** só se acrescentam colunas; a análise principal e os parâmetros de `config.py` não mudaram. D14 encerrada (decisão: opção A da issue #39, escolhida pelo Arthur em 25/11/2026, aprovação dos planos). Portal × Presencial e PBH APP × Presencial seguem inconclusivos no tempo; Telefone 156 × Presencial tem sinais concordantes, mas só 2 serviços (Ouvidoria com ~100% do peso): não interpretar. Interpretação passa à v1.1. Nenhuma outra pendência encerrada |

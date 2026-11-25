@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.8 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.9 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -205,7 +205,8 @@ Princípio mantido: nenhuma economia de tempo ou horas pode ser afirmada sem mé
 | Interpretação dos resultados | **Executado** (v1.1, 25/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issues #25 e #39) | Revisão por outro integrante |
 | Ameaças à validade revisadas | **Executado** (25/11/2026; sem revisão do grupo) | `docs/metodologia.md` §8 (#24) | Revisão por outro integrante |
 | Impacto | **Executado** (25/11/2026; sem revisão do grupo) | `docs/impacto.md`, `resultados/tabelas/impacto_*.csv` (#29) | Revisão por outro integrante; decidir P5 |
-| Relatório (documento final e apresentação) | **Pendente no repositório** | — | Mantidos fora do repositório por decisão do Arthur (25/11/2026); #31 depende da revisão do trio, dos nomes e links (P14) e da resposta do professor (P15, P16) |
+| Rascunho do documento final | **Executado** (25/11/2026; revisão independente aplicada; sem revisão do trio) | `docs/documento_final.md` (#28) | Revisão do trio |
+| Documento final (versão de entrega) e apresentação | **Pendente** | — | #31 depende da revisão do trio, dos nomes e links (P14) e da resposta do professor (P15, P16); a apresentação é mantida fora do repositório por decisão do Arthur (25/11/2026) |
 | Revisão das 7 categorias (S03) | **Executado** (25/11/2026; sem revisão do grupo) | METODOLOGIA §7 revisada, com correção de "longitudinal" para "retrospectivo; coorte retrospectiva com análise agregada no período" (issue #27) | Revisão por outro integrante |
 | Conclusões e limitações | **Executado** (25/11/2026; sem revisão do grupo) | `docs/conclusoes_limitacoes.md` (#27) | Revisão por outro integrante |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
@@ -248,7 +249,7 @@ Nenhuma data de S02, S03 ou entrega final está confirmada (P13). Mapa do enunci
 |---|---|---|
 | S01 | Proposta, pergunta, caminhos, 1ª versão das 7 categorias, plano, coleta piloto | Entregue com o desenho antigo; a nova coleta (completa) já roda |
 | S02 | Coleta completa, dados validados e versionados, análise (descritiva, testes, efeito), ameaças | **Executado**: interpretação (#25, #39), ameaças (#24) e reexecução verificada (#38), sem revisão do grupo |
-| S03 | Impacto, 7 categorias revisadas, conclusões e limitações, rascunhos | **Executado, sem revisão do grupo**: impacto (#29), 7 categorias revisadas e conclusões (#27); rascunhos do documento e da apresentação mantidos fora do repositório |
+| S03 | Impacto, 7 categorias revisadas, conclusões e limitações, rascunhos | **Executado, sem revisão do grupo**: impacto (#29), 7 categorias revisadas e conclusões (#27); rascunho do documento em `docs/documento_final.md` (#28); rascunho da apresentação mantido fora do repositório |
 | Final | Documento e apresentação de 10 min | Pendente |
 
 Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e Operação (`coleta`/`tratamento`); C Análise e Impacto (`estatistica`/`visualizacao`). Nomes não confirmados.
@@ -264,6 +265,7 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | `docs/metodologia.md` | Metodologia vigente (v3.0) |
 | `docs/interpretacao_resultados.md` | Interpretação dos resultados (Q1–Q4, sensibilidade, limites), issue #25 |
 | `docs/impacto.md` | Estimativa de impacto por par de canais, com limites, issue #29 |
+| `docs/documento_final.md` | Rascunho revisado do documento final (8 itens do enunciado §8), issue #28 |
 | `docs/enunciado/` | Enunciado oficial (autoridade máxima) |
 | `docs/evidencias/` | Critérios do software (S01) e instruções do pedido LAI |
 | `docs/arquivo/s01-metodologia-participantes/` | Proposta, relatório e auditoria Lighthouse da metodologia **descontinuada** |
@@ -341,3 +343,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 3.6 | 25/11/2026 | Issue #29 (impacto): criados `scripts/impacto.py`, `tests/test_impacto.py` e `docs/impacto.md`; o pipeline passa a gravar `impacto_por_par.csv`, `impacto_por_servico_par.csv` e `volume_anual_por_canal.csv`, a figura 07 e uma seção de impacto no painel e no resumo. Estimativa de **contrafactual hipotético** só para Portal × APP, Portal × 156 e APP × 156 (Presencial fora, D14). §11 e §13 atualizadas; **P5 segue aberta** (conversão em horas não feita, sem métrica compatível). Tabelas e colunas anteriores de `resultados/` não mudaram. Numeração 3.6 definida pela ordem prevista de merge (renumerar se mudar) |
 | 3.7 | 25/11/2026 | Issue #27: METODOLOGIA §7 revisada com base no executado (tabela com justificativa e coluna "Muda?"; "longitudinal" corrigido para "retrospectivo; coorte retrospectiva com análise agregada no período"; texto "Por que não é um experimento"); criado `docs/conclusoes_limitacoes.md`; §7 e §13 atualizadas. Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Sem aprovação do professor |
 | 3.8 | 25/11/2026 | Correções da revisão independente do rascunho do documento final: interpretação §3.3 (Portal × APP: 94 de 159 serviços na proporção e 98 de 149 no tempo, em vez de "150"; horizontes valem só para a proporção) e §6; §5 desta fonte (atributos **internos** do processo; a resolução, atributo externo, não é medida); §13 e §15 (estado de S02 e S03; documento final e apresentação mantidos fora do repositório); README (pendências). Nenhum resultado alterado |
+| 3.9 | 25/11/2026 | Issue #28: rascunho do documento final publicado em `docs/documento_final.md` (composição dos documentos do repositório; revisão independente com ajustes aplicados; números conferidos contra `resultados/`). Autores como Integrante A/B/C (P14) e referências 9–11 marcadas "a conferir". §13, §15, §16 e README atualizados; a apresentação continua fora do repositório. Nenhum resultado alterado |

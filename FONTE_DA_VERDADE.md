@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.1 · criada em 20/11/2026, atualizada em 24/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.2 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -140,6 +140,8 @@ Ver DICIONÁRIO §6: cobertura até jul/2023; canais "Integração entre Sistema
 | Q2 | A proporção de solicitações encerradas difere entre canais? | % encerrada em ≤ 90 dias e até o corte |
 | Q3 | As diferenças permanecem dentro do mesmo serviço? | OR de Mantel–Haenszel; delta de Cliff combinado; I²; nº de serviços em cada sentido |
 | Q4 | Quais serviços apresentam maior diferença entre canais? | Maior \|delta\| e maior \|dif. de risco\| por serviço |
+
+Hipóteses formais, variáveis e design: [METODOLOGIA §3.1](./docs/metodologia.md) (issue #37), formalizadas em 25/11/2026, depois dos resultados (não pré-registradas).
 
 Entidades e atributos: entidade = solicitação (processo/recurso de atendimento); atributos externos, medidas diretas (datas) e derivadas (tempo, taxa). Escalas e estatísticas permitidas: METODOLOGIA §4. Armadilha de medição (Goodhart/McNamara): "encerrada" pode ser encerramento administrativo; uma taxa alta não prova que o problema foi resolvido.
 
@@ -326,3 +328,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 2.6 | 23/11/2026 | Issue #25: dicionário de dados (proposta, a confirmar com o papel B), validador, análise, gerador de dados sintéticos, notebook `.py` percent, testes e `requirements.txt`. Tudo rodado **só com dados sintéticos**: **nenhum resultado**. P1 e P2 entram como parâmetros (opção provisória marcada PENDENTE, demais variantes como sensibilidade); teste da RQ4 desligável (P4). D10 registrada. Nenhuma pendência encerrada. Merge com a 2.5 (issue #20): `resultados/` passa a abrigar estimativas de simulação e saídas reais, nunca sintéticas; `requirements.txt` unificado |
 | 3.0 | 24/11/2026 | **Mudança de metodologia** (registro obrigatório): o experimento com participantes (celular × computador, SUS/SEQ, sessões, auditoria Lighthouse) é substituído por análise de **dados abertos de operação** da PBH por canal de atendimento. Motivo: a coleta com participantes exige recrutamento e sessões em número inviável para o grupo. Nova pergunta: para um mesmo serviço, tempo e taxa de encerramento diferem por canal? Validada a fonte (CKAN, CC-BY): **cobertura mai/2020–jul/2023, sem 2024–2026** (D11). Implementados pipeline (`scripts/`), testes (55), dicionário, metodologia e resultados reais. Material antigo arquivado em `docs/arquivo/` ou removido (§16). P1–P4, P6, P11, P12 marcadas obsoletas; novas P15 (professor aprovar a mudança), P16 (validar decisões de desenho), P17 (consultar a PBH). D1, D3, D10 encerradas/superadas; D11–D13 abertas. **Nenhuma aprovação do professor foi registrada** |
 | 3.1 | 24/11/2026 | Issue #25 (reescrita para a metodologia v3.0): criado `docs/interpretacao_resultados.md` com a resposta a Q1–Q4, sensibilidade e limites; §9 e §13 atualizadas. Registrada a D14 (dominância do Tapa-Buraco no delta combinado dos pares com Presencial). Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Issue #22 (32 sessões) fechada como obsoleta |
+| 3.2 | 25/11/2026 | Issue #37: hipóteses H0/H1 (Q2, Q3), variáveis, objetos, design, instrumentação e operação em docs/metodologia.md §3.1; cada hipótese aponta para o teste e a coluna existentes. Nenhum teste, parâmetro ou resultado alterado. Hipóteses formalizadas após os resultados (limitação registrada) |

@@ -20,7 +20,7 @@
 
 **Para a gestão da PBH.** A diferença global está sobretudo em **qual serviço** cada canal atende, não no canal de entrada (interpretação §3.1). Os serviços em que a diferença entre canais é grande (Q4, interpretação §5) são os candidatos a investigar primeiro. Que o roteamento e a triagem do serviço pesam mais que o canal é uma **hipótese** da interpretação, não algo que os dados mostram. Vale ainda conferir o que "encerrada" significa em cada serviço, o que os dados abertos não documentam (K1, K2).
 
-**Impacto.** A estimativa de impacto para quem usa o serviço está **pendente** no card #29 (`docs/impacto.md` ainda não existe). Por isso este documento **não traz nenhum número de impacto**. Quando existir, deve usar só os pares com conclusão sustentada (Portal × APP e canais digitais × 156) e deixar claro que as diferenças típicas são desprezíveis (interpretação §9).
+**Impacto.** A estimativa está em `docs/impacto.md` (#29). É um **contrafactual hipotético** ("se os pedidos de um canal tivessem o desempenho do outro no mesmo serviço"), calculado só para Portal × APP, Portal × 156 e APP × 156; os pares com Presencial ficaram de fora (inconclusivos, D14). Pelo mesmo serviço, a diferença de mediana ponderada (dias, com IC de 95%; B = segundo canal do par, positivo = B mais lento) é −1,69 [−3,37; −0,32] em Portal × PBH APP, +2,31 [0,84; 4,50] em Portal × Telefone 156 e +2,69 [1,02; 5,38] em PBH APP × Telefone 156 (`docs/impacto.md` §3, `resultados/tabelas/impacto_por_par.csv`). São diferenças pequenas por pedido, que descrevem associação e não o efeito de mudar de canal. A conversão em horas do cidadão não foi feita, e a P5 segue **aberta** (`docs/impacto.md` §7).
 
 ## 3. Limitações
 
@@ -34,8 +34,8 @@ Cada limitação cita o ID da ameaça correspondente (`docs/metodologia.md` §8,
 6. **Hipóteses escritas depois dos resultados (C6).** As definições e os testes foram fixados antes da análise, mas as hipóteses H0/H1 foram formalizadas depois; não é um estudo pré-registrado.
 7. **Independência e empates (C4, C5).** A base não identifica o cidadão, então ICs e p podem estar otimistas, e os empates (encerramento no mesmo dia) tornam o tempo menos preciso nos serviços rápidos.
 8. **Tempo: período longo, sem análise temporal (I4, I3, K3).** Plataforma, regras e demanda (incluindo a pandemia) mudaram entre 2020 e 2023 e o ano não entra como estratificador. A coorte madura de 90 dias deixa de fora os pedidos recentes, e o corte de observação é inferido.
-9. **Medida grosseira e nome do serviço (K4, K5).** A resolução é de 1 dia e "0 dia" significa o mesmo dia civil. Além disso, o serviço é identificado pelo nome normalizado, e a normalização pode juntar ou separar serviços de forma imperfeita.
-10. **Validade externa (E1, E2, E4).** Só Belo Horizonte, de mai/2020 a jul/2023, e só serviços com pelo menos 2 canais comparáveis. Os canais não comparáveis ficaram fora da análise (298.570 registros, `funil_elegibilidade.csv`; E4, K2).
+9. **Medida grosseira e nome do serviço (K4, K5).** A resolução é de 1 dia e "0 dia" significa o mesmo dia civil. Além disso, o serviço é identificado pelo nome normalizado (`servico_chave`), e a normalização, junto com o travessão perdido ("?") na fonte, pode juntar ou separar serviços; as variantes de nome não foram verificadas manualmente.
+10. **Validade externa (E1, E2, E4).** Só Belo Horizonte, de mai/2020 a jul/2023, e só serviços com pelo menos 2 canais comparáveis. Os canais "Integração entre Sistemas", "Origem Interna" e "E-mail" ficaram fora da análise (298.570 registros, 20,2% da base, `funil_elegibilidade.csv`; E4, K2).
 
 ## 4. O que não é possível afirmar
 
@@ -47,5 +47,4 @@ Ver `docs/interpretacao_resultados.md` §8. Em resumo: que mudar de canal aceler
 - **Significado das situações:** obter da PBH a regra de "Situação Atendimento Atual" (P17), para separar encerramento de resolução (K1).
 - **Combinação com survey:** ouvir usuários, o que o enunciado valoriza (§2b) e cobriria o que os dados de operação não têm (urgência, perfil, motivo da escolha do canal; I2).
 - **Análise temporal:** o estudo atual é uma coorte retrospectiva com análise agregada no período, sem estudo de tendência temporal; estudar a evolução ano a ano exigiria incluir o ano na análise (I4).
-- **Sensibilidade de ponderação:** decidir sobre o peso alternativo do delta combinado (D14, C2).
-- **Sensibilidade do OR de MH:** não há sensibilidade equivalente à do delta (#39); avaliar, por exemplo, o OR sem o serviço Recurso à JARI (C2).
+- **Sensibilidade do OR de MH:** a sensibilidade de ponderação do delta já existe no pipeline (#39, D14 encerrada), mas não há equivalente para o OR de MH; avaliar, por exemplo, o OR sem o serviço Recurso à JARI (C2).

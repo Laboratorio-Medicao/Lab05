@@ -207,7 +207,7 @@ Princípio mantido: nenhuma economia de tempo ou horas pode ser afirmada sem mé
 | Impacto | **Executado** (25/11/2026; sem revisão do grupo) | `docs/impacto.md`, `resultados/tabelas/impacto_*.csv` (#29) | Revisão por outro integrante; decidir P5 |
 | Relatório | **Pendente** | — | #31 (documento final) |
 | Revisão das 7 categorias (S03) | **Executado** (25/11/2026; sem revisão do grupo) | METODOLOGIA §7 revisada, com correção de "longitudinal" para "retrospectivo; coorte retrospectiva com análise agregada no período" (issue #27) | Revisão por outro integrante |
-| Conclusões e limitações | **Executado** (25/11/2026; sem revisão do grupo) | `docs/conclusoes_limitacoes.md` (#27) | Revisão por outro integrante; ajustar ao impacto (#29) quando existir |
+| Conclusões e limitações | **Executado** (25/11/2026; sem revisão do grupo) | `docs/conclusoes_limitacoes.md` (#27) | Revisão por outro integrante |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
 
 "Verificado" (§2.3) exige conferência por segunda pessoa ou ferramenta, com registro: o pipeline foi reexecutado do zero em 25/11/2026 por um agente de IA (Claude Sonnet), a pedido do Arthur, e não por um integrante do grupo; ver `docs/evidencias/verificacao_pipeline.md`.

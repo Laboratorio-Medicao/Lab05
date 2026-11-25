@@ -33,10 +33,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import coleta  # noqa: E402
 import config as C  # noqa: E402
 import estatistica as E  # noqa: E402
+import impacto as IMP  # noqa: E402
 import tratamento as T  # noqa: E402
 import visualizacao as V  # noqa: E402
 
 NOME_BASE = "solicitacoes_analiticas.csv.gz"
+
+# Tabelas da estimativa de impacto (issue #29): chave em ``r`` -> nome do CSV
+NOMES_TABELAS_IMPACTO = {
+    "volume_anual_por_canal": "volume_anual_por_canal",
+    "impacto_por_servico": "impacto_por_servico_par",
+    "impacto_por_par": "impacto_por_par",
+}
 
 
 def _jsonavel(x):
@@ -68,6 +76,7 @@ def gravar_tabelas(r: dict, pasta: Path) -> list[Path]:
         "estratificado_por_par": "pares_ajustados_por_servico",
         "sensibilidade_horizonte": "sensibilidade_horizonte",
     }
+    nomes.update(NOMES_TABELAS_IMPACTO)
     saidas = []
     for chave, nome in nomes.items():
         df = r[chave]
@@ -138,7 +147,28 @@ def resumo_markdown(r: dict, q: dict) -> str:
               f"- Testes de proporção usados: {r['pressupostos']['testes_proporcao_por_servico']}",
               f"- Mediana da proporção de empates nos tempos: "
               f"{V._n(r['pressupostos']['empates_tempo_mediana_p_empate'], 3)}"]
+    L += resumo_impacto(r)
     return "\n".join(L) + "\n"
+
+
+def resumo_impacto(r: dict) -> list[str]:
+    """Seção "Impacto estimado" do resumo (issue #29). Vazia se não há par de impacto."""
+    return V.linhas_markdown_impacto(r) if "impacto_por_par" in r else []
+
+
+def calcular_impacto(r: dict, params: C.Parametros) -> dict:
+    """Estimativa de impacto (issue #29) a partir do resultado de ``analisar``."""
+    el = r["elegiveis"]
+    anos = IMP.anos_coorte(el)
+    datas = pd.to_datetime(el["data_criacao"])
+    por_servico = IMP.impacto_por_servico(r["pares_por_servico"], anos)
+    return {
+        "coorte": {"inicio": str(datas.min().date()), "fim": str(datas.max().date()),
+                   "anos": float(anos)},
+        "volume_anual_por_canal": IMP.volume_anual_por_canal(el),
+        "impacto_por_servico": por_servico,
+        "impacto_por_par": IMP.impacto_por_par(por_servico, params.semente),
+    }
 
 
 def executar(args: argparse.Namespace, log=print) -> dict:
@@ -186,10 +216,12 @@ def executar(args: argparse.Namespace, log=print) -> dict:
 
     log("[3/4] Analisando")
     r = E.analisar(base, params)
+    r.update(calcular_impacto(r, params))
     tabelas = gravar_tabelas(r, saida / "tabelas")
     resumo = {k: _jsonavel(v) for k, v in r.items()
               if k not in ("elegiveis", "celulas", "servico_canal", "pares_por_servico",
                            "omnibus_por_servico")}
+    resumo.pop("impacto_por_servico", None)  # granular: já sai em CSV (como pares_por_servico)
     (saida / "resultados.json").parent.mkdir(parents=True, exist_ok=True)
     (saida / "resultados.json").write_text(
         json.dumps(resumo, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

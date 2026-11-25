@@ -989,5 +989,155 @@
     "empates_tempo_mediana_p_empate": 0.027408043933467657,
     "empates_tempo_maximo_p_empate": 0.44370316784109876,
     "independencia": "não verificável: a base não tem identificador do cidadão; o mesmo cidadão pode gerar várias solicitações"
-  }
+  },
+  "coorte": {
+    "inicio": "2020-05-11",
+    "fim": "2023-04-26",
+    "anos": 2.9596167008898013
+  },
+  "volume_anual_por_canal": [
+    {
+      "ano": 2020,
+      "canal": "pbh_app",
+      "solicitacoes": 17917,
+      "meses_cobertos": 8
+    },
+    {
+      "ano": 2020,
+      "canal": "portal_servicos",
+      "solicitacoes": 42538,
+      "meses_cobertos": 8
+    },
+    {
+      "ano": 2020,
+      "canal": "presencial",
+      "solicitacoes": 12,
+      "meses_cobertos": 3
+    },
+    {
+      "ano": 2020,
+      "canal": "telefone_156",
+      "solicitacoes": 13537,
+      "meses_cobertos": 7
+    },
+    {
+      "ano": 2021,
+      "canal": "pbh_app",
+      "solicitacoes": 104478,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2021,
+      "canal": "portal_servicos",
+      "solicitacoes": 166562,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2021,
+      "canal": "presencial",
+      "solicitacoes": 21641,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2021,
+      "canal": "telefone_156",
+      "solicitacoes": 41060,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "pbh_app",
+      "solicitacoes": 152793,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "portal_servicos",
+      "solicitacoes": 230079,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "presencial",
+      "solicitacoes": 21326,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2022,
+      "canal": "telefone_156",
+      "solicitacoes": 43467,
+      "meses_cobertos": 12
+    },
+    {
+      "ano": 2023,
+      "canal": "pbh_app",
+      "solicitacoes": 54014,
+      "meses_cobertos": 4
+    },
+    {
+      "ano": 2023,
+      "canal": "portal_servicos",
+      "solicitacoes": 110395,
+      "meses_cobertos": 4
+    },
+    {
+      "ano": 2023,
+      "canal": "presencial",
+      "solicitacoes": 7078,
+      "meses_cobertos": 4
+    },
+    {
+      "ano": 2023,
+      "canal": "telefone_156",
+      "solicitacoes": 16029,
+      "meses_cobertos": 4
+    }
+  ],
+  "impacto_por_par": [
+    {
+      "canal_a": "portal_servicos",
+      "canal_b": "pbh_app",
+      "servicos": 159,
+      "vol_b_ano_total": 110550.80203515265,
+      "dif_mediana_ponderada_dias": -1.6902387146136189,
+      "dif_mediana_ponderada_dias_ic_lo": -3.37149990647745,
+      "dif_mediana_ponderada_dias_ic_hi": -0.3234330878471485,
+      "dias_solicitacao_ano": -186607.10349213693,
+      "dias_solicitacao_ano_ic_lo": -421156.5976179464,
+      "dias_solicitacao_ano_ic_hi": -25214.160326086985,
+      "encerradas_90d_ano": -759.9194432051746,
+      "encerradas_90d_ano_ic_lo": -1646.6186107209462,
+      "encerradas_90d_ano_ic_hi": -7.502675290123275
+    },
+    {
+      "canal_a": "portal_servicos",
+      "canal_b": "telefone_156",
+      "servicos": 45,
+      "vol_b_ano_total": 38470.18432007401,
+      "dif_mediana_ponderada_dias": 2.312773918160499,
+      "dif_mediana_ponderada_dias_ic_lo": 0.8442740246981988,
+      "dif_mediana_ponderada_dias_ic_hi": 4.4976226054740325,
+      "dias_solicitacao_ano": 88972.83892229418,
+      "dias_solicitacao_ano_ic_lo": 34910.981874421836,
+      "dias_solicitacao_ano_ic_hi": 158072.1964298103,
+      "encerradas_90d_ano": 348.2432294821798,
+      "encerradas_90d_ano_ic_lo": 17.979503210618795,
+      "encerradas_90d_ano_ic_hi": 734.9424802003653
+    },
+    {
+      "canal_a": "pbh_app",
+      "canal_b": "telefone_156",
+      "servicos": 45,
+      "vol_b_ano_total": 38470.18432007401,
+      "dif_mediana_ponderada_dias": 2.693413668022168,
+      "dif_mediana_ponderada_dias_ic_lo": 1.0226190030133104,
+      "dif_mediana_ponderada_dias_ic_hi": 5.38049495571225,
+      "dias_solicitacao_ano": 103616.12025901943,
+      "dias_solicitacao_ano_ic_lo": 38193.700037580944,
+      "dias_solicitacao_ano_ic_hi": 186418.73450508772,
+      "encerradas_90d_ano": 335.69652714564006,
+      "encerradas_90d_ano_ic_lo": -154.35461355259395,
+      "encerradas_90d_ano_ic_hi": 829.3136263765466
+    }
+  ]
 }

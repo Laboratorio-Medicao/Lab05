@@ -93,4 +93,4 @@ Lab05/
 | P13 | Datas reais de S02, S03 e entrega final | Grupo |
 | P14 | Link do repositório / GitHub Projects; nomes completos dos integrantes | Grupo |
 
-Falta para a entrega: interpretar os resultados (S02/S03), estimar o impacto com números públicos e fonte, revisar as 7 categorias e preparar documento e apresentação de 10 minutos.
+Falta para a entrega: interpretar os resultados (S02/S03), revisar as 7 categorias e preparar documento e apresentação de 10 minutos. A estimativa de impacto já está em `docs/impacto.md` (sem revisão do grupo).

@@ -61,7 +61,7 @@ Convenção: para o par A × B, OR > 1 significa que A encerra mais em 90 dias, 
 ### 3.3 O que se pode dizer
 
 1. **Telefone 156 × canais digitais.** O 156 é mais lento em cerca de 3 de cada 4 serviços em comum (34 de 45 contra o Portal; 37 de 45 contra o APP), e esse padrão é estatisticamente consistente. A magnitude típica, porém, é desprezível (delta mediano por serviço de −0,06). A diferença de 3 × 20 dias nas medianas gerais vem sobretudo de **o 156 atender outro conjunto de serviços** (68 serviços contra mais de 360 nos canais digitais), em geral de fiscalização e manutenção urbana, que levam mais tempo. Na proporção encerrada, não há vencedor consistente.
-2. **Portal × APP.** O APP encerra um pouco mais e um pouco mais rápido na maioria dos 150 serviços em comum. É o resultado mais robusto do estudo (mesmo sentido nas duas medidas, nos horizontes de 30, 90 e 180 dias e com qualquer ponderação, §4), mas a diferença é **desprezível** para o cidadão médio.
+2. **Portal × APP.** O APP encerra mais em 94 de 159 serviços em comum (proporção) e é mais rápido em 98 de 149 (tempo). É o resultado mais robusto do estudo (mesmo sentido nas duas medidas, com qualquer ponderação, §4, e, na proporção, nos horizontes de 30, 90 e 180 dias, §6), mas a diferença é **desprezível** para o cidadão médio.
 3. **Presencial.** Os números agregados (OR de 14 a 19) não descrevem o canal. A proporção é dominada pela JARI (I² = 0,99), e na mediana dos serviços a diferença de risco fica perto de zero (−0,28 pp e +0,10 pp). **Não se pode dizer que o Presencial encerra menos** quando o serviço é o mesmo.
 
 ## 4. Achado da interpretação: um serviço domina o delta combinado
@@ -117,7 +117,7 @@ Fonte: `resultados/tabelas/sensibilidade_horizonte.csv` (OR de Mantel–Haenszel
 | Portal × Presencial | 12,0 | 19,1 | 24,5 |
 | APP × Presencial | 7,6 | 13,8 | 23,2 |
 
-- O **sentido** de todos os pares se mantém nos três horizontes: a escolha de 90 dias não muda a conclusão.
+- O **sentido** do OR de todos os pares se mantém nos três horizontes: a escolha de 90 dias não muda a conclusão sobre a proporção. A sensibilidade ao horizonte não foi feita para o tempo.
 - Nos pares com Presencial, o OR muda muito com o horizonte (de 7,6 para 23,2), outro sinal de que a estimativa é **instável** e dominada pela JARI.
 
 ## 7. Pressupostos e limites da análise

@@ -59,7 +59,7 @@ normaliza canais, pseudonimiza o Id Ticket, remove duplicatas, classifica os reg
 - **Entre serviços:** Cochran–Mantel–Haenszel (OR combinado, IC de Robins–Breslow–Greenland, heterogeneidade por Q de Cochran e I²); van Elteren para tempos; teste dos sinais sobre o sentido da diferença em cada serviço.
 - **Tamanho de efeito:** diferença de risco (IC de Newcombe), razão de chances, h de Cohen, delta de Cliff (IC de Cliff com erro-padrão de DeLong), épsilon² (Kruskal–Wallis), V de Cramér. Magnitudes: |delta| < 0,147 desprezível, < 0,33 pequena, < 0,474 média (Romano et al., 2006); |h| < 0,2 / 0,5 / 0,8 (Cohen).
 - **Múltiplas comparações:** Holm por família (proporções por serviço-par, tempos por serviço-par, omnibus por serviço, pares ajustados).
-- **Sensibilidade:** horizontes de 30 e 180 dias; mediana de Kaplan–Meier (abertas como censuradas).
+- **Sensibilidade:** horizontes de 30 e 180 dias; mediana de Kaplan–Meier (abertas como censuradas); delta combinado com peso n_A·n_B/(n_A+n_B) e mediana por serviço. O resultado de tempo do par é tratado como inconclusivo quando os sinais discordam (acrescentada em 25/11/2026, depois de ver os resultados; D14, #39).
 - **Convenção de sinal:** para o par (A, B), delta de Cliff > 0 = A mais lento; OR > 1 = A encerra mais.
 - Com n da ordem de 10⁵–10⁶ quase tudo tem p minúsculo: **a leitura é pelo tamanho do efeito e pela consistência entre serviços**, não pelo p. A conferência dos blocos estatísticos (contra scipy, força bruta, exemplos publicados e simulação de cobertura do IC) está em `tests/test_estatistica.py`.
 

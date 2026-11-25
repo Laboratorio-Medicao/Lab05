@@ -1,5 +1,7 @@
 # P10 — Enviar pedido via LAI à PBH (instruções para quem vai enviar)
 
+> **Nota (24/11/2026):** a metodologia mudou para análise de dados abertos de operação (ver `docs/metodologia.md`). Este registro continua válido **apenas** como evidência dos critérios real / em operação / alto impacto do ecossistema de atendimento da PBH. Trechos sobre tarefas, participantes e auditoria com axe/Lighthouse pertencem à metodologia antiga.
+
 Responsável pelo envio: **Arthur** · Criado em 20/11/2026 · Issue #16 · Pendência **P10**
 Contexto: [FONTE_DA_VERDADE.md](../../FONTE_DA_VERDADE.md) §14 · [S01_criterios_do_software.md](./S01_criterios_do_software.md) §5
 
@@ -7,7 +9,7 @@ Contexto: [FONTE_DA_VERDADE.md](../../FONTE_DA_VERDADE.md) §14 · [S01_criterio
 
 O Portal de Serviços da PBH (https://servicos.pbh.gov.br) não publica quantos acessos tem por mês. Nosso trabalho (LAB05, Laboratório de Experimentação de Software, PUC Minas) precisa desse número para mostrar o **alto impacto** do software, que o enunciado exige com "números e fontes". Vamos pedir o dado pela **Lei de Acesso à Informação (Lei 12.527/2011)**.
 
-Esse dado serve só como **contexto** e para uma análise secundária de impacto. Ele não entra no experimento.
+Com a nova metodologia este pedido é **opcional** (contexto de impacto; o pedido já foi enviado em 22/11/2026). Esse dado serve só como **contexto** e para uma análise secundária de impacto. Ele não entra no experimento.
 
 ## 2. O que você precisa fazer (passo a passo)
 

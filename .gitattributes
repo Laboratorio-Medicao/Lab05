@@ -1,2 +1,2 @@
-# Dados e checksums: sem conversão de fim de linha (os SHA-256 dependem dos bytes)
+# Dados e manifestos: sem conversão de fim de linha (os SHA-256 dependem dos bytes)
 dados/** -text

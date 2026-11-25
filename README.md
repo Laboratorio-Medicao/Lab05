@@ -26,7 +26,9 @@ pip install -r requirements.txt
 python scripts/pipeline.py
 ```
 
-Em ~6 min (download) + ~1 min (processamento) o pipeline: baixa os 10 CSVs pela API do CKAN (1 req/s) para uma pasta temporária **fora do repositório**,
+No Windows (Git Bash): `py -3.12 -m venv .venv && source .venv/Scripts/activate`.
+
+Em ~8–9 min (download) + ~1 min (processamento) o pipeline: baixa os 10 CSVs pela API do CKAN (1 req/s) para uma pasta temporária **fora do repositório**,
 descarta as colunas de endereço na leitura, gera a base anonimizada, analisa e produz os gráficos. Os CSVs brutos são apagados ao final.
 
 | Variação | Comando |

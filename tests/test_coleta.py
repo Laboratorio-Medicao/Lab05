@@ -65,12 +65,41 @@ def test_intervalo_minimo_entre_requisicoes(tmp_path):
     arq = tmp_path / "a.json"
     arq.write_text('{"ok": 1}')
     c = coleta.Cliente(intervalo_s=0.3)
-    t0 = time.monotonic()
+    t0 = time.perf_counter()
     c.json(arq.as_uri())
     c.json(arq.as_uri())
-    assert time.monotonic() - t0 >= 0.3
+    assert time.perf_counter() - t0 >= 0.3
 
 
 def test_user_agent_identifica_o_projeto():
     assert "Lab05" in C.USER_AGENT and "Mozilla" not in C.USER_AGENT
     assert C.INTERVALO_MIN_REQUISICOES_S >= 1.0  # enunciado: no máximo 1 req/s
+
+
+def test_intervalo_minimo_mesmo_com_sleep_curto(tmp_path, monkeypatch):
+    arq = tmp_path / "a.json"
+    arq.write_text('{"ok": 1}')
+    real = time.sleep
+    monkeypatch.setattr(coleta.time, "sleep", lambda s: real(max(0.0, s - 0.02)))  # simula acordar 20 ms antes
+    c = coleta.Cliente(intervalo_s=0.2)
+    t0 = time.perf_counter()
+    for _ in range(3):
+        c.json(arq.as_uri())
+    assert time.perf_counter() - t0 >= 0.4
+
+
+def test_intervalo_real_medido_com_relogio_de_alta_resolucao(tmp_path):
+    arq = tmp_path / "a.json"
+    arq.write_text('{"ok": 1}')
+    c = coleta.Cliente(intervalo_s=0.25)  # múltiplo exato de 15,625 ms
+    marcas, original = [], c._esperar
+    def esperar_marcado():
+        original()
+        marcas.append(time.perf_counter())
+    c._esperar = esperar_marcado
+    for i in range(8):
+        c.json(arq.as_uri())
+        fim = time.perf_counter() + 0.007 * i  # trabalho variável entre requisições
+        while time.perf_counter() < fim:
+            pass
+    assert min(b - a for a, b in zip(marcas, marcas[1:])) >= 0.25 - 1e-4

@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.0 · criada em 20/11/2026, atualizada em 24/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.1 · criada em 20/11/2026, atualizada em 24/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -164,10 +164,13 @@ Ver [METODOLOGIA §7](./docs/metodologia.md): aplicada; descritiva e exploratór
 
 ## 9. Plano de análise e resultados
 
-A análise é executada pelo código; os números vêm de `resultados/resumo.md`, `resultados/tabelas/` e `resultados/painel.html`. **Esta fonte não repete os números** para não divergirem do que o pipeline produz. A interpretação final (S02/S03) ainda **não foi redigida**: pendente do integrante responsável. Observações já visíveis nos dados, a serem tratadas na interpretação:
+A análise é executada pelo código; os números vêm de `resultados/resumo.md`, `resultados/tabelas/` e `resultados/painel.html`. **Esta fonte não repete os números** para não divergirem do que o pipeline produz. A interpretação (S02, issue #25) está em [docs/interpretacao_resultados.md](./docs/interpretacao_resultados.md), versão 1.0 de 24/11/2026, **ainda sem revisão do grupo**. Conclusões:
 
-- A comparação global (sem controlar o serviço) é enganosa: o Presencial parece encerrar muito menos, mas a maior parte de suas solicitações é de um único serviço (recurso à JARI), que permanece "em andamento" por natureza. O OR agregado de Mantel–Haenszel nos pares com Presencial é muito alto, porém **dominado por esse serviço** (I² próximo de 1, poucos serviços em comum); a mediana da diferença de risco por serviço fica perto de zero e o teste dos sinais não indica consistência entre serviços (ver `resultados/tabelas/pares_ajustados_por_servico.csv`).
-- Telefone 156 tem mediana de tempo maior que Portal e PBH APP; na comparação ajustada por serviço o delta combinado é de magnitude **desprezível** (|delta| < 0,147).
+- A maior parte da diferença global entre canais vem do **tipo de serviço** que cada canal atende. Dentro do mesmo serviço, o efeito típico é cerca de 10 vezes menor (interpretação §3.1).
+- O Presencial parece encerrar muito menos, mas 88,7% de suas solicitações elegíveis são recurso à JARI, que permanece "em andamento". O OR de Mantel–Haenszel nos pares com Presencial é **dominado por esse serviço**; a mediana da diferença de risco por serviço fica perto de zero.
+- O delta combinado de tempo nos pares com Presencial é **dominado pelo Tapa-Buraco** (peso n_A × n_B) e inverte de sinal com outra ponderação ou com a mediana por serviço: **resultado inconclusivo**, que não deve ser apresentado como achado (D14).
+- Telefone 156: mais lento em ~3/4 dos serviços em comum (consistente), com magnitude **desprezível**; sem sentido consistente na proporção encerrada.
+- Portal × PBH APP: o APP encerra um pouco mais e um pouco mais rápido de forma consistente, com magnitude desprezível. É o resultado mais robusto.
 - Todas as afirmações são associação em dados observacionais.
 
 ## 10. Ameaças à validade
@@ -195,7 +198,8 @@ Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, ex
 | Validação da fonte | **Executado** em 24/11/2026 (cobertura, colunas, licença, API) | DICIONÁRIO §1 | Confirmar com a PBH se há dados > jul/2023 (P17) |
 | Pipeline (coleta, tratamento, análise, gráficos) | **Executado** com os dados reais em 24/11/2026: 10 CSVs, 1.480.736 registros, ~44 s a partir dos CSVs locais | `resultados/`, `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Reexecutar por outro integrante a partir do README (verificação por segunda pessoa) |
 | Testes automatizados | **55 testes passando** (dados sintéticos), 24/11/2026 | `tests/` | Rodar `python -m pytest` |
-| Interpretação dos resultados, impacto, relatório | **Pendente** | — | Integrante responsável |
+| Interpretação dos resultados | **Executado** (v1.0, 24/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issue #25) | Revisão por outro integrante; decidir D14 |
+| Impacto, relatório | **Pendente** | — | #29 (impacto), #31 (documento final) |
 | Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
 
@@ -251,6 +255,7 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | `README.md` | Entrada: como reproduzir, estrutura, regras, pendências |
 | `FONTE_DA_VERDADE.md` | Este documento |
 | `docs/metodologia.md` | Metodologia vigente (v3.0) |
+| `docs/interpretacao_resultados.md` | Interpretação dos resultados (Q1–Q4, sensibilidade, limites), issue #25 |
 | `docs/enunciado/` | Enunciado oficial (autoridade máxima) |
 | `docs/evidencias/` | Critérios do software (S01) e instruções do pedido LAI |
 | `docs/arquivo/s01-metodologia-participantes/` | Proposta, relatório e auditoria Lighthouse da metodologia **descontinuada** |
@@ -294,6 +299,7 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | D11 | O pedido inicial supunha dados de 2024, 2025 e 2026; a fonte termina em **jul/2023** | **Resolvida pela fonte**: escopo ajustado; P17 pergunta à PBH se há dados novos |
 | D12 | Auditoria Lighthouse de 24/11/2026 gerada antes do aceite do professor (P12) | Arquivada, fora da análise |
 | D13 | `metadata_modified` do dataset (10/06/2026) não corresponde à data dos arquivos (jul/ago 2023) | Registrada; não indica dados novos |
+| D14 | O delta de Cliff combinado (`estratificado_por_par`) pondera cada serviço por n_A × n_B (encerradas). Nos pares com Presencial, o Tapa-Buraco (217 encerradas presenciais) recebe 44% a 68% do peso e define o sinal; com peso n_A·n_B/(n_A+n_B) ou pela mediana por serviço o sinal se inverte | **Aberta** (grupo): pipeline **não alterado**, porque o peso foi fixado antes dos resultados. Resultado tratado como inconclusivo em `docs/interpretacao_resultados.md` §4; decidir se a ponderação alternativa entra como sensibilidade (registrar na §19) |
 
 ---
 
@@ -319,3 +325,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 2.5 | 23/11/2026 | Issue #20: reconstrução da simulação de poder **v4** (`scripts/power_analysis.py`, `tests/test_power_analysis.py`, `resultados/results_v4.json`, `requirements.txt`; `.gitignore` com `.claude/worktrees/`). Nova §6.5.1 com regra de calibração, tabela citado × reproduzido e erro tipo I (n = 24, 28, 32); D1 atualizada (segue aberta para o v3.2; 7 de 9 valores de poder e o FWER de n = 28 fora de 3 EP_MC); §9, §13 e §16 atualizadas; cabeçalho corrigido para a versão atual. Proposta e relatório não foram alterados |
 | 2.6 | 23/11/2026 | Issue #25: dicionário de dados (proposta, a confirmar com o papel B), validador, análise, gerador de dados sintéticos, notebook `.py` percent, testes e `requirements.txt`. Tudo rodado **só com dados sintéticos**: **nenhum resultado**. P1 e P2 entram como parâmetros (opção provisória marcada PENDENTE, demais variantes como sensibilidade); teste da RQ4 desligável (P4). D10 registrada. Nenhuma pendência encerrada. Merge com a 2.5 (issue #20): `resultados/` passa a abrigar estimativas de simulação e saídas reais, nunca sintéticas; `requirements.txt` unificado |
 | 3.0 | 24/11/2026 | **Mudança de metodologia** (registro obrigatório): o experimento com participantes (celular × computador, SUS/SEQ, sessões, auditoria Lighthouse) é substituído por análise de **dados abertos de operação** da PBH por canal de atendimento. Motivo: a coleta com participantes exige recrutamento e sessões em número inviável para o grupo. Nova pergunta: para um mesmo serviço, tempo e taxa de encerramento diferem por canal? Validada a fonte (CKAN, CC-BY): **cobertura mai/2020–jul/2023, sem 2024–2026** (D11). Implementados pipeline (`scripts/`), testes (55), dicionário, metodologia e resultados reais. Material antigo arquivado em `docs/arquivo/` ou removido (§16). P1–P4, P6, P11, P12 marcadas obsoletas; novas P15 (professor aprovar a mudança), P16 (validar decisões de desenho), P17 (consultar a PBH). D1, D3, D10 encerradas/superadas; D11–D13 abertas. **Nenhuma aprovação do professor foi registrada** |
+| 3.1 | 24/11/2026 | Issue #25 (reescrita para a metodologia v3.0): criado `docs/interpretacao_resultados.md` com a resposta a Q1–Q4, sensibilidade e limites; §9 e §13 atualizadas. Registrada a D14 (dominância do Tapa-Buraco no delta combinado dos pares com Presencial). Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Issue #22 (32 sessões) fechada como obsoleta |

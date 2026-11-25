@@ -36,8 +36,18 @@ def test_gera_todas_as_saidas(execucao):
     ]
     for rel in esperados:
         assert (tmp / rel).exists(), rel
-    assert len(saida["figuras"]) == 6
+    assert len(saida["figuras"]) == 7
     assert all(f.stat().st_size > 5000 for f in saida["figuras"])  # PNG não vazio
+
+
+def test_saidas_de_impacto(execucao):
+    tmp, _ = execucao
+    for nome in ("impacto_por_par", "impacto_por_servico_par", "volume_anual_por_canal"):
+        assert (tmp / f"res/tabelas/{nome}.csv").exists(), nome
+    resumo = (tmp / "res/resumo.md").read_text(encoding="utf-8")
+    painel = (tmp / "res/painel.html").read_text(encoding="utf-8")
+    for t in (resumo, painel):
+        assert "Impacto estimado" in t and "contrafactual hipotético" in t
 
 
 def test_nenhuma_saida_contem_endereco(execucao):

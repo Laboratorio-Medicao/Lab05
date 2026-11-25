@@ -263,11 +263,173 @@ def fig_floresta(r: dict, pasta: Path) -> Path:
     return _salvar(fig, pasta / "06_comparacao_pares_ajustada.png")
 
 
+# ---------------------------------------------------------------------------
+# Impacto estimado (issue #29): figura 07, tabela, texto do painel e do resumo
+# ---------------------------------------------------------------------------
+
+AVISO_IMPACTO = (
+    "Estimativa de contrafactual hipotético: o que mudaria se os pedidos do segundo canal (B) "
+    "tivessem o desempenho do primeiro (A) no mesmo serviço. É associação, não causa: o cidadão "
+    "escolhe o canal e encerrar não significa resolver.")
+
+
+def _par_rotulo(a: str, b: str) -> str:
+    return f"{ROT[a].replace(' (BH Resolve)', '')} × {ROT[b].replace(' (BH Resolve)', '')}"
+
+
+def _com_ic(x, lo, hi, f) -> str:
+    return "–" if pd.isna(x) else f"{f(x)} [{f(lo)}; {f(hi)}]"
+
+
+def tabela_impacto(r: dict) -> pd.DataFrame:
+    """Tabela do impacto por par, já formatada em texto (painel e resumo)."""
+    h = r["parametros"]["horizonte_dias"]
+    d = r["impacto_por_par"]
+    col_dif = "Diferença de mediana ponderada (dias)"
+    col_dias = "Dias de espera por ano (B − A)"
+    col_enc = f"Encerradas em ≤ {h} d a mais por ano"
+    linhas = []
+    for _, x in d.iterrows():
+        linhas.append({
+            "Par (A × B)": _par_rotulo(x["canal_a"], x["canal_b"]),
+            "Serviços": int(x["servicos"]),
+            "Pedidos de B por ano": _fmt(x["vol_b_ano_total"]),
+            col_dif: _com_ic(x["dif_mediana_ponderada_dias"], x["dif_mediana_ponderada_dias_ic_lo"],
+                             x["dif_mediana_ponderada_dias_ic_hi"], lambda v: _n(v, 2)),
+            col_dias: _com_ic(x["dias_solicitacao_ano"], x["dias_solicitacao_ano_ic_lo"],
+                              x["dias_solicitacao_ano_ic_hi"], _fmt),
+            col_enc: _com_ic(x["encerradas_90d_ano"], x["encerradas_90d_ano_ic_lo"],
+                             x["encerradas_90d_ano_ic_hi"], _fmt),
+        })
+    return pd.DataFrame(linhas)
+
+
+def sentidos_impacto(r: dict) -> list[str]:
+    """Para cada par, diz se tempo e taxa apontam no mesmo sentido ou em sentidos opostos."""
+    h = r["parametros"]["horizonte_dias"]
+    frases = []
+    comparados = 0
+    for _, x in r["impacto_por_par"].iterrows():
+        dias, enc = x["dias_solicitacao_ano"], x["encerradas_90d_ano"]
+        if pd.isna(dias) or pd.isna(enc) or dias == 0 or enc == 0:
+            continue
+        comparados += 1
+        a, b = ROT[x["canal_a"]].replace(" (BH Resolve)", ""), ROT[x["canal_b"]].replace(" (BH Resolve)", "")
+        if (dias > 0) != (enc > 0):
+            frases.append(
+                f"No par {a} × {b}, tempo e taxa apontam em sentidos opostos: {b} é "
+                f"{'mais lento' if dias > 0 else 'mais rápido'} que {a} no tempo, mas encerra "
+                f"{'menos' if enc > 0 else 'mais'} em até {h} dias. As duas medidas não são "
+                "somadas numa conclusão só.")
+    if comparados and not frases:
+        onde = f"nos {comparados} pares comparados" if comparados > 1 else "no único par comparado"
+        frases.append(f"Nas estimativas pontuais, tempo e taxa apontam no mesmo sentido {onde}, "
+                      "mas cada medida tem o próprio IC e deve ser lida separadamente.")
+    return frases
+
+
+def _exemplo_sinal_impacto(r: dict) -> str:
+    """Frase com o sinal do tempo no primeiro par (derivada dos dados); vazia se não houver."""
+    d = r["impacto_por_par"]
+    if d.empty:
+        return ""
+    x = d.iloc[0]
+    dias = x["dias_solicitacao_ano"]
+    if pd.isna(dias) or dias == 0:
+        return ""
+    a, b = ROT[x["canal_a"]].replace(" (BH Resolve)", ""), ROT[x["canal_b"]].replace(" (BH Resolve)", "")
+    return (f" (neste resultado, em {a} × {b} o valor de tempo é {'positivo' if dias > 0 else 'negativo'}: "
+            f"{b} é {'mais lento' if dias > 0 else 'mais rápido'} que {a} no mesmo serviço)")
+
+
+def _texto_leitura_impacto(r: dict) -> str:
+    co = r.get("coorte", {})
+    h = r["parametros"]["horizonte_dias"]
+    return (f"Coorte de {co.get('inicio', '?')} a {co.get('fim', '?')} "
+            f"({_n(co.get('anos', float('nan')), 2)} anos). A = primeiro canal do par. As duas "
+            "medidas têm sinais próprios. Tempo (diferença de mediana e dias de espera por ano): "
+            "valor positivo = B mais lento que A no mesmo serviço; valor negativo = B mais rápido"
+            + _exemplo_sinal_impacto(r) + ". "
+            f"Taxa (encerradas em ≤ {h} d a mais por ano): valor positivo = B encerra menos que A "
+            f"(seriam encerradas mais solicitações de B em até {h} dias com o desempenho de A); "
+            "valor negativo = B encerra mais que A. IC de 95% por bootstrap reamostrando serviços. "
+            + " ".join(sentidos_impacto(r)))
+
+
+TEXTO_LIMITES_IMPACTO = (
+    "Pares com Presencial ficam de fora (resultado inconclusivo) e não se usam as medianas "
+    "globais. Não há conversão em horas do cidadão (P5): dias de espera até o encerramento "
+    "não são horas de esforço.")
+
+
+def linhas_markdown_impacto(r: dict) -> list[str]:
+    """Seção "Impacto estimado" do resumo em Markdown."""
+    L = ["", "## Impacto estimado (associação, não causa)\n", AVISO_IMPACTO + "\n",
+         _texto_leitura_impacto(r) + "\n"]
+    t = tabela_impacto(r) if len(r["impacto_por_par"]) else pd.DataFrame()
+    if t.empty:
+        L += ["Nenhum par de canais com serviços em comum suficientes para estimar o impacto.\n"]
+    else:
+        L += ["| " + " | ".join(t.columns) + " |",
+              "|---|" + "---:|" * (len(t.columns) - 1)]
+        L += ["| " + " | ".join(str(v) for v in lin) + " |" for lin in t.itertuples(index=False)]
+        L += [""]
+    L += [TEXTO_LIMITES_IMPACTO]
+    return L
+
+
+def secao_impacto_html(r: dict) -> str:
+    """Seção "Impacto estimado" do painel."""
+    t = tabela_impacto(r) if len(r["impacto_por_par"]) else pd.DataFrame()
+    tab = (f'<div class="rolagem">{_tabela(t)}</div>' if not t.empty else
+           "<p>Nenhum par de canais com serviços em comum suficientes para estimar o impacto.</p>")
+    return (f"<h2>Impacto estimado (associação, não causa)</h2>\n"
+            '<p class="aviso">' + html.escape(AVISO_IMPACTO) + '</p>\n'
+            f"<p>{html.escape(_texto_leitura_impacto(r))}</p>\n{tab}\n"
+            f"<p>{html.escape(TEXTO_LIMITES_IMPACTO)}</p>")
+
+
+def fig_impacto(r: dict, pasta: Path) -> Path:
+    d = r["impacto_por_par"].iloc[::-1].reset_index(drop=True)
+    fig, ax = plt.subplots(figsize=(9.5, 3.2))
+    if d.empty:
+        ax.text(0.5, 0.5, "Nenhum par de canais com serviços em comum suficientes",
+                ha="center", va="center", transform=ax.transAxes, color=TINTA2)
+        ax.set_axis_off()
+    else:
+        y = np.arange(len(d))
+        v = d["dif_mediana_ponderada_dias"]
+        ax.barh(y, v, height=0.5, color=COR["portal_servicos"], alpha=0.85)
+        ax.errorbar(v, y, xerr=[(v - d["dif_mediana_ponderada_dias_ic_lo"]).clip(lower=0),
+                                (d["dif_mediana_ponderada_dias_ic_hi"] - v).clip(lower=0)],
+                    fmt="none", ecolor=TINTA, lw=1, capsize=3)
+        ax.axvline(0, color=TINTA2, lw=0.8)
+        for i, row in d.iterrows():
+            dias = _com_ic(row["dias_solicitacao_ano"], row["dias_solicitacao_ano_ic_lo"],
+                           row["dias_solicitacao_ano_ic_hi"], _fmt)
+            ax.text(1.02, i, f"{dias} dias de espera somados/ano", transform=ax.get_yaxis_transform(),
+                    va="center", fontsize=8.5)
+        ax.set_yticks(y, [f"{_par_rotulo(a, b)} ({int(n)} serv.)"
+                          for a, b, n in zip(d["canal_a"], d["canal_b"], d["servicos"])])
+        ax.margins(x=0.15)
+        ax.grid(axis="x", color=GRADE)
+        ax.set_axisbelow(True)
+    ax.set_xlabel("Diferença de mediana (B − A) por serviço, média ponderada pelo volume de B "
+                  "(dias; IC 95%)\n"
+                  "← B mais rápido    B mais lento →")
+    ax.set_title("Impacto estimado: diferença de tempo entre canais (A × B)")
+    _fonte(fig, "Contrafactual hipotético (se B tivesse o desempenho de A no mesmo serviço); "
+                "associação, não causa. À direita: dias de espera somados por ano (B − A).\n"
+                + _nota(r), y=-0.18)
+    return _salvar(fig, pasta / "07_impacto_por_par.png")
+
+
 def gerar_figuras(r: dict, pasta: Path) -> list[Path]:
     pasta = Path(pasta)
     pasta.mkdir(parents=True, exist_ok=True)
     return [fig_solicitacoes(r, pasta), fig_taxa(r, pasta), fig_mediana(r, pasta),
-            fig_distribuicao(r, pasta), fig_servico_canal(r, pasta), fig_floresta(r, pasta)]
+            fig_distribuicao(r, pasta), fig_servico_canal(r, pasta), fig_floresta(r, pasta),
+            fig_impacto(r, pasta)]
 
 
 # ---------------------------------------------------------------------------
@@ -304,6 +466,7 @@ def gerar_painel(r: dict, figuras: list[Path], qualidade: dict, caminho: Path) -
         "04": "Fração das encerradas que já tinham encerrado em cada prazo.",
         "05": "Comparação direta entre canais para o mesmo serviço.",
         "06": "Efeito combinado entre serviços para cada par de canais.",
+        "07": "Impacto estimado por par (contrafactual hipotético; associação, não causa).",
     }
     for f in figuras:
         b64 = base64.b64encode(Path(f).read_bytes()).decode()
@@ -336,6 +499,7 @@ def gerar_painel(r: dict, figuras: list[Path], qualidade: dict, caminho: Path) -
     rp = rank.get("proporcao", pd.DataFrame())
     fmt_rank = lambda df: df.assign(  # noqa: E731
         canal_a=df["canal_a"].map(C.ROTULO_CANAL), canal_b=df["canal_b"].map(C.ROTULO_CANAL))
+    impacto_html = secao_impacto_html(r)
     corpo = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Canais de atendimento da PBH</title><style>
@@ -368,6 +532,7 @@ mais tempo. I² mede a heterogeneidade entre serviços (alto = efeito varia muit
         "or_mh": _n, "or_ic_lo": _n, "or_ic_hi": _n, "p_cmh_holm": _p, "heterogeneidade_i2": _n,
         "delta_combinado": lambda v: _n(v, 3), "delta_ic_lo": lambda v: _n(v, 3),
         "delta_ic_hi": lambda v: _n(v, 3), "p_van_elteren_holm": _p})}</div>
+{impacto_html}
 <h2>Serviços com maior diferença de tempo entre canais</h2><div class="rolagem">{
         _tabela(fmt_rank(rt), {"delta_cliff": lambda v: _n(v, 3), "delta_ic_lo": lambda v: _n(v, 3),
                                "delta_ic_hi": lambda v: _n(v, 3), "p_tempo_holm": _p,

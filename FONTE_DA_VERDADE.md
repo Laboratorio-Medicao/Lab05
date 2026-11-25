@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.1 · criada em 20/11/2026, atualizada em 24/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.6 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -179,7 +179,9 @@ Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, ex
 
 ## 11. Impacto
 
-**Nada foi calculado.** Princípio: nenhuma economia de tempo ou horas pode ser afirmada sem métrica compatível e fonte. Possível estimativa (S03): volume anual de solicitações por canal (da própria base) × diferença relativa de tempo, **apenas** para os serviços e canais com comparação válida, sempre com IC e com a ressalva de associação. Conversão em horas do cidadão: **P5** (pendente). Limites de generalização: BH, 2020–2023, serviços com ≥ 2 canais comparáveis.
+**Executado em 25/11/2026** (issue #29; sem revisão do grupo): [docs/impacto.md](./docs/impacto.md), com `resultados/tabelas/impacto_por_par.csv`, `impacto_por_servico_par.csv` e `volume_anual_por_canal.csv` (código em `scripts/impacto.py`). É um **contrafactual hipotético** (volume anual de B × diferença de desempenho para A no mesmo serviço), **não** efeito causal, calculado só para Portal × PBH APP, Portal × Telefone 156 e PBH APP × Telefone 156, com IC de 95% por bootstrap de serviços. Pares com Presencial ficam de fora (inconclusivo, D14) e não se usam as medianas globais. Por pedido, a diferença é de poucos dias na mediana; os totais anuais são **escala de grandeza**, não economia. Os números ficam nos CSVs e em `docs/impacto.md`, não aqui.
+
+Princípio mantido: nenhuma economia de tempo ou horas pode ser afirmada sem métrica compatível e fonte. **Conversão em horas do cidadão não foi feita** (P5 segue aberta): dias até o encerramento administrativo não são horas de esforço. Limites de generalização: BH, 2020–2023, serviços com ≥ 2 canais comparáveis (e ≥ 30 registros por célula).
 
 ## 12. Reaproveitamento dos laboratórios anteriores
 
@@ -199,7 +201,8 @@ Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, ex
 | Pipeline (coleta, tratamento, análise, gráficos) | **Executado** com os dados reais em 24/11/2026: 10 CSVs, 1.480.736 registros, ~44 s a partir dos CSVs locais | `resultados/`, `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Reexecutar por outro integrante a partir do README (verificação por segunda pessoa) |
 | Testes automatizados | **55 testes passando** (dados sintéticos), 24/11/2026 | `tests/` | Rodar `python -m pytest` |
 | Interpretação dos resultados | **Executado** (v1.0, 24/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issue #25) | Revisão por outro integrante; decidir D14 |
-| Impacto, relatório | **Pendente** | — | #29 (impacto), #31 (documento final) |
+| Impacto | **Executado** (25/11/2026; sem revisão do grupo) | `docs/impacto.md`, `resultados/tabelas/impacto_*.csv` (#29) | Revisão por outro integrante; decidir P5 |
+| Relatório | **Pendente** | — | #31 (documento final) |
 | Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
 
@@ -217,7 +220,7 @@ Preservadas as P1–P14 originais. **Não renumerar, agrupar nem remover.** Nova
 | P2 | Regra provisória de fechamento dos blocos | **Obsoleta** (idem) |
 | P3 | Critério de exclusão por proporção de tarefas no teto de 300 s | **Obsoleta** (idem) |
 | P4 | Teste inferencial da RQ4 (violações WCAG × erros) | **Obsoleta** (RQ4 descontinuada) |
-| P5 | Conversão do impacto em horas | **Aberta** (grupo) |
+| P5 | Conversão do impacto em horas | **Aberta** (grupo). Conversão não feita: sem métrica compatível (`docs/impacto.md` §7) |
 | P6 | n mínimo abaixo de 32 | **Obsoleta** (não há amostra de participantes; hoje o critério é o mínimo por célula, P16) |
 | P7 | Como foi obtido o HTML da página inicial | **Encerrada em 20/11/2026** (evidência em `docs/evidencias/`) |
 | P8 | Leitura dos termos de uso do Portal | **Encerrada em 20/11/2026**. O pipeline atual não acessa o Portal |
@@ -256,6 +259,7 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | `FONTE_DA_VERDADE.md` | Este documento |
 | `docs/metodologia.md` | Metodologia vigente (v3.0) |
 | `docs/interpretacao_resultados.md` | Interpretação dos resultados (Q1–Q4, sensibilidade, limites), issue #25 |
+| `docs/impacto.md` | Estimativa de impacto por par de canais, com limites, issue #29 |
 | `docs/enunciado/` | Enunciado oficial (autoridade máxima) |
 | `docs/evidencias/` | Critérios do software (S01) e instruções do pedido LAI |
 | `docs/arquivo/s01-metodologia-participantes/` | Proposta, relatório e auditoria Lighthouse da metodologia **descontinuada** |
@@ -326,3 +330,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 2.6 | 23/11/2026 | Issue #25: dicionário de dados (proposta, a confirmar com o papel B), validador, análise, gerador de dados sintéticos, notebook `.py` percent, testes e `requirements.txt`. Tudo rodado **só com dados sintéticos**: **nenhum resultado**. P1 e P2 entram como parâmetros (opção provisória marcada PENDENTE, demais variantes como sensibilidade); teste da RQ4 desligável (P4). D10 registrada. Nenhuma pendência encerrada. Merge com a 2.5 (issue #20): `resultados/` passa a abrigar estimativas de simulação e saídas reais, nunca sintéticas; `requirements.txt` unificado |
 | 3.0 | 24/11/2026 | **Mudança de metodologia** (registro obrigatório): o experimento com participantes (celular × computador, SUS/SEQ, sessões, auditoria Lighthouse) é substituído por análise de **dados abertos de operação** da PBH por canal de atendimento. Motivo: a coleta com participantes exige recrutamento e sessões em número inviável para o grupo. Nova pergunta: para um mesmo serviço, tempo e taxa de encerramento diferem por canal? Validada a fonte (CKAN, CC-BY): **cobertura mai/2020–jul/2023, sem 2024–2026** (D11). Implementados pipeline (`scripts/`), testes (55), dicionário, metodologia e resultados reais. Material antigo arquivado em `docs/arquivo/` ou removido (§16). P1–P4, P6, P11, P12 marcadas obsoletas; novas P15 (professor aprovar a mudança), P16 (validar decisões de desenho), P17 (consultar a PBH). D1, D3, D10 encerradas/superadas; D11–D13 abertas. **Nenhuma aprovação do professor foi registrada** |
 | 3.1 | 24/11/2026 | Issue #25 (reescrita para a metodologia v3.0): criado `docs/interpretacao_resultados.md` com a resposta a Q1–Q4, sensibilidade e limites; §9 e §13 atualizadas. Registrada a D14 (dominância do Tapa-Buraco no delta combinado dos pares com Presencial). Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Issue #22 (32 sessões) fechada como obsoleta |
+| 3.6 | 25/11/2026 | Issue #29 (impacto): criados `scripts/impacto.py`, `tests/test_impacto.py` e `docs/impacto.md`; o pipeline passa a gravar `impacto_por_par.csv`, `impacto_por_servico_par.csv` e `volume_anual_por_canal.csv`, a figura 07 e uma seção de impacto no painel e no resumo. Estimativa de **contrafactual hipotético** só para Portal × APP, Portal × 156 e APP × 156 (Presencial fora, D14). §11 e §13 atualizadas; **P5 segue aberta** (conversão em horas não feita, sem métrica compatível). Tabelas e colunas anteriores de `resultados/` não mudaram. Numeração 3.6 definida pela ordem prevista de merge (renumerar se mudar) |

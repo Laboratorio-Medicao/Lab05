@@ -1,17 +1,18 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 2.6 · criada em 20/11/2026, atualizada em 23/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.0 · criada em 20/11/2026, atualizada em 24/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
-> Convenção de leitura: este documento separa sempre **exigido** (enunciado), **decidido** (professor), **planejado** (proposta), **executado** (evidência no repositório) e **resultado** (dado observado). Hoje existe apenas planejamento. **Não existe nenhum resultado empírico.** Os dados em `dados/sinteticos/` (prefixo `SINTETICO_`) são falsos, feitos só para testar o código da análise.
+> Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
 
-Fontes consultadas (links relativos):
+Fontes consultadas:
 
 | Sigla | Arquivo | Papel |
 |---|---|---|
-| ENUNCIADO | [docs/enunciado/ENUNCIADO_LAB05.pdf](./docs/enunciado/ENUNCIADO_LAB05.pdf) | Requisitos do professor (impressão da página do Canvas em 20/11/2026, 7 páginas; arquivo renomeado, ver §19) |
-| PROPOSTA | [docs/proposta/LAB05_S01_Proposta_FINAL.md](./docs/proposta/LAB05_S01_Proposta_FINAL.md) | Planejamento metodológico do grupo, revisado em 17/11/2026 (original de 16/11/2026) |
-| RELATÓRIO | [docs/relatorios/RELATORIO_FECHAMENTO_LAB05.md](./docs/relatorios/RELATORIO_FECHAMENTO_LAB05.md) | Auditoria e fechamento da S01, de 17/11/2026 |
+| ENUNCIADO | [docs/enunciado/ENUNCIADO_LAB05.pdf](./docs/enunciado/ENUNCIADO_LAB05.pdf) | Requisitos do professor (impressão do Canvas em 20/11/2026) |
+| METODOLOGIA | [docs/metodologia.md](./docs/metodologia.md) | Metodologia vigente (v3.0) |
+| DICIONÁRIO | [dados/dicionario_de_dados.md](./dados/dicionario_de_dados.md) | Fonte dos dados, colunas, classificação, limitações |
+| ARQUIVO | [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/) | Proposta e relatório S01 (histórico, descontinuados) |
 
 ---
 
@@ -20,16 +21,13 @@ Fontes consultadas (links relativos):
 | Campo | Valor | Fonte |
 |---|---|---|
 | Laboratório | Laboratório 05 — Experimento em Software Real (LAB05), 20 pontos | ENUNCIADO |
-| Curso / disciplina | Engenharia de Software — Laboratório de Experimentação de Software, 6º período, noite, Campus Lourdes (PUC Minas, PLU), 2026/2 | ENUNCIADO |
+| Curso / disciplina | Engenharia de Software — Laboratório de Experimentação de Software, 6º período, noite, Campus Lourdes (PUC Minas), 2026/2 | ENUNCIADO |
 | Professor | Danilo Maia | ENUNCIADO |
-| Objetivo acadêmico | Planejar, executar e analisar um experimento sobre software real, em operação e de alto impacto; responder "o que o estudo mostrou?" e "o que isso significa para quem usa esse software?" | ENUNCIADO |
-| Software estudado | Portal de Serviços da Prefeitura de Belo Horizonte (PBH), construído sobre a plataforma SYDLE ONE | PROPOSTA §1 |
-| Estudo | Experimento intrassujeitos celular × computador (32 participantes analisáveis planejados) + auditoria WCAG complementar | PROPOSTA |
-| Integrantes | **Não confirmados.** Em 22/11/2026 o cabeçalho passou a trazer só os primeiros nomes (Marcos A, Guilherme B, Arthur C), conforme a issue #15; nomes completos e conferência da autoria seguem na pendência P14 | PROPOSTA, P14 |
-| Sprint atual | **S01 (Proposta) fechada com pendências externas** em 17/11/2026. Piloto e aceite do professor **não têm evidência de execução**; pedido LAI informado como enviado em 22/11/2026, sem protocolo arquivado (ver §13) | RELATÓRIO |
-| Link repositório / GitHub Projects | A preencher (P14) | PROPOSTA §9 |
-
----
+| Software / objeto | Ecossistema de atendimento ao cidadão da Prefeitura de Belo Horizonte (PBH): Portal de Serviços (SYDLE ONE), PBH APP, Central 156 e atendimento presencial (BH Resolve) | METODOLOGIA |
+| Estudo | Análise observacional retrospectiva de dados abertos de operação (CKAN da PBH, CC-BY), mai/2020 a jul/2023 | METODOLOGIA |
+| Integrantes | **Não confirmados** (primeiros nomes: Marcos, Guilherme, Arthur); P14 | — |
+| Sprint atual | S01 entregue com o desenho antigo; reorientação em 24/11/2026 (P15 pendente com o professor) | §19 |
+| Link repositório / GitHub Projects | Repositório `Laboratorio-Medicao/Lab05`; link do Projects a preencher (P14) | — |
 
 ## 2. Fonte de autoridade e regras do projeto
 
@@ -68,7 +66,6 @@ Estimativas e premissas (inclusive o poder simulado) **não são resultados**.
 - Pendência só muda para "Encerrada" com a evidência citada na linha.
 
 ---
-
 ## 3. O que o professor exige (ENUNCIADO)
 
 ### 3.1 Obrigatório vs. sugestão
@@ -109,483 +106,194 @@ O enunciado usa linguagem explícita. Exigências firmes (**OBRIGATÓRIO**) são
 (1) software, por que é real/operação/alto impacto, com números; (2) pergunta e caminho; (3) 7 categorias com justificativa; (4) conceitos da disciplina; (5) reaproveitado dos laboratórios; (6) resultados com análise adequada ao tipo e escala; (7) ameaças (4 tipos); (8) impacto e o que **não** é possível afirmar.
 
 ---
-
 ## 4. Contexto e objeto de estudo
 
-**Portal de Serviços da Prefeitura de Belo Horizonte (PBH), sobre SYDLE ONE.** O objeto é o software em uso pelo cidadão, não código-fonte nem repositório (o que respeita a proibição de repositórios do GitHub).
+O objeto continua sendo o ecossistema de atendimento da PBH, agora observado pelos **resultados das solicitações** registradas no BH Digital, e não pela interação de participantes.
 
-### 4.1 Evidências (todas da PROPOSTA §1; acesso em 16/11/2026)
+### 4.1 Os três critérios do enunciado (§2a)
 
-| Critério | Evidência | Fonte | Situação da evidência |
-|---|---|---|---|
-| Real | HTML da página inicial carrega pacotes `@sydle/pbh-components`, `@sydle/sydle-one-components`, `@sydle/service-desk-components`, com `org: "bhdigital"`. SYDLE ONE é vendida como plataforma de BPM, CRM e Service Desk | Página inicial do Portal; sydle.com/br | **Forma de obtenção do HTML não documentada (P7)** |
-| Em operação | Portal no ar, lançado na plataforma atual em maio de 2020, com login único gov.br | PBH, 12/05/2020 | Citada; sem cópia arquivada no repositório |
-| Alto impacto | 1.492 serviços catalogados, 1.118 solicitáveis pela internet; jan–set/2026, 92% das demandas à Prefeitura entraram por Portal ou app | PBH, 05/10/2026 | Citada |
-| Alto impacto | 496.956 solicitações de serviço de jan–out/2023 (Portal + app + 156 + BH Resolve) | PBH, 27/12/2023 | Citada; soma de canais, não só Portal |
-| Alto impacto | 2.315.560 habitantes (Censo 2022); BH eleita cidade mais digital do Brasil pelo 3º ano | IBGE Cidades; PBH, 18/08/2026 | **Número do IBGE a conferir no navegador (P9)** |
+Evidências em [docs/evidencias/S01_criterios_do_software.md](./docs/evidencias/S01_criterios_do_software.md) (ainda válidas): Portal sobre SYDLE ONE (real); Portal no ar desde maio/2020 (em operação); 1.492 serviços catalogados e 92% das demandas jan–set/2026 via Portal ou app, 496.956 solicitações jan–out/2023, BH com 2.315.560 habitantes (alto impacto; cada número com fonte e data no arquivo de evidências). Em adição, o próprio conjunto de dados mostra a escala: **1.480.736 solicitações únicas** entre 11/05/2020 e 31/07/2023 (`dados/qualidade_dados.json`).
 
-Nenhuma cópia das páginas-fonte está no repositório; a verificabilidade depende de reacesso às URLs.
+### 4.2 Fonte dos dados (confirmada na API em 24/11/2026)
 
-### 4.2 Limitações
+Resumo; detalhes no [DICIONÁRIO](./dados/dicionario_de_dados.md).
 
-- **Acessos mensais ao Portal: desconhecidos.** Nenhuma página pública consultada informa. Pedido via LAI previsto (P10). **Não inventar esse número.**
-- Os 496.956 de 2023 somam quatro canais e servem apenas de contexto de escala, não de cálculo de horas.
-- O app BH SIM tem só 129 serviços (plano B Portal × app, descartado como principal por restringir tarefas comparáveis).
+- Dataset CKAN "Solicitações dos cidadãos, por meio dos canais de atendimento da PBH", licença **CC-BY**, 10 CSVs de dados + dicionário PDF (atualizado em 25/07/2023).
+- **Cobertura real: mai/2020 a jul/2023.** Não há 2024, 2025 nem 2026 (o pedido inicial supunha cobertura até 2026; foi **desmentido pela fonte**). O `metadata_modified` (10/06/2026) não corresponde a novos dados.
+- Outro dataset do mesmo CKAN, "Solicitações de Serviço e Incidentes", vai até 2026, mas é de **chamados de TI (Prodabel)**, sem canal: descartado.
+- Acesso automatizado: API do CKAN; o servidor bloqueia o user-agent padrão (HTTP 403) e aceita um identificado. O pipeline se identifica e respeita 1 req/s (enunciado §2).
+- Colunas de endereço e localização (logradouro, número, bairro, regional, coordenadas) existem na fonte; **são descartadas na leitura** e nunca persistidas.
 
-### 4.3 Restrição do robots.txt
+### 4.3 Limitações da fonte
 
-O robots.txt do Portal contém `User-agent: *` e `Disallow: /`. Consequências adotadas: **sem crawler, sem varredura, sem coleta automatizada em larga escala**. A compatibilidade de axe DevTools e Lighthouse, acionados manualmente, com o robots.txt e com os termos de uso **não está comprovada nem refutada** (P8, P12). Ver também a divergência D3 (§18) sobre o limite de 1 requisição/segundo.
+Ver DICIONÁRIO §6: cobertura até jul/2023; canais "Integração entre Sistemas" e "Origem Interna" e as "situações" não documentados; travessão perdido ("?") na origem; resolução de dia; sem id do cidadão; corte de observação inferido. O robots.txt do Portal **não se aplica** ao CKAN e deixou de ser relevante: o pipeline não acessa o Portal.
 
 ---
 
 ## 5. Perguntas de pesquisa e GQM
 
-**Pergunta principal:** o cidadão consegue encontrar e iniciar um serviço no Portal com a mesma eficácia, eficiência e satisfação no celular e no computador?
-**Complementar:** quais barreiras de acessibilidade (WCAG 2.2 AA) existem nas páginas dos serviços mais procurados, e elas coincidem com os pontos onde os participantes erram?
+**Principal:** para um mesmo serviço, existem diferenças no tempo de encerramento e na proporção de solicitações encerradas conforme o canal de atendimento?
 
-**Caminhos do enunciado combinados:** "estudar com pessoas" (principal) + "avaliar a qualidade do produto" (complementar).
-
-**Objetivo GQM (Basili):** analisar o Portal de Serviços da PBH, com o propósito de avaliar, com respeito à usabilidade e à acessibilidade, do ponto de vista do cidadão, no contexto de usuários adultos realizando consultas sem login em celular e computador.
-
-### 5.1 Perguntas e correspondência
-
-| GQM | Pergunta | RQ | Papel |
-|---|---|---|---|
-| Q1 | O dispositivo altera a eficácia (nº de tarefas concluídas)? | RQ1 | Confirmatória |
-| Q2 | O dispositivo altera o tempo nas tarefas (teto 300 s)? | RQ2 | Confirmatória |
-| Q3 | O dispositivo altera a satisfação percebida? | RQ3 | Confirmatória |
-| **Q4** | Quantas e quais violações WCAG existem nas páginas dos serviços da tarefa? | **nenhuma** | **Descritiva, sem hipótese** |
-| **Q5** | As violações estão nos passos onde os participantes erram? | RQ4 | Exploratória, fora do Holm, com teste (p-valor sem ajuste) |
-
-### 5.2 Métricas
-
-| Métrica | Q | Entidade | Atributo | Medida | Escala | Papel |
-|---|---|---|---|---|---|---|
-| Tarefa concluída (sim/não) | Q1 | Produto em uso | Eficácia (ext.) | Direta | Nominal | Insumo |
-| **Tarefas concluídas por participante e dispositivo (0–3)** | Q1 | Produto em uso | Eficácia (ext.) | Derivada | Razão (contagem) | **Teste RQ1** |
-| Taxa de conclusão (%) | Q1 | Produto em uso | Eficácia (ext.) | Derivada | Razão | Descritiva |
-| Tempo na tarefa (s, teto 300 s) | Q2 | Processo (uso) | Eficiência (ext.) | Direta | Razão | Insumo |
-| **Log-tempo médio por participante e dispositivo** | Q2 | Processo (uso) | Eficiência (ext.) | Derivada | Intervalar (log de razão) | **Teste RQ2** |
-| Nº de erros por tarefa | Q2 | Processo (uso) | Eficiência (ext.) | Direta | Razão (contagem) | Descritiva |
-| **Escore SUS (0–100)** | Q3 | Recurso (participante) sobre o produto | Satisfação (ext.) | Derivada | Intervalar (por convenção) | **Teste RQ3** |
-| Item SUS (1–5) | Q3 | Recurso | Satisfação | Direta | Ordinal | Descritiva |
-| SEQ pós-tarefa (1–7) | Q3 | Recurso | Dificuldade percebida | Direta | Ordinal | Descritiva |
-| Nº de violações axe por página e severidade | Q4 | Produto | Acessibilidade (int.) | Direta | Razão; severidade ordinal | Descritiva |
-| Nota Lighthouse de acessibilidade (0–100) | Q4 | Produto | Acessibilidade (int.) | Derivada | Ordinal (não intervalar) | Descritiva, complementar |
-| LCP e CLS (Lighthouse mobile) | Q4 | Produto | Eficiência de desempenho | Direta | Razão | Descritiva |
-| Taxa de erro por passo (erros ÷ pessoas que chegaram), por grupo: com violação / sem violação detectada / indeterminado | Q5 | Processo (uso) | Associação | Derivada | Razão | Exploratória descritiva |
-
-**Entram em teste de hipótese apenas:** tarefas concluídas (RQ1), log-tempo médio (RQ2), SUS (RQ3).
-**Só descritivos:** nº de erros por tarefa, item SUS, SEQ, SUS contra a referência de 68, taxa de conclusão em %, todas as métricas da Q4, e a distribuição das taxas por grupo de passos (RQ4; o teste da RQ4 é exploratório, ver §6.1).
-
-**Armadilhas de medição (tema da disciplina):** a nota Lighthouse é "jogável" (Goodhart); página nota 100 pode ser inutilizável com leitor de tela. Por isso não é métrica principal; o desfecho principal é a conclusão da tarefa por pessoas (contra a Falácia de McNamara).
-
----
-
-## 6. Hipóteses e desenho experimental
-
-Todos os testes bicaudais, α = 0,05. **RQ1–RQ3 confirmatórias, família Holm de 3 testes. RQ4 exploratória, fora do Holm, com teste próprio e p-valor sem ajuste (proposta de 22/11/2026, a validar no P4).**
-
-### 6.1 Hipóteses (definições da PROPOSTA §4, sem simplificação)
-
-| RQ | H0 | H1 | Teste planejado |
-|---|---|---|---|
-| RQ1 | Não há diferença no número de tarefas concluídas entre celular e computador | Há diferença no número de tarefas concluídas entre celular e computador | Wilcoxon pareado sobre diferença celular − computador (`scipy.stats.wilcoxon`, `zero_method="wilcox"`). **Não** McNemar (tarefas de cada dispositivo vêm de conjuntos diferentes). Efeito: r de postos |
-| RQ2 | A média, entre participantes, da diferença do log do tempo gasto (teto 300 s) (celular − computador) é zero, isto é, a razão das médias geométricas dos tempos (celular/computador) é 1 | A média da diferença do log do tempo é diferente de zero, isto é, a razão das médias geométricas é diferente de 1 | t pareado nas diferenças das médias do log. Efeito: d_z. O exponencial da diferença média estima a razão das médias geométricas **com teto**, não a razão das médias aritméticas |
-| RQ3 | A diferença média de SUS (celular − computador) é zero | A diferença média de SUS é diferente de zero | t pareado. Efeito: d_z |
-| RQ4 | Na mediana entre participantes, a diferença intraparticipante entre a taxa de erro por passo alcançado em passos com violação e sem violação detectada é zero | A mediana dessa diferença é diferente de zero | **Exploratória, fora do Holm.** Wilcoxon pareado sobre d_i (participante como unidade); sensibilidade: permutação por inversão de sinais; p-valor sem ajuste; efeito: média de d_i com IC bootstrap e r. **A validar pelo professor (P4)** |
-
-Nota: o RQ2 mede "tempo gasto com teto de 300 s", que **não** é o tempo até concluir quando a tarefa falha.
-
-### 6.2 Variáveis
-
-| Tipo | Variável | Níveis |
+| GQM | Pergunta | Métricas |
 |---|---|---|
-| Independente | Dispositivo | Celular Android (Chrome) × computador (Chrome, tela ≥ 1366×768) |
-| Dependentes | Tempo (teto 300 s), tarefas concluídas (0–3), erros, SEQ, SUS | — |
-| Controladas | Rede, navegador, tarefas, roteiro, moderador | Mesma rede Wi-Fi, Chrome atual, roteiro lido igual, um moderador fixo |
-| Bloqueio | Ordem do dispositivo e pareamento conjunto-dispositivo | Contrabalanceamento completo das 4 sequências |
-| Covariáveis registradas | Idade (faixa), uso prévio do Portal, familiaridade digital, sequência | Questionário inicial, sem identificação |
+| Q1 | Quais canais têm menor tempo mediano de encerramento? | Mediana, Q1–Q3, P90 (dias); mediana de Kaplan–Meier |
+| Q2 | A proporção de solicitações encerradas difere entre canais? | % encerrada em ≤ 90 dias e até o corte |
+| Q3 | As diferenças permanecem dentro do mesmo serviço? | OR de Mantel–Haenszel; delta de Cliff combinado; I²; nº de serviços em cada sentido |
+| Q4 | Quais serviços apresentam maior diferença entre canais? | Maior \|delta\| e maior \|dif. de risco\| por serviço |
 
-### 6.3 Desenho
+Entidades e atributos: entidade = solicitação (processo/recurso de atendimento); atributos externos, medidas diretas (datas) e derivadas (tempo, taxa). Escalas e estatísticas permitidas: METODOLOGIA §4. Armadilha de medição (Goodhart/McNamara): "encerrada" pode ser encerramento administrativo; uma taxa alta não prova que o problema foi resolvido.
 
-- **Intrassujeitos**, 1 fator de 2 níveis. Cada participante usa os dois dispositivos, com dois conjuntos de tarefas equivalentes (A e B).
-- **4 sequências** (ordem do dispositivo × pareamento conjunto-dispositivo): celular-A/computador-B, celular-B/computador-A, computador-A/celular-B, computador-B/celular-A. É contrabalanceamento completo das quatro sequências, **não** quadrado latino.
-- Ordem das 3 tarefas dentro do conjunto sorteada por participante.
-- **Tarefas:** 3 por conjunto, só consulta, sem login, encerradas na tela anterior a qualquer formulário. **Candidatas (a validar no piloto, não definitivas):** poda de árvore; documentos para alvará; reparo de buraco na via; segunda via de guia municipal. Os conjuntos A e B ainda **não** estão definidos.
-- **Cronômetro:** inicia quando o moderador termina a leitura e diz "pode começar"; para quando o participante chega à tela-alvo da tarefa e declara que terminou. Limite 300 s por tarefa.
+## 6. Definições e desenho da análise (fixadas antes de olhar os resultados)
 
-### 6.4 Participantes, amostra e recrutamento
+Detalhe completo na [METODOLOGIA §6](./docs/metodologia.md) e no cabeçalho de `scripts/estatistica.py`. Pontos que não se pode mudar sem registro:
 
-| Item | Valor |
-|---|---|
-| Meta | **32 analisáveis, 8 por sequência**. Adultos, por conveniência (colegas, familiares, funcionários da universidade); exclui quem trabalha no desenvolvimento do Portal |
-| Agendamento | 36 a 38 (cobre 10%–15% de faltas; 32/0,90 ≈ 35,6; 32/0,85 ≈ 37,6). Percentuais são estimativas de planejamento, sem dados. Reservas incluídas nesse número |
-| Piloto | 3 participantes, não repetem e não entram na análise final |
-| Recrutamento total | 39 a 41 (36–38 + 3 do piloto) |
-| Alocação | Blocos sorteados de 4 (um por sequência). 36 formam 9 blocos completos; 37 e 38 não formam blocos completos |
-| n fixo | Fixado antes da coleta; sem parada antecipada por resultados |
+1. **Estados:** encerrada / aberta / inconsistente. **Aberta nunca recebe tempo 0.**
+2. **Elegível:** não inconsistente, canal comparável (Portal, PBH APP, Telefone 156, Presencial), seguimento ≥ **90 dias** (coorte madura; decisão do grupo, **P16**).
+3. **Tempo:** dias entre criação e encerramento, só de encerradas. **Taxa:** % encerrada em ≤ 90 dias (medida de proporção testada) e até o corte (descritiva).
+4. **Mesmo serviço:** estratificação por serviço; célula serviço × canal precisa de ≥ 30 registros (**P16**).
+5. **Testes:** qui-quadrado/Fisher, Mann–Whitney, Kruskal–Wallis, CMH, van Elteren, teste dos sinais; efeitos (diferença de risco, OR, h, delta de Cliff, ε², V); Holm por família; sensibilidade em 30 e 180 dias.
+6. Com n ≥ 10⁵ o p-valor é quase sempre minúsculo: **interpretar por tamanho de efeito e consistência entre serviços**.
 
-**Regra operacional provisória de fechamento (NÃO aprovada pelo professor; P2):**
-1. Falta ou sessão inválida (falha técnica, interrupção) é reposta na mesma sequência.
-2. Análise primária usa os 8 primeiros analisáveis de cada sequência, por ordem de realização.
-3. Excedentes de sequência completa são dispensados antes da sessão; se já ocorreu, dados arquivados e descritos, fora da análise primária.
-4. Se terminar com sequências incompletas, analisam-se apenas os k blocos completos (k = menor n analisável entre as 4 sequências, k ≤ 8), com a perda de poder correspondente.
+## 7. Sete categorias da pesquisa
 
-Não há n mínimo definido abaixo de 32 (P6).
+Ver [METODOLOGIA §7](./docs/metodologia.md): aplicada; descritiva e exploratória (comparativa); quantitativa; análise documental de dados secundários (observacional retrospectivo); longitudinal retrospectivo; sem controle experimental (ajuste estatístico por serviço); evidência observacional (associação, não causa). **Preliminar**, a revisar na S03.
 
-### 6.5 Poder estatístico
+## 8. Coleta e tratamento (implementados)
 
-Estimado por **simulação conjunta com Holm de 3** sobre RQ1–RQ3 (script `power_analysis.py` v3.2, semente 20261117, 20.000 simulações por célula, erro de simulação ≈ 0,004; d_z nominal = 0,6 em RQ2 e RQ3; conclusão marginal de 90% no computador e 75% no celular na RQ1). Valores para n = 32 (arquivo `results_v3_2.json`, **conforme citado**):
+`python scripts/pipeline.py`: coleta → tratamento → análise → gráficos. Passos e módulos no README e no DICIONÁRIO. Garantias verificadas por testes (`tests/`): colunas de endereço não chegam à memória, à base nem a nenhuma saída; ids pseudonimizados; datas nos dois formatos; duplicatas por Id; abertas sem tempo; recusa de pasta de CSV bruto dentro do repositório; user-agent identificado e intervalo ≥ 1 s. Execução real de 24/11/2026: ver §13.
 
-| Cenário | RQ1 | RQ2 | RQ3 |
-|---|---|---|---|
-| S0 idealizado | 0,778 | 0,883 | 0,875 |
-| S1 realista | 0,671 | 0,821 | 0,818 |
-| S2 adverso | 0,557 | 0,650 | 0,649 |
+## 9. Plano de análise e resultados
 
-Em S1 o d_z efetivo de RQ2/RQ3 cai para 0,557; em S2, para 0,469.
+A análise é executada pelo código; os números vêm de `resultados/resumo.md`, `resultados/tabelas/` e `resultados/painel.html`. **Esta fonte não repete os números** para não divergirem do que o pipeline produz. A interpretação final (S02/S03) ainda **não foi redigida**: pendente do integrante responsável. Observações já visíveis nos dados, a serem tratadas na interpretação:
 
-#### 6.5.1 Reconstrução v4 (issue #20, 23/11/2026) — **Executado, não Verificado**
+- A comparação global (sem controlar o serviço) é enganosa: o Presencial parece encerrar muito menos, mas a maior parte de suas solicitações é de um único serviço (recurso à JARI), que permanece "em andamento" por natureza. O OR agregado de Mantel–Haenszel nos pares com Presencial é muito alto, porém **dominado por esse serviço** (I² próximo de 1, poucos serviços em comum); a mediana da diferença de risco por serviço fica perto de zero e o teste dos sinais não indica consistência entre serviços (ver `resultados/tabelas/pares_ajustados_por_servico.csv`).
+- Telefone 156 tem mediana de tempo maior que Portal e PBH APP; na comparação ajustada por serviço o delta combinado é de magnitude **desprezível** (|delta| < 0,147).
+- Todas as afirmações são associação em dados observacionais.
 
-Como o v3.2 não está no repositório (D1), foi escrita uma **reconstrução compatível**: [`scripts/power_analysis.py`](./scripts/power_analysis.py) **v4.0**, saída em [`resultados/results_v4.json`](./resultados/results_v4.json), testes em [`tests/test_power_analysis.py`](./tests/test_power_analysis.py). É um **modelo novo**, escrito a partir da descrição da proposta; **não é o v3.2 reproduzido** e não confirma nem refuta os valores citados. Rodada única com R = 20.000 por célula, semente 20261117 (`SeedSequence(20261117).spawn`, uma semente filha por célula), Python 3.12.10, numpy 2.5.3, scipy 1.16.3, em 23/11/2026 (~39 s).
+## 10. Ameaças à validade
 
-Modelo (detalhes no cabeçalho do script e no JSON): 4 sequências × 8; 3 tarefas por conjunto; traço latente do participante comum às RQs; RQ1 por tarefa Bernoulli (logit = intercepto do dispositivo + u_i), interceptos por Gauss-Hermite para manter 90%/75% marginais em cada cenário, Wilcoxon pareado (`zero_method="wilcox"`, aproximação normal; p = 1 se todas as diferenças forem 0); RQ2/RQ3 como diferença pareada padronizada com d_z nominal 0,6 e t pareado; Holm de 3 calculado à mão. S1/S2 somam diferença de dificuldade A/B, efeito de período, variação entre tarefas e ruído de sequência (efeito aleatório por sequência, que **não** se cancela na média).
+Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, externa, com mitigação). Principais: confusão residual por perfil da demanda; encerramento administrativo ≠ resolução; censura à direita; independência não verificável; cobertura só até jul/2023; poucos serviços em comum entre alguns canais.
 
-**Regra de calibração (fixada antes da rodada, sem reajuste depois):** (a) DP de u_i (logit) tal que o poder da RQ1 no S0 com Holm seja 0,778 → **DP_u = 0,9964** (calibração com 50.000 réplicas, semente própria); (b) variância extra de S1/S2 = (0,6/d_z alvo)² − 1, dividida em **25% conjunto, 25% tarefa, 25% período, 25% sequência** → S1: δ_conjunto = 0,200, π_período = 0,200, σ_tarefa = 0,245, σ_sequência = 0,200; S2: 0,399 / 0,399 / 0,489 / 0,399 (em DP da diferença; na RQ1, as mesmas magnitudes em logit); (c) correlação RQ2–RQ3 = 0,5, fixada. Critério de compatibilidade com o citado: |Δ| ≤ 3·EP_MC, EP_MC = √(p(1−p)/R).
+## 11. Impacto
 
-**Citado (v3.2) × reproduzido (v4), poder com Holm, n = 32** (Δ = v4 − citado):
-
-| Cenário | RQ | Citado | v4 | Δ | Δ/EP_MC | Compatível (≤ 3 EP)? |
-|---|---|---|---|---|---|---|
-| S0 | RQ1 | 0,778 | 0,779 | +0,001 | +0,4 | Sim (é o alvo da calibração (a)) |
-| S0 | RQ2 | 0,883 | 0,871 | −0,012 | −5,0 | **Não** |
-| S0 | RQ3 | 0,875 | 0,870 | −0,005 | −2,0 | Sim |
-| S1 | RQ1 | 0,671 | 0,754 | +0,083 | +27,1 | **Não** |
-| S1 | RQ2 | 0,821 | 0,799 | −0,022 | −7,9 | **Não** |
-| S1 | RQ3 | 0,818 | 0,802 | −0,016 | −5,7 | **Não** |
-| S2 | RQ1 | 0,557 | 0,687 | +0,130 | +39,5 | **Não** |
-| S2 | RQ2 | 0,650 | 0,637 | −0,013 | −3,8 | **Não** |
-| S2 | RQ3 | 0,649 | 0,635 | −0,015 | −4,2 | **Não** |
-
-d_z efetivo (RQ2/RQ3): analítico 0,600 / 0,557 / 0,469 (S0/S1/S2, exato por construção da regra (b)); empírico agregado 0,599–0,600 / 0,557 / 0,467–0,469. Poder sem ajuste do t pareado no S0: 0,906 (RQ2) e 0,908 (RQ3), contra 0,908 analítico (t não central).
-
-**Erro tipo I sob H0, ruído de S1** (FWER = ≥ 1 rejeição com Holm; a proposta §7 diz "erro familiar"):
-
-| n | Sequências | FWER v4 | Citado | Δ/EP_MC | Sem ajuste por RQ (RQ1 / RQ2 / RQ3) |
-|---|---|---|---|---|---|
-| 24 | 8/8/4/4 (faltam as duas "computador primeiro") | 0,064 | 0,068 | −2,2 (compatível) | 0,050 / 0,071 / 0,074 |
-| 28 | 8/8/8/4 (falta computador-B/celular-A) | 0,061 | 0,073 | −6,8 (**não**) | 0,051 / 0,066 / 0,065 |
-| 32 | 8/8/8/8 | 0,061 | não simulado no v3.2 | — | 0,051 / 0,068 / 0,067 |
-| 32 (S0, sem ruído) | 8/8/8/8 | 0,044 | — | — | 0,050 / 0,049 / 0,050 |
-
-**Leitura:** só 2 dos 9 valores de poder ficam dentro de 3 EP_MC (um deles é o próprio alvo de calibração), e um dos dois valores de erro tipo I. A maior diferença é a RQ1 em S1/S2: no v4 o ruído de S1/S2 quase não reduz o poder da RQ1 (0,779 → 0,754 → 0,687), enquanto o citado cai para 0,671 e 0,557; isso indica que o v3.2 usava, na RQ1, perturbações bem maiores (ou de outra forma) do que as do v4, o que não é recuperável sem o script original. Em RQ2/RQ3 o v4 fica 0,005–0,022 abaixo do citado. No v4, o ruído de sequência infla o erro tipo I **mesmo com 8 por sequência** (FWER 0,061 no S1 balanceado), de modo que "mesmo n por sequência" não basta para manter 0,05 nesse modelo. Essas diferenças estão registradas na D1 (§18); proposta e relatório **não** foram alterados.
-
-**Limitações (obrigatório repetir ao citar poder):** (i) são estimativas condicionadas a premissas, não garantias; (ii) poder da RQ1 < 0,80 mesmo em S1; (iii) a simulação da RQ2 não representa a massa de tarefas no teto, as tarefas não concluídas nem a relação falha–tempo; (iv) a RQ4 não tem poder calculado como confirmatória; (v) parâmetros de S1 e S2 foram escolhidos pelo grupo sem dados de apoio (no v4, as proporções da regra (b), a correlação de 0,5 e a escala do ruído da RQ1 também são escolhas sem dados); (vi) **o script v3.2 e o `results_v3_2.json` continuam fora do repositório** (D1, §18); existe a reconstrução v4, que é outro modelo e **não reproduz** a maior parte dos valores citados (tabela acima).
-
-### 6.6 Tarefa não concluída, abandono e teto de 300 s
-
-- A regra será definida **antes da coleta** e aplicada igualmente nos dois dispositivos; o moderador **só registra** evento e tempo, sem decidir durante a sessão.
-- Pela proposta original: estourar 300 s = não concluída, tempo = 300 s; pedido de ajuda = não conclusão.
-- 300 s **não** é tempo real de conclusão.
-- **Indefinido (P1):** tempo da tarefa abandonada antes de 300 s e da encerrada por pedido de ajuda.
-- **Sem** limite de validade nem critério de exclusão por proporção de tarefas no teto (P3); o relatório informa, por dispositivo, quantidade e proporção de tarefas que chegaram a 300 s.
-
----
-
-## 7. As sete categorias da pesquisa (primeira versão — **preliminar**)
-
-| Categoria | Classificação | Justificativa (resumo) |
-|---|---|---|
-| Natureza | Aplicada | Problema prático de serviço público em produção; não busca teoria nova |
-| Objetivos | Explicativa (com parte descritiva) | Testa se o dispositivo causa diferença; a auditoria descreve barreiras |
-| Abordagem | Mista, predominantemente quantitativa | Métricas e testes; comentários e notas do moderador analisados qualitativamente |
-| Procedimentos | Experimento controlado + avaliação de produto | Manipula o dispositivo com contrabalanceamento; auditoria é inspeção sistemática contra a WCAG |
-| Tempo | Transversal | Uma única sessão por participante; auditoria é retrato da versão do Portal no período |
-| Controle | Laboratório (in vitro) sobre software real | Ambiente, rede, roteiro e tarefas fixados; software não controlado e pode mudar |
-| Nível de evidência | Experimento único com amostra por conveniência | Controle interno alto, sem amostragem aleatória de BH: evidência causal local, generalização limitada |
-
-**Classificação sujeita a revisão na S03** conforme a execução real. Gatilhos: sequências incompletas com análise só dos k blocos completos (k < 8; P2/P6), perdas que desbalanceiem as sequências, ou mudança do Portal que altere as tarefas → passa a quase-experimento.
-
----
-
-## 8. Plano de coleta e instrumentação
-
-### 8.1 Roteiro da sessão (~30 min)
-
-1. Termo de consentimento; código P01, P02… (sem nome na base).
-2. Questionário inicial: faixa etária, frequência de uso do Portal, familiaridade digital.
-3. Primeiro dispositivo: 3 tarefas, cada uma seguida de SEQ (1–7).
-4. SUS do primeiro dispositivo.
-5. Segundo dispositivo: 3 tarefas do outro conjunto, cada uma seguida de SEQ.
-6. SUS do segundo dispositivo + pergunta aberta "o que mais atrapalhou?".
-
-### 8.2 Instrumentos
-
-- **Planilha de observação padronizada:** início/fim por tarefa (cronômetro), conclusão, erros (clique em caminho errado, volta, busca refeita) e passo onde ocorreram. *Ainda não existe no repositório.*
-- **Gravação de tela:** opcional, só com consentimento explícito, sem câmera nem áudio, apagada após codificação.
-- **SUS e SEQ:** versão validada em português (fonte da versão a registrar).
-- **Registro de versão:** data, hash dos pacotes `ui-package` carregados e versão do Portal em cada sessão.
-
-### 8.3 Navegação manual × verificações automatizadas
-
-| Atividade | Quem/como | Natureza |
-|---|---|---|
-| Uso do Portal nas tarefas | Participantes, manualmente, dispositivo e navegador padrão | Navegação manual |
-| Auditoria | Integrante B aciona **axe DevTools** e **Lighthouse** (mobile e desktop) no Chrome, **manualmente, uma página por vez**, em 12–20 páginas selecionadas percorridas pelas tarefas; 3 execuções por página para desempenho; registra data, versão do Chrome e JSON exportado | Ferramentas executam verificações automatizadas **sobre a página aberta**; o Lighthouse recarrega a página a cada execução |
-| Checklist WCAG complementar | Manual | Inspeção |
-
-**Não há:** crawler, varredura de páginas, teste de carga ou coleta automatizada em larga escala. Este estudo **não deve ser descrito** como crawler ou varredura.
-
-### 8.4 Rótulo WCAG para a RQ4
-
-Atribuído, sempre que possível, ao **elemento** usado no passo (campo, botão, link, região), não à página inteira. "Sem violação" = "sem violação detectada por axe e checklist manual", nunca ausência comprovada. Passos cujo elemento não possa ser identificado formam a categoria **"indeterminado"** (quantidade e motivo reportados).
-
-### 8.5 Ética, anonimização e versionamento
-
-- Sem crawler; sem login; sem formulário enviado; sem conta ou dado real dos participantes; tarefa termina antes do login gov.br.
-- Nenhum dado pessoal armazenado: só código do participante, faixas e respostas. Gravação apagada após codificação.
-- Consentimento obrigatório. Necessidade de apreciação por comitê de ética: decisão do professor/instituição (P11).
-- Se o professor discordar do uso de axe/Lighthouse, **a auditoria sai** e o estudo fica só com participantes (P12).
-- Dados brutos (planilhas anonimizadas e JSON da auditoria) no repositório, com dicionário de dados e registro de data/versão do Portal.
-
-### 8.6 Limitações da coleta
-
-Moderador único (viés possível); cronometragem manual (conferência de amostra por segundo integrante); um aparelho/navegador específico; software de terceiros que pode mudar durante a coleta (janela de até 2 semanas planejada; P13 define a janela real); amostra por conveniência.
-
----
-
-## 9. Plano de análise
-
-Cada métrica recebe o teste permitido pela escala e pelo desenho pareado.
-
-| Análise | Unidade | Descritiva | Inferência? | Teste | Efeito / IC |
-|---|---|---|---|---|---|
-| RQ1 conclusão | Participante | Média e distribuição por dispositivo | **Sim (Holm)** | Wilcoxon pareado | r de postos; IC 95% da diferença da taxa de conclusão por bootstrap de participantes |
-| RQ2 tempo | Participante (média do log por dispositivo) | Mediana, IQR, boxplot; quantidade e proporção de tarefas no teto por dispositivo | **Sim (Holm)** | t pareado no log | d_z; exp(diferença média) = razão das médias geométricas (com teto), com IC. **Sensibilidade:** Wilcoxon pareado; análise só das concluídas (viés de seleção) |
-| RQ3 SUS | Participante | Média e DP por dispositivo | **Sim (Holm)** | t pareado | d_z |
-| RQ4 violações × erros | **Participante** (d_i = taxa com − sem violação, por passo alcançado; indeterminados fora) | Tamanho de cada grupo, contagens de erros, passos alcançados, taxas por grupo, distribuição de d_i; tabela 2×2 (Fisher apenas descritivo) | Exploratório, fora do Holm | Wilcoxon pareado sobre d_i; sensibilidade: permutação por inversão de sinais; p-valor sem ajuste | Média de d_i com IC 95% bootstrap; r de postos |
-| SEQ, SUS vs. 68 | — | Mediana/distribuição; média/DP com referência de 68 | Não | — | — |
-| Auditoria (Q4) | Página | Totais, mediana por página, top 10 regras WCAG violadas | Não | — | — |
-
-- **Holm** sobre RQ1–RQ3 (α = 0,05 na família de 3). Teste primário de cada RQ fixado **antes** da coleta, sem escolher teste pelo resultado de normalidade.
-- **Controle de ordem:** verificar efeito de período e de conjunto (A × B) antes de interpretar o dispositivo. Com 8 por sequência o poder dessa checagem é baixo e **não calculado**; não encontrar efeito não prova que seja nulo.
-- **Erro tipo I:** sequências desbalanceadas podem elevá-lo acima de 0,05 (simulações n = 24 e 28: 0,068 e 0,073 no cenário realista; **n = 32 não foi simulado**). Por isso a meta é o mesmo n por sequência. A reconstrução v4 (§6.5.1) simulou também n = 32 balanceado: FWER 0,061 no ruído de S1 (estimativa do modelo v4, não resultado).
-- **RQ4 — teste proposto (22/11/2026), a validar no P4:** a permutação de rótulos entre passos não é defensável (rótulos detectados, não randomizados; complexidade, posição e tipo de tarefa coincidem com violações; passos sequenciais; mesma página nos dois dispositivos; denominadores diferentes). Por isso a unidade é o **participante**: taxa por passo alcançado com × sem violação (dispositivos somados, indeterminados fora), Wilcoxon pareado sobre a diferença, permutação por inversão de sinais como sensibilidade e repetição por tarefa. Resolve as dependências (iii)–(v); **não** resolve a falta de randomização dos rótulos. p-valor exploratório, sem ajuste; poder não calculado. Um resultado indica associação nos passos observados, **não** causa e **não** se estende ao resto do Portal.
-- **Ferramentas:** Python (pandas, scipy, statsmodels) em notebook versionado; gráficos/dashboard reaproveitando a base do Lab04.
-
----
-
-## 10. Ameaças à validade (PROPOSTA §8)
-
-| Tipo | Ameaça | Consequência | Mitigação planejada |
-|---|---|---|---|
-| Conclusão | Amostra de 32 deixa poder < 0,80 na RQ1 e, em cenários adversos, em RQ2/RQ3; múltiplos testes inflam erro tipo I | Falsos negativos; falsos positivos | Poder simulado antes da coleta; Holm; reportar efeito e IC; poder apresentado como condicional |
-| Conclusão | Faltas e substituições desbalanceiam sequências | Erro tipo I > 0,05 | Blocos de 4; reposição na mesma sequência; análise só de blocos completos (regra provisória, P2) |
-| Conclusão | Cronometragem manual imprecisa | Ruído no tempo | Regra fixa de início/fim; segundo integrante confere amostra das gravações |
-| Conclusão | Tarefas no teto de 300 s sem tempo real; teto não simulado no poder | Estimativa de tempo enviesada; poder da RQ2 não comprovado | Relatar quantidade e proporção por dispositivo; sensibilidades; regra única antes da coleta (P1, P3) |
-| Interna | Aprendizado: 2ª rodada mais rápida | Confunde dispositivo e ordem | 4 sequências; teste de efeito de período (poder baixo) |
-| Interna | Portal muda durante a coleta | Condições diferentes entre sessões | Coleta em até 2 semanas; registrar data e hash dos pacotes |
-| Interna | Moderador induz o participante | Viés de desempenho | Roteiro idêntico; moderador não ajuda nem decide; pedido de ajuda = não conclusão |
-| Interna | RQ4: rótulos não randomizados, passos dependentes, mesma página em dois dispositivos, denominadores distintos, confusão por complexidade | Associação espúria ou mascarada | Rótulo no elemento; indeterminados reportados; unidade no participante, denominador de passos alcançados, sensibilidade por tarefa; p-valor exploratório sem ajuste; sem causalidade nem generalização |
-| Construto | Tarefas sem login não representam o uso completo | Construto reduzido | Declarar o construto como "encontrar e iniciar" o serviço |
-| Construto | Nota Lighthouse ≠ acessibilidade real; "sem violação" = "não detectada" | Falsa segurança | Contagem axe e erros de pessoas como principais; Lighthouse complementar |
-| Externa | Amostra de estudantes e conhecidos, mais jovem e digital que a população de BH | Generalização limitada | Registrar perfil; não generalizar para idosos ou pessoas com deficiência; recrutar fora da turma |
-| Externa | Um aparelho e um navegador | Resultado restrito | Declarar modelo e versão; vale para Android/Chrome em rede estável |
-| Externa | Poucos serviços entre 1.118 solicitáveis | Não representa o catálogo | Serviços de alta demanda; não extrapolar |
-
----
-
-## 11. Impacto para usuários e empresas
-
-**Princípio:** nenhuma economia de tempo ou horas de cidadãos pode ser afirmada sem dados externos e métrica compatível. **Nada foi calculado.**
-
-| Camada | Conteúdo | Situação |
-|---|---|---|
-| **Impacto relativo mensurável (resultado principal, S03)** | (i) razão das médias geométricas dos tempos (RQ2), com IC; (ii) diferença no nº de tarefas concluídas (RQ1); (iii) diferença de SUS (RQ3) | Planejado; depende da coleta |
-| Estimativa secundária | Conversão em horas do cidadão | **Pendente (P5)**. Não se converte a razão das médias geométricas em segundos/horas (o total depende da média aritmética; o teto de 300 s não é tempo real) |
-| Dados externos necessários | Solicitações mensais por serviço testado, fração de uso por celular, distribuição de tempos | **Grupo não os possui**; acessos mensais via LAI (P10) |
-| Contexto de escala | 496.956 solicitações de 2023; 1.118 serviços online; 92% das demandas via Portal/app (jan–set/2026) | Só contextualiza; **não** serve para calcular horas |
-| Limites de generalização | Só os serviços das tarefas testadas, Android/Chrome, rede estável, amostra por conveniência; sem idosos nem pessoas com deficiência; qualquer extrapolação mantém o IC | Obrigatório declarar |
-
-Formato sugerido de entrega final: reunião simulada com o gestor do Portal (sugestão do grupo, não decisão).
-
----
+**Nada foi calculado.** Princípio: nenhuma economia de tempo ou horas pode ser afirmada sem métrica compatível e fonte. Possível estimativa (S03): volume anual de solicitações por canal (da própria base) × diferença relativa de tempo, **apenas** para os serviços e canais com comparação válida, sempre com IC e com a ressalva de associação. Conversão em horas do cidadão: **P5** (pendente). Limites de generalização: BH, 2020–2023, serviços com ≥ 2 canais comparáveis.
 
 ## 12. Reaproveitamento dos laboratórios anteriores
 
-| Lab | Reaproveitado (planejado) | Novo no LAB05 | Evidência no repositório |
+| Lab | Conceito reaproveitado | Novo no LAB05 | Evidência |
 |---|---|---|---|
-| Lab01 | Kanban no GitHub Projects | Coleta manual por pessoas, sem API | Nenhuma (link do Projects ainda a preencher, P14) |
-| Lab02 | Desenho com tratamentos e participantes; termo de consentimento | Contrabalanceamento intrassujeitos das 4 sequências | Nenhuma (termo não está no repositório) |
-| Lab03 | Visão de métricas de operação (DORA) como contexto | Qualidade em uso (ISO/IEC 25010) e WCAG | Nenhuma |
-| Lab04 | Escolha do teste, simulação de poder e de erro tipo I, dashboard | Testes pareados (Wilcoxon, t pareado), Holm, impacto relativo | Nenhuma (scripts e dashboard do Lab04 não estão neste repositório) |
-
-A coluna "Reaproveitado" é **intenção declarada**; nada foi verificado como efetivamente reutilizado.
-
----
+| Lab01 | Coleta automatizada de dados via API | Cliente da API do CKAN com limite de 1 req/s | `scripts/coleta.py` (**conceito**; o código do Lab01 não está neste repositório) |
+| Lab02 | Desenho de experimento | Substituído: estudo observacional, sem participantes | — |
+| Lab03 | Métricas de operação (tempo até encerramento ≈ lead time/MTTR) | Aplicadas a solicitações de atendimento | `scripts/estatistica.py` (conceito) |
+| Lab04 | Escolha do teste de hipótese, tamanho de efeito, dashboard | Testes não paramétricos e estratificados; painel HTML | `scripts/estatistica.py`, `scripts/visualizacao.py` (conceito; o código do Lab04 não está aqui). Simulação de poder/erro tipo I **não se aplica** (dados populacionais, n enorme) |
 
 ## 13. Estado atual do projeto
 
-Legenda: **Verificado** · **Planejado** · **Em andamento** · **Pend. professor** · **Pend. grupo** · **Pend. documental**.
-
 | Item | Situação | Evidência | Próxima ação |
 |---|---|---|---|
-| Texto da proposta S01 (versão FINAL de 17/11/2026) | Concluído (texto); **não** verificado por terceiros nem aprovado | `docs/proposta/LAB05_S01_Proposta_FINAL.md` | Submeter ao professor |
-| Relatório de fechamento da S01 | Concluído (texto) | `docs/relatorios/RELATORIO_FECHAMENTO_LAB05.md` | — |
-| PDF da proposta | Declarado no relatório; **ausente do repositório** | Nenhuma (D2) | Localizar/regerar e versionar, ou corrigir o relatório |
-| Escolha do software e evidências dos 3 critérios | Planejado/documentado; evidências citadas, não arquivadas | PROPOSTA §1 | Resolver P7 e P9; arquivar capturas |
-| Aceite do professor sobre a auditoria (P12) | Pend. professor | Nenhuma | Levar ao professor |
-| Validação da regra de fechamento, tempo de abandono, teto (P1, P2, P3) | Pend. professor | Nenhuma | Levar ao professor |
-| Ética / comitê (P11) | Pend. professor | Nenhuma | Consultar professor/instituição |
-| Termos de uso (P8) | Pend. documental | Nenhuma | Ler e registrar |
-| Pedido via LAI (P10) | Enviado em 22/11/2026 (informado pelo grupo) | Nenhuma ainda (sem protocolo/captura) | Arquivar protocolo e captura |
-| Tarefas definitivas e conjuntos A/B | Planejado (candidatas) | PROPOSTA §4 | Definir e validar no piloto |
-| Planilha de observação, roteiro final, termo de consentimento, formulários SUS/SEQ | Planejado; **inexistentes no repositório** | Nenhuma | Produzir (integrante B) |
-| Script `power_analysis.py` v3.2 e `results_v3_2.json` | Citados; **ausentes do repositório** | Nenhuma (D1) | Localizar e versionar, se existirem |
-| Reconstrução da simulação de poder (v4, issue #20) | **Executado** em 23/11/2026; **não** verificado por segunda pessoa; 7 dos 9 valores citados e 1 dos 2 de erro tipo I ficam fora de 3 EP_MC | `scripts/power_analysis.py`, `resultados/results_v4.json`, `tests/test_power_analysis.py` (§6.5.1) | Grupo decidir como tratar a divergência com o citado (D1) e conferir o script |
-| Piloto (3 participantes + auditoria de 3 páginas) | Planejado; **sem evidência de execução** | Nenhuma | Executar e registrar |
-| Coleta principal (S02) | Planejado | — | Aguardar P1–P3, P13 |
-| Auditoria completa axe/Lighthouse | Planejado; condicionado a P12 | — | Aguardar P12 |
-| Dicionário de dados (`dados/dicionario_de_dados.md`) | **Proposta do papel C, a confirmar com o papel B** (issue #25) | `dados/dicionario_de_dados.md`, `scripts/esquema.py` | Revisar com o papel B antes da planilha de observação |
-| Análise estatística e notebook | **Em andamento** (issue #25): validador, análise, gerador sintético, notebook e testes prontos e rodados **só com dados sintéticos**; nenhum dado real, **nenhum resultado** | `scripts/validar_dados.py`, `scripts/analise.py`, `notebooks/analise_S02.py`, `tests/` | Confirmar dicionário (B); decisões P1, P2, P4; rodar com dados reais após a coleta e a validação por segunda pessoa |
-| Estimativa de impacto relativo (S03) | Planejado | — | Após análise |
-| Conversão em horas | Pend. grupo (P5) | — | Decidir se será feita |
-| Teste inferencial na RQ4 | Proposto pelo grupo em 22/11/2026; pend. validação do professor (P4) | Proposta §7 | Validar |
-| n mínimo (P6) | Pend. grupo | — | Decidir |
-| Datas S02/S03/Final e janela de coleta (P13) | Pend. documental | — | Obter do cronograma da disciplina |
-| Repositório e GitHub Projects (P14) | Pend. documental | — | Preencher |
-| Conferência visual das páginas do PDF não vistas | Pend. (relatório §6) | RELATÓRIO | Conferir |
-| Concordância do grupo com o teste exploratório da RQ4 (proposto em 22/11/2026) e com a categoria "indeterminado" | Pend. grupo (adotadas "por instrução", sem votação registrada) | RELATÓRIO §6 | Registrar a decisão |
+| Reorientação para dados abertos | **Executado** (código, docs, testes); **não aprovado pelo professor** (P15) | `scripts/`, `docs/metodologia.md` | Levar ao professor |
+| Validação da fonte | **Executado** em 24/11/2026 (cobertura, colunas, licença, API) | DICIONÁRIO §1 | Confirmar com a PBH se há dados > jul/2023 (P17) |
+| Pipeline (coleta, tratamento, análise, gráficos) | **Executado** com os dados reais em 24/11/2026: 10 CSVs, 1.480.736 registros, ~44 s a partir dos CSVs locais | `resultados/`, `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Reexecutar por outro integrante a partir do README (verificação por segunda pessoa) |
+| Testes automatizados | **55 testes passando** (dados sintéticos), 24/11/2026 | `tests/` | Rodar `python -m pytest` |
+| Interpretação dos resultados, impacto, relatório | **Pendente** | — | Integrante responsável |
+| Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
+| Documento e apresentação (10 min) | Pendente | — | Entrega final |
 
-Nenhuma atividade de coleta, auditoria ou análise está marcada como concluída porque **não há artefato** que a comprove.
+"Verificado" (§2.3) exige conferência por segunda pessoa: ainda **não** houve; o pipeline foi executado e testado por quem o implementou.
 
 ---
 
-## 14. Registro das pendências P1–P14
+## 14. Registro das pendências
 
-Preservadas integralmente da PROPOSTA §10 e do RELATÓRIO §4. **Todas estão abertas em 20/11/2026.**
+Preservadas as P1–P14 originais. **Não renumerar, agrupar nem remover.** Novas a partir da P15.
 
-| ID | Descrição | Tipo | Responsável | Situação | Para encerrar |
-|---|---|---|---|---|---|
-| P1 | Tratamento do tempo da tarefa abandonada antes de 300 s e da encerrada por pedido de ajuda (RQ2); definir antes da coleta | Professor | Professor | **Aberta** | Resposta documentada do professor; regra registrada no protocolo e aqui |
-| P2 | Validação da regra operacional provisória de fechamento dos blocos e da análise só de blocos completos | Professor | Professor | **Aberta** (regra provisória) | Aprovação documentada, ou regra substituta |
-| P3 | Critério formal de validade/exclusão por proporção de tarefas no teto de 300 s (nenhum adotado) | Professor | Professor | **Aberta** | Decisão documentada (adotar critério ou confirmar que não haverá) |
-| P4 | Teste inferencial na RQ4: critério de adequação dos grupos e denominadores, estatística, unidade de análise, verificação de permutabilidade | Grupo e Professor | Grupo, com validação do professor | **Aberta** (teste proposto em 22/11/2026) | Validação do professor da especificação (Wilcoxon pareado por participante; sensibilidade por permutação de sinais) e do poder |
-| P5 | Conversão do impacto em horas (secundária): métrica compatível e dados externos | Grupo | Grupo | **Aberta** | Métrica definida e dados externos com fonte (ou decisão de não converter) |
-| P6 | n mínimo abaixo de 32 e como declarar o estudo nesse caso | Grupo | Grupo | **Aberta** | n mínimo e rótulo do estudo decididos e registrados |
-| P7 | Como foram obtidos a leitura do HTML da página inicial e o tempo de resposta (HTTP 200 em 0,49 s). A frase do tempo de resposta foi **retirada** do texto | Documental | Grupo | **Encerrada em 20/11/2026** (HTML de https://servicos.pbh.gov.br, 18:57, Chrome 158.0.8127.36, via view-source Cmd+Option+U; trecho sem tokens em `docs/evidencias/capturas/`). Ressalva: o tempo de 0,49 s segue fora do texto | Registro feito: ver `docs/evidencias/S01_criterios_do_software.md` §2 |
-| P8 | Leitura dos termos de uso do Portal e registro | Documental | Grupo | **Encerrada em 20/11/2026** (Termos de Uso em `https://servicos.pbh.gov.br/termos-de-uso+5df3bbb5ad0ab2006ceca0ad`, menu "O Portal"; sem menção a acesso automatizado, robôs ou ferramentas de auditoria; Política de Privacidade não lida; leitura feita por assistente no Chrome do coletor, com autorização, a informar ao professor na P12; reler antes da S02) | Registro em `docs/evidencias/S01_criterios_do_software.md` §4.2 |
-| P9 | Conferência no navegador do nº de habitantes de BH no IBGE Cidades | Documental | Grupo | **Encerrada em 20/11/2026** (IBGE Cidades mostra 2.315.560 pessoas, Censo 2022; estimativa 2026: 2.415.451; captura em `docs/evidencias/capturas/`; conferência feita por assistente no Chrome do coletor, com autorização) | Registro em `docs/evidencias/S01_criterios_do_software.md` §3 |
-| P10 | Envio do pedido via LAI ao canal de transparência da PBH e resposta | Documental | Grupo | **Enviada em 22/11/2026; protocolo a anexar depois** | Protocolo do envio e resposta arquivados |
-| P11 | Necessidade de apreciação por comitê de ética | Professor | Professor ou instituição | **Aberta** | Decisão documentada |
-| P12 | Validação do uso de axe DevTools e Lighthouse (manuais) frente ao robots.txt e à ética do enunciado | Professor | Professor | **Aberta** | Aceite/recusa documentada; se recusa, auditoria removida |
-| P13 | Datas reais de S02, S03 e entrega final; janela de coleta | Documental | Grupo, conforme cronograma da disciplina | **Aberta** | Datas copiadas do cronograma oficial e registradas |
-| P14 | Link do repositório e do GitHub Projects; conferência da autoria no cabeçalho | Documental | Grupo | **Aberta** (cabeçalho com primeiros nomes) | Links preenchidos; nomes completos confirmados |
-
-**Não renumerar, agrupar nem remover.** Novas pendências devem receber P15 em diante.
+| ID | Descrição | Situação em 24/11/2026 |
+|---|---|---|
+| P1 | Tempo da tarefa abandonada antes de 300 s / pedido de ajuda (RQ2) | **Obsoleta** (metodologia anterior; sem tarefas com participantes) |
+| P2 | Regra provisória de fechamento dos blocos | **Obsoleta** (idem) |
+| P3 | Critério de exclusão por proporção de tarefas no teto de 300 s | **Obsoleta** (idem) |
+| P4 | Teste inferencial da RQ4 (violações WCAG × erros) | **Obsoleta** (RQ4 descontinuada) |
+| P5 | Conversão do impacto em horas | **Aberta** (grupo) |
+| P6 | n mínimo abaixo de 32 | **Obsoleta** (não há amostra de participantes; hoje o critério é o mínimo por célula, P16) |
+| P7 | Como foi obtido o HTML da página inicial | **Encerrada em 20/11/2026** (evidência em `docs/evidencias/`) |
+| P8 | Leitura dos termos de uso do Portal | **Encerrada em 20/11/2026**. O pipeline atual não acessa o Portal |
+| P9 | Habitantes de BH (IBGE) | **Encerrada em 20/11/2026** (2.315.560, Censo 2022) |
+| P10 | Pedido via LAI (acessos ao Portal) | Enviado em 22/11/2026; protocolo a anexar. **Opcional** na nova metodologia (só contexto de impacto) |
+| P11 | Comitê de ética | **Obsoleta** como pendência de participantes (sem participantes nem dados pessoais; colunas de endereço descartadas). Se o professor exigir manifestação, registrar aqui |
+| P12 | Aceite de axe DevTools e Lighthouse frente ao robots.txt | **Obsoleta** (auditoria removida do escopo; arquivos em `docs/arquivo/`) |
+| P13 | Datas de S02, S03 e entrega final | **Aberta** |
+| P14 | Link do repositório/Projects; autoria | **Aberta** |
+| **P15** | **Professor aprovar a mudança de metodologia** (dados abertos de operação no lugar de experimento com participantes). Não há registro de aprovação | **Aberta** (professor) |
+| **P16** | **Professor validar decisões de desenho:** coorte madura de 90 dias, mínimo de 30 por célula, estratificação por serviço, não interpretar "situações" | **Aberta** (professor) |
+| **P17** | Confirmar com a PBH (SUMOG) se existem dados posteriores a jul/2023, a data de extração dos CSVs e o significado de "Integração entre Sistemas", "Origem Interna" e das situações | **Aberta** (grupo) |
 
 ---
 
 ## 15. Cronograma e entregas
 
-**Nenhuma data de S02, S03 ou entrega final está confirmada** (P13). O enunciado diz apenas "conforme cronograma da disciplina". Datas conhecidas: proposta original 16/11/2026; versão FINAL e relatório 17/11/2026; impressão do enunciado 20/11/2026.
+Nenhuma data de S02, S03 ou entrega final está confirmada (P13). Mapa do enunciado para o trabalho atual:
 
-| Etapa | Esperado (ENUNCIADO) | Planejado no grupo (PROPOSTA §9) | Produzido | Falta |
-|---|---|---|---|---|
-| **S01** | Proposta com evidências dos 3 critérios, pergunta, caminhos, 1ª versão das 7 categorias, plano de coleta e análise, coleta piloto | Proposta; aceite do professor sobre auditoria; pedido LAI enviado; piloto com 3 participantes | Texto da proposta e relatório de fechamento | Aceite do professor; evidência de LAI; piloto; termo, planilha e instrumentos; resolver P7–P10 |
-| **S02** | Coleta completa, dados validados e versionados, análise (descritiva, testes, efeito), ameaças | 32 sessões analisáveis (36–38 agendadas), auditoria completa, dados versionados, testes, ameaças atualizadas | — | Tudo |
-| **S03** | Impacto, 7 categorias revisadas e justificadas, conclusões e limitações, rascunho do documento e da apresentação | Estimativa de impacto relativo com fontes; horas só como secundária (P5); categorias revisadas | — | Tudo |
-| **Final** | Documento e apresentação de 10 min, formato livre | Documento + apresentação; sugestão: reunião simulada com o gestor do Portal | — | Tudo |
+| Etapa | Esperado (ENUNCIADO) | Situação |
+|---|---|---|
+| S01 | Proposta, pergunta, caminhos, 1ª versão das 7 categorias, plano, coleta piloto | Entregue com o desenho antigo; a nova coleta (completa) já roda |
+| S02 | Coleta completa, dados validados e versionados, análise (descritiva, testes, efeito), ameaças | **Código pronto e executado**; falta interpretar e conferir por segunda pessoa |
+| S03 | Impacto, 7 categorias revisadas, conclusões e limitações, rascunhos | Pendente |
+| Final | Documento e apresentação de 10 min | Pendente |
 
-Papéis (sugestão do enunciado, adotada): **A** Planejamento e Método (critérios, LAI, GQM, hipóteses, categorias, ameaças); **B** Instrumentação e Operação (tarefas, roteiro, termo, planilha, sessões, auditoria, validação e anonimização); **C** Análise e Impacto (simulação de poder, notebook, gráficos, efeito, impacto relativo). Nomes: não confirmados.
+Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e Operação (`coleta`/`tratamento`); C Análise e Impacto (`estatistica`/`visualizacao`). Nomes não confirmados.
 
 ---
 
-## 16. Estrutura dos artefatos do projeto
-
-**Convenção de pastas** (adotada em 20/11/2026): `docs/enunciado/`, `docs/proposta/`, `docs/relatorios/` para documentos; `scripts/` (análise e poder), `tests/` (testes dos scripts), `notebooks/`, `dados/` (coletas anonimizadas e JSON de auditoria; `dados/brutos/` imutável, `dados/sinteticos/` só dado falso) e `resultados/` (estimativas de simulação em JSON e, depois da coleta, saídas de dados reais: gráficos, dashboard; **nunca** saída de dados sintéticos) existem desde 23/11/2026; pastas futuras previstas: `instrumentos/` (termo, roteiro, planilha, formulários). Só criar a pasta quando houver arquivo. Saídas em `resultados/` hoje são **estimativas** de simulação, não resultados empíricos.
-
-**Inventário verificado em 20/11/2026, atualizado em 23/11/2026 (issue #20)** (todo o conteúdo do repositório; `git status` limpo no início da sessão e sem commits listados):
+## 16. Estrutura dos artefatos
 
 | Caminho | Finalidade |
 |---|---|
-| `docs/enunciado/ENUNCIADO_LAB05.pdf` | Enunciado oficial (autoridade máxima) |
-| `docs/proposta/LAB05_S01_Proposta_FINAL.md` | Proposta metodológica oficial (fonte oficial do planejamento) |
-| `docs/relatorios/RELATORIO_FECHAMENTO_LAB05.md` | Auditoria e fechamento da S01 |
-| `docs/evidencias/S01_criterios_do_software.md` | Registro de evidências dos 3 critérios (issue #16): matriz, roteiros de P7/P8, confirmação do IBGE, rascunho do pedido LAI |
-| `docs/evidencias/P10_pedido_LAI_instrucoes.md` | Instruções e texto pronto do pedido LAI para quem vai enviar (Arthur); tabela de retorno do protocolo |
-| `FONTE_DA_VERDADE.md` | Este documento (fica na raiz) |
-| `README.md` | Porta de entrada do repositório: resumo, regras, tarefas por pessoa (P10 com Arthur), estrutura |
-| `scripts/power_analysis.py` | Simulação de poder v4.0 (reconstrução compatível, issue #20; §6.5.1) |
-| `tests/test_power_analysis.py` | Testes pytest do script de poder (Holm, Wilcoxon, interceptos, tipo I, d_z, reprodutibilidade) |
-| `resultados/results_v4.json` | Saída da rodada única do v4 (R = 20.000, semente 20261117, 23/11/2026): parâmetros, calibração, poder, erro tipo I, citado × reproduzido. Estimativa, não resultado |
-| `.gitignore` | Ignora `.claude/worktrees/`, `__pycache__/`, `.pytest_cache/` e `dados/sinteticos/saida/` |
-| `.gitattributes` | Sem conversão de fim de linha em `dados/` (os checksums dependem dos bytes) |
-| `dados/dicionario_de_dados.md` | Dicionário de dados (issue #25, 23/11/2026): **proposta do papel C, a confirmar com o papel B** |
-| `dados/sinteticos/` | Dados **SINTÉTICOS** (prefixo `SINTETICO_`, `origem = sintetico`, URLs `.invalid`) com efeitos plantados, só para testar o código. **Não são resultado** |
-| `scripts/esquema.py` | Versão executável do dicionário (colunas, domínios, sequências) |
-| `scripts/validar_dados.py` | Validador (esquema, domínios, coerência, dado pessoal, origem, checksums). Passar nele não torna o dado "Verificado" (§2.3) |
-| `scripts/analise.py` | Análise RQ1–RQ4, Holm, checagem de ordem, descritivas e auditoria Q4; recusa misturar origem e grava sintético fora de `resultados/` |
-| `scripts/gerar_dados_sinteticos.py` | Gerador dos dados sintéticos (semente 20261117) |
-| `notebooks/analise_S02.py` | Notebook em formato percent (`# %%`), com aviso "dados sintéticos até a coleta; nada aqui é resultado" (D10) |
-| `tests/` | Testes pytest da análise e do validador |
-| `requirements.txt` | Versões fixadas do ambiente (numpy, scipy, pandas, matplotlib, pytest) |
+| `README.md` | Entrada: como reproduzir, estrutura, regras, pendências |
+| `FONTE_DA_VERDADE.md` | Este documento |
+| `docs/metodologia.md` | Metodologia vigente (v3.0) |
+| `docs/enunciado/` | Enunciado oficial (autoridade máxima) |
+| `docs/evidencias/` | Critérios do software (S01) e instruções do pedido LAI |
+| `docs/arquivo/s01-metodologia-participantes/` | Proposta, relatório e auditoria Lighthouse da metodologia **descontinuada** |
+| `dados/dicionario_de_dados.md` | Fonte, colunas, classificação, limitações |
+| `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Saídas versionadas da coleta e do tratamento |
+| `dados/processados/` | Base analítica anonimizada (**ignorada pelo git**, regenerável) |
+| `scripts/` | `config`, `coleta`, `tratamento`, `estatistica`, `visualizacao`, `pipeline` |
+| `tests/` | pytest com dados sintéticos (`tests/sintetico.py`) |
+| `resultados/` | Resumo, tabelas, figuras, painel e JSON gerados pelo pipeline com dados reais |
+| `.gitignore`, `.gitattributes` | Ignoram `.venv`, base processada e `dados/brutos/`; sem conversão de fim de linha em `dados/` |
 
-**Citados nos documentos, mas NÃO presentes no repositório** (não tratar como existentes):
-
-| Artefato citado | Citado em |
-|---|---|
-| `LAB05_S01_Proposta_FINAL.pdf` | RELATÓRIO §2 |
-| `LAB05_S01_Proposta_v2_pre_FINAL.md` | RELATÓRIO §2 |
-| `original_S01.txt` | RELATÓRIO §2 |
-| `power_analysis.py` (v3.2) — o v4 em `scripts/` é outro modelo, não este arquivo | PROPOSTA §4 |
-| `results_v3_2.json` — o `results_v4.json` não o substitui como evidência dos valores citados | PROPOSTA §4, RELATÓRIO §5 |
-
-**Inexistentes e ainda por produzir:** planilha de observação, termo de consentimento, formulários SUS/SEQ, roteiro final, dados coletados (reais), JSON de auditoria (real), gráficos/dashboard com dados reais, documento e apresentação finais. O dicionário de dados existe só como proposta; o notebook só roda com dados sintéticos.
+**Removidos em 24/11/2026** (histórico no git, último commit com eles `bb06c60`): `docs/sessao/*` (roteiro, tarefas A/B, termo de consentimento, relatório do piloto), `dados/sinteticos/*`, dicionário antigo, `scripts/{analise,esquema,gerar_dados_sinteticos,validar_dados,power_analysis}.py`, `tests/test_{analise,validar_dados,power_analysis}.py`, `notebooks/analise_S02.py`, `resultados/results_v4.json`. Justificativa: dependiam de participantes, de SUS/SEQ, de tempo de tarefa humana ou de comparação celular × computador.
 
 ---
 
 ## 17. Regras para os próximos agentes de IA
 
-1. Consultar esta fonte da verdade **antes** de modificar qualquer artefato do LAB05.
-2. Consultar o enunciado oficial para verificar requisitos acadêmicos.
-3. Não alterar decisões metodológicas sem justificativa e registro (§19).
-4. Não inventar resultados, referências, números ou aprovações.
-5. Não remover pendências sem evidência de resolução (§14).
-6. Preservar a distinção entre planejamento, execução e resultado (§2.3).
-7. Atualizar esta fonte quando decisões relevantes forem tomadas.
-8. Manter consistência entre proposta, coleta, análise, relatório e apresentação.
-9. **Não realizar testes de carga** em sistemas de terceiros; respeitar robots.txt, termos de uso e o limite de 1 requisição/segundo. Não executar crawler, nem automatizar acesso ao Portal sem aceite do professor (P12).
-10. Não coletar dados pessoais dos participantes.
-11. Não apresentar associação como causalidade (sobretudo RQ4).
-12. Não generalizar além do desenho: serviços testados, Android/Chrome, amostra por conveniência.
-
-Regras adicionais derivadas deste documento:
-
-13. Citar poder estatístico sempre com suas limitações (§6.5) e nunca como resultado.
-14. Não escrever nomes de integrantes, datas de S02/S03/final, número de acessos ao Portal ou horas economizadas sem fonte.
-15. Não descrever a regra de fechamento, o teto de 300 s ou o teste da RQ4 como aprovados pelo professor.
-16. Não modificar a PROPOSTA e o RELATÓRIO como efeito colateral de outra tarefa; correções entram com registro na §19.
+1. Consultar esta fonte e o enunciado antes de modificar qualquer artefato.
+2. Não alterar decisões metodológicas sem justificativa e registro (§19).
+3. Não inventar resultados, referências, números, colunas ou significados que a PBH não documentou.
+4. Não remover pendências sem evidência (§14); pendência obsoleta é marcada, não apagada.
+5. Manter a distinção entre planejado, executado e resultado (§2.3).
+6. **Nunca** versionar CSV bruto da PBH nem colunas de endereço/coordenadas; a base processada fica fora do git.
+7. Respeitar 1 requisição por segundo e identificar o acesso. Não fazer teste de carga em sistema de terceiros. Não acessar o Portal de Serviços de forma automatizada.
+8. Não apresentar associação como causa; não tratar "encerrada" como "resolvida"; não tratar mudança de metodologia como aprovada pelo professor.
+9. Não generalizar além de BH, mai/2020–jul/2023 e dos serviços com ≥ 2 canais comparáveis.
+10. Não escrever nomes completos, datas de S02/S03/final ou horas economizadas sem fonte.
+11. Toda mudança em horizonte, mínimo por célula, definições ou testes: registrar na §19 no mesmo commit.
 
 ---
 
-## 18. Divergências e inconsistências encontradas
+## 18. Divergências e inconsistências
 
-| ID | Descrição | Fontes | Tratamento |
-|---|---|---|---|
-| D1 | A proposta e o relatório afirmam que o poder foi conferido em `results_v3_2.json` (gerado por `power_analysis.py` v3.2), mas **nenhum dos dois arquivos está no repositório**. Os 9 valores de poder são, neste repositório, **não reproduzíveis nem verificáveis** | PROPOSTA §4, RELATÓRIO §5 vs. repositório | Manter os valores como "conforme citado"; versionar script e JSON antes de usar na S02/S03. **Segue aberta para o v3.2.** Em 23/11/2026 (issue #20) foi versionada a reconstrução **v4** (`scripts/power_analysis.py`, `resultados/results_v4.json`; §6.5.1), modelo novo com regra de calibração fixada antes da rodada única (R = 20.000). Resultado da comparação: dos 9 valores de poder, só S0-RQ1 (alvo da calibração) e S0-RQ3 ficam dentro de 3 EP_MC; RQ1 em S1/S2 diverge muito (v4 0,754 e 0,687 contra 0,671 e 0,557; Δ/EP +27 e +40); RQ2/RQ3 ficam 0,005–0,022 abaixo do citado (Δ/EP −2 a −8). Erro tipo I (FWER): n = 24 compatível (0,064 × 0,068), n = 28 não (0,061 × 0,073). O v4 não verifica nem substitui os valores citados. `statsmodels` não está instalado no ambiente; o Holm foi implementado à mão e testado (§9 prevê statsmodels). **Decisão pendente do grupo:** manter os valores citados com a ressalva, passar a citar o v4, ou procurar o v3.2. Proposta e relatório não foram alterados |
-| D2 | O relatório lista `LAB05_S01_Proposta_FINAL.pdf`, `..._v2_pre_FINAL.md` e `original_S01.txt` como produzidos/preservados; nenhum está no repositório | RELATÓRIO §2 vs. repositório | Localizar e versionar, ou corrigir o relatório (com registro) |
-| D3 | O enunciado limita medições de fora a **no máximo 1 requisição por segundo**. A proposta cita robots.txt e termos de uso, mas **não menciona o limite**. O Lighthouse recarrega a página em cada execução (12–20 páginas × 3 execuções × 2 modos, ou seja, até cerca de 120 carregamentos), e o enunciado exige respeito ao robots.txt (`Disallow: /`) | ENUNCIADO §2 vs. PROPOSTA §6 | Incluir o limite explícito de 1 req/s no protocolo de auditoria e levar a P12 ao professor. Não alterar a proposta sem registro |
-| D4 | O enunciado pede "coleta piloto" na S01; a proposta a prevê, mas não há evidência de execução, e o relatório de fechamento não menciona o piloto como feito | ENUNCIADO §7, PROPOSTA §9, RELATÓRIO | Tratar como **não executado** até haver artefato |
-| D5 | O relatório declara o texto "sem contradições internas relevantes" e a decisão de RQ4 descritiva/"indeterminado" foi adotada "por instrução, não por votação registrada". Em 22/11/2026 o grupo passou a propor teste exploratório na RQ4 (categoria "indeterminado" mantida) | RELATÓRIO §1, §6 | Registrar a concordância do grupo |
-| D6 | O relatório diz que a proposta foi "finalizada com pendências externas" e "metodologicamente coerente" — é uma autoavaliação; não existe revisão independente nem do professor | RELATÓRIO §1 | Não citar como validação externa |
-| D7 | A proposta (§9) lista o S01 como incluindo "aceite do professor sobre a auditoria" e "pedido LAI enviado" — nenhuma das duas é comprovada | PROPOSTA §9 | Tratar como planejadas |
-| D8 | Autoria: cabeçalho trazia "@Someone"; trocado em 22/11/2026 por primeiros nomes e papéis (da issue #15). Nomes completos a confirmar. Atenção: o README atribui o envio do LAI (papel A) a Arthur (papel C na #15) | PROPOSTA | P14 |
-| D9 | A lista de fontes da proposta cita o título "amplia em mais de 500 serviços digitais"; o título real da notícia de 05/10/2026 é "... em mais de 500% serviços digitais". Além disso, os números de serviços variam por data (05/10/2026: 1.492/1.118; 18/08/2026: 1.489/903; 27/12/2023: 1.387/936) | PROPOSTA vs. fonte conferida em 20/11/2026 | **Título corrigido na proposta em 22/11/2026**; citar sempre com a data da fonte |
-| D10 | A proposta (§7) e a §9 desta fonte preveem "Python (pandas, scipy, statsmodels) em notebook versionado". Na issue #25: (i) o notebook é `notebooks/analise_S02.py` em **formato percent** (`# %%`), não `.ipynb`, para versionar sem saídas embutidas e rodar sem jupyter instalado (abre como notebook no VS Code); (ii) **statsmodels não está instalado** no ambiente, e a correção de Holm foi **implementada à mão** em `scripts/analise.py` (testada com o valor conhecido p = [0,01; 0,04; 0,03] → [0,03; 0,06; 0,06]) | PROPOSTA §7, FDV §9 vs. repositório | Ferramenta, não método: o teste e a correção são os mesmos. A proposta não foi alterada |
-
-Não foi encontrada divergência de conteúdo entre a proposta e o relatório quanto a RQs, pendências, tamanhos de amostra ou valores de poder (conferidos nesta consolidação).
+| ID | Descrição | Tratamento |
+|---|---|---|
+| D1 | Poder simulado v3.2 ausente do repositório; reconstrução v4 divergente | **Encerrada por descontinuação** (24/11/2026): simulação de poder sem sentido na nova metodologia; arquivos removidos (histórico no git) |
+| D2 | PDF da proposta, v2_pre_FINAL e original_S01 citados no relatório, ausentes | Mantida como registro histórico (relatório arquivado) |
+| D3 | Limite de 1 req/s do enunciado ausente da proposta antiga | **Encerrada**: o novo pipeline implementa e testa o limite |
+| D4, D5, D6, D7, D8, D9 | Piloto não executado; RQ4; autoavaliação do relatório; aceite não comprovado; autoria; títulos de notícias | Mantidas como histórico da proposta antiga; D8 (autoria) segue em P14; D9 segue válida para as citações do arquivo de evidências |
+| D10 | Notebook `.py` percent e Holm à mão por falta de statsmodels | **Superada**: notebook removido; Holm e demais testes seguem implementados à mão/scipy em `scripts/estatistica.py`, conferidos por testes |
+| D11 | O pedido inicial supunha dados de 2024, 2025 e 2026; a fonte termina em **jul/2023** | **Resolvida pela fonte**: escopo ajustado; P17 pergunta à PBH se há dados novos |
+| D12 | Auditoria Lighthouse de 24/11/2026 gerada antes do aceite do professor (P12) | Arquivada, fora da análise |
+| D13 | `metadata_modified` do dataset (10/06/2026) não corresponde à data dos arquivos (jul/ago 2023) | Registrada; não indica dados novos |
 
 ---
 
@@ -610,3 +318,4 @@ Não foi encontrada divergência de conteúdo entre a proposta e o relatório qu
 | 2.4 | 22/11/2026 | RQ4 passa a ter teste exploratório proposto (participante como unidade, Wilcoxon pareado, permutação de sinais como sensibilidade), a validar no P4; reverte a nota de 2.3 de "sem teste" |
 | 2.5 | 23/11/2026 | Issue #20: reconstrução da simulação de poder **v4** (`scripts/power_analysis.py`, `tests/test_power_analysis.py`, `resultados/results_v4.json`, `requirements.txt`; `.gitignore` com `.claude/worktrees/`). Nova §6.5.1 com regra de calibração, tabela citado × reproduzido e erro tipo I (n = 24, 28, 32); D1 atualizada (segue aberta para o v3.2; 7 de 9 valores de poder e o FWER de n = 28 fora de 3 EP_MC); §9, §13 e §16 atualizadas; cabeçalho corrigido para a versão atual. Proposta e relatório não foram alterados |
 | 2.6 | 23/11/2026 | Issue #25: dicionário de dados (proposta, a confirmar com o papel B), validador, análise, gerador de dados sintéticos, notebook `.py` percent, testes e `requirements.txt`. Tudo rodado **só com dados sintéticos**: **nenhum resultado**. P1 e P2 entram como parâmetros (opção provisória marcada PENDENTE, demais variantes como sensibilidade); teste da RQ4 desligável (P4). D10 registrada. Nenhuma pendência encerrada. Merge com a 2.5 (issue #20): `resultados/` passa a abrigar estimativas de simulação e saídas reais, nunca sintéticas; `requirements.txt` unificado |
+| 3.0 | 24/11/2026 | **Mudança de metodologia** (registro obrigatório): o experimento com participantes (celular × computador, SUS/SEQ, sessões, auditoria Lighthouse) é substituído por análise de **dados abertos de operação** da PBH por canal de atendimento. Motivo: a coleta com participantes exige recrutamento e sessões em número inviável para o grupo. Nova pergunta: para um mesmo serviço, tempo e taxa de encerramento diferem por canal? Validada a fonte (CKAN, CC-BY): **cobertura mai/2020–jul/2023, sem 2024–2026** (D11). Implementados pipeline (`scripts/`), testes (55), dicionário, metodologia e resultados reais. Material antigo arquivado em `docs/arquivo/` ou removido (§16). P1–P4, P6, P11, P12 marcadas obsoletas; novas P15 (professor aprovar a mudança), P16 (validar decisões de desenho), P17 (consultar a PBH). D1, D3, D10 encerradas/superadas; D11–D13 abertas. **Nenhuma aprovação do professor foi registrada** |

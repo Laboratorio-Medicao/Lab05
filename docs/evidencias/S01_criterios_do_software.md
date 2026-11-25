@@ -1,7 +1,9 @@
 # Evidências dos critérios do software — Portal de Serviços da PBH
 
+> **Nota (24/11/2026):** a metodologia mudou para análise de dados abertos de operação (ver `docs/metodologia.md`). Este registro continua válido **apenas** como evidência dos critérios real / em operação / alto impacto do ecossistema de atendimento da PBH. Trechos sobre tarefas, participantes e auditoria com axe/Lighthouse pertencem à metodologia antiga.
+
 Issue: Laboratorio-Medicao/Lab05#16 (parte de #15) · Sprint S01 · Criado em 20/11/2026
-Referências: [FONTE_DA_VERDADE.md](../../FONTE_DA_VERDADE.md) §4 e §14 · [Proposta §1](../proposta/LAB05_S01_Proposta_FINAL.md) · [Enunciado](../enunciado/ENUNCIADO_LAB05.pdf) §2
+Referências: [FONTE_DA_VERDADE.md](../../FONTE_DA_VERDADE.md) §4 e §14 · [Proposta §1](../arquivo/s01-metodologia-participantes/LAB05_S01_Proposta_FINAL.md) · [Enunciado](../enunciado/ENUNCIADO_LAB05.pdf) §2
 
 > **Estado honesto deste registro:** nada abaixo encerra P7, P8, P9 ou P10. O que foi verificado está marcado como tal; o restante é **roteiro para o grupo executar à mão no navegador**, porque (a) o enunciado exige respeito a robots.txt e termos de uso, (b) o robots.txt do Portal tem `Disallow: /` e a P12 (aceite do professor) está aberta, e (c) o site institucional da PBH bloqueia acesso automatizado ("Acesso Bloqueado"), bloqueio que não deve ser contornado.
 

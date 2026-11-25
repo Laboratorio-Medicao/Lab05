@@ -1,4 +1,9 @@
 .claude/worktrees/
 __pycache__/
 .pytest_cache/
-dados/sinteticos/saida/
+*.pyc
+.venv/
+# CSVs originais da PBH têm endereço/coordenadas: nunca no repositório
+dados/brutos/
+# base analítica anonimizada: reproduzível pelo pipeline (~38 MB)
+dados/processados/

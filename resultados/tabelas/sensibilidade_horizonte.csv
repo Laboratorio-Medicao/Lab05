@@ -1,0 +1,13 @@
+horizonte_dias,canal_a,canal_b,servicos,or_mh,or_ic_lo,or_ic_hi,p_cmh
+30,portal_servicos,pbh_app,170,0.841805,0.828788,0.855027,8.09762e-104
+30,portal_servicos,telefone_156,45,1.16406,1.13737,1.19138,3.14384e-38
+30,portal_servicos,presencial,21,11.9561,11.3653,12.5776,0
+30,pbh_app,telefone_156,45,1.18427,1.15881,1.2103,1.71877e-53
+30,pbh_app,presencial,16,7.63787,7.18085,8.12398,0
+30,telefone_156,presencial,2,0.696216,0.62271,0.778399,1.26066e-10
+180,portal_servicos,pbh_app,132,0.770134,0.751203,0.789542,1.077e-94
+180,portal_servicos,telefone_156,45,1.09891,1.05522,1.14441,4.53569e-06
+180,portal_servicos,presencial,16,24.4869,22.8095,26.2876,0
+180,pbh_app,telefone_156,45,1.18527,1.1396,1.23277,1.22898e-17
+180,pbh_app,presencial,14,23.215,21.1752,25.4513,0
+180,telefone_156,presencial,1,0.543834,0.403786,0.732456,6.06888e-05

@@ -1,0 +1,70 @@
+{
+  "dataset": {
+    "id": "solicitacoes-dos-cidadaos-por-meio-dos-canais-de-atendimento-da-pbh",
+    "url": "https://ckan.pbh.gov.br/dataset/solicitacoes-dos-cidadaos-por-meio-dos-canais-de-atendimento-da-pbh"
+  },
+  "recursos": [
+    {
+      "arquivo": "dadosabertos_bhdigital_2020_mai-dez.csv",
+      "bytes": 24118525,
+      "sha256": "b13a7b4e7dd767c64ccc9a44e4009744bb4ca75b3d44c59f3e699950402292b7",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2021.csv",
+      "bytes": 123454366,
+      "sha256": "ebe155c1222de657f99cef745ded5f0c6cd26c2493751df119919bd6f7e099a6",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2022.csv",
+      "bytes": 142692517,
+      "sha256": "b7dbb518da34504c1becf1b6b789e82c322f41929eaae27e69348b9680cf39d9",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_jan.csv",
+      "bytes": 18167219,
+      "sha256": "9f5c1cd00461ec20aebe764f6a314b3623ababe451fe52d30b193dce08e5e490",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_fev.csv",
+      "bytes": 15201851,
+      "sha256": "c76e5d46cdc961c97024211462e267659ec20c66852f79fb95efa3c15732c094",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_mar.csv",
+      "bytes": 15290517,
+      "sha256": "522ea17dce7ff72ac031d3a162fc9602ad43c0309496b0c53508056aac6a133e",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_abr.csv",
+      "bytes": 13138167,
+      "sha256": "db028cc6014f70012cdafcf9ace44cbd8725a9d4e71e66d274caa6bba8c82d27",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_mai.csv",
+      "bytes": 14779363,
+      "sha256": "358464c0fcd660bc053bca303f8a4d61a390ec3029a7d4c10cc4071e15f668b4",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_jun.csv",
+      "bytes": 11831720,
+      "sha256": "5791b56349a5a727895727f31630d271c000b5f3a274df336f7baa86ceb01ce7",
+      "origem": "pasta_local"
+    },
+    {
+      "arquivo": "dadosabertos_bhdigital_2023_jul.csv",
+      "bytes": 12535636,
+      "sha256": "6450e49a0e774206f921b77c5fd4e96c61170cb03f1e35d3c776b9b02decaf64",
+      "origem": "pasta_local"
+    }
+  ],
+  "gerado_em_utc": "2026-11-25T00:39:03Z",
+  "sha256_base_analitica": "7362852e89443e4fac20a2bbaaacc18dd00b7869c670b55b3775fd963662f2d3"
+}

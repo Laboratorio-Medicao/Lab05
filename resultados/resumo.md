@@ -30,14 +30,16 @@ n/d = a curva de Kaplan–Meier não chega a 50% (menos da metade encerrou).
 
 A = primeiro canal. OR de Mantel–Haenszel > 1: A encerra mais em 90 d. Delta de Cliff > 0: A mais lento. p com correção de Holm (6 pares).
 
-| Par (A × B) | Serviços (prop.) | OR MH [IC 95%] | p (CMH, Holm) | I² | Serviços (tempo) | Delta combinado [IC 95%] | Magnitude | p (van Elteren, Holm) |
-|---|---:|---|---|---:|---:|---|---|---|
-| Portal de Serviços × PBH APP | 159 | 0.84 [0.83; 0.86] | < 0,0001 | 0,89 | 149 | 0.088 [0.085; 0.092] | desprezível | < 0,0001 |
-| Portal de Serviços × Telefone 156 | 45 | 1.12 [1.09; 1.16] | < 0,0001 | 0,94 | 45 | -0.108 [-0.117; -0.099] | desprezível | < 0,0001 |
-| Portal de Serviços × Presencial (BH Resolve) | 20 | 19.10 [17.98; 20.28] | < 0,0001 | 0,99 | 20 | -0.171 [-0.198; -0.144] | pequena | < 0,0001 |
-| PBH APP × Telefone 156 | 45 | 1.12 [1.09; 1.15] | < 0,0001 | 0,95 | 45 | -0.130 [-0.138; -0.123] | desprezível | < 0,0001 |
-| PBH APP × Presencial (BH Resolve) | 15 | 13.81 [12.88; 14.81] | < 0,0001 | 0,99 | 15 | -0.391 [-0.419; -0.363] | média | 0,0120 |
-| Telefone 156 × Presencial (BH Resolve) | 2 | 0.55 [0.46; 0.66] | < 0,0001 | 0,94 | 2 | 0.052 [0.020; 0.084] | desprezível | < 0,0001 |
+| Par (A × B) | Serviços (prop.) | OR MH [IC 95%] | p (CMH, Holm) | I² | Serviços (tempo) | Delta combinado [IC 95%] | Magnitude | Delta (ponderação alternativa) | Sinal consistente (D14) | p (van Elteren, Holm) |
+|---|---:|---|---|---:|---:|---|---|---:|---|---|
+| Portal de Serviços × PBH APP | 159 | 0.84 [0.83; 0.86] | < 0,0001 | 0,89 | 149 | 0.088 [0.085; 0.092] | desprezível | 0.070 | sim | < 0,0001 |
+| Portal de Serviços × Telefone 156 | 45 | 1.12 [1.09; 1.16] | < 0,0001 | 0,94 | 45 | -0.108 [-0.117; -0.099] | desprezível | -0.071 | sim | < 0,0001 |
+| Portal de Serviços × Presencial (BH Resolve) | 20 | 19.10 [17.98; 20.28] | < 0,0001 | 0,99 | 20 | -0.171 [-0.198; -0.144] | pequena | 0.074 | **inconclusivo** | < 0,0001 |
+| PBH APP × Telefone 156 | 45 | 1.12 [1.09; 1.15] | < 0,0001 | 0,95 | 45 | -0.130 [-0.138; -0.123] | desprezível | -0.074 | sim | < 0,0001 |
+| PBH APP × Presencial (BH Resolve) | 15 | 13.81 [12.88; 14.81] | < 0,0001 | 0,99 | 15 | -0.391 [-0.419; -0.363] | média | 0.027 | **inconclusivo** | 0,0120 |
+| Telefone 156 × Presencial (BH Resolve) | 2 | 0.55 [0.46; 0.66] | < 0,0001 | 0,94 | 2 | 0.052 [0.020; 0.084] | desprezível | 0.084 | sim | < 0,0001 |
+
+Robustez (D14): o delta combinado usa peso n_A·n_B; a ponderação alternativa n_A·n_B/(n_A+n_B) e a mediana por serviço são sensibilidade. Quando os sinais discordam, o resultado de tempo do par é inconclusivo. Sinais concordantes não bastam quando há poucos serviços ou um serviço concentra quase todo o peso (ver a fatia abaixo). Serviço de maior peso por par (fatia do peso n_A·n_B): Portal de Serviços × PBH APP: Tapa-Buraco (59%); Portal de Serviços × Telefone 156: Ouvidoria (57%); Portal de Serviços × Presencial (BH Resolve): Tapa-Buraco (44%); PBH APP × Telefone 156: Ouvidoria (35%); PBH APP × Presencial (BH Resolve): Tapa-Buraco (68%); Telefone 156 × Presencial (BH Resolve): Ouvidoria (100%).
 
 ## Testes por serviço e par
 

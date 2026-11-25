@@ -227,21 +227,38 @@ def fig_servico_canal(r: dict, pasta: Path) -> Path:
 def fig_floresta(r: dict, pasta: Path) -> Path:
     e = r["estratificado_por_par"]
     fig, axs = plt.subplots(1, 2, figsize=(12.5, 4.2), sharey=True)
-    rot = [f"{ROT[a].replace(' (BH Resolve)', '')} × {ROT[b].replace(' (BH Resolve)', '')}"
-           for a, b in zip(e["canal_a"], e["canal_b"])]
+    rot = [f"{ROT[a].replace(' (BH Resolve)', '')} × {ROT[b].replace(' (BH Resolve)', '')} "
+           f"({int(n)} serv.)"
+           for a, b, n in zip(e["canal_a"], e["canal_b"], e["servicos_tempo"])]
     y = np.arange(len(e))[::-1]
     ax = axs[0]
     ok = e["delta_combinado"].notna()
     ax.errorbar(e["delta_combinado"][ok], y[ok.to_numpy()],
                 xerr=[(e["delta_combinado"] - e["delta_ic_lo"])[ok],
                       (e["delta_ic_hi"] - e["delta_combinado"])[ok]],
-                fmt="o", color=COR["portal_servicos"], capsize=3, ms=6)
+                fmt="o", color=COR["portal_servicos"], capsize=3, ms=6,
+                label="peso n_A·n_B (principal)")
+    if "delta_combinado_harmonico" in e:
+        # ponderação alternativa (D14): marcador vazado, um pouco abaixo, sem barra de erro
+        h = e["delta_combinado_harmonico"]
+        okh = h.notna()
+        ax.plot(h[okh], y[okh.to_numpy()] - 0.18, "D", mfc="none", mec=COR["portal_servicos"],
+                ms=6, ls="none", label="ponderação alternativa n_A·n_B/(n_A+n_B)")
+        hs, ls = ax.get_legend_handles_labels()
+        ax.legend(hs[::-1], ls[::-1], loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2,
+                  fontsize=8,
+                  frameon=False, handletextpad=0.3, columnspacing=1.0)
+    if "delta_sinal_consistente" in e:
+        for yi, v in zip(y, e["delta_sinal_consistente"]):
+            if pd.notna(v) and not bool(v):
+                ax.text(0.98, yi, "inconclusivo", ha="right", va="center", fontsize=9,
+                        color=TINTA2, fontstyle="italic")
     ax.axvline(0, color=TINTA2, lw=0.8)
     for xv in (-0.147, 0.147):
         ax.axvline(xv, color=GRADE, lw=0.8, ls="--")
     ax.set_xlim(-1, 1)
     ax.set_xlabel("Delta de Cliff combinado (IC 95%)\n← A mais rápido    A mais lento →")
-    ax.set_title("Tempo, dentro do mesmo serviço", fontsize=11)
+    ax.set_title("Tempo, dentro do mesmo serviço", fontsize=11, pad=22)
     ax.set_yticks(y, rot)
     ax = axs[1]
     ok = e["or_mh"].notna()
@@ -252,14 +269,16 @@ def fig_floresta(r: dict, pasta: Path) -> Path:
     ax.set_xscale("log")
     ax.set_xlabel("Razão de chances de Mantel–Haenszel (IC 95%)\n← A encerra menos    A encerra mais →")
     ax.set_title(f"Encerrada em ≤ {r['parametros']['horizonte_dias']} dias, dentro do mesmo serviço",
-                 fontsize=11)
+                 fontsize=11, pad=22)
     for a in axs:
         a.grid(axis="x", color=GRADE)
         a.set_axisbelow(True)
     fig.suptitle("Comparação entre pares de canais, ajustada por serviço (A × B)",
-                 x=0.01, y=1.03, ha="left", fontsize=12, fontweight="bold")
+                 x=0.01, y=1.10, ha="left", fontsize=12, fontweight="bold")
     fig.subplots_adjust(wspace=0.08)
-    _fonte(fig, _nota(r) + "\nLinhas tracejadas: limite de efeito desprezível (|delta| = 0,147).", y=-0.12)
+    _fonte(fig, _nota(r) + "\nLinhas tracejadas: limite de efeito desprezível (|delta| = 0,147). "
+           "'inconclusivo' = o delta combinado, o da ponderação alternativa e a mediana por serviço "
+           "não têm o mesmo sinal.", y=-0.12)
     return _salvar(fig, pasta / "06_comparacao_pares_ajustada.png")
 
 
@@ -455,6 +474,21 @@ def _n(v, c=2) -> str:
     return "–" if pd.isna(v) else f"{v:.{c}f}".replace(".", ",")
 
 
+def texto_robustez(est: pd.DataFrame) -> str:
+    """Nota sobre a ponderação alternativa do delta combinado (D14), em texto simples."""
+    t = ("Robustez (D14): o delta combinado usa peso n_A·n_B; a ponderação alternativa "
+         "n_A·n_B/(n_A+n_B) e a mediana por serviço são sensibilidade. Quando os sinais "
+         "discordam, o resultado de tempo do par é inconclusivo. Sinais concordantes não bastam "
+         "quando há poucos serviços ou um serviço concentra quase todo o peso (ver a fatia abaixo).")
+    if "servico_maior_peso" in est:
+        itens = [f"{C.ROTULO_CANAL[x['canal_a']]} × {C.ROTULO_CANAL[x['canal_b']]}: "
+                 f"{x['servico_maior_peso']} ({100 * x['fatia_maior_peso']:.0f}%)"
+                 for _, x in est.iterrows() if pd.notna(x["servico_maior_peso"])]
+        if itens:
+            t += " Serviço de maior peso por par (fatia do peso n_A·n_B): " + "; ".join(itens) + "."
+    return t
+
+
 def gerar_painel(r: dict, figuras: list[Path], qualidade: dict, caminho: Path) -> Path:
     p = r["parametros"]
     h = p["horizonte_dias"]
@@ -487,8 +521,8 @@ def gerar_painel(r: dict, figuras: list[Path], qualidade: dict, caminho: Path) -
     est_t = est[["Par (A × B)", "servicos_prop", "or_mh", "or_ic_lo", "or_ic_hi", "p_cmh_holm",
                  "heterogeneidade_i2", "servicos_a_encerra_mais", "servicos_b_encerra_mais",
                  "servicos_tempo", "delta_combinado", "delta_ic_lo", "delta_ic_hi",
-                 "delta_magnitude", "p_van_elteren_holm", "servicos_a_mais_lento",
-                 "servicos_b_mais_lento"]]
+                 "delta_magnitude", "delta_combinado_harmonico", "delta_sinal_consistente",
+                 "p_van_elteren_holm", "servicos_a_mais_lento", "servicos_b_mais_lento"]]
     ing = r["comparacao_ingenua"]
     nao = (f"Qui-quadrado (4 canais): χ² = {_n(ing['proporcao']['chi2'], 0)}, "
            f"V de Cramér = {_n(ing['proporcao']['cramer_v'])}, p {_p(ing['proporcao']['p'])}. "
@@ -531,7 +565,11 @@ mais tempo. I² mede a heterogeneidade entre serviços (alto = efeito varia muit
 <div class="rolagem">{_tabela(est_t, {
         "or_mh": _n, "or_ic_lo": _n, "or_ic_hi": _n, "p_cmh_holm": _p, "heterogeneidade_i2": _n,
         "delta_combinado": lambda v: _n(v, 3), "delta_ic_lo": lambda v: _n(v, 3),
-        "delta_ic_hi": lambda v: _n(v, 3), "p_van_elteren_holm": _p})}</div>
+        "delta_ic_hi": lambda v: _n(v, 3),
+        "delta_combinado_harmonico": lambda v: _n(v, 3),
+        "delta_sinal_consistente": lambda v: "sim" if bool(v) else "inconclusivo",
+        "p_van_elteren_holm": _p})}</div>
+<p>{html.escape(texto_robustez(est))}</p>
 {impacto_html}
 <h2>Serviços com maior diferença de tempo entre canais</h2><div class="rolagem">{
         _tabela(fmt_rank(rt), {"delta_cliff": lambda v: _n(v, 3), "delta_ic_lo": lambda v: _n(v, 3),

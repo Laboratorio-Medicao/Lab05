@@ -63,20 +63,20 @@ def test_nenhuma_saida_contem_endereco(execucao):
 
 def test_manifesto_e_qualidade(execucao):
     tmp, _ = execucao
-    man = json.loads((tmp / "dados/manifesto_coleta.json").read_text())
+    man = json.loads((tmp / "dados/manifesto_coleta.json").read_text(encoding="utf-8"))
     assert len(man["recursos"]) == 2 and len(man["sha256_base_analitica"]) == 64
-    q = json.loads((tmp / "dados/qualidade_dados.json").read_text())
+    q = json.loads((tmp / "dados/qualidade_dados.json").read_text(encoding="utf-8"))
     assert "nome logradouro" in q["colunas_descartadas_na_leitura"]
     assert q["status_registro"]["inconsistente"] == 6
 
 
 def test_resumo_so_tem_numeros_calculados(execucao):
     tmp, saida = execucao
-    texto = (tmp / "res/resumo.md").read_text()
+    texto = (tmp / "res/resumo.md").read_text(encoding="utf-8")
     pc = saida["resultado"]["por_canal"].set_index("canal")
     assert f"{int(pc.loc['portal_servicos', 'solicitacoes']):,}".replace(",", ".") in texto
     assert "Portal de Serviços × Telefone 156" in texto
-    html = (tmp / "res/painel.html").read_text()
+    html = (tmp / "res/painel.html").read_text(encoding="utf-8")
     assert "<img" in html and "associação, não causa" in html
 
 
@@ -89,8 +89,8 @@ def test_so_analise_a_partir_da_base_reproduz_os_resultados(execucao, tmp_path):
     a = saida["resultado"]["por_canal"].reset_index(drop=True)
     b = outra["resultado"]["por_canal"].reset_index(drop=True)
     assert a.equals(b)
-    assert (tmp / "res/tabelas/metricas_por_canal.csv").read_text() == \
-        (tmp_path / "res2/tabelas/metricas_por_canal.csv").read_text()
+    assert (tmp / "res/tabelas/metricas_por_canal.csv").read_text(encoding="utf-8") == \
+        (tmp_path / "res2/tabelas/metricas_por_canal.csv").read_text(encoding="utf-8")
 
 
 def test_recusa_entrada_dentro_do_repositorio(tmp_path):
@@ -101,3 +101,13 @@ def test_recusa_entrada_dentro_do_repositorio(tmp_path):
 def test_cli_retorna_erro_amigavel(tmp_path, capsys):
     rc = P.main(["--entrada", str(C.RAIZ / "dados"), "--saida", str(tmp_path)])
     assert rc == 1 and "ERRO" in capsys.readouterr().err
+
+
+def test_saidas_trazem_ponderacao_alternativa(execucao):
+    tmp, _ = execucao
+    resumo = (tmp / "res/resumo.md").read_text(encoding="utf-8")
+    painel = (tmp / "res/painel.html").read_text(encoding="utf-8")
+    assert "ponderação alternativa" in resumo and "ponderação alternativa" in painel
+    import pandas as pd
+    cols = pd.read_csv(tmp / "res/tabelas/pares_ajustados_por_servico.csv").columns
+    assert {"delta_combinado_harmonico", "servico_maior_peso", "delta_sinal_consistente"} <= set(cols)

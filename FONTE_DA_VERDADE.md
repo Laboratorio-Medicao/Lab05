@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.4 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.5 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -177,7 +177,7 @@ A análise é executada pelo código; os números vêm de `resultados/resumo.md`
 
 ## 10. Ameaças à validade
 
-Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, externa, com mitigação). Principais: confusão residual por perfil da demanda; encerramento administrativo ≠ resolução; censura à direita; independência não verificável; cobertura só até jul/2023; poucos serviços em comum entre alguns canais.
+Revistas em 25/11/2026 com os resultados reais (issue #24), com evidência, mitigação e risco remanescente para cada uma: ver [METODOLOGIA §8](./docs/metodologia.md) (IDs C1–C7, I1–I4, K1–K5, E1–E4). As principais: **I1**, confusão pelo tipo de serviço (efeito cerca de 10 vezes menor dentro do serviço); **C2**, um serviço domina o efeito combinado dos pares com Presencial (Tapa-Buraco no tempo, JARI no OR), sem sensibilidade equivalente para o OR; **K1**, "encerrada" é encerramento administrativo, não resolução; **E1**, só Belo Horizonte, de mai/2020 a jul/2023.
 
 ## 11. Impacto
 
@@ -201,6 +201,7 @@ Ver [METODOLOGIA §8](./docs/metodologia.md) (conclusão, interna, construto, ex
 | Pipeline (coleta, tratamento, análise, gráficos) | **Verificado** em 25/11/2026 (reexecução do zero com download real, por agente de IA a pedido do Arthur; reproduzido com ressalvas): 10 CSVs e base com os mesmos SHA-256, 1.480.736 registros | `docs/evidencias/verificacao_pipeline.md`, `resultados/`, `dados/manifesto_coleta.json`, `dados/qualidade_dados.json` | Reexecução por um integrante (opcional, reforça a verificação, §2.3) |
 | Testes automatizados | **64 testes passando** (dados sintéticos), 25/11/2026 | `tests/` | Rodar `python -m pytest` |
 | Interpretação dos resultados | **Executado** (v1.1, 25/11/2026; sem revisão do grupo) | `docs/interpretacao_resultados.md` (issues #25 e #39) | Revisão por outro integrante |
+| Ameaças à validade revisadas | **Executado** (25/11/2026; sem revisão do grupo) | `docs/metodologia.md` §8 (#24) | Revisão por outro integrante |
 | Impacto, relatório | **Pendente** | — | #29 (impacto), #31 (documento final) |
 | Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
@@ -331,3 +332,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 3.2 | 25/11/2026 | Issue #37: hipóteses H0/H1 (Q2, Q3), variáveis, objetos, design, instrumentação e operação em docs/metodologia.md §3.1; cada hipótese aponta para o teste e a coluna existentes. Nenhum teste, parâmetro ou resultado alterado. Hipóteses formalizadas após os resultados (limitação registrada) |
 | 3.3 | 25/11/2026 | Issue #38: verificação do pipeline por reexecução do zero (venv novo, download real do CKAN, 57 testes), feita por um agente de IA a pedido do Arthur. CSVs e base com os mesmos SHA-256; diferenças só no manifesto (origem do download), fim de linha, a última casa decimal de 41 números de `resultados.json` e os bytes da figura 04 (renderização do matplotlib). Achados corrigidos: intervalo de 1 req/s (a resolução de 15,625 ms de `time.monotonic()` no Python 3.12/Windows deixava o intervalo real até ~16 ms abaixo do pedido; corrigido com relógio `perf_counter` e laço de reconferência, com teste novo) em `scripts/coleta.py` e testes portáveis (`encoding="utf-8"`); linha para Windows no README. Registrado em `docs/evidencias/verificacao_pipeline.md`; §13 atualizada. Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada |
 | 3.4 | 25/11/2026 | Issue #39 (opção A): o pipeline passa a gerar a sensibilidade da ponderação do delta combinado (peso n_A·n_B/(n_A+n_B), serviço de maior peso e indicador de sinal consistente) e a figura 06, o painel e o resumo marcam como "inconclusivo" o tempo dos pares em que os sinais discordam (Portal × Presencial e PBH APP × Presencial). **Mudança metodológica registrada:** só se acrescentam colunas; a análise principal e os parâmetros de `config.py` não mudaram. D14 encerrada (decisão: opção A da issue #39, escolhida pelo Arthur em 25/11/2026, aprovação dos planos). Portal × Presencial e PBH APP × Presencial seguem inconclusivos no tempo; Telefone 156 × Presencial tem sinais concordantes, mas só 2 serviços (Ouvidoria com ~100% do peso): não interpretar. Interpretação passa à v1.1. Nenhuma outra pendência encerrada |
+| 3.5 | 25/11/2026 | Issue #24: ameaças à validade revistas com os resultados reais (IDs C1–C7, I1–I4, K1–K5, E1–E4), com evidência, mitigação e risco remanescente. Nenhum resultado alterado |

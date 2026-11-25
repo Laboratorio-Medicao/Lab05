@@ -1,6 +1,6 @@
 # FONTE DA VERDADE — LAB05
 
-**Versão 3.6 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
+**Versão 3.7 · criada em 20/11/2026, atualizada em 25/11/2026** · Referência central e permanente do projeto LAB05.
 Qualquer pessoa ou agente de IA deve ler este arquivo antes de tocar em qualquer artefato do LAB05.
 
 > Convenção de leitura: este documento separa **exigido** (enunciado), **decidido** (professor), **planejado**, **executado** (artefato no repositório) e **resultado** (dado observado). **Mudança de direção (v3.0, 24/11/2026):** o projeto deixou de ser um experimento com participantes e passou a analisar **dados abertos reais de operação** da PBH. Os resultados do pipeline estão em `resultados/` e são gerados pelo código; nenhum número deste documento é digitado à mão sem apontar a fonte. A metodologia anterior está arquivada em [docs/arquivo/](./docs/arquivo/s01-metodologia-participantes/README.md) e **não vale mais**.
@@ -158,7 +158,7 @@ Detalhe completo na [METODOLOGIA §6](./docs/metodologia.md) e no cabeçalho de 
 
 ## 7. Sete categorias da pesquisa
 
-Ver [METODOLOGIA §7](./docs/metodologia.md): aplicada; descritiva e exploratória (comparativa); quantitativa; análise documental de dados secundários (observacional retrospectivo); longitudinal retrospectivo; sem controle experimental (ajuste estatístico por serviço); evidência observacional (associação, não causa). **Preliminar**, a revisar na S03.
+Classificação **revisada em 25/11/2026 (S03, #27)**, com base no que foi executado; ver [METODOLOGIA §7](./docs/metodologia.md) (tabela e "Por que não é um experimento"): aplicada; descritiva e exploratória-comparativa; quantitativa; pesquisa documental com dados secundários de operação (observacional retrospectivo, *ex post facto*); **retrospectivo (coorte retrospectiva no nível da solicitação, com análise agregada no período, sem estudo de tendência temporal)**; sem controle experimental (controle estatístico por estratificação por serviço); evidência observacional (associação, não causa). A revisão **corrige o "longitudinal retrospectivo" preliminar**, que sugeria estudo de evolução no tempo: os dados cobrem mai/2020–jul/2023, mas os 3 anos são analisados juntos. Conclusões e limitações em `docs/conclusoes_limitacoes.md`. Sem revisão do grupo.
 
 ## 8. Coleta e tratamento (implementados)
 
@@ -206,7 +206,8 @@ Princípio mantido: nenhuma economia de tempo ou horas pode ser afirmada sem mé
 | Ameaças à validade revisadas | **Executado** (25/11/2026; sem revisão do grupo) | `docs/metodologia.md` §8 (#24) | Revisão por outro integrante |
 | Impacto | **Executado** (25/11/2026; sem revisão do grupo) | `docs/impacto.md`, `resultados/tabelas/impacto_*.csv` (#29) | Revisão por outro integrante; decidir P5 |
 | Relatório | **Pendente** | — | #31 (documento final) |
-| Revisão das 7 categorias (S03) | Pendente | METODOLOGIA §7 | S03 |
+| Revisão das 7 categorias (S03) | **Executado** (25/11/2026; sem revisão do grupo) | METODOLOGIA §7 revisada, com correção de "longitudinal" para "retrospectivo; coorte retrospectiva com análise agregada no período" (issue #27) | Revisão por outro integrante |
+| Conclusões e limitações | **Executado** (25/11/2026; sem revisão do grupo) | `docs/conclusoes_limitacoes.md` (#27) | Revisão por outro integrante |
 | Documento e apresentação (10 min) | Pendente | — | Entrega final |
 
 "Verificado" (§2.3) exige conferência por segunda pessoa ou ferramenta, com registro: o pipeline foi reexecutado do zero em 25/11/2026 por um agente de IA (Claude Sonnet), a pedido do Arthur, e não por um integrante do grupo; ver `docs/evidencias/verificacao_pipeline.md`.
@@ -338,3 +339,4 @@ Papéis (sugestão do enunciado): A Planejamento e Método; B Instrumentação e
 | 3.4 | 25/11/2026 | Issue #39 (opção A): o pipeline passa a gerar a sensibilidade da ponderação do delta combinado (peso n_A·n_B/(n_A+n_B), serviço de maior peso e indicador de sinal consistente) e a figura 06, o painel e o resumo marcam como "inconclusivo" o tempo dos pares em que os sinais discordam (Portal × Presencial e PBH APP × Presencial). **Mudança metodológica registrada:** só se acrescentam colunas; a análise principal e os parâmetros de `config.py` não mudaram. D14 encerrada (decisão: opção A da issue #39, escolhida pelo Arthur em 25/11/2026, aprovação dos planos). Portal × Presencial e PBH APP × Presencial seguem inconclusivos no tempo; Telefone 156 × Presencial tem sinais concordantes, mas só 2 serviços (Ouvidoria com ~100% do peso): não interpretar. Interpretação passa à v1.1. Nenhuma outra pendência encerrada |
 | 3.5 | 25/11/2026 | Issue #24: ameaças à validade revistas com os resultados reais (IDs C1–C7, I1–I4, K1–K5, E1–E4), com evidência, mitigação e risco remanescente. Nenhum resultado alterado |
 | 3.6 | 25/11/2026 | Issue #29 (impacto): criados `scripts/impacto.py`, `tests/test_impacto.py` e `docs/impacto.md`; o pipeline passa a gravar `impacto_por_par.csv`, `impacto_por_servico_par.csv` e `volume_anual_por_canal.csv`, a figura 07 e uma seção de impacto no painel e no resumo. Estimativa de **contrafactual hipotético** só para Portal × APP, Portal × 156 e APP × 156 (Presencial fora, D14). §11 e §13 atualizadas; **P5 segue aberta** (conversão em horas não feita, sem métrica compatível). Tabelas e colunas anteriores de `resultados/` não mudaram. Numeração 3.6 definida pela ordem prevista de merge (renumerar se mudar) |
+| 3.7 | 25/11/2026 | Issue #27: METODOLOGIA §7 revisada com base no executado (tabela com justificativa e coluna "Muda?"; "longitudinal" corrigido para "retrospectivo; coorte retrospectiva com análise agregada no período"; texto "Por que não é um experimento"); criado `docs/conclusoes_limitacoes.md`; §7 e §13 atualizadas. Pipeline, parâmetros e resultados **não** foram alterados. Nenhuma pendência encerrada. Sem aprovação do professor |

@@ -120,17 +120,24 @@ def resumo_markdown(r: dict, q: dict) -> str:
           "A = primeiro canal. OR de Mantel–Haenszel > 1: A encerra mais em "
           f"{h} d. Delta de Cliff > 0: A mais lento. p com correção de Holm (6 pares).\n",
           "| Par (A × B) | Serviços (prop.) | OR MH [IC 95%] | p (CMH, Holm) | I² | "
-          "Serviços (tempo) | Delta combinado [IC 95%] | Magnitude | p (van Elteren, Holm) |",
-          "|---|---:|---|---|---:|---:|---|---|---|"]
+          "Serviços (tempo) | Delta combinado [IC 95%] | Magnitude | "
+          "Delta (ponderação alternativa) | Sinal consistente (D14) | p (van Elteren, Holm) |",
+          "|---|---:|---|---|---:|---:|---|---|---:|---|---|"]
     for _, x in r["estratificado_por_par"].iterrows():
         par = f"{C.ROTULO_CANAL[x['canal_a']]} × {C.ROTULO_CANAL[x['canal_b']]}"
         orr = ("n/d" if pd.isna(x.get("or_mh")) else
                f"{x['or_mh']:.2f} [{x['or_ic_lo']:.2f}; {x['or_ic_hi']:.2f}]")
         dl = ("n/d" if pd.isna(x.get("delta_combinado")) else
               f"{x['delta_combinado']:.3f} [{x['delta_ic_lo']:.3f}; {x['delta_ic_hi']:.3f}]")
+        harm = ("n/d" if pd.isna(x.get("delta_combinado_harmonico")) else
+                f"{x['delta_combinado_harmonico']:.3f}")
+        sc = x.get("delta_sinal_consistente")
+        sinais = "n/d" if pd.isna(sc) else ("sim" if bool(sc) else "**inconclusivo**")
         L.append(f"| {par} | {int(x['servicos_prop'])} | {orr} | {V._p(x.get('p_cmh_holm'))} | "
                  f"{V._n(x.get('heterogeneidade_i2'))} | {int(x['servicos_tempo'])} | {dl} | "
-                 f"{x.get('delta_magnitude', 'n/d')} | {V._p(x.get('p_van_elteren_holm'))} |")
+                 f"{x.get('delta_magnitude', 'n/d')} | {harm} | {sinais} | "
+                 f"{V._p(x.get('p_van_elteren_holm'))} |")
+    L += ["", V.texto_robustez(r["estratificado_por_par"])]
     par = r["pares_por_servico"]
     if len(par):
         L += ["", "## Testes por serviço e par\n",

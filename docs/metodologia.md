@@ -31,6 +31,46 @@ do ponto de vista da gestão do atendimento ao cidadão, no contexto dos dados a
 
 Quantidade de solicitações por canal é descritiva (Q1 e Q2).
 
+## 3.1 Planejamento do estudo
+
+Esta subseção formaliza o que a §3 já pergunta: variáveis, objetos, hipóteses, design, instrumentação e operação. Ela define as hipóteses, não as responde; a resposta está em `docs/interpretacao_resultados.md`.
+
+### Variáveis e objetos
+
+| Elemento | Definição |
+|---|---|
+| Objeto (unidade de análise) | Solicitação registrada no BH Digital; sem sujeitos humanos |
+| Variável independente (fator) | Canal de captação, 4 níveis: Portal de Serviços, PBH APP, Telefone 156, Presencial (BH Resolve) |
+| Variáveis dependentes | (1) tempo de encerramento em dias (razão; só encerradas); (2) encerrada em ≤ 90 dias (nominal binária) |
+| Variável de estratificação (controle) | Serviço (`servico_chave`) |
+| Parâmetros fixos | Horizonte de 90 dias; mínimo de 30 registros elegíveis (proporção) ou 30 encerradas (tempo) por célula serviço × canal; α = 0,05 (decisão do grupo, P16 pendente) |
+| Variáveis não controladas (confusão possível) | Urgência e perfil do solicitante, regional (existe na fonte, descartada na leitura por privacidade; dicionário §2), ano, mudanças de plataforma |
+
+### Hipóteses
+
+Todas as H1 são bicaudais: H1 é a negação de H0 (por exemplo, "OR de MH ≠ 1"), e nenhuma afirma um sentido. A convenção de sinal da §6 vale para ler os resultados (delta de Cliff > 0 = A mais lento; OR > 1 = A encerra mais em 90 dias).
+
+| ID | Pergunta | H0 | H1 | Teste | Onde está o resultado |
+|---|---|---|---|---|---|
+| H-Q1 | Q1 | O tempo de encerramento (entre as encerradas) tem a mesma distribuição nos 4 canais (sem ajuste) | O tempo difere em pelo menos um canal | Kruskal–Wallis | `resultados.json` → `comparacao_ingenua.tempo.p` |
+| H-Q2 | Q2 | A proporção encerrada em ≤ 90 d é igual nos 4 canais (sem ajuste) | A proporção difere em pelo menos um canal | Qui-quadrado r×2 | `resultados.json` → `comparacao_ingenua.proporcao.p` |
+| H-Q3p | Q3 | Para cada par A × B, OR de Mantel–Haenszel = 1 entre serviços | OR de MH ≠ 1 | CMH | `pares_ajustados_por_servico.csv` → `p_cmh_holm` |
+| H-Q3p-s | Q3 | P(serviço em que A encerra mais \| serviços sem empate) = 0,5 | P(serviço em que A encerra mais \| serviços sem empate) ≠ 0,5 | Teste dos sinais | `pares_ajustados_por_servico.csv` → `p_sinais_prop_holm` |
+| H-Q3t | Q3 | Dentro dos serviços, os tempos de A e B (entre as encerradas) não diferem estocasticamente | Os tempos de A e B (entre as encerradas) diferem estocasticamente | van Elteren | `pares_ajustados_por_servico.csv` → `p_van_elteren_holm` |
+| H-Q3t-s | Q3 | P(serviço em que A é mais lento \| serviços sem empate) = 0,5 | P(serviço em que A é mais lento \| serviços sem empate) ≠ 0,5 | Teste dos sinais | `pares_ajustados_por_servico.csv` → `p_sinais_tempo_holm` |
+| H-S | Q3 | Para um dado serviço e par, a proporção não difere (qui-quadrado/Fisher) e, em teste separado, o tempo das encerradas não difere (Mann–Whitney) | Para esse serviço e par, difere | Qui-quadrado ou Fisher; Mann–Whitney | `pares_por_servico.csv` → `p_prop_holm`, `p_tempo_holm` |
+| H-O | Q3 | Para um dado serviço com ≥ 3 canais, a proporção não difere entre os canais (qui-quadrado r×2) e, em teste separado, o tempo das encerradas não difere (Kruskal–Wallis) | Para esse serviço, difere | Qui-quadrado r×2; Kruskal–Wallis | `omnibus_por_servico.csv` → `p_prop_holm`, `p_tempo_holm` |
+
+1. Q1 é descritiva; H-Q1 é só o teste global sem ajuste. Q4 é exploratória e não tem hipótese própria: usa os p da família H-S apenas para ordenar e filtrar.
+2. **Regra de decisão:** rejeitar H0 com p (Holm) < 0,05 **e** só chamar a diferença de relevante quando a magnitude for pelo menos "pequena" (limiares da §6). Com n ≈ 10⁶, rejeitar H0 sozinho não diz nada. Magnitude por hipótese: H-S, delta de Cliff (`delta_magnitude`) e h de Cohen (`h_magnitude`); H-Q3t, delta combinado com a ressalva D14; H-Q3p, mediana da diferença de risco por serviço (`mediana_dif_risco_pp`), pois a §6 não fixa limiar para OR; H-Q1, H-Q2 e H-O, V de Cramér e ε², só descritivos (sem limiar fixado); testes dos sinais, só consistência, sem magnitude.
+3. **Limitação:** as definições e os testes foram fixados antes dos resultados (FONTE §6), mas as hipóteses só foram escritas formalmente em 25/11/2026, **depois** de os resultados existirem. Não são pré-registradas, e essa limitação deve entrar nas ameaças de conclusão (§8, card #24).
+
+### Design, instrumentação e operação
+
+- **Design:** observacional retrospectivo, estratificado por serviço, sem atribuição de tratamento.
+- **Instrumentação:** `scripts/pipeline.py` (coleta, tratamento, estatística, visualização), com testes em `tests/`.
+- **Operação:** coleta única pela API do CKAN a 1 req/s, CSVs fora do repositório e colunas de endereço descartadas na leitura (ver §5).
+
 ## 4. Métricas e escalas
 
 | Métrica | Definição | Escala | Estatística adequada |

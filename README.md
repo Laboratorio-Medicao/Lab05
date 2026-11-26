@@ -48,6 +48,7 @@ O pipeline recusa pastas de CSV bruto dentro do repositório (os originais têm 
 | Resumo (números gerados pelo código) | `resultados/resumo.md` |
 | Painel interativo-estático (abra no navegador) | `resultados/painel.html` |
 | Documento final (rascunho revisado) | `docs/documento_final.md` |
+| Apresentação de 10 min (slides, roteiro e banco de perguntas) | `docs/apresentacao/` (abra `slides.html` no navegador) |
 | Gráficos (PNG) | `resultados/figuras/` |
 | Tabelas (CSV) | `resultados/tabelas/` |
 | Todos os resultados em JSON | `resultados/resultados.json` |
@@ -94,4 +95,4 @@ Lab05/
 | P13 | Datas reais de S02, S03 e entrega final | Grupo |
 | P14 | Link do repositório / GitHub Projects; nomes completos dos integrantes | Grupo |
 
-Falta para a entrega: revisão do trio (interpretação, ameaças, impacto, categorias e conclusões), nomes e links (P14), resposta do professor (P15, P16) e a apresentação de 10 minutos. O rascunho do documento final está em `docs/documento_final.md` (falta a versão de entrega, #31); a apresentação é mantida fora do repositório.
+Falta para a entrega: revisão do trio (interpretação, ameaças, impacto, categorias e conclusões), nomes e links (P14), resposta do professor (P15, P16) e o ensaio da apresentação de 10 minutos. O rascunho do documento final está em `docs/documento_final.md` (falta a versão de entrega, #31) e o material da apresentação em `docs/apresentacao/` (#32).
